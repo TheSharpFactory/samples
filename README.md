@@ -1,4 +1,4 @@
-![The Sharp Factory](https://www.thesharpfactory.com/images/full_logo.svg)
+![The Sharp Factory](https://www.thesharpfactory.com/images/full_logo.svg | height=250)
 # The Sharp Factory Sample Projects
 ====================
 
