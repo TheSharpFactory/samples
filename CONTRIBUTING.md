@@ -2,16 +2,16 @@
 
 One of the easiest ways to contribute is to participate in discussions on GitHub issues. You can also contribute by submitting pull requests with code changes.
 
-
 ## General feedback and discussions?
+
 Please start a discussion on the [TheSharpFactory/samples issue tracker](https://github.com/TheSharpFactory/samples/issues).
 
-
 ## Reporting security issues and bugs
-Security issues and bugs should be reported privately, via email, to the The Sharp Factory Response Center (TSFRC)  secure@thesharpfactory.com. You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message.
 
+Security issues and bugs should be reported privately, via email, to the The Sharp Factory Security Response Center (TSFSRC)  secure@thesharpfactory.com. You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message.
 
 ## Other discussions
+
 Our team members also monitor several other discussion forums:
 
 * [Stack Overflow](https://stackoverflow.com/) with the [`sharp-factory`](https://stackoverflow.com/questions/tagged/sharp-factory), [`the-sharp-factory`](https://stackoverflow.com/questions/tagged/the-sharp-factory), or [`sharpfactory`](https://stackoverflow.com/questions/tagged/sharpfactory) tags.

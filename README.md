@@ -4,7 +4,7 @@
 ====================
 
 [The Sharp Factory](https://www.thesharpfactory.com). Is a framework to build a professional Data Access Layer.
-It is composed of a code generator called **The Sharp Factory App which is a full fledge ORM(Community Edition** is free)
+It is composed of a code generator called **The Sharp Factory App which is a full fledge ORM(Community Edition is free)**
 and a framework that interact together to make data access simple and professional.
 This repo contains sample Visual Studio projects which illustrate basic and advanced concepts using The Sharp Factory.
 
