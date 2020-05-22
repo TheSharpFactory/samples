@@ -1,1 +1,3 @@
-*.cs linguist-detectable=true 
+*.sln linguist-language=csharp 
+*.cs linguist-language=csharp
+*.csproj linguist-language=csharp
