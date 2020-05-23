@@ -1,3 +1,4 @@
+*.sln *.sln linguist-language=csharp 
 *.cs linguist-language=csharp
 *.cshtml linguist-language=chsarp
 *.razor linguist-language=csharp
