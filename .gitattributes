@@ -1,4 +1,5 @@
 *.cs linguist-language=csharp
 *.cshtml linguist-language=chsarp
 *.razor linguist-language=csharp
+*.csproj linguist-language=csharp
 *.editorconfig linguist-language=EditorConfig
