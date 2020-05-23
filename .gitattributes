@@ -1,3 +1,16 @@
-*.sln linguist-language=csharp 
+*.js linguist-language=javascript
+*.html linguist-language=HTML
+*.css linguist-language=CSS
+*.less linguist-language=Less
+*.scss linguist-language=SCSS
 *.cs linguist-language=csharp
-*.csproj linguist-language=csharp
+*.cshtml linguist-language=HTML+Razor
+*.razor linguist-language=HTML+Razor
+*.graphql GraphQL
+*.proto linguist-language=Protocol Buffers
+*.json linguist-language=JSON
+*.xml linguist-language=XML 
+*.xaml linguist-language=XML
+*.axml linguist-language=XML
+*.csproj linguist-language=XML
+*.editorconfig linguist-language=EditorConfig
