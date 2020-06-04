@@ -1,0 +1,25 @@
+@namespace TheSharpFactory.Apps.Cross.SharedUI.Views.BlazorNative
+<Microsoft.MobileBlazorBindings.Elements.Frame CornerRadius="10" BackgroundColor="Color.LightBlue">
+
+    <Microsoft.MobileBlazorBindings.Elements.StackLayout Orientation="StackOrientation.Horizontal" HorizontalOptions="LayoutOptions.Center">
+
+        <Microsoft.MobileBlazorBindings.Elements.Button OnClick="@IncrementCount">Increment</Microsoft.MobileBlazorBindings.Elements.Button>
+
+        <Microsoft.MobileBlazorBindings.Elements.Label
+               Text="@("The button was clicked " + count + " times")"
+               FontAttributes="FontAttributes.Bold"
+               VerticalTextAlignment="TextAlignment.Center" />
+
+    </Microsoft.MobileBlazorBindings.Elements.StackLayout>
+
+</Microsoft.MobileBlazorBindings.Elements.Frame>
+
+@code
+{
+    int count;
+
+    void IncrementCount()
+    {
+        count++;
+    }
+}
