@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>tizen40</TargetFramework>
+    <TargetFramework>tizen55</TargetFramework>
     <AssemblyName>TheSharpFactory.Apps.Cross.Tizen</AssemblyName>
     <RootNamespace>TheSharpFactory.Apps.Cross.Tizen</RootNamespace>
   </PropertyGroup>
