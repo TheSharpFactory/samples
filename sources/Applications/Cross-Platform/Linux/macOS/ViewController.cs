@@ -12,24 +12,13 @@ namespace TheSharpFactory.Apps.Cross.macOS
         {
         }
 
-        public override void ViewDidLoad()
-        {
-            base.ViewDidLoad();
-
-            // Do any additional setup after loading the view.
-        }
-
         public override NSObject RepresentedObject
         {
-            get
-            {
-                return base.RepresentedObject;
-            }
-            set
-            {
-                base.RepresentedObject = value;
-                // Update the view, if already loaded.
-            }
+            get => base.RepresentedObject;
+            set => base.RepresentedObject = value;// Update the view, if already loaded.
         }
+
+        //public override void ViewDidLoad()
+        //    => base.ViewDidLoad();
     }
 }
