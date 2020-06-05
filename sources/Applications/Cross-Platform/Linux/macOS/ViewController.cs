@@ -3,9 +3,10 @@
 using AppKit;
 using Foundation;
 
-namespace TheSharpFactory.Apps.Cross.MacOS
+namespace TheSharpFactory.Apps.Cross.macOS
 {
-    public partial class ViewController : NSViewController
+    public partial class ViewController
+        : NSViewController
     {
         public ViewController(IntPtr handle) : base(handle)
         {

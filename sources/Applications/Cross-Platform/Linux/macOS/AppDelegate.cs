@@ -2,14 +2,15 @@
 using Foundation;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.MacOS;
 
 using TheSharpFactory.Apps.Cross.SharedUI;
+using Xamarin.Forms.Platform.MacOS;
 
-namespace TheSharpFactory.Apps.Cross.MacOS
+namespace TheSharpFactory.Apps.Cross.macOS
 {
     [Register("AppDelegate")]
-    public class AppDelegate : FormsApplicationDelegate
+    public class AppDelegate
+        : FormsApplicationDelegate
     {
         readonly NSWindow window;
 
@@ -18,12 +19,14 @@ namespace TheSharpFactory.Apps.Cross.MacOS
 
         public AppDelegate()
         {
-            var style = NSWindowStyle.Closable | NSWindowStyle.Resizable | NSWindowStyle.Titled;
+            const NSWindowStyle style = NSWindowStyle.Closable | NSWindowStyle.Resizable | NSWindowStyle.Titled;
 
             var rect = new CoreGraphics.CGRect(0, 0, 1024, 768);
-            window = new NSWindow(rect, style, NSBackingStore.Buffered, false);
-            window.Title = "Xamarin.Forms on Mac!"; // choose your own Title here
-            window.TitleVisibility = NSWindowTitleVisibility.Visible;
+            window = new NSWindow(rect, style, NSBackingStore.Buffered, false)
+            {
+                Title = "Xamarin.Forms on Mac!", // choose your own Title here
+                TitleVisibility = NSWindowTitleVisibility.Visible
+            };
         }
 
         public override void DidFinishLaunching(NSNotification notification)

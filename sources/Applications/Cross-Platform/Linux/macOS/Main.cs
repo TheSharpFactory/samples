@@ -1,6 +1,6 @@
 ﻿using AppKit;
 
-namespace TheSharpFactory.Apps.Cross.MacOS
+namespace TheSharpFactory.Apps.Cross.macOS
 {
     static class MainClass
     {
