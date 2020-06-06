@@ -8,7 +8,7 @@ using Xamarin.Forms.Platform.MacOS;
 
 namespace TheSharpFactory.Apps.Cross.macOS
 {
-    [Register("AppDelegate")]
+    [Register(nameof(AppDelegate))]
     public class AppDelegate
         : FormsApplicationDelegate
     {
