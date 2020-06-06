@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "TheSharpFactory.Services.Unified": {
+    "Services-Unified": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
