@@ -16,7 +16,7 @@
         "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
       }
     },
-    "TheSharpFactory.Apps.Web.MVC": {
+    "MVC": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5007"

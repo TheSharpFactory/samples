@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "TheSharpFactory.App.BlazorServer": {
+    "Blazor-Server-Direct": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
