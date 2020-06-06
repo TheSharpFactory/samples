@@ -19,7 +19,9 @@ namespace TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new ItemsViewModel();
+            _viewModel = new ItemsViewModel();
+            _viewModel.ExecuteLoadItemsCommand().Wait();
+            BindingContext = _viewModel;
         }
 
         async void OnItemSelected(object sender, EventArgs args)
