@@ -27,15 +27,14 @@ namespace TheSharpFactory.Apps.Cross.macOS
                 Title = "Xamarin.Forms on Mac!", // choose your own Title here
                 TitleVisibility = NSWindowTitleVisibility.Visible
             };
-        }
+        }        
 
         public override void DidFinishLaunching(NSNotification notification)
         {
             // Insert code here to initialize your application
             Forms.Init();
-            LoadApplication(new XFApp());
+            LoadApplication(new BlazorApp());
             base.DidFinishLaunching(notification);
-
         }
 
         public override void WillTerminate(NSNotification notification)
