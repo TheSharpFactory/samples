@@ -4,8 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\Applications\Web\TheSharpFactory</DockerfileContext>
-    <AssemblyName>SharpFactory.Services.Unified</AssemblyName>
-    <RootNamespace>SF.Services.Unified</RootNamespace>
+    <AssemblyName>TheSharpFactory.Services.Unified</AssemblyName>
+    <RootNamespace>TheSharpFactory.Services.Unified</RootNamespace>
   </PropertyGroup>
   
 </Project>
