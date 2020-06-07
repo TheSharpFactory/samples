@@ -18,7 +18,9 @@ namespace TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms
         {
             InitializeComponent();
 
-            MasterBehavior = MasterBehavior.Popover;
+            MasterBehavior = Device.RuntimePlatform == Device.macOS
+                           ? MasterBehavior.Default
+                           : MasterBehavior.Popover;
 
             MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
         }
