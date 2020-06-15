@@ -19,7 +19,7 @@
     "MVC": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5007"
+      "applicationUrl": "http://localhost:5007",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
