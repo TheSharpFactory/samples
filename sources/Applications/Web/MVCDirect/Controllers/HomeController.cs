@@ -3,7 +3,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-using TheSharpFactory.Apps.Web.MVCDirect.Models;
+using TheSharpFactory.Apps.Shared.ViewModels;
 
 namespace TheSharpFactory.Apps.Web.MVCDirect.Controllers
 {
