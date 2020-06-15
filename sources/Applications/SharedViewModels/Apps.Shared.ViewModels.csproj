@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
     <AssemblyName>TheSharpFactory.Apps.Shared.ViewModels</AssemblyName>
-    <RootNamespace>TSF.Apps.Shared.ViewModels</RootNamespace>
+    <RootNamespace>TheSharpFactory.Apps.Shared.ViewModels</RootNamespace>
   </PropertyGroup>
 </Project>
