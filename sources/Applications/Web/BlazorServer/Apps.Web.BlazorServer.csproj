@@ -32,6 +32,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorClient\Apps.Web.BlazorClient.csproj" />
+    <ProjectReference Include="..\SharedUI.Blazor\Apps.Web.SharedUI.Blazor.csproj" />
   </ItemGroup>
 
 </Project>

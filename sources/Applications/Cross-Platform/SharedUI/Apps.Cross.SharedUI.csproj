@@ -23,6 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\ViewModels\Apps.Shared.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="XFApp.xaml.cs">
       <DependentUpon>XFApp.xaml</DependentUpon>
     </Compile>

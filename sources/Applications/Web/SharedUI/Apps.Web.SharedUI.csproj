@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\ViewModels\Apps.Shared.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="Views\Home\Index.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -20,10 +24,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Landing\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Shared\ViewModels\Apps.Shared.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>
