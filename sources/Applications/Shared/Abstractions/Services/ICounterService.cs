@@ -1,4 +1,4 @@
-﻿namespace TheSharpFactorty.Apps.Shared.Services
+﻿namespace TheSharpFactory.Apps.Shared.Services
 {
     public interface ICounterService
     {

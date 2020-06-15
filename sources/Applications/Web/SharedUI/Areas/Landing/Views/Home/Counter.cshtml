@@ -1,0 +1,76 @@
+﻿
+
+<h1>Counter</h1>
+
+<table>
+     <tbody>
+          <tr style="vertical-align:middle;text-align:center">
+               <td colspan="3"><input id="txtCount" type="number" value="0" /></td>
+          </tr>
+          <tr style="vertical-align:middle;text-align:center">
+               <td>
+                    <input id="txtDecrementBy" type="number" style="width:2em" value="1" min="=0" onchange="updateDecrementCount()" />
+                    <button id="btnDecrement" class="btn btn-primary" onclick="decrement()">-</button>
+               </td>
+               <td><input id="rngCount" type="range" min="0" max="100" value="0" /></td>
+               <td>
+                    <button id="btnIncrement" class="btn btn-primary" onclick="increment()">+</button>
+                    <input id="txtIncrementBy" type="number" style="width:2em" value="1" min="0" onchange="updateIncrementCount()" />
+               </td>
+          </tr>
+     </tbody>
+</table>
+
+@section Scripts {
+     <script type="text/javascript">
+          let counterModel = {
+               "count": 0,
+               "incrementBy": 1,
+               "decrementBy": 1
+          };
+          window.onload = e => {
+               counterModel = JSON.parse(window.localStorage.getItem("counterModel"));
+
+               if (typeof counterModel === undefined) {
+                    counterModel = {
+                         "count": 0,
+                         "incrementBy": 1,
+                         "decrementBy": 1
+                    };
+                    localStorage.setItem("counterModel", JSON.stringify(counterModel));
+               }
+
+               let count = parseInt(counterModel.count);
+
+               document.getElementById("txtCount").value = count;
+               document.getElementById("rngCount").value = count;
+               document.getElementById("txtDecrementBy").value = parseInt(counterModel.decrementBy);
+               document.getElementById("txtIncrementBy").value = parseInt(counterModel.incrementBy);
+
+          };
+          function decrement() {
+               counterModel.count -= counterModel.decrementBy;
+               localStorage.setItem("counterModel", JSON.stringify(counterModel));
+               document.getElementById("txtCount").value = counterModel.count;
+               document.getElementById("rngCount").value = counterModel.count;
+          }
+          function increment() {
+               counterModel.count += counterModel.incrementBy;
+               localStorage.setItem("counterModel", JSON.stringify(counterModel));
+               document.getElementById("txtCount").value = counterModel.count;
+               document.getElementById("rngCount").value = counterModel.count;
+          }
+
+          function updateDecrementCount() {
+               let decBy = document.getElementById("txtDecrementBy").value;
+               counterModel.decrementBy = parseInt(decBy);
+               localStorage.setItem("counterModel", JSON.stringify(counterModel));
+          }
+
+          function updateIncrementCount() {
+               let incBy = document.getElementById("txtIncrementBy").value
+               counterModel.incrementBy = parseInt(incBy);
+               localStorage.setItem("counterModel", JSON.stringify(counterModel));
+          }
+     </script>
+}

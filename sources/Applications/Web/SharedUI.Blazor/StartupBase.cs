@@ -3,8 +3,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-using TheSharpFactorty.Apps.Shared.Services;
-
 using TheSharpFactory.Apps.Shared.Services;
 using TheSharpFactory.Apps.Shared.ViewModels.Conventional;
 

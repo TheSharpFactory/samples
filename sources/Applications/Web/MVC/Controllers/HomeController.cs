@@ -7,7 +7,8 @@ using TheSharpFactory.Apps.Shared.ViewModels.Conventional;
 
 namespace TheSharpFactory.Apps.Web.MVC.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController
+        : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -17,7 +18,10 @@ namespace TheSharpFactory.Apps.Web.MVC.Controllers
         public IActionResult Index()
             => View();
 
-        public IActionResult Privacy()
+        public IActionResult Counter()
+            => View();
+
+        public IActionResult FetchData()
             => View();
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using TheSharpFactory.Apps.Shared.Services;
 using TheSharpFactory.Apps.Shared.ViewModels.Conventional;
-using TheSharpFactorty.Apps.Shared.Services;
 
 namespace TheSharpFactory.Apps.Web.BlazorClient
 {
