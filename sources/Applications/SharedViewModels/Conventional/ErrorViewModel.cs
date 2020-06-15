@@ -1,4 +1,4 @@
-namespace TheSharpFactory.Apps.Shared.ViewModels.Web
+namespace TheSharpFactory.Apps.Shared.ViewModels.Conventional
 {
     public class ErrorViewModel
     {

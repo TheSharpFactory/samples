@@ -6,4 +6,8 @@
     <AssemblyName>TheSharpFactory.Apps.Shared.ViewModels</AssemblyName>
     <RootNamespace>TheSharpFactory.Apps.Shared.ViewModels</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Reactive\" />
+  </ItemGroup>
 </Project>
