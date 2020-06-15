@@ -3,7 +3,10 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-using TheSharpFactory.Apps.Web.SharedUI.Data;
+using TheSharpFactorty.Apps.Shared.Services;
+
+using TheSharpFactory.Apps.Shared.Services;
+using TheSharpFactory.Apps.Shared.ViewModels.Conventional;
 
 #if netcoreapp31
 using ElectronNET.API;
@@ -70,7 +73,10 @@ namespace TheSharpFactory.Apps.Web.SharedUI
 #endif
 
             services.AddSingleton(_ => AppModel);
-            services.AddTransient<WeatherForecastService>();
+            services.AddTransient<IWeatherForecastDTO, WeatherForecastDTO>();
+            services.AddTransient<IWeatherForecastService, WeatherForecastService>();
+            services.AddTransient<IFetchDataViewModel, FetchDataViewModel>();
+            services.AddSingleton<ICounterService, CounterService>();
         }
 
 #if netcoreapp31

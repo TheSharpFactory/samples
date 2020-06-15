@@ -36,7 +36,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SharedViewModels\Apps.Shared.ViewModels.csproj" />
+    <ProjectReference Include="..\..\Shared\Services\Apps.Shared.Services.csproj" />
+    <ProjectReference Include="..\..\Shared\ViewModels\Apps.Shared.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>

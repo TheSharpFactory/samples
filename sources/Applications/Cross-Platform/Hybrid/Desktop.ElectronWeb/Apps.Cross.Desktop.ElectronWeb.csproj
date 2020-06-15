@@ -24,7 +24,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Web\BlazorClient\Apps.Web.BlazorClient.csproj" />
-    <ProjectReference Include="..\..\..\Web\SharedUI\Apps.Web.SharedUI.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -2,12 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <LangVersion>7.3</LangVersion>
-    <AssemblyName>TheSharpFactory.Apps.Shared.ViewModels</AssemblyName>
+    <LangVersion>8.0</LangVersion>
+    <AssemblyName>TheSharpFactory.Apps.Shared.ViewModels.Abstractions</AssemblyName>
     <RootNamespace>TheSharpFactory.Apps.Shared.ViewModels</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Reactive\" />
   </ItemGroup>
+
 </Project>

@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Apps.Web.SharedUI\Apps.Web.SharedUI.csproj" />
+    <ProjectReference Include="..\SharedUI\Apps.Web.SharedUI.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SharedViewModels\Apps.Shared.ViewModels.csproj" />
     <ProjectReference Include="..\Apps.Web.SharedUI\Apps.Web.SharedUI.csproj" />
+    <ProjectReference Include="..\SharedUI\Apps.Web.SharedUI.csproj" />
   </ItemGroup>
 
   <ItemGroup>
