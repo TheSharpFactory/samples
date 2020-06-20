@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+     <title>@ViewData["Title"] - MVC @ViewBag.Brand</title>
+     <base href="/" />
+     <link href="~/lib/bootstrap/bootstrap.min.css" rel="stylesheet" />
+     <link href="~/styles/app.css" rel="stylesheet" />
+</head>
+<body>
+
+     <app>
+          <div class="sidebar">
+               <partial name="NavMenu" />
+          </div>
+
+          <div class="main">
+               <div class="top-row px-4">
+                    <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+               </div>
+
+               <div class="content px-4">
+                    @RenderBody()
+               </div>
+          </div>
+
+          @RenderSection("Scripts", required: false)
+     </app>
+</body>
+</html>

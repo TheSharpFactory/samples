@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>TheSharpFactorty.Apps.Shared.Services.Abstractions</AssemblyName>
+    <RootNamespace>TheSharpFactorty.Apps.Shared.Services</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ViewModels\Apps.Shared.Abstractions.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>
