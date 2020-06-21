@@ -158,7 +158,7 @@ stages:
           projects: '$(projectAngular)'
           arguments: '--configuration $(buildConfiguration)'
     - job: 'BuildReactApp'
-      displayName: 'Build React SPA'
+      displayName: 'React SPA'
       dependsOn: BuildAPIServices
       condition: succeeded('BuildAPIServices')
       pool:
