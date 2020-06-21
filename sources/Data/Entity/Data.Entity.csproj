@@ -11,4 +11,8 @@
     <Compile Remove="Class1.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="dotMorten.Microsoft.SqlServer.Types" Version="1.1.0" />
+  </ItemGroup>
+
 </Project>
