@@ -47,6 +47,7 @@ stages:
             arguments: '--configuration $(buildConfiguration)'
     - job: 'BuildAngularApp'
       displayName: 'Build Angular SPA'
+      dependsOn: BuildAPIServices
       condition: succeeded('BuildAPIServices')
       steps:
       - task: NuGetToolInstaller@1
@@ -69,6 +70,7 @@ stages:
           msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=false /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
     - job: 'BuildReactApp'
       displayName: 'Build Angular SPA'
+      dependsOn: BuildAPIServices
       condition: succeeded('BuildAPIServices')
       steps:
         - task: NuGetToolInstaller@1
