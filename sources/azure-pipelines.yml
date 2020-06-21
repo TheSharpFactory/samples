@@ -15,9 +15,6 @@ pr:
       - feature/*
       - epic/*
 
-pool:
-  vmImage: 'ubuntu-16.04'
-
 variables:
   solutionAngular: 'sources/TheSharpFactory.Web.Angular.sln'
   solutionReact: 'sources/TheSharpFactory.Web.Angular.React.sln'
@@ -31,14 +28,14 @@ stages:
     jobs: 
     - job: BuildAPIServices
       displayName: 'Build API Services'
+      pool:
+        vmImage: 'ubuntu-16.04'
       steps:
-        - task: NuGetToolInstaller@1
+        - task: UseDotNet@2
           displayName: 'NuGet Tool Installer'
-        - task: NodeTool@0
-          displayName: 'Node.js Installer'
           inputs:
-            versionSpec: '11.x' 
-            checkLatest: true # Optional
+            version: '3.1.301'
+            includePreviewVersions: false # Required for preview versions
         - task: DotNetCoreCLI@2
           displayName: 'Build Services'
           inputs:
@@ -49,41 +46,44 @@ stages:
       displayName: 'Build Angular SPA'
       dependsOn: BuildAPIServices
       condition: succeeded('BuildAPIServices')
+      pool:
+        vmImage: 'ubuntu-16.04'
       steps:
-      - task: NuGetToolInstaller@1
-        displayName: 'NuGet Tool Installer'
+      - task: UseDotNet@2
+        displayName: 'DonetNet Core Tool Installer'
+        inputs:
+          version: '3.1.301'
+          includePreviewVersions: false # Required for preview versions
       - task: NodeTool@0
         displayName: 'Node.js Installer'
         inputs:
           versionSpec: '11.x' 
           checkLatest: true 
-      - task: VSBuild@1
+      - task: DotNetCoreCLI@2
         displayName: 'Build Angular Project'
         inputs:
-          solution: '$(solutionAngular)'
-          platform: '$(buildPlatform)'
-          configuration: '$(buildConfiguration)'
-      - task: VSTest@2
-        inputs:
-          platform: '$(buildPlatform)'
-          configuration: '$(buildConfiguration)'
-          msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=false /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+          command: 'build'
+          projects: '$(projectServices)'
+          arguments: '--configuration $(buildConfiguration)'
     - job: 'BuildReactApp'
-      displayName: 'Build Angular SPA'
-      dependsOn: BuildAPIServices
+      displayName: 'Build React SPA'
       condition: succeeded('BuildAPIServices')
+      pool:
+        vmImage: 'ubuntu-16.04'
       steps:
-        - task: NuGetToolInstaller@1
+        - task: UseDotNet@2
           displayName: 'NuGet Tool Installer'
+          inputs:
+            version: '3.1.301'
+            includePreviewVersions: false # Required for preview versions
         - task: NodeTool@0
           displayName: 'Node.js Installer'
           inputs:
             versionSpec: '11.x' 
             checkLatest: true 
-        - task: VSBuild@1
+        - task: DotNetCoreCLI@2
           displayName: 'Build Angular Project'
           inputs:
-            solution: '$(solutionReact)'
-            platform: '$(buildPlatform)'
-            configuration: '$(buildConfiguration)'
-            msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=false /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+            command: 'build'
+            projects: '$(projectServices)'
+            arguments: '--configuration $(buildConfiguration)'
