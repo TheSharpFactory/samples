@@ -67,6 +67,7 @@ stages:
           arguments: '--configuration $(buildConfiguration)'
     - job: 'BuildReactApp'
       displayName: 'Build React SPA'
+      dependsOn: BuildAPIServices
       condition: succeeded('BuildAPIServices')
       pool:
         vmImage: 'ubuntu-16.04'
