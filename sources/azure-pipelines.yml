@@ -118,14 +118,8 @@ stages:
             arguments: '--configuration $(buildConfiguration)'
     - job: BuildAppLayerSharedViewModel
       displayName: 'Abstraction Layer: Shared Abstractions'
-      dependsOn:
-        - BuildAppLayerSharedAppServiceAbstraction
-        - BuildAppLayerSharedViewModelAbstraction
-        - BuildAppLayerSharedAppService
-      condition:
-        - succeeded('BuildAppLayerSharedAppServiceAbstraction')
-        - succeeded('BuildAppLayerSharedViewModelAbstraction')
-        - succeeded('BuildAppLayerSharedAppService')
+      dependsOn: BuildAppLayerSharedAppService
+      condition: succeeded('BuildAppLayerSharedAppService')
       pool:
         vmImage: 'ubuntu-16.04'
       steps:
@@ -187,19 +181,9 @@ stages:
             projects: '$(projectAngular)'
             arguments: '--configuration $(buildConfiguration)'
     - job: 'BuildMVCSharedUI'
-      displayName: 'Build Shared RCL for MVC'
-      dependsOn:
-        - BuildAPIServices
-        - BuildAppLayerSharedAppServiceAbstraction
-        - BuildAppLayerSharedViewModelAbstraction
-        - BuildAppLayerSharedAppService
-        - BuildAppLayerSharedViewModel
-      condition:
-        - succeeded('BuildAPIServices')
-        - succeeded('BuildAppLayerSharedAppServiceAbstraction')
-        - succeeded('BuildAppLayerSharedViewModelAbstraction')
-        - succeeded('BuildAppLayerSharedAppService')
-        - succeeded('BuildAppLayerSharedViewModel')
+      displayName: 'Shared UI for MVC'
+      dependsOn: BuildAppLayerSharedViewModel
+      condition: succeeded('BuildAppLayerSharedViewModel')
       pool:
         vmImage: 'ubuntu-16.04'
       steps:
@@ -214,27 +198,15 @@ stages:
             versionSpec: '11.x' 
             checkLatest: true 
         - task: DotNetCoreCLI@2
-          displayName: 'Build Angular Project'
+          displayName: 'Build'
           inputs:
             command: 'build'
             projects: '$(projectSharedUIMVC)'
             arguments: '--configuration $(buildConfiguration)'
     - job: 'BuildMVCApp'
-      displayName: 'Build MVC API'
-      dependsOn:
-        - BuildAPIServices
-        - BuildAppLayerSharedAppServiceAbstraction
-        - BuildAppLayerSharedViewModelAbstraction
-        - BuildAppLayerSharedAppService
-        - BuildAppLayerSharedViewModel
-        - BuildMVCSharedUI
-      condition:
-        - succeeded('BuildAPIServices')
-        - succeeded('BuildAppLayerSharedAppServiceAbstraction')
-        - succeeded('BuildAppLayerSharedViewModelAbstraction')
-        - succeeded('BuildAppLayerSharedAppService')
-        - succeeded('BuildAppLayerSharedViewModel')
-        - succeeded('BuildMVCSharedUI')
+      displayName: 'MVC API'
+      dependsOn: BuildMVCSharedUI
+      condition: succeeded('BuildMVCSharedUI')
       pool:
         vmImage: 'ubuntu-16.04'
       steps:
@@ -255,26 +227,14 @@ stages:
             projects: '$(projectMVC)'
             arguments: '--configuration $(buildConfiguration)'
     - job: 'BuildMVCAppDirect'
-      displayName: 'Build MVC Direct'
-      dependsOn:
-        - BuildAPIServices
-        - BuildAppLayerSharedAppServiceAbstraction
-        - BuildAppLayerSharedViewModelAbstraction
-        - BuildAppLayerSharedAppService
-        - BuildAppLayerSharedViewModel
-        - BuildMVCSharedUI
-      condition:
-        - succeeded('BuildAPIServices')
-        - succeeded('BuildAppLayerSharedAppServiceAbstraction')
-        - succeeded('BuildAppLayerSharedViewModelAbstraction')
-        - succeeded('BuildAppLayerSharedAppService')
-        - succeeded('BuildAppLayerSharedViewModel')
-        - succeeded('BuildMVCSharedUI')
+      displayName: 'MVC Direct'
+      dependsOn: BuildMVCSharedUI
+      condition: succeeded('BuildMVCSharedUI')
       pool:
         vmImage: 'ubuntu-16.04'
       steps:
         - task: UseDotNet@2
-          displayName: 'DotNetCore 3.1.3.1 Installer'
+          displayName: 'DotNetCore 3.1.301 SDK Installer'
           inputs:
             version: '3.1.301'
             includePreviewVersions: false # Required for preview versions
@@ -284,7 +244,7 @@ stages:
             versionSpec: '11.x' 
             checkLatest: true 
         - task: DotNetCoreCLI@2
-          displayName: 'Build Angular Project'
+          displayName: 'Build'
           inputs:
             command: 'build'
             projects: '$(projectMVCDirect)'
