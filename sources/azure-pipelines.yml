@@ -3,17 +3,29 @@
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
+trigger:
+  branches:
+    include:
+      - master
+      - dev
+      - staging/*/*
+      - release/*/*
+    exclude:
+      - user_story/*/*
+      - feature/*/*
+      - epic/*/*
+
 pr:
   branches:
     include:
       - master
       - dev
-      - staging/*
-      - release/*
+      - staging/*/*
+      - release/*/*
     exclude:
-      - user_story/*
-      - feature/*
-      - epic/*
+      - user_story/*/*
+      - feature/*/*
+      - epic/*/*
 
 variables:
   solutionAngular: 'sources/TheSharpFactory.Web.Angular.sln'
