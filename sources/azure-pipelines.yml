@@ -44,7 +44,7 @@ variables:
 stages:     
   - stage: 'nightly_builds'
     displayName: 'Dev Build'
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
+    condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'dev'))
     jobs: 
     - job: BuildAPIServices
       displayName: 'API Services'
