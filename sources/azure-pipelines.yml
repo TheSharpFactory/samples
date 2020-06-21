@@ -4,16 +4,16 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 pr:
-     branches:
-          include:
-               - master
-               - dev
-               - staging/*
-               - release/*
-          exclude:
-               - user_story/*
-               - feature/*
-               - epic/*
+  branches:
+    include:
+      - master
+      - dev
+      - staging/*
+      - release/*
+    exclude:
+      - user_story/*
+      - feature/*
+      - epic/*
 
 pool:
   vmImage: 'ubuntu-16.04'
