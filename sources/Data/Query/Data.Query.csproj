@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <RootNamespace>TheSharpFactory.Data.Query</RootNamespace>
+    <AssemblyName>TheSharpFactory.Data.Query</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TheSharpFactory.Data.Entity\TheSharpFactory.Data.Entity.csproj" />
+    <ProjectReference Include="..\Entity\Data.Entity.csproj" />
   </ItemGroup>
 
 </Project>

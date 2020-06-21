@@ -37,15 +37,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{FF956D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apps.Web.SharedUI", "Applications\Web\SharedUI\Apps.Web.SharedUI.csproj", "{9E009585-C4B5-408C-9B6F-ED24FEC6F872}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Entity", "Data\TheSharpFactory.Data.Entity\TheSharpFactory.Data.Entity.csproj", "{2AE3819E-1747-448D-8081-D451BE78B73D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Entity", "Data\Entity\Data.Entity.csproj", "{2AE3819E-1747-448D-8081-D451BE78B73D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Entity.Utils", "Data\TheSharpFactory.Data.Entity.Utils\TheSharpFactory.Data.Entity.Utils.csproj", "{84A93113-13FB-4586-AEB9-A1055886112C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Entity.Utils", "Data\Entity.Utils\Data.Entity.Utils.csproj", "{84A93113-13FB-4586-AEB9-A1055886112C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Query", "Data\TheSharpFactory.Data.Query\TheSharpFactory.Data.Query.csproj", "{06FFFE6E-F3B5-455E-93AC-11E8085340D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Query", "Data\Query\Data.Query.csproj", "{06FFFE6E-F3B5-455E-93AC-11E8085340D9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Repository", "Data\TheSharpFactory.Data.Repository\TheSharpFactory.Data.Repository.csproj", "{1367CA19-9A48-4C9C-BA07-B908B4B357BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Repository", "Data\Repository\Data.Repository.csproj", "{1367CA19-9A48-4C9C-BA07-B908B4B357BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Repository.Interfaces", "Data\TheSharpFactory.Data.Repository.Interfaces\TheSharpFactory.Data.Repository.Interfaces.csproj", "{C82B1E02-E071-4A4D-B8E7-69967904B021}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Repository.Interfaces", "Data\Repository.Interfaces\Data.Repository.Interfaces.csproj", "{C82B1E02-E071-4A4D-B8E7-69967904B021}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
