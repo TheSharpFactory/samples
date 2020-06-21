@@ -21,7 +21,7 @@ pool:
 variables:
   solutionAngular: 'sources/TheSharpFactory.Web.Angular.sln'
   solutionReact: 'sources/TheSharpFactory.Web.Angular.React.sln'
-  projectServices: 'sources/services/Unified/Services.Unified.csproj'
+  projectServices: 'sources/Services/Unified/Services.Unified.csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
