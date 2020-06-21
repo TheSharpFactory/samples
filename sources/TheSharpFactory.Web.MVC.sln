@@ -39,15 +39,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{201C20
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apps.Web.SharedUI", "Applications\Web\SharedUI\Apps.Web.SharedUI.csproj", "{AAE91AEF-81F8-496F-961A-29A3696FC6CE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Entity", "Data\TheSharpFactory.Data.Entity\TheSharpFactory.Data.Entity.csproj", "{DC0D8E3C-811B-47CF-A282-A4AB65B7FAF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Entity", "Data\Entity\Data.Entity.csproj", "{DC0D8E3C-811B-47CF-A282-A4AB65B7FAF8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Entity.Utils", "Data\TheSharpFactory.Data.Entity.Utils\TheSharpFactory.Data.Entity.Utils.csproj", "{F18DE27B-980C-43AB-B032-0DFB172BC85B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Entity.Utils", "Data\Entity.Utils\Data.Entity.Utils.csproj", "{F18DE27B-980C-43AB-B032-0DFB172BC85B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Query", "Data\TheSharpFactory.Data.Query\TheSharpFactory.Data.Query.csproj", "{4836AF66-78AF-4C8B-B42D-522A6C1B6E01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Query", "Data\Query\Data.Query.csproj", "{4836AF66-78AF-4C8B-B42D-522A6C1B6E01}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Repository", "Data\TheSharpFactory.Data.Repository\TheSharpFactory.Data.Repository.csproj", "{37D7015A-4BE4-48F1-AEE7-DBF28465EF02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Repository", "Data\Repository\Data.Repository.csproj", "{37D7015A-4BE4-48F1-AEE7-DBF28465EF02}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Repository.Interfaces", "Data\TheSharpFactory.Data.Repository.Interfaces\TheSharpFactory.Data.Repository.Interfaces.csproj", "{AD19296C-09E0-46E5-B199-DB0959110FEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSharpFactory.Data.Repository.Interfaces", "Data\Repository.Interfaces\Data.Repository.Interfaces.csproj", "{AD19296C-09E0-46E5-B199-DB0959110FEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
