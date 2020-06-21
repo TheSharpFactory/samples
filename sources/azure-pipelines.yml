@@ -26,12 +26,12 @@ variables:
   buildConfiguration: 'Release'
 
 stages:     
-     - stage: nightly_builds
+     - stage: 'nightly_builds'
        displayName: 'Dev Build'
-       jobs: Build App
-       - job: 
-         displayName: 'Build API Services'
-         steps:
+       jobs: 'Build Apps'
+       - job: 'BuildAPIServices'
+          displayName: 'Build API Services'
+          steps:
           - task: NuGetToolInstaller@1
                displayName: 'NuGet Tool Installer'
           - task: NodeTool@0
@@ -45,10 +45,10 @@ stages:
                     command: 'build'
                     projects: '$(projectServices)'
                     arguments: '--configuration $(buildConfiguration)'
-       - job: BuildAngularApp
-         displayName: 'Build Angular SPA'
-         condition: succeeded('BuildAPIServices')
-         steps:
+       - job: 'BuildAngularApp'
+          displayName: 'Build Angular SPA'
+          condition: succeeded('BuildAPIServices')
+          steps:
           - task: NuGetToolInstaller@1
                displayName: 'NuGet Tool Installer'
           - task: NodeTool@0
@@ -67,10 +67,10 @@ stages:
                     platform: '$(buildPlatform)'
                     configuration: '$(buildConfiguration)'
                     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=false /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
-       - job: BuildReactApp
-         displayName: 'Build Angular SPA'
-         condition: succeeded('BuildAPIServices')
-         steps:
+       - job: 'BuildReactApp'
+          displayName: 'Build Angular SPA'
+          condition: succeeded('BuildAPIServices')
+          steps:
           - task: NuGetToolInstaller@1
                displayName: 'NuGet Tool Installer'
           - task: NodeTool@0
