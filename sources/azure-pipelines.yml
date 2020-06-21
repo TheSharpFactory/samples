@@ -29,10 +29,10 @@ pr:
 
 variables:  
   projectServices: 'sources/Services/Unified/Services.Unified.csproj'
-  projectAppServiceAbstraction: 'sources/Applications/Shared/Abstractions/Services/App.Shared.Abstractions.Services.csproj'
-  projectViewModelAbstraction: 'sources/Applications/Shared/Abstractions/ViewModels/App.Shared.Abstractions.ViewModels.csproj'
-  projectAppService: 'sources/Applications/Shared/Services/App.Shared.Services.csproj'
-  projectViewModel: 'sources/Applications/Shared/ViewModels/App.Shared.ViewModels.csproj'
+  projectAppServiceAbstraction: 'sources/Applications/Shared/Abstractions/Services/Apps.Shared.Abstractions.Services.csproj'
+  projectViewModelAbstraction: 'sources/Applications/Shared/Abstractions/ViewModels/Apps.Shared.Abstractions.ViewModels.csproj'
+  projectAppService: 'sources/Applications/Shared/Services/Apps.Shared.Services.csproj'
+  projectViewModel: 'sources/Applications/Shared/ViewModels/Apps.Shared.ViewModels.csproj'
   projectAngular: 'sources/Applications/Web/Angular/Apps.Web.Angular.csproj'
   projectReact: 'sources/Applications/Web/React/Apps.Web.React.csproj'
   projectSharedUIMVC: 'sources/Applications/Web/SharedUI/Apps.Web.SharedUI.csproj'
