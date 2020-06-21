@@ -29,7 +29,7 @@ stages:
   - stage: 'nightly_builds'
     displayName: 'Dev Build'
     jobs: 'Build Apps'
-    - job: 'BuildAPIServices'
+    - job: BuildAPIServices
       displayName: 'Build API Services'
       steps:
         - task: NuGetToolInstaller@1
