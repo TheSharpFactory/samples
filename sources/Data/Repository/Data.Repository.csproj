@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>TheSharpFactory.Data.Repository</AssemblyName>
+    <RootNamespace>TheSharpFactory.Data.Repository</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entity.Utils\Data.Entity.Utils.csproj" />
+    <ProjectReference Include="..\Entity\Data.Entity.csproj" />
+    <ProjectReference Include="..\Query\Data.Query.csproj" />
+    <ProjectReference Include="..\Repository.Interfaces\Data.Repository.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
