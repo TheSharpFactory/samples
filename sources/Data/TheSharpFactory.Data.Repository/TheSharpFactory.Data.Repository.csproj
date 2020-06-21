@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheSharpFactory.Data.Entity.Utils\TheSharpFactory.Data.Entity.Utils.csproj" />
+    <ProjectReference Include="..\TheSharpFactory.Data.Entity\TheSharpFactory.Data.Entity.csproj" />
+    <ProjectReference Include="..\TheSharpFactory.Data.Query\TheSharpFactory.Data.Query.csproj" />
+    <ProjectReference Include="..\TheSharpFactory.Data.Repository.Interfaces\TheSharpFactory.Data.Repository.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
