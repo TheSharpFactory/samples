@@ -1,0 +1,87 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+pr:
+     branches:
+          include:
+               - master
+               - dev
+               - staging/*
+               - release/*
+          exclude:
+               - user_story/*
+               - feature/*
+               - epic/*
+
+pool:
+  vmImage: 'ubuntu-16.04'
+
+variables:
+  solutionAngular: 'sources/TheSharpFactory.Web.Angular.sln'
+  solutionReact: 'sources/TheSharpFactory.Web.Angular.React.sln'
+  projectServices: 'sources/services/Unified/Services.Unified.csproj'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+stages:     
+     - stage: nightly_builds
+       displayName: 'Dev Build'
+       jobs: Build App
+       - job: BuildAPIServices
+         displayName: 'Build API Services'
+         steps:
+          - task: NuGetToolInstaller@1
+               displayName: 'NuGet Tool Installer'
+          - task: NodeTool@0
+               displayName: 'Node.js Installer'
+               inputs:
+                    versionSpec: '11.x' 
+                    checkLatest: true # Optional
+          - task: DotNetCoreCLI@2
+               displayName: 'Build Services'
+               inputs:
+                    command: 'build'
+                    projects: '$(projectServices)'
+                    arguments: '--configuration $(buildConfiguration)'
+       - job: BuildAngularApp
+         displayName: 'Build Angular SPA'
+         condition: succeeded('BuildAPIServices')
+         steps:
+          - task: NuGetToolInstaller@1
+               displayName: 'NuGet Tool Installer'
+          - task: NodeTool@0
+               displayName: 'Node.js Installer'
+               inputs:
+                    versionSpec: '11.x' 
+                    checkLatest: true 
+          - task: VSBuild@1
+               displayName: 'Build Angular Project'
+               inputs:
+                    solution: '$(solutionAngular)'
+                    platform: '$(buildPlatform)'
+                    configuration: '$(buildConfiguration)'
+          - task: VSTest@2
+               inputs:
+                    platform: '$(buildPlatform)'
+                    configuration: '$(buildConfiguration)'
+                    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=false /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+       - job: BuildReactApp
+         displayName: 'Build Angular SPA'
+         condition: succeeded('BuildAPIServices')
+         steps:
+          - task: NuGetToolInstaller@1
+               displayName: 'NuGet Tool Installer'
+          - task: NodeTool@0
+               displayName: 'Node.js Installer'
+               inputs:
+                    versionSpec: '11.x' 
+                    checkLatest: true 
+          - task: VSBuild@1
+               displayName: 'Build Angular Project'
+               inputs:
+                    solution: '$(solutionReact)'
+                    platform: '$(buildPlatform)'
+                    configuration: '$(buildConfiguration)'
+                    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=false /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
