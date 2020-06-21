@@ -117,7 +117,7 @@ stages:
             projects: '$(projectAppService)'
             arguments: '--configuration $(buildConfiguration)'
     - job: BuildAppLayerSharedViewModel
-      displayName: 'Abstraction Layer: Shared Abstractions'
+      displayName: 'Shared View Models'
       dependsOn: BuildAppLayerSharedAppService
       condition: succeeded('BuildAppLayerSharedAppService')
       pool:
