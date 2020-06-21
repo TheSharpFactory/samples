@@ -101,7 +101,7 @@ stages:
     - job: BuildAppLayerSharedAppService
       displayName: 'Shared App Services'
       dependsOn: BuildAppLayerSharedAppServiceAbstraction
-      condition: and(succeeded(), eq(succeeded('BuildAppLayerSharedAppServiceAbstraction'), succeeded('BuildAppLayerSharedViewModelAbstraction')))
+      condition: succeeded('BuildAppLayerSharedAppServiceAbstraction')
       pool:
         vmImage: 'ubuntu-16.04'
       steps:
@@ -118,8 +118,8 @@ stages:
             arguments: '--configuration $(buildConfiguration)'
     - job: BuildAppLayerSharedViewModel
       displayName: 'Shared View Models'
-      dependsOn: BuildAppLayerSharedAppService
-      condition: succeeded('BuildAppLayerSharedAppService')
+      dependsOn: [BuildAppLayerSharedAppService, BuildAppLayerSharedAppServiceAbstraction, BuildAppLayerSharedViewModelAbstraction]
+      condition: and(succeeded('BuildAppLayerSharedAppService'), eq(succeeded('BuildAppLayerSharedAppServiceAbstraction'), succeeded('BuildAppLayerSharedViewModelAbstraction'))
       pool:
         vmImage: 'ubuntu-16.04'
       steps:
