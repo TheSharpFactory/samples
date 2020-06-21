@@ -28,7 +28,7 @@ variables:
 stages:     
   - stage: 'nightly_builds'
     displayName: 'Dev Build'
-    jobs: 'Build Apps'
+    jobs: 
     - job: BuildAPIServices
       displayName: 'Build API Services'
       steps:
