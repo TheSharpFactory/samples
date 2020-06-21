@@ -68,9 +68,9 @@ stages:
           configuration: '$(buildConfiguration)'
           msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=false /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
     - job: 'BuildReactApp'
-        displayName: 'Build Angular SPA'
-        condition: succeeded('BuildAPIServices')
-        steps:
+      displayName: 'Build Angular SPA'
+      condition: succeeded('BuildAPIServices')
+      steps:
         - task: NuGetToolInstaller@1
           displayName: 'NuGet Tool Installer'
         - task: NodeTool@0
