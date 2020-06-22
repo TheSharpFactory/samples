@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>TheSharpFactory.Domain.Models</AssemblyName>
+    <RootNamespace>TheSharpFactory.Domain.Models</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\Repository\Data.Repository.csproj" />
+    <ProjectReference Include="..\Abstractions\Domain.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
