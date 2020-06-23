@@ -53,6 +53,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Extensions", "Domain
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Models", "Domain\Models\Domain.Models.csproj", "{02878913-AF6C-4FFE-AB27-4E936215F765}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.DTO", "Common\DTO\Common.DTO.csproj", "{7E9C617A-D5AC-4FA8-A25A-100473BF924A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,10 @@ Global
 		{02878913-AF6C-4FFE-AB27-4E936215F765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02878913-AF6C-4FFE-AB27-4E936215F765}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02878913-AF6C-4FFE-AB27-4E936215F765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9C617A-D5AC-4FA8-A25A-100473BF924A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9C617A-D5AC-4FA8-A25A-100473BF924A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9C617A-D5AC-4FA8-A25A-100473BF924A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9C617A-D5AC-4FA8-A25A-100473BF924A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -139,6 +145,7 @@ Global
 		{559EED13-5CD5-4BCC-ABE5-06949428F20A} = {361B3B5D-7817-4237-B20F-4976713D346F}
 		{0932A549-54D1-4F83-9856-70F33B136977} = {361B3B5D-7817-4237-B20F-4976713D346F}
 		{02878913-AF6C-4FFE-AB27-4E936215F765} = {361B3B5D-7817-4237-B20F-4976713D346F}
+		{7E9C617A-D5AC-4FA8-A25A-100473BF924A} = {4DC8F943-4EC3-469B-AEBE-5E974474111F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1046926-B6D0-48BE-850C-66CD3FF62744}
