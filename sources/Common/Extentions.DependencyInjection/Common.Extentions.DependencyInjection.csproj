@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>TheSharpFactory.Common.Extentions.DependencyInjection</AssemblyName>
+    <RootNamespace>TheSharpFactory.Common.Extentions.DependencyInjection</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Extensions\Domain.Extensions.csproj" />
+    <ProjectReference Include="..\DTO\Common.DTO.csproj" />
+  </ItemGroup>
+
+</Project>
