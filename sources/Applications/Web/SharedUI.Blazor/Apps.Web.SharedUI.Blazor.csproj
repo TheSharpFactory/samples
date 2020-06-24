@@ -17,15 +17,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\**" />
     <Compile Remove="Pages\**" />
+    <Content Remove="Data\**" />
     <Content Remove="Pages\**" />
+    <EmbeddedResource Remove="Data\**" />
     <EmbeddedResource Remove="Pages\**" />
+    <None Remove="Data\**" />
     <None Remove="Pages\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="3.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="3.2.0" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
@@ -41,7 +46,85 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
+    <AdditionalFiles Include="..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout">
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
+      <Visible>False</Visible>
+    </None>
+    
+    <AdditionalFiles Include="..\..\..\Architecture\Hybrid\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\Architecture\Hybrid\App.layerdiagram.layout" Link="App.layerdiagram.layout">
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\Architecture\Hybrid\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
+      <Visible>False</Visible>
+    </None>
+
+    <AdditionalFiles Include="..\..\..\Architecture\Hybrid\Electron\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\Architecture\Hybrid\Electron\App.layerdiagram.layout" Link="App.layerdiagram.layout">
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\Architecture\Hybrid\Electron\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
+      <Visible>False</Visible>
+    </None>
+
+    <AdditionalFiles Include="..\..\..\Architecture\Hybrid\WebWindow\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\Architecture\Hybrid\WebWindow\App.layerdiagram.layout" Link="App.layerdiagram.layout">
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\Architecture\Hybrid\WebWindow\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
+      <Visible>False</Visible>
+    </None>
+
+    <AdditionalFiles Include="..\..\..\Architecture\Web\Blazor\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\Architecture\Web\Blazor\App.layerdiagram.layout" Link="App.layerdiagram.layout">
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\Architecture\Web\Blazor\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
+      <Visible>False</Visible>
+    </None>
+
+    <AdditionalFiles Include="..\..\..\Architecture\Web\Blazor\Server\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\Architecture\Web\Blazor\Server\App.layerdiagram.layout" Link="App.layerdiagram.layout">
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\Architecture\Web\Blazor\Server\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
+      <Visible>False</Visible>
+    </None>
+
+    <AdditionalFiles Include="..\..\..\Architecture\Web\Blazor\Server\Direct\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\Architecture\Web\Blazor\Server\Direct\App.layerdiagram.layout" Link="App.layerdiagram.layout">
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\Architecture\Web\Blazor\Server\Direct\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
+      <Visible>False</Visible>
+    </None>
+
+    <AdditionalFiles Include="..\..\..\Architecture\Web\Blazor\WebAssembly\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\Architecture\Web\Blazor\WebAssembly\App.layerdiagram.layout" Link="App.layerdiagram.layout">
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\Architecture\Web\Blazor\WebAssembly\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
+      <Visible>False</Visible>
+    </None>
   </ItemGroup>
 
 </Project>

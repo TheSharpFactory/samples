@@ -16,10 +16,53 @@
 
   <ItemGroup>
     <PackageReference Include="ElectronNET.API" Version="8.31.2" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="ElectronNET.CLI" Version="0.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" >
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" >
+      <Visible>False</Visible>
+    </None>
+
+    <AdditionalFiles Include="..\..\..\..\Architecture\Hybrid\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\..\Architecture\Hybrid\App.layerdiagram.layout" Link="App.layerdiagram.layout" >
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\..\Architecture\Hybrid\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" >
+      <Visible>False</Visible>
+    </None>
+
+    <AdditionalFiles Include="..\..\..\..\Architecture\Hybrid\Electron\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\..\Architecture\Hybrid\Electron\App.layerdiagram.layout" Link="App.layerdiagram.layout" >
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\..\Architecture\Hybrid\Electron\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" >
+      <Visible>False</Visible>
+    </None>
+
+    <AdditionalFiles Include="..\..\..\..\Architecture\Hybrid\WebWindow\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\..\Architecture\Hybrid\WebWindow\App.layerdiagram.layout" Link="App.layerdiagram.layout" >
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\..\Architecture\Hybrid\WebWindow\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" >
+      <Visible>False</Visible>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

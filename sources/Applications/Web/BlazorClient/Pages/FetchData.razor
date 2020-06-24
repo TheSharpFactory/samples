@@ -38,8 +38,6 @@ else
 }
 
 @code {
-     private ICollection<IWeatherForecastDTO> forecasts;
-
      protected override async Task OnInitializedAsync()
           => await vm.GetForecastAsync(DateTime.Now);
 

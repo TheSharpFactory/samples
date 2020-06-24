@@ -17,8 +17,51 @@
   </ItemGroup>
 
   <ItemGroup>
+    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout">
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" >
+      <Visible>False</Visible>
+    </None>                 
+    
+    <AdditionalFiles Include="..\..\..\..\Architecture\Hybrid\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\..\Architecture\Hybrid\App.layerdiagram.layout" Link="App.layerdiagram.layout" >
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\..\Architecture\Hybrid\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" >
+      <Visible>False</Visible>
+    </None>
+
+    <AdditionalFiles Include="..\..\..\..\Architecture\Hybrid\Electron\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\..\Architecture\Hybrid\Electron\App.layerdiagram.layout" Link="App.layerdiagram.layout" >
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\..\Architecture\Hybrid\Electron\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" >
+      <Visible>False</Visible>
+    </None>
+
+    <AdditionalFiles Include="..\..\..\..\Architecture\Hybrid\WebWindow\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\..\Architecture\Hybrid\WebWindow\App.layerdiagram.layout" Link="App.layerdiagram.layout" >
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\..\Architecture\Hybrid\WebWindow\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" >
+      <Visible>False</Visible>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Blazor" Version="3.2.0-preview1.20073.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.4" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.4" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.4" />
     <PackageReference Include="Microsoft.JSInterop" Version="3.1.4" />
