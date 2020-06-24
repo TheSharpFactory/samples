@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{d958d852-169c-4dc8-b552-81fd82fd4f4b}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>TheSharpfactory.Architecture</Name>
+    <RootNamespace>TheSharpfactory.Architecture</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Validate Include="App.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="App.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>App.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="App.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>App.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="AppDirect.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="AppDirect.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AppDirect.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="AppDirect.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>AppDirect.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Class Diagram - Data Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - Domain Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - Cross Cutting Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - Service Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - Application Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - App.dgml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Applications\Shared\Abstractions\Services\Apps.Shared.Abstractions.Services.csproj">
+      <Name>Apps.Shared.Abstractions.Services</Name>
+      <Project>{b8f3d969-18bb-4bd4-aaba-1080e0835dfe}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Applications\Shared\Abstractions\ViewModels\Apps.Shared.Abstractions.ViewModels.csproj">
+      <Name>Apps.Shared.Abstractions.ViewModels</Name>
+      <Project>{c7a24347-c024-4dc8-84eb-a6ebf09f5469}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Applications\Shared\Services\Apps.Shared.Services.csproj">
+      <Name>Apps.Shared.Services</Name>
+      <Project>{b0eb19de-a5ca-4aa8-adea-7acae68aba53}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Applications\Shared\ViewModels\Apps.Shared.ViewModels.csproj">
+      <Name>Apps.Shared.ViewModels</Name>
+      <Project>{a2a373d7-97c8-4378-8a10-27b7952fcac1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Applications\Web\BlazorClient\Apps.Web.BlazorClient.csproj">
+      <Name>Apps.Web.BlazorClient</Name>
+      <Project>{00a39e46-165a-4197-97c9-9e40c98e6d89}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Applications\Web\BlazorServerDirect\Apps.Web.BlazorServerDirect.csproj">
+      <Name>Apps.Web.BlazorServerDirect</Name>
+      <Project>{c48a8dfb-a016-4e06-84c4-8c967fe535b2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Applications\Web\BlazorServer\Apps.Web.BlazorServer.csproj">
+      <Name>Apps.Web.BlazorServer</Name>
+      <Project>{fd56083a-26e1-46a6-adcb-5ffb50fa9fa2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Applications\Web\SharedUI.Blazor\Apps.Web.SharedUI.Blazor.csproj">
+      <Name>Apps.Web.SharedUI.Blazor</Name>
+      <Project>{bd9b1596-a322-44a7-8d4a-92a31ce72933}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\DTO\Common.DTO.csproj">
+      <Name>Common.DTO</Name>
+      <Project>{80434d43-d61b-4d59-be48-c1b295122449}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Extentions.DependencyInjection\Common.Extentions.DependencyInjection.csproj">
+      <Name>Common.Extentions.DependencyInjection</Name>
+      <Project>{3367bca2-7606-4a35-acbe-6cb4d6cac8a4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Data\Entity.Utils\Data.Entity.Utils.csproj">
+      <Name>Data.Entity.Utils</Name>
+      <Project>{b834919f-5225-4f32-b95e-7cb951299df6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Data\Entity\Data.Entity.csproj">
+      <Name>Data.Entity</Name>
+      <Project>{9f52e978-29d5-4a19-8770-37e65dbdaf51}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Data\Query\Data.Query.csproj">
+      <Name>Data.Query</Name>
+      <Project>{ebd51b7b-cde5-4ff2-91a4-9c4cca4af1ba}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Data\Repository.Interfaces\Data.Repository.Interfaces.csproj">
+      <Name>Data.Repository.Interfaces</Name>
+      <Project>{bccf16c2-23f9-40da-a08e-3cf4488e9a28}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Data\Repository\Data.Repository.csproj">
+      <Name>Data.Repository</Name>
+      <Project>{8a0e0c6c-cdeb-4516-9301-b9942c71eaf5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Domain\Abstractions\Domain.Abstractions.csproj">
+      <Name>Domain.Abstractions</Name>
+      <Project>{804a396b-ccc1-418a-a0aa-66192db9a1d2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Domain\Extensions\Domain.Extensions.csproj">
+      <Name>Domain.Extensions</Name>
+      <Project>{b7dc2925-db4a-43fa-a7ad-de702d5601e7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Domain\Models\Domain.Models.csproj">
+      <Name>Domain.Models</Name>
+      <Project>{de918dc8-a00f-4e72-a89e-d3795e4e2c8f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Services\Unified\Services.Unified.csproj">
+      <Name>Services.Unified</Name>
+      <Project>{083e39ed-7c68-4801-8e32-9125e40a4984}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
