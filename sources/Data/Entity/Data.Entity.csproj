@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -12,7 +12,187 @@
   </ItemGroup>
 
   <ItemGroup>
+    <AdditionalFiles Include="..\..\Architecture\Cross\Blazor\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\Blazor\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\Blazor\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\Blazor\Android\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\Blazor\Android\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\Blazor\Android\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\Blazor\iOS\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\Blazor\iOS\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\Blazor\iOS\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\Blazor\macOS\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\Blazor\macOS\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\Blazor\macOS\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\Blazor\Tizen\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\Blazor\Tizen\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\Blazor\Tizen\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\Blazor\Windows\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\Blazor\Windows\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\Blazor\Windows\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\Blazor\Windows\UWP\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\Blazor\Windows\UWP\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\Blazor\Windows\UWP\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\Blazor\Windows\WPF\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\Blazor\Windows\WPF\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\Blazor\Windows\WPF\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\Architecture\Cross\XamarinForms\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\XamarinForms\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\XamarinForms\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\XamarinForms\Android\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\XamarinForms\Android\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\XamarinForms\Android\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\XamarinForms\iOS\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\XamarinForms\iOS\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\XamarinForms\iOS\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\XamarinForms\macOS\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\XamarinForms\macOS\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\XamarinForms\macOS\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\XamarinForms\Linux\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\XamarinForms\Linux\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\XamarinForms\Linux\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\XamarinForms\Tizen\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\XamarinForms\Tizen\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\XamarinForms\Tizen\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\XamarinForms\Windows\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\XamarinForms\Windows\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\XamarinForms\Windows\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\XamarinForms\Windows\UWP\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\XamarinForms\Windows\UWP\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\XamarinForms\Windows\UWP\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Cross\XamarinForms\Windows\WPF\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Cross\XamarinForms\Windows\WPF\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Cross\XamarinForms\Windows\WPF\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\Architecture\Hybrid\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Hybrid\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Hybrid\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Hybrid\Electron\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Hybrid\Electron\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Hybrid\Electron\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Hybrid\WebWindow\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Hybrid\WebWindow\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Hybrid\WebWindow\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\Architecture\Web\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Web\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Web\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Web\MVC\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Web\MVC\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Web\MVC\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Web\Blazor\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Web\Blazor\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Web\Blazor\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Web\Blazor\Server\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Web\Blazor\Server\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Web\Blazor\Server\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+
+
+    <AdditionalFiles Include="..\..\Architecture\Web\Blazor\WebAssembly\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\Architecture\Web\Blazor\WebAssembly\App.layerdiagram.layout" Link="App.layerdiagram.layout" />
+    <None Include="..\..\Architecture\Web\Blazor\WebAssembly\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="dotMorten.Microsoft.SqlServer.Types" Version="1.1.0" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
   </ItemGroup>
 
 </Project>

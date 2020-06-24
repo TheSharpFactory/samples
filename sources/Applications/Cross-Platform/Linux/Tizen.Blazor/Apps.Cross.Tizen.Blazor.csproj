@@ -20,6 +20,58 @@
   </ItemGroup>
 
   <ItemGroup>
+    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" >
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" >
+      <Visible>
+        False
+      </Visible>
+    </None>
+	
+	
+    <None Include="..\..\..\..\Architecture\Cross\App.layerdiagram.layout" Link="App.layerdiagram.layout">
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\..\Architecture\Cross\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
+      <Visible>False</Visible>
+    </None>
+    <AdditionalFiles Include="..\..\..\..\Architecture\Cross\App.layerdiagram">
+      <Link>App.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
+	
+	
+    <None Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram.layout" Link="App.layerdiagram.layout">
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
+      <Visible>False</Visible>
+    </None>
+    <AdditionalFiles Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram">
+      <Link>App.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
+	
+	
+    <None Include="..\..\..\..\Architecture\Cross\Blazor\Tizen\App.layerdiagram.layout" Link="App.layerdiagram.layout">
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\..\..\Architecture\Cross\Blazor\Tizen\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
+      <Visible>False</Visible>
+    </None>
+    <AdditionalFiles Include="..\..\..\..\Architecture\Cross\Blazor\Tizen\App.layerdiagram">
+      <Link>App.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
+	
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
   </ItemGroup>
@@ -27,6 +79,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\SharedUI\Apps.Cross.SharedUI.csproj" />
   </ItemGroup>
-  
+
 
 </Project>
