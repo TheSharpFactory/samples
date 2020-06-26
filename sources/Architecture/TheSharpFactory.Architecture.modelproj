@@ -45,6 +45,34 @@
     </Validate>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Class Diagram - Data Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - Domain Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - Cross Cutting Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - Service Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - Application Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - App.dgml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Applications\Cross-Platform\Hybrid\Desktop.ElectronWeb\Apps.Cross.Desktop.ElectronWeb.csproj">
+      <Name>Apps.Cross.Desktop.ElectronWeb</Name>
+      <Project>{9efb7310-8073-4435-b17d-f1837eeeba77}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Cross-Platform\Hybrid\Desktop.WebWindow\Apps.Cross.Desktop.WebWindow.csproj">
+      <Name>Apps.Cross.Desktop.WebWindow</Name>
+      <Project>{b3826e21-4f02-4879-a4c2-257821b729fd}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Applications\Cross-Platform\Linux\Android.Blazor\Apps.Cross.Droid.Blazor.csproj">
       <Name>Apps.Cross.Droid.Blazor</Name>
       <Project>{a282ed13-e36a-4d0e-9b63-032c4a311293}</Project>
@@ -75,15 +103,15 @@
     </ProjectReference>
     <ProjectReference Include="..\Applications\Cross-Platform\Linux\Tizen.Blazor\Apps.Cross.Tizen.Blazor.csproj">
       <Name>Apps.Cross.Tizen.Blazor</Name>
-      <Project>{67a0d60b-de70-49b7-91df-5d7e90fd4f32}</Project>
+      <Project>{53872825-759f-40ea-be15-e757e0fc03d8}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Applications\Cross-Platform\Linux\Tizen\Apps.Cross.Tizen.csproj">
       <Name>Apps.Cross.Tizen</Name>
-      <Project>{ddcdd8d4-a971-45da-aef9-b49e8c4c7688}</Project>
+      <Project>{6ce9a184-c15e-40b1-8bd4-0fc907a43d61}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Applications\Cross-Platform\SharedUI\Apps.Cross.SharedUI.csproj">
       <Name>Apps.Cross.SharedUI</Name>
-      <Project>{199309e9-f428-41d9-8afb-8bb593c31cc4}</Project>
+      <Project>{b4fd4484-12e8-484d-ac9d-1cf7e0766e05}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Applications\Cross-Platform\Windows\UWP.Blazor\Apps.Cross.UWP.Blazor.csproj">
       <Name>Apps.Cross.UWP.Blazor</Name>
@@ -103,84 +131,100 @@
     </ProjectReference>
     <ProjectReference Include="..\Applications\Shared\Abstractions\Services\Apps.Shared.Abstractions.Services.csproj">
       <Name>Apps.Shared.Abstractions.Services</Name>
-      <Project>{aac17b69-5ebe-458e-bddf-c712ba937cdd}</Project>
+      <Project>{b2373ada-437a-46a3-97a2-a560ddfcf05a}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Applications\Shared\Abstractions\ViewModels\Apps.Shared.Abstractions.ViewModels.csproj">
       <Name>Apps.Shared.Abstractions.ViewModels</Name>
-      <Project>{9734958d-d791-4f18-b4dd-ca245706ee6c}</Project>
+      <Project>{291d61de-55b8-4339-a72f-b4eb5334f5a8}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Applications\Shared\Services\Apps.Shared.Services.csproj">
       <Name>Apps.Shared.Services</Name>
-      <Project>{ced2b48c-dd49-4b5d-97b4-d80e72b5d71b}</Project>
+      <Project>{7545e23a-6a0f-4ac0-9a18-7feca06cddd6}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Applications\Shared\ViewModels\Apps.Shared.ViewModels.csproj">
       <Name>Apps.Shared.ViewModels</Name>
-      <Project>{8a6779e4-35f1-447b-8636-0ddea5602680}</Project>
+      <Project>{e471fa7f-f915-42ee-b3f3-812358e83e28}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Web\Angular\Apps.Web.Angular.csproj">
+      <Name>Apps.Web.Angular</Name>
+      <Project>{3f2a95b9-286e-473c-88dc-f5579f891c1b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Web\BlazorClient\Apps.Web.BlazorClient.csproj">
+      <Name>Apps.Web.BlazorClient</Name>
+      <Project>{ab1bb3ac-d991-4c45-a6a2-2f3b604ac870}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Web\BlazorServerDirect\Apps.Web.BlazorServerDirect.csproj">
+      <Name>Apps.Web.BlazorServerDirect</Name>
+      <Project>{c2fc2140-1e29-4ff9-9a89-a08db41cc90a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Web\BlazorServer\Apps.Web.BlazorServer.csproj">
+      <Name>Apps.Web.BlazorServer</Name>
+      <Project>{1e33b304-9298-4bac-946f-f8abd3a5dfa4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Web\MVCDirect\Apps.Web.MVCDirect.csproj">
+      <Name>Apps.Web.MVCDirect</Name>
+      <Project>{381bc12f-84be-4600-aade-e1a22cb42a88}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Web\MVC\Apps.Web.MVC.csproj">
+      <Name>Apps.Web.MVC</Name>
+      <Project>{4aeb5506-20b5-4e8c-bd0b-ac6745528a60}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Web\React\Apps.Web.React.csproj">
+      <Name>Apps.Web.React</Name>
+      <Project>{93bad24f-c421-4316-a158-e12c2dfbdb15}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Web\SharedUI.Blazor\Apps.Web.SharedUI.Blazor.csproj">
+      <Name>Apps.Web.SharedUI.Blazor</Name>
+      <Project>{8eaf5e37-889d-41bf-993d-3b2cf4a35121}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Web\SharedUI\Apps.Web.SharedUI.csproj">
+      <Name>Apps.Web.SharedUI</Name>
+      <Project>{8fe7d070-dce1-4c8b-97aa-877a7ee73469}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Common\DTO\Common.DTO.csproj">
       <Name>Common.DTO</Name>
-      <Project>{8e3a7a2a-1fbf-43fd-b9e4-18f2ad7882f0}</Project>
+      <Project>{62285101-0c2b-4620-9d28-3774b15f77c6}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Common\Extentions.DependencyInjection\Common.Extentions.DependencyInjection.csproj">
       <Name>Common.Extentions.DependencyInjection</Name>
-      <Project>{fd51f34d-e68d-4b1d-a7fd-0f5750de44c0}</Project>
+      <Project>{ed722584-627b-416d-9a3d-19a24e9df6b5}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Data\Entity.Utils\Data.Entity.Utils.csproj">
       <Name>Data.Entity.Utils</Name>
-      <Project>{fc10c9a7-2fd6-4f04-8709-488cd6d72c42}</Project>
+      <Project>{c9c13f26-e5ce-489d-bf41-c2c36f82480c}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Data\Entity\Data.Entity.csproj">
       <Name>Data.Entity</Name>
-      <Project>{3b54bc0e-dbad-41ac-b21b-1ee74110b2e0}</Project>
+      <Project>{86da72b0-0876-4774-ba73-522164c7b33f}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Data\Query\Data.Query.csproj">
       <Name>Data.Query</Name>
-      <Project>{d24b5b16-c3e9-49ab-b94f-69b1085beaac}</Project>
+      <Project>{ab244265-ff50-4704-bdfb-4f9733b374ac}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Data\Repository.Interfaces\Data.Repository.Interfaces.csproj">
       <Name>Data.Repository.Interfaces</Name>
-      <Project>{5614acd3-e32d-4e0c-a996-5a1a2398925c}</Project>
+      <Project>{47faf41a-6d0d-4c4c-b499-5b97f861ed01}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Data\Repository\Data.Repository.csproj">
       <Name>Data.Repository</Name>
-      <Project>{5b8a3b71-718f-4cf1-b06e-9c23a42d24a2}</Project>
+      <Project>{e6e00a5e-c3d8-4c7d-8b93-816df358e11e}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Abstractions\Domain.Abstractions.csproj">
       <Name>Domain.Abstractions</Name>
-      <Project>{1696abd3-38c0-457e-922a-394aa99f37dd}</Project>
+      <Project>{657fb290-edc4-450f-9a80-18e1543703d9}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Extensions\Domain.Extensions.csproj">
       <Name>Domain.Extensions</Name>
-      <Project>{047ed31b-6927-4f6c-bd46-2468ba9b7fc9}</Project>
+      <Project>{f2ee4778-a0d5-44ba-be20-5913b9962e3d}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Models\Domain.Models.csproj">
       <Name>Domain.Models</Name>
-      <Project>{8eb0bb23-79be-4277-82b4-bd86f2f57a09}</Project>
+      <Project>{e9db20ae-ea13-4c57-998c-2c38b0d17395}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Services\Unified\Services.Unified.csproj">
       <Name>Services.Unified</Name>
-      <Project>{049aa5bb-e57e-4128-aaad-8d5cca661b0f}</Project>
+      <Project>{4751524a-f5bf-4cfb-8911-e029e388a436}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Class Diagram - Data Layer.dgml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Class Diagram - Domain Layer.dgml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Class Diagram - Cross Cutting Layer.dgml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Class Diagram - Service Layer.dgml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Class Diagram - Application Layer.dgml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Class Diagram - App.dgml">
-      <SubType>Content</SubType>
-    </Content>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>

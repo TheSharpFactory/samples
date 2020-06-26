@@ -40,6 +40,9 @@
         <dependencyFromLayerToLayer Id="c971e0a2-f034-484d-b1b8-64ca3909c7fe" direction="Bidirectional">
           <layerMoniker Id="dc9b1a80-6ae2-4466-b34b-f41e923745b9" />
         </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="51b36721-7580-44cc-8fef-05d4056da6c9" direction="Forward">
+          <layerMoniker Id="a1694e12-0839-4d88-a7a4-6b28eb3d31da" />
+        </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <childLayers>
         <layer Id="ccc04ed4-2aba-402f-9a35-106d2beec661" name="Shared">
@@ -109,114 +112,149 @@
           <childLayers>
             <layer Id="cb91287e-4d6d-400a-9cc7-3ac17b97e4d8" name="Shared">
               <childLayers>
-                <layer Id="2383e939-7db9-4ad3-b9ec-b09f6d5451fa" name="MVC" />
+                <layer Id="2383e939-7db9-4ad3-b9ec-b09f6d5451fa" name="MVC">
+                  <childLayers>
+                    <layer Id="b0fdceab-432d-4049-a468-52965d4801c3" name="Views">
+                      <references>
+                        <reference Id="12f95b12-2520-4bf2-8e7d-766c8f284037" name="Index.cshtml">
+                          <ArtifactNode Label="Index.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/Home/Index.cshtml)" />
+                        </reference>
+                        <reference Id="6b53490a-1920-4722-8946-c4f7fe6f4d3e" name="FetchData.cshtml">
+                          <ArtifactNode Label="FetchData.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/Home/FetchData.cshtml)" />
+                        </reference>
+                        <reference Id="51b692c6-e98e-4fb2-813e-9af086e2176d" name="Counter.cshtml">
+                          <ArtifactNode Label="Counter.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/Home/Counter.cshtml)" />
+                        </reference>
+                        <reference Id="d8e299f2-4117-49a4-8b9e-7071edd709f8" name="Privacy.cshtml">
+                          <ArtifactNode Label="Privacy.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/Home/Privacy.cshtml)" />
+                        </reference>
+                        <reference Id="fb0b4709-b147-4ce1-b749-bfdf9570945d" name="_ViewImports.cshtml">
+                          <ArtifactNode Label="_ViewImports.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/_ViewImports.cshtml)" />
+                        </reference>
+                        <reference Id="46fb3d82-df8f-489c-9564-a83f2209f668" name="_ViewStart.cshtml">
+                          <ArtifactNode Label="_ViewStart.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/_ViewStart.cshtml)" />
+                        </reference>
+                        <reference Id="445f7ab9-8417-4ed0-9243-3cc25f5fdbcd" name="_ViewImports.cshtml1">
+                          <ArtifactNode Label="_ViewImports.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/_ViewImports.cshtml)" />
+                        </reference>
+                        <reference Id="4d3558cd-2da9-48a8-b0c1-a2267b576cc6" name="_ViewStart.cshtml1">
+                          <ArtifactNode Label="_ViewStart.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/_ViewStart.cshtml)" />
+                        </reference>
+                        <reference Id="b2b6f440-f8de-44a6-a37b-25f81349a3dc" name="_Layout.cshtml">
+                          <ArtifactNode Label="_Layout.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/Shared/_Layout.cshtml)" />
+                        </reference>
+                        <reference Id="77e1d40c-44d9-416e-a2a4-35e0bae6fbbb" name="_ValidationScriptsPartial.cshtml">
+                          <ArtifactNode Label="_ValidationScriptsPartial.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/Shared/_ValidationScriptsPartial.cshtml)" />
+                        </reference>
+                        <reference Id="94719789-4976-42ba-8861-bbf9aab62f5e" name="Error.cshtml">
+                          <ArtifactNode Label="Error.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/Shared/Error.cshtml)" />
+                        </reference>
+                        <reference Id="a3b49ddd-b234-4d76-80d4-634b629aad76" name="NavMenu.cshtml">
+                          <ArtifactNode Label="NavMenu.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/Shared/NavMenu.cshtml)" />
+                        </reference>
+                      </references>
+                    </layer>
+                    <layer Id="bf1eb762-956a-48c6-9568-f8b1157931ce" name="Controllers">
+                      <references>
+                        <reference Id="67528e95-c826-4c59-a0cf-0ceb82381cc0" name="HomeController1">
+                          <ArtifactNode Label="HomeController" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Web.SharedUI Namespace=TheSharpFactory.Apps.Web.SharedUI.Areas.Landing.Controllers Type=HomeController)" />
+                          <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Web.SharedUI Namespace=TheSharpFactory.Apps.Web.SharedUI.Areas.Landing.Controllers Type=HomeController)" Label="HomeController" Category="CodeSchema_Class">
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
+                  </childLayers>
+                  <references>
+                    <reference Id="ef770081-c229-4e64-af2b-df2095497e4f" name="TheSharpFactory.Apps.Web.SharedUI.dll">
+                      <ArtifactNode Label="TheSharpFactory.Apps.Web.SharedUI.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Web.SharedUI)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Web.SharedUI)" Label="TheSharpFactory.Apps.Web.SharedUI.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Produces" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                  </references>
+                </layer>
                 <layer Id="06412a4e-f53d-491a-aaae-9194571188df" name="Blazor">
                   <childLayers>
-                    <layer Id="005a01fe-d625-43a5-9ec9-d983b81ad0b5" name="Web Components" />
+                    <layer Id="005a01fe-d625-43a5-9ec9-d983b81ad0b5" name="Web Components">
+                      <references>
+                        <reference Id="72291ade-3611-43b0-b6f2-ce8f6ec74e8e" name="TheSharpFactory.Apps.Web.SharedUI.Blazor.dll">
+                          <ArtifactNode Label="TheSharpFactory.Apps.Web.SharedUI.Blazor.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Web.SharedUI.Blazor)" />
+                          <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Web.SharedUI.Blazor)" Label="TheSharpFactory.Apps.Web.SharedUI.Blazor.dll" Category="CodeSchema_Assembly">
+                            <Category Ref="FileSystem.Category.FileOfType.dll" />
+                            <LinkCategory Ref="Produces" />
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
+                    <layer Id="18e3073d-bb44-4a69-84c4-9d71efe698e8" name="Native Components">
+                      <references>
+                        <reference Id="6c051d06-8dbb-4aa6-9b29-b9d3d53d2b82" name="TheSharpFactory.Apps.Cross.SharedUI.dll">
+                          <ArtifactNode Label="TheSharpFactory.Apps.Cross.SharedUI.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI)" />
+                          <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI)" Label="TheSharpFactory.Apps.Cross.SharedUI.dll" Category="CodeSchema_Assembly">
+                            <Category Ref="FileSystem.Category.FileOfType.dll" />
+                            <LinkCategory Ref="Produces" />
+                            <LinkCategory Ref="Represents" />
+                          </ExpandedNode>
+                        </reference>
+                      </references>
+                    </layer>
                   </childLayers>
                 </layer>
                 <layer Id="ac36d09d-e38c-4be8-911d-a35dae0dd9f4" name="Xamarin Forms">
                   <references>
-                    <reference Id="3ec8062f-67d4-4872-b245-97c21f441178" name="XFApp">
-                      <ArtifactNode Label="XFApp" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI Type=XFApp)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI Type=XFApp)" Label="XFApp" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Contains" />
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="1f25dc38-37fb-44d7-a14c-44192d992e7d" name="AboutPage1">
-                      <ArtifactNode Label="AboutPage" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=AboutPage)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=AboutPage)" Label="AboutPage" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Contains" />
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="5fb40184-785e-4a73-a3a5-c22b71b5dbf9" name="ItemDetailPage">
-                      <ArtifactNode Label="ItemDetailPage" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=ItemDetailPage)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=ItemDetailPage)" Label="ItemDetailPage" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="eaaf031a-3575-4fe2-a758-37dd4a9e4c51" name="ItemsPage">
-                      <ArtifactNode Label="ItemsPage" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=ItemsPage)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=ItemsPage)" Label="ItemsPage" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="ae065378-3676-44a9-b8cb-a53098e62f36" name="MainPage">
-                      <ArtifactNode Label="MainPage" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=MainPage)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=MainPage)" Label="MainPage" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="70d30dbd-b47d-40ca-ab78-45ec8ff0e489" name="MenuPage">
-                      <ArtifactNode Label="MenuPage" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=MenuPage)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=MenuPage)" Label="MenuPage" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="bb3fc206-4246-4a5c-8666-513e0f46e9a0" name="NewItemPage">
-                      <ArtifactNode Label="NewItemPage" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=NewItemPage)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=NewItemPage)" Label="NewItemPage" Category="CodeSchema_Class">
+                    <reference Id="13f918a3-ee53-45ad-a8bb-9cd5ee0070cb" name="TheSharpFactory.Apps.Cross.SharedUI.dll">
+                      <ArtifactNode Label="TheSharpFactory.Apps.Cross.SharedUI.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI)" Label="TheSharpFactory.Apps.Cross.SharedUI.dll" Category="CodeSchema_Assembly">
+                        <Category Ref="FileSystem.Category.FileOfType.dll" />
+                        <LinkCategory Ref="Produces" />
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
                   </references>
                 </layer>
               </childLayers>
-              <references>
-                <reference Id="4202089a-11a4-4bde-bda9-bb513439d5ad" name="TheSharpFactory.Apps.Cross.SharedUI.dll">
-                  <ArtifactNode Label="TheSharpFactory.Apps.Cross.SharedUI.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI)" />
-                  <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI)" Label="TheSharpFactory.Apps.Cross.SharedUI.dll" Category="CodeSchema_Assembly">
-                    <Category Ref="FileSystem.Category.FileOfType.dll" />
-                    <LinkCategory Ref="Produces" />
-                    <LinkCategory Ref="Represents" />
-                  </ExpandedNode>
-                </reference>
-              </references>
             </layer>
             <layer Id="4fc7f94d-c590-4837-abfe-a2220cdd08bb" name="Platform Specifics">
               <dependencyToLayers>
-                <dependencyFromLayerToLayer Id="b6270714-83d2-47d2-a44b-3e1983b172dc" direction="Forward">
+                <dependencyFromLayerToLayer Id="dbf46367-6afa-4e0c-aad8-47053709bfe2" direction="Forward">
                   <layerMoniker Id="cb91287e-4d6d-400a-9cc7-3ac17b97e4d8" />
                 </dependencyFromLayerToLayer>
               </dependencyToLayers>
               <childLayers>
-                <layer Id="cfcec426-119c-40b6-bfbb-adcde057899d" name="Controllers" />
-                <layer Id="94303162-b52a-4561-b5ef-d60fba344889" name="Components" />
-                <layer Id="72bf58de-344b-4e0b-90a1-9759345a1bd0" name="XAML Pages" />
+                <layer Id="72bf58de-344b-4e0b-90a1-9759345a1bd0" name="XAML Pages">
+                  <references>
+                    <reference Id="447ec10f-e105-460d-9c1c-5e45695712d3" name="MainPage1">
+                      <ArtifactNode Label="MainPage" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.UWP Namespace=TheSharpFactory.Apps.Cross.UWP Type=MainPage)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.UWP Namespace=TheSharpFactory.Apps.Cross.UWP Type=MainPage)" Label="MainPage" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="304dc802-e32a-4b04-ab9c-5933c7f67b3b" name="MainPage11">
+                      <ArtifactNode Label="MainPage" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.UWP.Blazor Namespace=TheSharpFactory.Apps.Cross.UWP Type=MainPage)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.UWP.Blazor Namespace=TheSharpFactory.Apps.Cross.UWP Type=MainPage)" Label="MainPage" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="ad40c7f1-ecb4-4020-a4d1-8c79cc2b0c36" name="MainWindow1">
+                      <ArtifactNode Label="MainWindow" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.WPF Namespace=TheSharpFactory.Apps.Cross.WPF Type=MainWindow)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.WPF Namespace=TheSharpFactory.Apps.Cross.WPF Type=MainWindow)" Label="MainWindow" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="277f0088-fb86-4002-86e8-0323d8a36064" name="MainWindow11">
+                      <ArtifactNode Label="MainWindow" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.WPF.Blazor Namespace=TheSharpFactory.Apps.Cross.WPF Type=MainWindow)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.WPF.Blazor Namespace=TheSharpFactory.Apps.Cross.WPF Type=MainWindow)" Label="MainWindow" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                  </references>
+                </layer>
                 <layer Id="8b90c7f1-a22d-4eac-9019-b6589f0463d3" name="Entrypoints">
                   <references>
-                    <reference Id="93bc0032-b9ea-4c24-860d-66ddbb1c8595" name="MainActivity1">
-                      <ArtifactNode Label="MainActivity" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Droid.Blazor Namespace=TheSharpFactory.Apps.Cross.Droid Type=MainActivity)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Droid.Blazor Namespace=TheSharpFactory.Apps.Cross.Droid Type=MainActivity)" Label="MainActivity" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="3ef77f46-f150-4c84-93a8-b9ccedc4c7d8" name="Application1">
-                      <ArtifactNode Label="Application" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.iOS.Blazor Namespace=TheSharpFactory.Apps.Cross.iOS Type=Application)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.iOS.Blazor Namespace=TheSharpFactory.Apps.Cross.iOS Type=Application)" Label="Application" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="7ab3be9e-fab5-447e-b7c4-b9b855fa4ce6" name="AppDelegate1">
-                      <ArtifactNode Label="AppDelegate" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.iOS.Blazor Namespace=TheSharpFactory.Apps.Cross.iOS Type=AppDelegate)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.iOS.Blazor Namespace=TheSharpFactory.Apps.Cross.iOS Type=AppDelegate)" Label="AppDelegate" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="a6bb6237-da7a-452f-913f-cf74efba0323" name="AppDelegate11">
-                      <ArtifactNode Label="AppDelegate" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.macOS.Blazor Namespace=TheSharpFactory.Apps.Cross.macOS Type=AppDelegate)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.macOS.Blazor Namespace=TheSharpFactory.Apps.Cross.macOS Type=AppDelegate)" Label="AppDelegate" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="73923d8a-d329-42ce-8910-8f0597b4bb8b" name="MainClass1">
-                      <ArtifactNode Label="MainClass" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.macOS.Blazor Namespace=TheSharpFactory.Apps.Cross.macOS Type=MainClass)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.macOS.Blazor Namespace=TheSharpFactory.Apps.Cross.macOS Type=MainClass)" Label="MainClass" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
                     <reference Id="65df955d-f3df-4170-b0a8-632142d26891" name="ViewController1">
                       <ArtifactNode Label="ViewController" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.macOS.Blazor Namespace=TheSharpFactory.Apps.Cross.macOS Type=ViewController)" />
                       <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.macOS.Blazor Namespace=TheSharpFactory.Apps.Cross.macOS Type=ViewController)" Label="ViewController" Category="CodeSchema_Class">
@@ -229,111 +267,192 @@
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
-                    <reference Id="15a02922-8b3b-4392-b7be-277c521f38e6" name="Program1">
-                      <ArtifactNode Label="Program" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Tizen.Blazor Namespace=TheSharpFactory.Apps.Cross.Tizen Type=Program)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Tizen.Blazor Namespace=TheSharpFactory.Apps.Cross.Tizen Type=Program)" Label="Program" Category="CodeSchema_Class">
+                    <reference Id="23edbffb-e731-4d72-93fd-8d041f139f8b" name="Program13">
+                      <ArtifactNode Label="Program" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Web.MVC Namespace=TheSharpFactory.Apps.Web.MVC Type=Program)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Web.MVC Namespace=TheSharpFactory.Apps.Web.MVC Type=Program)" Label="Program" Category="CodeSchema_Class">
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
-                    <reference Id="eec1dde2-879d-4206-95e7-132fa14db5f1" name="App1">
-                      <ArtifactNode Label="App" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.UWP.Blazor Namespace=TheSharpFactory.Apps.Cross.UWP Type=App)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.UWP.Blazor Namespace=TheSharpFactory.Apps.Cross.UWP Type=App)" Label="App" Category="CodeSchema_Class">
+                    <reference Id="3fd64420-0daa-4f34-92b1-b610a1dab141" name="Startup">
+                      <ArtifactNode Label="Startup" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Web.MVC Namespace=TheSharpFactory.Apps.Web.MVC Type=Startup)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Web.MVC Namespace=TheSharpFactory.Apps.Web.MVC Type=Startup)" Label="Startup" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Contains" />
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
-                    <reference Id="5b958296-f402-4248-b33f-d64d823979f9" name="MainPage1">
-                      <ArtifactNode Label="MainPage" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.UWP.Blazor Namespace=TheSharpFactory.Apps.Cross.UWP Type=MainPage)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.UWP.Blazor Namespace=TheSharpFactory.Apps.Cross.UWP Type=MainPage)" Label="MainPage" Category="CodeSchema_Class">
+                    <reference Id="f0f21906-0aec-43ec-86c3-62eba1ec9b88" name="Startup1">
+                      <ArtifactNode Label="Startup" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Namespace=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Type=Startup)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Namespace=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Type=Startup)" Label="Startup" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Contains" />
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
-                    <reference Id="88e89949-532b-4527-94d7-6b9ba2d84b37" name="App11">
-                      <ArtifactNode Label="App" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.WPF.Blazor Namespace=TheSharpFactory.Apps.Cross.WPF Type=App)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.WPF.Blazor Namespace=TheSharpFactory.Apps.Cross.WPF Type=App)" Label="App" Category="CodeSchema_Class">
+                    <reference Id="aa02cb33-c62e-4f11-b3e1-47654cc7ff33" name="Program14">
+                      <ArtifactNode Label="Program" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Namespace=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Type=Program)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Namespace=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Type=Program)" Label="Program" Category="CodeSchema_Class">
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
-                    <reference Id="b8eca085-1117-4bd7-bb54-f94eab58750c" name="MainWindow1">
-                      <ArtifactNode Label="MainWindow" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.WPF.Blazor Namespace=TheSharpFactory.Apps.Cross.WPF Type=MainWindow)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.WPF.Blazor Namespace=TheSharpFactory.Apps.Cross.WPF Type=MainWindow)" Label="MainWindow" Category="CodeSchema_Class">
+                    <reference Id="60fda4c3-4355-4977-b631-8eb07ea8272a" name="Program">
+                      <ArtifactNode Label="Program" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.WebWindow Namespace=TheSharpFactory.Apps.Cross.Desktop.WebView Type=Program)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.WebWindow Namespace=TheSharpFactory.Apps.Cross.Desktop.WebView Type=Program)" Label="Program" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Contains" />
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
-                    <reference Id="a7b6fa87-cd4d-4714-8b04-5d6e3bb7de9d" name="MainActivity11">
-                      <ArtifactNode Label="MainActivity" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Droid Namespace=TheSharpFactory.Apps.Cross.Droid Type=MainActivity)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Droid Namespace=TheSharpFactory.Apps.Cross.Droid Type=MainActivity)" Label="MainActivity" Category="CodeSchema_Class">
+                    <reference Id="b003588d-eb58-49b6-a1a3-d17d3a7dd439" name="Startup11">
+                      <ArtifactNode Label="Startup" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.WebWindow Namespace=TheSharpFactory.Apps.Cross.Desktop.WebView Type=Startup)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.WebWindow Namespace=TheSharpFactory.Apps.Cross.Desktop.WebView Type=Startup)" Label="Startup" Category="CodeSchema_Class">
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
-                    <reference Id="f9162c5f-f061-4560-887d-5ae8d86f86bf" name="AppDelegate12">
-                      <ArtifactNode Label="AppDelegate" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.iOS Namespace=TheSharpFactory.Apps.Cross.iOS Type=AppDelegate)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.iOS Namespace=TheSharpFactory.Apps.Cross.iOS Type=AppDelegate)" Label="AppDelegate" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="fe226a99-2cb7-4370-8244-273155210586" name="Application11">
-                      <ArtifactNode Label="Application" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.iOS Namespace=TheSharpFactory.Apps.Cross.iOS Type=Application)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.iOS Namespace=TheSharpFactory.Apps.Cross.iOS Type=Application)" Label="Application" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="44aeffcb-e0e9-48a7-8b91-73b7bcd9088c" name="Program11">
-                      <ArtifactNode Label="Program" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Linux Namespace=TheSharpFactory.Apps.Cross.Linux Type=Program)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Linux Namespace=TheSharpFactory.Apps.Cross.Linux Type=Program)" Label="Program" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="34cad00b-cb8b-4c23-af39-732cf3743c28" name="MainClass11">
-                      <ArtifactNode Label="MainClass" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.macOS Namespace=TheSharpFactory.Apps.Cross.macOS Type=MainClass)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.macOS Namespace=TheSharpFactory.Apps.Cross.macOS Type=MainClass)" Label="MainClass" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="5811520a-4134-4176-9e5d-fb244588ad70" name="AppDelegate14">
-                      <ArtifactNode Label="AppDelegate" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.macOS Namespace=TheSharpFactory.Apps.Cross.macOS Type=AppDelegate)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.macOS Namespace=TheSharpFactory.Apps.Cross.macOS Type=AppDelegate)" Label="AppDelegate" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="aad1545b-85d7-44e5-93e6-6725d8c16f53" name="ViewController12">
-                      <ArtifactNode Label="ViewController" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.macOS Namespace=TheSharpFactory.Apps.Cross.macOS Type=ViewController)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.macOS Namespace=TheSharpFactory.Apps.Cross.macOS Type=ViewController)" Label="ViewController" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="302c6308-51b7-4c50-a559-bcc20e3de263" name="ViewController13">
-                      <ArtifactNode Label="ViewController" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.macOS Namespace=TheShapFactorySamples Type=ViewController)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.macOS Namespace=TheShapFactorySamples Type=ViewController)" Label="ViewController" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="eab43714-7448-45fc-84a6-c185b5b69789" name="Program12">
-                      <ArtifactNode Label="Program" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Tizen Namespace=TheSharpFactory.Apps.Cross.Tizen Type=Program)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Tizen Namespace=TheSharpFactory.Apps.Cross.Tizen Type=Program)" Label="Program" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="d6ce1595-f6ef-4e0b-82c5-6dc46ecd22ca" name="App12">
+                    <reference Id="9f6dcc34-996c-4ed3-903e-96bc95ff7d20" name="App14">
                       <ArtifactNode Label="App" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.UWP Namespace=TheSharpFactory.Apps.Cross.UWP Type=App)" />
                       <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.UWP Namespace=TheSharpFactory.Apps.Cross.UWP Type=App)" Label="App" Category="CodeSchema_Class">
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
-                    <reference Id="f153aa44-8590-4401-9efb-dc74a5176c9b" name="MainPage11">
-                      <ArtifactNode Label="MainPage" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.UWP Namespace=TheSharpFactory.Apps.Cross.UWP Type=MainPage)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.UWP Namespace=TheSharpFactory.Apps.Cross.UWP Type=MainPage)" Label="MainPage" Category="CodeSchema_Class">
+                    <reference Id="39352a99-8960-47fd-8e4c-9885986f5cbb" name="App12">
+                      <ArtifactNode Label="App" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.UWP.Blazor Namespace=TheSharpFactory.Apps.Cross.UWP Type=App)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.UWP.Blazor Namespace=TheSharpFactory.Apps.Cross.UWP Type=App)" Label="App" Category="CodeSchema_Class">
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
-                    <reference Id="ee80b470-ca01-472b-b932-29a4f1221e62" name="App13">
+                    <reference Id="0c3b03a0-365b-4b6e-8f76-b5966df4b2f1" name="App1">
                       <ArtifactNode Label="App" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.WPF Namespace=TheSharpFactory.Apps.Cross.WPF Type=App)" />
                       <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.WPF Namespace=TheSharpFactory.Apps.Cross.WPF Type=App)" Label="App" Category="CodeSchema_Class">
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
-                    <reference Id="73f26b4c-9a85-4c5d-a10e-c5ba7297de58" name="MainWindow11">
-                      <ArtifactNode Label="MainWindow" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.WPF Namespace=TheSharpFactory.Apps.Cross.WPF Type=MainWindow)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.WPF Namespace=TheSharpFactory.Apps.Cross.WPF Type=MainWindow)" Label="MainWindow" Category="CodeSchema_Class">
+                    <reference Id="445fe517-5377-447f-a83a-591a1feb50af" name="App13">
+                      <ArtifactNode Label="App" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.WPF.Blazor Namespace=TheSharpFactory.Apps.Cross.WPF Type=App)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.WPF.Blazor Namespace=TheSharpFactory.Apps.Cross.WPF Type=App)" Label="App" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="4b9b1555-f1f3-48b6-9497-aac66194d781" name="MainActivity11">
+                      <ArtifactNode Label="MainActivity" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Droid Namespace=TheSharpFactory.Apps.Cross.Droid Type=MainActivity)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Droid Namespace=TheSharpFactory.Apps.Cross.Droid Type=MainActivity)" Label="MainActivity" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="20637989-6efe-4691-a0e0-deea6f37fe69" name="MainActivity12">
+                      <ArtifactNode Label="MainActivity" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Droid.Blazor Namespace=TheSharpFactory.Apps.Cross.Droid Type=MainActivity)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Droid.Blazor Namespace=TheSharpFactory.Apps.Cross.Droid Type=MainActivity)" Label="MainActivity" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="b397ac85-9b13-4052-90e2-d2d712b4ead6" name="AppDelegate13">
+                      <ArtifactNode Label="AppDelegate" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.iOS Namespace=TheSharpFactory.Apps.Cross.iOS Type=AppDelegate)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.iOS Namespace=TheSharpFactory.Apps.Cross.iOS Type=AppDelegate)" Label="AppDelegate" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="4080fb18-54a6-48e9-91f1-2f9edc4316e6" name="Application12">
+                      <ArtifactNode Label="Application" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.iOS Namespace=TheSharpFactory.Apps.Cross.iOS Type=Application)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.iOS Namespace=TheSharpFactory.Apps.Cross.iOS Type=Application)" Label="Application" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="6f285990-117a-4c5c-b371-946d35fa7dbe" name="Application11">
+                      <ArtifactNode Label="Application" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.iOS.Blazor Namespace=TheSharpFactory.Apps.Cross.iOS Type=Application)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.iOS.Blazor Namespace=TheSharpFactory.Apps.Cross.iOS Type=Application)" Label="Application" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="47da4cf7-8ef8-4cde-8a76-4f7c0e5f0f8e" name="AppDelegate12">
+                      <ArtifactNode Label="AppDelegate" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.iOS.Blazor Namespace=TheSharpFactory.Apps.Cross.iOS Type=AppDelegate)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.iOS.Blazor Namespace=TheSharpFactory.Apps.Cross.iOS Type=AppDelegate)" Label="AppDelegate" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="5b04a8e8-3c62-4941-ba5d-8c6a60bebcaf" name="Program15">
+                      <ArtifactNode Label="Program" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Linux Namespace=TheSharpFactory.Apps.Cross.Linux Type=Program)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Linux Namespace=TheSharpFactory.Apps.Cross.Linux Type=Program)" Label="Program" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="9643065b-e0b3-4031-b3e9-8a9f96c45484" name="MainClass11">
+                      <ArtifactNode Label="MainClass" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.macOS Namespace=TheSharpFactory.Apps.Cross.macOS Type=MainClass)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.macOS Namespace=TheSharpFactory.Apps.Cross.macOS Type=MainClass)" Label="MainClass" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="e69f66b5-e601-48d5-a6ab-031df19d5f70" name="AppDelegate1">
+                      <ArtifactNode Label="AppDelegate" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.macOS Namespace=TheSharpFactory.Apps.Cross.macOS Type=AppDelegate)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.macOS Namespace=TheSharpFactory.Apps.Cross.macOS Type=AppDelegate)" Label="AppDelegate" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="debc5140-6054-4264-b96f-ed65fe01635a" name="MainClass12">
+                      <ArtifactNode Label="MainClass" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.macOS.Blazor Namespace=TheSharpFactory.Apps.Cross.macOS Type=MainClass)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.macOS.Blazor Namespace=TheSharpFactory.Apps.Cross.macOS Type=MainClass)" Label="MainClass" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="b2244b79-9097-4151-ae35-69e0a21b98ce" name="AppDelegate14">
+                      <ArtifactNode Label="AppDelegate" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.macOS.Blazor Namespace=TheSharpFactory.Apps.Cross.macOS Type=AppDelegate)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.macOS.Blazor Namespace=TheSharpFactory.Apps.Cross.macOS Type=AppDelegate)" Label="AppDelegate" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="76965fff-228b-4740-8dec-178ecd0d9df8" name="Program11">
+                      <ArtifactNode Label="Program" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Tizen Namespace=TheSharpFactory.Apps.Cross.Tizen Type=Program)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Tizen Namespace=TheSharpFactory.Apps.Cross.Tizen Type=Program)" Label="Program" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="13eb2d3d-cfd2-4820-a053-43b2fe86db34" name="Program12">
+                      <ArtifactNode Label="Program" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Tizen.Blazor Namespace=TheSharpFactory.Apps.Cross.Tizen Type=Program)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Tizen.Blazor Namespace=TheSharpFactory.Apps.Cross.Tizen Type=Program)" Label="Program" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                  </references>
+                </layer>
+                <layer Id="f2210849-51aa-4e1d-b6e7-731c5b2488c2" name="Components">
+                  <references>
+                    <reference Id="162373cf-e7c3-4033-a1fa-f14bef8123f1" name="_Host.cshtml">
+                      <ArtifactNode Label="_Host.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorServerDirect/Apps.Web.BlazorServerDirect.csproj File=../Applications/Web/BlazorServerDirect/Pages/_Host.cshtml)" />
+                    </reference>
+                    <reference Id="325a7004-ce0d-4fd9-9122-b21313a7125a" name="_Imports.razor">
+                      <ArtifactNode Label="_Imports.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorClient/Apps.Web.BlazorClient.csproj File=../Applications/Web/BlazorClient/Pages/_Imports.razor)" />
+                    </reference>
+                    <reference Id="1c03b1ec-60ad-4e40-98fb-2be2fd7c3ff7" name="Counter.razor">
+                      <ArtifactNode Label="Counter.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorClient/Apps.Web.BlazorClient.csproj File=../Applications/Web/BlazorClient/Pages/Counter.razor)" />
+                    </reference>
+                    <reference Id="ddb9fa7f-ff39-4b47-b963-d700476d0778" name="Error.razor">
+                      <ArtifactNode Label="Error.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorClient/Apps.Web.BlazorClient.csproj File=../Applications/Web/BlazorClient/Pages/Error.razor)" />
+                    </reference>
+                    <reference Id="49e9d41e-672d-42a5-84c4-e5f912671d49" name="FetchData.razor">
+                      <ArtifactNode Label="FetchData.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorClient/Apps.Web.BlazorClient.csproj File=../Applications/Web/BlazorClient/Pages/FetchData.razor)" />
+                    </reference>
+                    <reference Id="64cd1ee8-c5e9-4a6d-925e-606e06c82537" name="Index.razor">
+                      <ArtifactNode Label="Index.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorClient/Apps.Web.BlazorClient.csproj File=../Applications/Web/BlazorClient/Pages/Index.razor)" />
+                    </reference>
+                    <reference Id="58f284d3-6b9a-4abd-98ef-a0d36c0e156f" name="_Imports.razor1">
+                      <ArtifactNode Label="_Imports.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorClient/Apps.Web.BlazorClient.csproj File=../Applications/Web/BlazorClient/_Imports.razor)" />
+                    </reference>
+                    <reference Id="21060779-a232-4ce3-9ee2-699c5b2ad93a" name="_Imports.razor2">
+                      <ArtifactNode Label="_Imports.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/Hybrid/Desktop.ElectronWeb/Apps.Cross.Desktop.ElectronWeb.csproj File=../Applications/Cross-Platform/Hybrid/Desktop.ElectronWeb/_Imports.razor)" />
+                    </reference>
+                    <reference Id="97fdc07d-9bda-439e-8a54-7561332a0113" name="_Imports.razor3">
+                      <ArtifactNode Label="_Imports.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/Hybrid/Desktop.WebWindow/Apps.Cross.Desktop.WebWindow.csproj File=../Applications/Cross-Platform/Hybrid/Desktop.WebWindow/_Imports.razor)" />
+                    </reference>
+                  </references>
+                </layer>
+                <layer Id="b244576f-3109-48bd-a449-a85450f42b6e" name="Views">
+                  <references>
+                    <reference Id="639443bd-d774-4ad9-8eb5-dff3bb290d97" name="_Host.cshtml">
+                      <ArtifactNode Label="_Host.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorServer/Apps.Web.BlazorServer.csproj File=../Applications/Web/BlazorServer/Pages/_Host.cshtml)" />
+                    </reference>
+                    <reference Id="a42a305d-2213-412a-a221-4433c46775f4" name="_Imports.razor">
+                      <ArtifactNode Label="_Imports.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/Hybrid/Desktop.WebWindow/Apps.Cross.Desktop.WebWindow.csproj File=../Applications/Cross-Platform/Hybrid/Desktop.WebWindow/_Imports.razor)" />
+                    </reference>
+                    <reference Id="2c01ad04-9356-41c1-8b59-e17dc1cd7451" name="_Pages__Host">
+                      <ArtifactNode Label="_Pages__Host" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Namespace=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb.Pages Type=_Pages__Host)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Namespace=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb.Pages Type=_Pages__Host)" Label="_Pages__Host" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Contains" />
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
@@ -445,6 +564,46 @@
                     <LinkCategory Ref="Represents" />
                   </ExpandedNode>
                 </reference>
+                <reference Id="130e57e1-8efd-4fa4-9894-be7ddf3d3c02" name="SharpFactory.Apps.Web.Angular.dll">
+                  <ArtifactNode Label="SharpFactory.Apps.Web.Angular.dll" Category="CodeSchema_Assembly" Id="(Assembly=SharpFactory.Apps.Web.Angular)" />
+                  <ExpandedNode Id="(Assembly=SharpFactory.Apps.Web.Angular)" Label="SharpFactory.Apps.Web.Angular.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+                <reference Id="4c1d3528-bbe8-4bb6-a67b-1e48461fd913" name="SharpFactory.Apps.Web.ReactWithRedux.dll">
+                  <ArtifactNode Label="SharpFactory.Apps.Web.ReactWithRedux.dll" Category="CodeSchema_Assembly" Id="(Assembly=SharpFactory.Apps.Web.ReactWithRedux)" />
+                  <ExpandedNode Id="(Assembly=SharpFactory.Apps.Web.ReactWithRedux)" Label="SharpFactory.Apps.Web.ReactWithRedux.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+                <reference Id="cc73c0bf-60e6-462d-aa8f-31f6ab2c8afd" name="TheSharpFactory.Apps.Web.BlazorClient.dll">
+                  <ArtifactNode Label="TheSharpFactory.Apps.Web.BlazorClient.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Web.BlazorClient)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Web.BlazorClient)" Label="TheSharpFactory.Apps.Web.BlazorClient.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+                <reference Id="eddf6d2a-b330-489a-a7f9-474afac81ca9" name="TheSharpFactory.Apps.Web.BlazorServer.dll">
+                  <ArtifactNode Label="TheSharpFactory.Apps.Web.BlazorServer.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Web.BlazorServer)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Web.BlazorServer)" Label="TheSharpFactory.Apps.Web.BlazorServer.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+                <reference Id="0a2f63e9-bf5e-425e-9008-5af60f1a6660" name="TheSharpFactory.Apps.Web.MVC.dll1">
+                  <ArtifactNode Label="TheSharpFactory.Apps.Web.MVC.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Web.MVC)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Web.MVC)" Label="TheSharpFactory.Apps.Web.MVC.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
               </references>
             </layer>
           </childLayers>
@@ -456,7 +615,7 @@
         <dependencyFromLayerToLayer Id="2a754761-e897-44db-bd31-7982107f84ca" direction="Bidirectional">
           <layerMoniker Id="dc9b1a80-6ae2-4466-b34b-f41e923745b9" />
         </dependencyFromLayerToLayer>
-        <dependencyFromLayerToLayer Id="caeea233-39c2-448b-a8e8-f58b7da5326b" direction="Forward">
+        <dependencyFromLayerToLayer Id="c658ce0b-98c2-44b6-bddd-3ed080139aeb" direction="Forward">
           <layerMoniker Id="5a37c67c-6a6c-4630-8deb-f0ea343f5e6e" />
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
@@ -646,6 +805,5 @@
         </layer>
       </childLayers>
     </layer>
-    <layer Id="18e3073d-bb44-4a69-84c4-9d71efe698e8" name="Native Components" />
   </layers>
 </layerModel>
