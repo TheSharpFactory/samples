@@ -8,7 +8,7 @@ using TheSharpFactory.Apps.Web.SharedUI;
 
 using StartupBase = TheSharpFactory.Apps.Web.SharedUI.StartupBase;
 
-namespace TheSharpFactory.Apps.Cross.Desktop.ElectronWeb
+namespace TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb
 {
     public static class Program
     {

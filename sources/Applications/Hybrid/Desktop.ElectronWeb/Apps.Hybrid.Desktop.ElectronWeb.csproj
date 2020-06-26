@@ -5,7 +5,7 @@
     <LangVersion>8.0</LangVersion>
     <RazorLangVersion>3.0</RazorLangVersion>
     <OutputType>WinExe</OutputType>
-    <AssemblyName>TheSharpFactory.Apps.Cross.Desktop.ElectronWeb</AssemblyName>
+    <AssemblyName>TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb</AssemblyName>
     <RootNamespace>TheSharpFactory.Apps.Cross.Desktop.ElectronWeb</RootNamespace>
 
   </PropertyGroup>
@@ -24,20 +24,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
-    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
-    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
+    <Content Include="..\..\Web\BlazorServer\Pages\_Host.cshtml" Link="Pages\_Host.cshtml" Visible="true" />
+    
+    <AdditionalFiles Include="..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Web\BlazorClient\Apps.Web.BlazorClient.csproj" />
-    <ProjectReference Include="..\..\..\Web\SharedUI.Blazor\Apps.Web.SharedUI.Blazor.csproj" />
+    <ProjectReference Include="..\..\Web\BlazorClient\Apps.Web.BlazorClient.csproj" />
+    <ProjectReference Include="..\..\Web\SharedUI.Blazor\Apps.Web.SharedUI.Blazor.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Update="electron.manifest.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\" />
   </ItemGroup>
 
 </Project>

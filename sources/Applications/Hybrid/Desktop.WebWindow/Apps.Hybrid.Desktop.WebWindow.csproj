@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <RazorLangVersion>3.0</RazorLangVersion>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TheSharpFactory.Apps.Hybrid.Desktop.WebWindow</RootNamespace>
+    <AssemblyName>TheSharpFactory.Apps.Hybrid.Desktop.WebWindow</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\Web\BlazorClient\wwwroot\index.html" Link="wwwroot\index.html" Visible="true" />
+    <Content Include="..\..\Web\BlazorClient\wwwroot\favicon.ico" Link="wwwroot\favicon.ico" Visible="true" />
+    <Content Include="..\..\Web\BlazorClient\wwwroot\icon-512.png" Link="wwwroot\icon-512.png" Visible="true" />
+    <Content Include="..\..\Web\BlazorClient\wwwroot\manifest.json" Link="wwwroot\manifest.json" Visible="true" />
+    <Content Include="..\..\Web\BlazorClient\wwwroot\service-worker.shared.js" Link="wwwroot\service-worker.shared.js" Visible="true" />
+    <Content Include="..\..\Web\BlazorClient\wwwroot\service-worker.js" Link="wwwroot\service-worker.js" Visible="true" />
+    <Content Include="..\..\Web\BlazorClient\wwwroot\service-worker.published.js" Link="wwwroot\service-worker.published.js" Visible="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="false" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Blazor" Version="3.2.0-preview1.20073.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.4" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.4" />
+    <PackageReference Include="Microsoft.JSInterop" Version="3.1.4" />
+    <PackageReference Include="WebWindow.Blazor" Version="0.1.0-20200214.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Web\BlazorClient\Apps.Web.BlazorClient.csproj" />
+    <ProjectReference Include="..\..\Web\SharedUI.Blazor\Apps.Web.SharedUI.Blazor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

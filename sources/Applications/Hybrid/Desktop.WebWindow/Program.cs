@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNetCore.Hosting;
-
+﻿
 using TheSharpFactory.Apps.Web.SharedUI;
 
 using WebWindows.Blazor;
 
 using StartupBase = TheSharpFactory.Apps.Web.SharedUI.StartupBase;
 
-namespace TheSharpFactory.Apps.Cross.Desktop.WebView
+namespace TheSharpFactory.Apps.Hybrid.Desktop.WebView
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "RCS1102:Make class static.", Justification = "<Pending>")]
     public static class Program

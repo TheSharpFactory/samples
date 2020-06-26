@@ -1,7 +1,7 @@
 ﻿
 using WebWindows.Blazor;
 
-namespace TheSharpFactory.Apps.Cross.Desktop.WebView
+namespace TheSharpFactory.Apps.Hybrid.Desktop.WebView
 {
     public class Startup
         : Web.SharedUI.StartupBase

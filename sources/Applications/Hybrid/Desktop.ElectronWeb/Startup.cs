@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 
 using TheSharpFactory.Apps.Web.SharedUI;
 
-namespace TheSharpFactory.Apps.Cross.Desktop.ElectronWeb
+namespace TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb
 {
     public class Startup
         : Web.SharedUI.StartupBase
