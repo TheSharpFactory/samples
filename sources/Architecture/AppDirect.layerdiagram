@@ -40,6 +40,9 @@
         <dependencyFromLayerToLayer Id="c971e0a2-f034-484d-b1b8-64ca3909c7fe" direction="Bidirectional">
           <layerMoniker Id="dc9b1a80-6ae2-4466-b34b-f41e923745b9" />
         </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="6b5b3da3-fc1b-4dcb-9c64-751a68d7561f" direction="Forward">
+          <layerMoniker Id="5a37c67c-6a6c-4630-8deb-f0ea343f5e6e" />
+        </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <childLayers>
         <layer Id="ccc04ed4-2aba-402f-9a35-106d2beec661" name="Shared">
@@ -110,7 +113,6 @@
             <layer Id="cb91287e-4d6d-400a-9cc7-3ac17b97e4d8" name="Shared">
               <childLayers>
                 <layer Id="2383e939-7db9-4ad3-b9ec-b09f6d5451fa" name="MVC" />
-                <layer Id="06412a4e-f53d-491a-aaae-9194571188df" name="Blazor" />
                 <layer Id="ac36d09d-e38c-4be8-911d-a35dae0dd9f4" name="Xamarin Forms">
                   <references>
                     <reference Id="3ec8062f-67d4-4872-b245-97c21f441178" name="XFApp">
@@ -159,28 +161,10 @@
                     </reference>
                   </references>
                 </layer>
-                <layer Id="83deeee4-6d07-49c2-97f6-72c2846ed067" name="Blazor Native">
-                  <references>
-                    <reference Id="209a968c-3048-44fe-b665-b305a290fb9b" name="_Imports.razor">
-                      <ArtifactNode Label="_Imports.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/SharedUI/Apps.Cross.SharedUI.csproj File=../Applications/Cross-Platform/SharedUI/Views/BlazorNative/_Imports.razor)" />
-                    </reference>
-                    <reference Id="0143cdad-428c-46dc-b102-0c3f65480145" name="Counter.razor">
-                      <ArtifactNode Label="Counter.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/SharedUI/Apps.Cross.SharedUI.csproj File=../Applications/Cross-Platform/SharedUI/Views/BlazorNative/Counter.razor)" />
-                    </reference>
-                    <reference Id="f45f7c4c-05f6-47e1-b066-8c2197825b5c" name="HelloWorld.razor">
-                      <ArtifactNode Label="HelloWorld.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/SharedUI/Apps.Cross.SharedUI.csproj File=../Applications/Cross-Platform/SharedUI/Views/BlazorNative/HelloWorld.razor)" />
-                    </reference>
-                    <reference Id="107d6bd9-0f42-4942-bf1d-4847db4e6aa2" name="MainPage.razor">
-                      <ArtifactNode Label="MainPage.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/SharedUI/Apps.Cross.SharedUI.csproj File=../Applications/Cross-Platform/SharedUI/Views/BlazorNative/MainPage.razor)" />
-                    </reference>
-                    <reference Id="4742d988-2f29-40d2-8fdb-66cee6302933" name="BlazorApp">
-                      <ArtifactNode Label="BlazorApp" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI Type=BlazorApp)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI Type=BlazorApp)" Label="BlazorApp" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Contains" />
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                  </references>
+                <layer Id="b5a01ba7-597a-41d7-b8d8-90c70abe2389" name="Blazor">
+                  <childLayers>
+                    <layer Id="a061324f-d8c6-41d5-bcd3-3a7cccfeca07" name="Web Components" />
+                  </childLayers>
                 </layer>
               </childLayers>
               <references>
@@ -203,7 +187,6 @@
               <childLayers>
                 <layer Id="cfcec426-119c-40b6-bfbb-adcde057899d" name="Controllers" />
                 <layer Id="94303162-b52a-4561-b5ef-d60fba344889" name="Components" />
-                <layer Id="72bf58de-344b-4e0b-90a1-9759345a1bd0" name="XAML Pages" />
                 <layer Id="8b90c7f1-a22d-4eac-9019-b6589f0463d3" name="Entrypoints">
                   <references>
                     <reference Id="93bc0032-b9ea-4c24-860d-66ddbb1c8595" name="MainActivity1">
@@ -467,36 +450,6 @@
               </references>
             </layer>
           </childLayers>
-        </layer>
-      </childLayers>
-    </layer>
-    <layer Id="a1694e12-0839-4d88-a7a4-6b28eb3d31da" name="Service Layer">
-      <dependencyToLayers>
-        <dependencyFromLayerToLayer Id="2a754761-e897-44db-bd31-7982107f84ca" direction="Bidirectional">
-          <layerMoniker Id="dc9b1a80-6ae2-4466-b34b-f41e923745b9" />
-        </dependencyFromLayerToLayer>
-        <dependencyFromLayerToLayer Id="caeea233-39c2-448b-a8e8-f58b7da5326b" direction="Forward">
-          <layerMoniker Id="5a37c67c-6a6c-4630-8deb-f0ea343f5e6e" />
-        </dependencyFromLayerToLayer>
-      </dependencyToLayers>
-      <childLayers>
-        <layer Id="dfefd68b-1d20-4091-a3dd-be53ad58cc72" name="Layer of Abstraction" />
-        <layer Id="d7216d08-78bb-4083-8f70-81391759fb47" name="Services">
-          <dependencyToLayers>
-            <dependencyFromLayerToLayer Id="ea23aeec-0886-48c5-9b0f-21632596d598" direction="Forward">
-              <layerMoniker Id="dfefd68b-1d20-4091-a3dd-be53ad58cc72" />
-            </dependencyFromLayerToLayer>
-          </dependencyToLayers>
-          <references>
-            <reference Id="55908a3f-e095-4b76-b5e6-e494f66802cc" name="TheSharpFactory.Services.Unified.dll">
-              <ArtifactNode Label="TheSharpFactory.Services.Unified.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Services.Unified)" />
-              <ExpandedNode Id="(Assembly=TheSharpFactory.Services.Unified)" Label="TheSharpFactory.Services.Unified.dll" Category="CodeSchema_Assembly">
-                <Category Ref="FileSystem.Category.FileOfType.dll" />
-                <LinkCategory Ref="Produces" />
-                <LinkCategory Ref="Represents" />
-              </ExpandedNode>
-            </reference>
-          </references>
         </layer>
       </childLayers>
     </layer>

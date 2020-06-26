@@ -18,9 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
-    <None Include="..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
-    <None Include="..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
+    <AdditionalFiles Include="..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
   </ItemGroup>
 
 </Project>

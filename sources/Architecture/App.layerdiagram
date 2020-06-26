@@ -110,7 +110,11 @@
             <layer Id="cb91287e-4d6d-400a-9cc7-3ac17b97e4d8" name="Shared">
               <childLayers>
                 <layer Id="2383e939-7db9-4ad3-b9ec-b09f6d5451fa" name="MVC" />
-                <layer Id="06412a4e-f53d-491a-aaae-9194571188df" name="Blazor" />
+                <layer Id="06412a4e-f53d-491a-aaae-9194571188df" name="Blazor">
+                  <childLayers>
+                    <layer Id="005a01fe-d625-43a5-9ec9-d983b81ad0b5" name="Web Components" />
+                  </childLayers>
+                </layer>
                 <layer Id="ac36d09d-e38c-4be8-911d-a35dae0dd9f4" name="Xamarin Forms">
                   <references>
                     <reference Id="3ec8062f-67d4-4872-b245-97c21f441178" name="XFApp">
@@ -154,29 +158,6 @@
                     <reference Id="bb3fc206-4246-4a5c-8666-513e0f46e9a0" name="NewItemPage">
                       <ArtifactNode Label="NewItemPage" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=NewItemPage)" />
                       <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms Type=NewItemPage)" Label="NewItemPage" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                  </references>
-                </layer>
-                <layer Id="83deeee4-6d07-49c2-97f6-72c2846ed067" name="Blazor Native">
-                  <references>
-                    <reference Id="209a968c-3048-44fe-b665-b305a290fb9b" name="_Imports.razor">
-                      <ArtifactNode Label="_Imports.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/SharedUI/Apps.Cross.SharedUI.csproj File=../Applications/Cross-Platform/SharedUI/Views/BlazorNative/_Imports.razor)" />
-                    </reference>
-                    <reference Id="0143cdad-428c-46dc-b102-0c3f65480145" name="Counter.razor">
-                      <ArtifactNode Label="Counter.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/SharedUI/Apps.Cross.SharedUI.csproj File=../Applications/Cross-Platform/SharedUI/Views/BlazorNative/Counter.razor)" />
-                    </reference>
-                    <reference Id="f45f7c4c-05f6-47e1-b066-8c2197825b5c" name="HelloWorld.razor">
-                      <ArtifactNode Label="HelloWorld.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/SharedUI/Apps.Cross.SharedUI.csproj File=../Applications/Cross-Platform/SharedUI/Views/BlazorNative/HelloWorld.razor)" />
-                    </reference>
-                    <reference Id="107d6bd9-0f42-4942-bf1d-4847db4e6aa2" name="MainPage.razor">
-                      <ArtifactNode Label="MainPage.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/SharedUI/Apps.Cross.SharedUI.csproj File=../Applications/Cross-Platform/SharedUI/Views/BlazorNative/MainPage.razor)" />
-                    </reference>
-                    <reference Id="4742d988-2f29-40d2-8fdb-66cee6302933" name="BlazorApp">
-                      <ArtifactNode Label="BlazorApp" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI Type=BlazorApp)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.SharedUI Namespace=TheSharpFactory.Apps.Cross.SharedUI Type=BlazorApp)" Label="BlazorApp" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Contains" />
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
@@ -665,5 +646,6 @@
         </layer>
       </childLayers>
     </layer>
+    <layer Id="18e3073d-bb44-4a69-84c4-9d71efe698e8" name="Native Components" />
   </layers>
 </layerModel>
