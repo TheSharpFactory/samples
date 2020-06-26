@@ -32,6 +32,17 @@
       <SubType>Content</SubType>
       <DependentUpon>App.layerdiagram</DependentUpon>
     </Validate>
+    <Validate Include="AppDirect.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="AppDirect.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AppDirect.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="AppDirect.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>AppDirect.layerdiagram</DependentUpon>
+    </Validate>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Applications\Cross-Platform\Linux\Android.Blazor\Apps.Cross.Droid.Blazor.csproj">
