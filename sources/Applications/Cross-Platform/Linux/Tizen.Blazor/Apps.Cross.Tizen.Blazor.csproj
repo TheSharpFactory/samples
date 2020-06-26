@@ -20,54 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram">
-      <Visible>False</Visible>
-    </AdditionalFiles>
-    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" >
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" >
-      <Visible>
-        False
-      </Visible>
-    </None>
-	
-	
-    <None Include="..\..\..\..\Architecture\Cross\App.layerdiagram.layout" Link="App.layerdiagram.layout">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
-      <Visible>False</Visible>
-    </None>
-    <AdditionalFiles Include="..\..\..\..\Architecture\Cross\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-	
-	
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram.layout" Link="App.layerdiagram.layout">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
-      <Visible>False</Visible>
-    </None>
-    <AdditionalFiles Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-	
-	
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\Tizen\App.layerdiagram.layout" Link="App.layerdiagram.layout">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\Tizen\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
-      <Visible>False</Visible>
-    </None>
-    <AdditionalFiles Include="..\..\..\..\Architecture\Cross\Blazor\Tizen\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-	
+    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
   </ItemGroup>
 
   <ItemGroup>

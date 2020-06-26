@@ -67,34 +67,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\App.layerdiagram.layout" Link="App.layerdiagram.layout">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram.layout" Link="App.layerdiagram.layout">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
-      <Visible>False</Visible>
-    </None>
-    <AdditionalFiles Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\Android\App.layerdiagram.layout" Link="App.layerdiagram.layout">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\Android\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
-      <Visible>False</Visible>
-    </None>
+    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

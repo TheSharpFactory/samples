@@ -86,44 +86,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
-      <Visible>False</Visible>
-    </None>
-    <AdditionalFiles Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-    <None Include="..\..\..\..\Architecture\Cross\App.layerdiagram.layout" Link="App.layerdiagram.layout">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram.layout" Link="App.layerdiagram.layout">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
-      <Visible>False</Visible>
-    </None>
-    <AdditionalFiles Include="..\..\..\..\Architecture\Cross\Blazor\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\Windows\App.layerdiagram.layout" Link="App.layerdiagram.layout">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\Windows\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\Windows\WPF\App.layerdiagram.layout" Link="App.layerdiagram.layout">
-      <Visible>False</Visible>
-    </None>
-    <None Include="..\..\..\..\Architecture\Cross\Blazor\Windows\WPF\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions">
-      <Visible>False</Visible>
-    </None>
+    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

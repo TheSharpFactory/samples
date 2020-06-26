@@ -67,46 +67,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-	<AdditionalFiles Include="..\..\..\..\Architecture\Cross\XamarinForms\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-	<AdditionalFiles Include="..\..\..\..\Architecture\Cross\XamarinForms\Android\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-	<AdditionalFiles Include="..\..\..\..\Architecture\Cross\XamarinForms\iOS\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-	<AdditionalFiles Include="..\..\..\..\Architecture\Cross\XamarinForms\macOS\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-	<AdditionalFiles Include="..\..\..\..\Architecture\Cross\XamarinForms\Linux\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-	<AdditionalFiles Include="..\..\..\..\Architecture\Cross\XamarinForms\Tizen\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-	<AdditionalFiles Include="..\..\..\..\Architecture\Cross\XamarinForms\Windows\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-	<AdditionalFiles Include="..\..\..\..\Architecture\Cross\XamarinForms\Windows\UWP\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
-	<AdditionalFiles Include="..\..\..\..\Architecture\Cross\XamarinForms\Windows\WPF\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
+    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

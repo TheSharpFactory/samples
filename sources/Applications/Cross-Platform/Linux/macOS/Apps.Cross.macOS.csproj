@@ -220,10 +220,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram">
-      <Link>App.layerdiagram</Link>
-      <Visible>False</Visible>
-    </AdditionalFiles>
+    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
   </ItemGroup>
