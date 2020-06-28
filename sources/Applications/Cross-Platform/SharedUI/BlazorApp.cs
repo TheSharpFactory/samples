@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+
 using Microsoft.MobileBlazorBindings;
 
 using Xamarin.Forms;
