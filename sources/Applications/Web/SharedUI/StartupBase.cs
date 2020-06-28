@@ -17,7 +17,7 @@ namespace TheSharpFactory.Apps.Web.SharedUI
     {
         public IConfiguration Configuration { get; internal set; }
 
-        public static MvcApplicationModel AppModel { get; set; }
+        public MvcApplicationModel AppModel { get; protected set; }
 
         protected StartupBase(IConfiguration configuration)
             => Configuration = configuration;

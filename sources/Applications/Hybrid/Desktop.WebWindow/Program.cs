@@ -1,9 +1,5 @@
 ﻿
-using TheSharpFactory.Apps.Web.SharedUI;
-
 using WebWindows.Blazor;
-
-using StartupBase = TheSharpFactory.Apps.Web.SharedUI.StartupBase;
 
 namespace TheSharpFactory.Apps.Hybrid.Desktop.WebWindow
 {
@@ -12,14 +8,7 @@ namespace TheSharpFactory.Apps.Hybrid.Desktop.WebWindow
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancy", "RCS1163:Unused parameter.", Justification = "<Pending>")]
         public static void Main(string[] args)
-        {
-            StartupBase.AppModel = new BlazorApplicationModel
-            {
-                Flavor = BlazorFlavor.WebAssembly | BlazorFlavor.Hybrid,
-                Platform = BlazorPlatform.WebWindow
-            };
-            ComponentsDesktop
+            => ComponentsDesktop
                 .Run<Startup>("The Sharp Factory Samples", "wwwroot/index.html");
-        }
     }
 }

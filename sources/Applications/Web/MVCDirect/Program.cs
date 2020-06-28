@@ -12,16 +12,10 @@ namespace TheSharpFactory.Apps.Web.MVCDirect
             => CreateHostBuilder(args).Build().Run();
 
         public static IHostBuilder CreateHostBuilder(string[] args)
-        {
-            SharedUI.StartupBase.AppModel = new MvcApplicationModel
-            {
-                CommunicationWay = MvcCommunicationWay.Direct
-            };
-            return Host
-                        .CreateDefaultBuilder(args)
-                        .ConfigureWebHostDefaults(webBuilder
-                          => webBuilder.UseStartup<Startup>()
-                        );
-        }
+            => Host
+                .CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder
+                    => webBuilder.UseStartup<Startup>()
+                );
     }
 }
