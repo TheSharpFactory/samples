@@ -1,188 +1,269 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph DataVirtualized="True" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="@10" Category="CodeSchema_Assembly" Bounds="1276.39899675805,314.857201093526,325.186666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.macOS.Blazor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(387c7d9f-8675-4d46-84ce-7adb1c9be51a.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.macOS.Blazor.exe" />
-    <Node Id="@12" Category="CodeSchema_Assembly" Bounds="293.885363424711,314.857201093526,304.523333333333,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.iOS.Blazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(44b1f453-0300-49c0-b9e9-2205e9eeae2c.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.iOS.Blazor.exe" />
-    <Node Id="@14" Category="CodeSchema_Assembly" Bounds="1434.11662464792,259.857101093526,287.136666666666,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.macOS, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(5663ac88-d6cb-4684-a55e-8a4e136d7677.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.macOS.exe" />
-    <Node Id="@16" Category="CodeSchema_Assembly" Bounds="649.643507229837,202.727164792496,266.473333333333,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.iOS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(c2e0b63b-c99d-4da4-ab71-6bdeb14c4c7b.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.iOS.exe" />
-    <Node Id="@18" Category="CodeSchema_Assembly" Bounds="1499.118719928,32.7270647924957,363.9,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.Desktop.ElectronWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(6dfbcd2b-9368-4451-a806-25b4726c6e81.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.Desktop.ElectronWeb.dll" />
-    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="1247.07370722984,204.857001093526,273.386666666666,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.WPF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(26ab7e0b-36fc-4c01-bf83-913540c0d4ff.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.WPF.exe">
+    <Node Id="(@33)" Category="CodeSchema_Assembly" Bounds="1410.60277111427,562.932982423193,259.94,25" CodeSchemaProperty_StrongName="SharpFactory.Apps.Web.Angular, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(3f2a95b9-286e-473c-88dc-f5579f891c1b.OutputPath)" Group="Collapsed" Label="SharpFactory.Apps.Web.Angular.dll" />
+    <Node Id="(@58)" Category="CodeSchema_Assembly" Bounds="1410.60277111427,672.932982423193,308.353333333333,25" CodeSchemaProperty_StrongName="SharpFactory.Apps.Web.ReactWithRedux, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(93bad24f-c421-4316-a158-e12c2dfbdb15.OutputPath)" Group="Collapsed" Label="SharpFactory.Apps.Web.ReactWithRedux.dll" />
+    <Node Id="@10" Category="CodeSchema_Assembly" Bounds="-6.81899555239275,643.704888841461,325.186666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.macOS.Blazor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(387c7d9f-8675-4d46-84ce-7adb1c9be51a.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.macOS.Blazor.exe" />
+    <Node Id="@12" Category="CodeSchema_Assembly" Bounds="-6.81899555239272,478.704888841461,304.523333333333,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.iOS.Blazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(44b1f453-0300-49c0-b9e9-2205e9eeae2c.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.iOS.Blazor.exe" />
+    <Node Id="@14" Category="CodeSchema_Assembly" Bounds="-6.81899555239272,423.704888841461,287.136666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.macOS, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(5663ac88-d6cb-4684-a55e-8a4e136d7677.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.macOS.exe" />
+    <Node Id="@16" Category="CodeSchema_Assembly" Bounds="-6.81899555239272,313.704888841461,266.473333333333,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.iOS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(c2e0b63b-c99d-4da4-ab71-6bdeb14c4c7b.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.iOS.exe" />
+    <Node Id="@18" Category="CodeSchema_Assembly" Bounds="1000.11799663524,72.9333824231928,371.17,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(eba42083-eca2-47d7-b6c7-2990fb423b5e.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb.dll" />
+    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="637.704337780941,396.204888841461,273.386666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.WPF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(26ab7e0b-36fc-4c01-bf83-913540c0d4ff.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.WPF.exe">
       <Category Ref="CodeMap_WpfProject" />
       <Category Ref="FileSystem.Category.FileOfType.exe" />
     </Node>
-    <Node Id="@20" Category="CodeSchema_Assembly" Bounds="789.61309131459,257.727264792496,273.066666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(7cbc6077-0655-4007-a5c9-f07e65592c9f.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.Droid.dll" />
-    <Node Id="@22" Category="CodeSchema_Assembly" Bounds="785.992046620233,409.857401093526,293.25,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.SharedUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(199309e9-f428-41d9-8afb-8bb593c31cc4.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.SharedUI.dll" />
-    <Node Id="@24" Category="CodeSchema_Assembly" Bounds="348.643407229837,204.857001093526,271,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.Tizen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ddcdd8d4-a971-45da-aef9-b49e8c4c7688.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.Tizen.dll" />
-    <Node Id="@26" Category="CodeSchema_Assembly" Bounds="109.446224647923,259.857101093526,311.116666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.Droid.Blazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(a282ed13-e36a-4d0e-9b63-032c4a311293.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.Droid.Blazor.dll" />
-    <Node Id="@28" Category="CodeSchema_Assembly" Bounds="1811.25339131459,358.004651418879,326.16,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Web.SharedUI.Blazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ebbe56b5-8275-424b-983c-ec2dfa7ead00.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Web.SharedUI.Blazor.dll" />
-    <Node Id="@30" Category="CodeSchema_Assembly" Bounds="450.562991314589,259.857101093526,309.05,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.Tizen.Blazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(67a0d60b-de70-49b7-91df-5d7e90fd4f32.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.Tizen.Blazor.dll" />
-    <Node Id="@32" Category="CodeSchema_Assembly" Bounds="1266.17143077616,544.857701093526,295.563333333334,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Shared.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ced2b48c-dd49-4b5d-97b4-d80e72b5d71b.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Shared.Services.dll" />
-    <Node Id="@34" Category="CodeSchema_Assembly" Bounds="1592.21809744282,544.857701093526,319.470000000001,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Shared.ViewModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(8a6779e4-35f1-447b-8636-0ddea5602680.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Shared.ViewModels.dll" />
-    <Node Id="@36" Category="CodeSchema_Assembly" Bounds="1564.98976410949,639.857901093526,373.926666666667,25" CodeSchemaProperty_StrongName="TheSharpFactorty.Apps.Shared.Services.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(aac17b69-5ebe-458e-bddf-c712ba937cdd.OutputPath)" Group="Collapsed" Label="TheSharpFactorty.Apps.Shared.Services.Abstractions.dll" />
-    <Node Id="@38" Category="CodeSchema_Assembly" Bounds="1555.23976410949,694.858001093526,393.426666666666,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Shared.ViewModels.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(9734958d-d791-4f18-b4dd-ca245706ee6c.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Shared.ViewModels.Abstractions.dll" />
-    <Node Id="@4" Category="CodeSchema_Assembly" Bounds="628.408796758044,314.857201093526,274.97,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.UWP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(3599f073-739b-43c5-a044-a460979ccb8c.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.UWP.exe" />
-    <Node Id="@40" Category="CodeSchema_Assembly" Bounds="1822.32839131459,263.004651418879,304.01,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(0a4322d1-5e55-4d03-bd30-352378dd30c2.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Web.BlazorClient.dll" />
-    <Node Id="@42" Category="CodeSchema_Assembly" Bounds="1499.118719928,87.7270647924957,364.786666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.Desktop.WebWindow, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(bbc09c0e-4c03-4a87-bf38-c3a74ed1f01a.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.Desktop.WebWindow.dll" />
-    <Node Id="@44" Category="CodeSchema_Assembly" Bounds="946.116940563172,202.727164792496,270.956666666666,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.Linux, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(fafe5226-58fb-4dce-ac3b-31fdff352746.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.Linux.dll" />
-    <Node Id="@6" Category="CodeSchema_Assembly" Bounds="1092.67985798126,259.857101093526,311.436666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.WPF.Blazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(2407e563-c06f-4d81-b094-311dc85b4b4a.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.WPF.Blazor.exe">
+    <Node Id="@20" Bounds="1189.34610444761,282.932982423193,272.346666666666,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Web.MVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" ErrorLevel="Error" FilePath="$(4aeb5506-20b5-4e8c-bd0b-ac6745528a60.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Web.MVC.dll" />
+    <Node Id="@22" Category="CodeSchema_Assembly" Bounds="294.181004447607,368.704888841461,273.066666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(7cbc6077-0655-4007-a5c9-f07e65592c9f.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.Droid.dll" />
+    <Node Id="@24" Category="CodeSchema_Assembly" Bounds="1040.72443778094,607.932982423193,288.11,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Web.SharedUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(8fe7d070-dce1-4c8b-97aa-877a7ee73469.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Web.SharedUI.dll" />
+    <Node Id="@26" Category="CodeSchema_Assembly" Bounds="647.589337780941,718.704888841461,293.25,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.SharedUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(199309e9-f428-41d9-8afb-8bb593c31cc4.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.SharedUI.dll" />
+    <Node Id="@28" Category="CodeSchema_Assembly" Bounds="-6.81899555239272,368.704888841461,271,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.Tizen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ddcdd8d4-a971-45da-aef9-b49e8c4c7688.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.Tizen.dll" />
+    <Node Id="@30" Category="CodeSchema_Assembly" Bounds="1176.89656113622,862.932124089896,420.57,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(f5a124f5-a60d-4d21-9800-de44c14d7e6e.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Shared.ViewModels.Mappers.Domain.dll" />
+    <Node Id="@32" Category="CodeSchema_Assembly" Bounds="710.399894469548,1142.9321240899,400.056666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Shared.ViewModels.Mappers.DTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(4e7b0102-4493-498d-9861-7dae0aea5635.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Shared.ViewModels.Mappers.DTO.dll" />
+    <Node Id="@35" Category="CodeSchema_Assembly" Bounds="1189.34610444761,392.932982423193,306.87,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Web.BlazorServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(1e33b304-9298-4bac-946f-f8abd3a5dfa4.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Web.BlazorServer.dll" />
+    <Node Id="@37" Category="CodeSchema_Assembly" Bounds="-6.81899555239272,588.704888841461,311.116666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.Droid.Blazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(a282ed13-e36a-4d0e-9b63-032c4a311293.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.Droid.Blazor.dll" />
+    <Node Id="@39" Category="CodeSchema_Assembly" Bounds="1196.69943778094,747.932982423193,326.16,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Web.SharedUI.Blazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ebbe56b5-8275-424b-983c-ec2dfa7ead00.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Web.SharedUI.Blazor.dll" />
+    <Node Id="@4" Category="CodeSchema_Assembly" Bounds="637.704337780941,451.204888841461,274.97,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.UWP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(3599f073-739b-43c5-a044-a460979ccb8c.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.UWP.exe" />
+    <Node Id="@41" Category="CodeSchema_Assembly" Bounds="-6.81899555239269,533.704888841461,309.05,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.Tizen.Blazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(67a0d60b-de70-49b7-91df-5d7e90fd4f32.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.Tizen.Blazor.dll" />
+    <Node Id="@43" Category="CodeSchema_Assembly" Bounds="710.399894469548,917.932124089896,295.563333333334,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Shared.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(ced2b48c-dd49-4b5d-97b4-d80e72b5d71b.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Shared.Services.dll" />
+    <Node Id="@45" Category="CodeSchema_Assembly" Bounds="1036.44656113622,917.932124089896,319.47,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Shared.ViewModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(8a6779e4-35f1-447b-8636-0ddea5602680.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Shared.ViewModels.dll" />
+    <Node Id="@47" Category="CodeSchema_Assembly" Bounds="1200.21822780288,1012.9321240899,373.926666666667,25" CodeSchemaProperty_StrongName="TheSharpFactorty.Apps.Shared.Services.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(aac17b69-5ebe-458e-bddf-c712ba937cdd.OutputPath)" Group="Collapsed" Label="TheSharpFactorty.Apps.Shared.Services.Abstractions.dll" />
+    <Node Id="@49" Category="CodeSchema_Assembly" Bounds="1190.46822780288,1067.9321240899,393.426666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Shared.ViewModels.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(9734958d-d791-4f18-b4dd-ca245706ee6c.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Shared.ViewModels.Abstractions.dll" />
+    <Node Id="@51" Category="CodeSchema_Assembly" Bounds="1189.34610444761,337.932982423193,297.343333333333,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Web.MVCDirect, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(381bc12f-84be-4600-aade-e1a22cb42a88.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Web.MVCDirect.dll" />
+    <Node Id="@53" Category="CodeSchema_Assembly" Bounds="1189.34610444761,447.932982423193,340.866666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Web.BlazorServerDirect, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(c2fc2140-1e29-4ff9-9a89-a08db41cc90a.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Web.BlazorServerDirect.dll" />
+    <Node Id="@55" Category="CodeSchema_Assembly" Bounds="1410.60277111427,617.932982423193,304.01,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Web.BlazorClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(0a4322d1-5e55-4d03-bd30-352378dd30c2.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Web.BlazorClient.dll" />
+    <Node Id="@57" Category="CodeSchema_Assembly" Bounds="1000.11799663524,127.933382423193,372.056666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Hybrid.Desktop.WebWindow, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(a8cdeeea-fe40-4077-86bf-59358b46075b.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Hybrid.Desktop.WebWindow.dll" />
+    <Node Id="@6" Category="CodeSchema_Assembly" Bounds="637.704337780941,506.204888841461,311.436666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.WPF.Blazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(2407e563-c06f-4d81-b094-311dc85b4b4a.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.WPF.Blazor.exe">
       <Category Ref="CodeMap_WpfProject" />
       <Category Ref="FileSystem.Category.FileOfType.exe" />
     </Node>
-    <Node Id="@8" Category="CodeSchema_Assembly" Bounds="933.378896758044,314.857201093526,313.02,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.UWP.Blazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(9ee60d61-357b-4454-83f1-063166d6e74a.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.UWP.Blazor.exe" />
-    <Node Id="Abstractions{7976F7F1-F883-4E90-982F-99966DB89262}" Category="CodeMap_SolutionFolder" Bounds="1535.23976410949,599.857801093526,433.426666666667,140.0003" Group="Expanded" Label="Abstractions" />
-    <Node Id="Applications{63159B48-79FB-4666-82C9-5A38EA2784A2}" Category="CodeMap_SolutionFolder" Bounds="69.4462246479229,-47.2729352075042,2127.96716666667,827.13113630103" Group="Expanded" Label="Applications" />
-    <Node Id="Applications{FBB3C7E0-E8AE-4EE9-99E1-FE32AC1F03B5}" Category="CodeMap_SolutionFolder" Bounds="-6.61214194508375E-07,-102.873035207504,90.6366666666667,25.6" Label="Applications" />
-    <Node Id="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Category="CodeMap_SolutionFolder" Bounds="89.4462246479228,162.727064792496,1651.80706666667,312.13053630103" Group="Expanded" Label="Cross" />
-    <Node Id="Hybrid{6C972E8B-1859-4704-A92C-9B592448223D}" Category="CodeMap_SolutionFolder" Bounds="1479.118719928,-7.27293520750427,404.786666666667,140" Group="Expanded" Label="Hybrid" />
-    <Node Id="Shared{94741542-624A-4CB5-9D00-0064A6B80301}" Category="CodeMap_SolutionFolder" Bounds="765.992046620233,369.857301093526,333.25,85.0002" Group="Expanded" Label="Shared" />
-    <Node Id="Shared{A6742153-6912-4EC2-8F54-B36CBFBEA783}" Category="CodeMap_SolutionFolder" Bounds="1246.17143077616,504.857601093526,742.495,255.0006" Group="Expanded" Label="Shared" />
-    <Node Id="Shared{BFE33CE2-CA9B-48DF-B95F-BAF0FF8BEF35}" Category="CodeMap_SolutionFolder" Bounds="1791.25339131459,318.004651418779,366.16,85.0002" Group="Expanded" Label="Shared" />
-    <Node Id="Web{6F31457E-BFD0-4100-82BB-FE41A504E637}" Category="CodeMap_SolutionFolder" Bounds="1771.25339131459,223.004451418779,406.16,200.0005" Group="Expanded" Label="Web" />
+    <Node Id="@60" Category="CodeSchema_Assembly" Bounds="289.654337780941,313.704888841461,270.956666666667,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.Linux, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(fafe5226-58fb-4dce-ac3b-31fdff352746.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.Linux.dll" />
+    <Node Id="@8" Category="CodeSchema_Assembly" Bounds="637.704337780941,561.204888841461,313.02,25" CodeSchemaProperty_StrongName="TheSharpFactory.Apps.Cross.UWP.Blazor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(9ee60d61-357b-4454-83f1-063166d6e74a.OutputPath)" Group="Collapsed" Label="TheSharpFactory.Apps.Cross.UWP.Blazor.exe" />
+    <Node Id="Abstractions{F9BC7EDF-9A47-4FBC-9FBA-DA485007F877}" Category="CodeMap_SolutionFolder" Bounds="1170.46822780288,972.932124089896,433.426666666667,140" Group="Expanded" Label="Abstractions" />
+    <Node Id="Applications{12845FC3-EBC3-48B1-BE84-EC6650C65190}" Category="CodeMap_SolutionFolder" Bounds="-66.8189955523926,-7.06787591010288,1845.7751,1215" Group="Expanded" Label="Applications" />
+    <Node Id="Applications{FBB3C7E0-E8AE-4EE9-99E1-FE32AC1F03B5}" Category="CodeMap_SolutionFolder" Bounds="1907.8875,0,85.1966666666667,24.4000000000001" Label="Applications" />
+    <Node Id="Cross-Platform{01328470-CF06-4C2C-BB3C-6F5807E0FF97}" Category="CodeMap_SolutionFolder" Bounds="-46.8189955523927,233.704444397014,1037.54333333333,530.000664444459" Group="Expanded" Label="Cross-Platform" />
+    <Node Id="Hybrid{0CDCD99B-7442-4BB1-9B71-73C82E92D52E}" Category="CodeMap_SolutionFolder" Bounds="980.11799663524,32.932124089897,412.056666666667,140.0003" Group="Expanded" Label="Hybrid" />
+    <Node Id="MPA{BE131DC3-D9E9-46B4-ACF5-690B27B4194B}" Category="CodeMap_SolutionFolder" Bounds="1169.34610444761,242.932249089898,380.866666666667,250.0005" Group="Expanded" Label="MPA" />
+    <Node Id="SPA{ACE5C349-5C86-4C6D-A832-C1516EDAF431}" Category="CodeMap_SolutionFolder" Bounds="1390.60277111427,522.932824089897,348.353333333333,195.0004" Group="Expanded" Label="SPA" />
+    <Node Id="Shared{8EBA4270-2275-4F99-A20A-8DFB9B686139}" Category="CodeMap_SolutionFolder" Bounds="690.399894469548,822.932124089896,933.495,365" Group="Expanded" Label="Shared" />
+    <Node Id="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" Category="CodeMap_SolutionFolder" Bounds="-26.8189955523927,273.704544397014,614.066666666667,415.0008" Group="Expanded" Label="Unix" />
+    <Node Id="Web{52031280-C6C5-45B3-8B4E-019C631840AC}" Category="CodeMap_SolutionFolder" Bounds="1020.72443778094,202.932124089897,738.231666666667,590.0013" Group="Expanded" Label="Web" />
+    <Node Id="Windows{41E2D34F-ABEF-40BE-A72F-9921B76C2E98}" Category="CodeMap_SolutionFolder" Bounds="617.704337780941,356.204608841472,353.02,250.0005" Group="Expanded" Label="Windows" />
   </Nodes>
   <Links>
-    <Link Source="@10" Target="@22" Category="CodeSchema_Calls" Bounds="438.301781110037,-64.7591372516677,245.533482047858,67.6106689697" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@10" Target="@26" Category="CodeSchema_Calls" Bounds="461.746666666666,391.550077229673,416.688131691983,48.949955950283" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@12" Target="@22" Category="CodeMap_ProjectReference" Bounds="379.278055555556,96.3096245704362,7.88271966809549,41.1606387867602" />
-    <Link Source="@14" Target="@22" Category="CodeSchema_Calls" Bounds="271.513550313271,164.001921903093,342.870422543866,48.733523311177" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@12" Target="@26" Category="CodeMap_ProjectReference" Bounds="378.798524305555,226.550077229673,572.750335424163,211.877440961713" />
+    <Link Source="@14" Target="@26" Category="CodeSchema_Calls" Bounds="364.173686440678,171.550077229673,593.536322490698,266.31564438374" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@16" Target="@22" Category="CodeSchema_Calls" Bounds="229.490265285307,142.091542142528,216.228684485061,48.0477448987176" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@16" Target="@26" Category="CodeSchema_Calls" Bounds="346.594341563786,61.5500772296732,618.879273428453,375.332969224949" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@18" Target="@28" Category="References" Bounds="628.546310086748,-7.7500000000002,694.855767002296,297.522849851637" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="8">
+    <Link Source="@18" Target="@39" Category="References" Bounds="-418.755416394801,21.5500772296732,137.137499728134,416.451563097888" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="8">
       <Category Ref="CodeMap_ProjectReference" />
       <Category Ref="CodeSchema_Calls" />
       <Category Ref="InheritsFrom" />
     </Link>
-    <Link Source="@18" Target="@32" Category="CodeMap_ExternalReference" Bounds="612.84204110592,-7.7500000000002,524.470565793285,486.012971778639" />
-    <Link Source="@18" Target="@34" Category="CodeMap_ExternalReference" Bounds="621.012128983588,-7.7500000000002,844.936776491979,487.631634945683" />
-    <Link Source="@18" Target="@36" Category="CodeMap_ExternalReference" Bounds="617.650714387717,-7.7500000000002,852.02314357647,582.053550870655" />
-    <Link Source="@18" Target="@38" Category="CodeMap_ExternalReference" Bounds="616.142196429126,-7.7500000000002,855.252707965723,636.755636557846" />
-    <Link Source="@18" Target="@40" Category="CodeMap_ProjectReference" Bounds="640.548847647869,-7.7500000000002,670.511903240273,203.452177958039" />
-    <Link Source="@2" Target="@22" Category="CodeSchema_Calls" Bounds="1216.23850812746,56.4431244276107,401.872497564002,122.378189264541" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@18" Target="@43" Category="CodeMap_ExternalReference" Bounds="-274.383211651918,21.5500772296732,132.538739572919,531.267642735162" />
+    <Link Source="@18" Target="@45" Category="CodeMap_ExternalReference" Bounds="-467.224362281312,21.5500772296732,185.363274523199,531.501977656337" />
+    <Link Source="@18" Target="@47" Category="CodeMap_ExternalReference" Bounds="-274.832080176768,21.5500772296732,133.735281071938,626.198484193886" />
+    <Link Source="@18" Target="@49" Category="CodeMap_ExternalReference" Bounds="-275.037432983683,21.5500772296732,134.284954496349,681.169948611354" />
+    <Link Source="@18" Target="@55" Category="CodeMap_ProjectReference" Bounds="-470.791954010972,21.5500772296732,184.428891332909,260.157783118664" />
+    <Link Source="@2" Target="@26" Category="CodeSchema_Calls" Bounds="974.73142118863,144.050077229673,17.7285087882963,288.516942854103" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@20" Target="@22" Category="CodeSchema_Calls" Bounds="228.068709600382,142.260718546471,197.39510969984,47.8785457675161" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@20" Target="@24" Category="References" Bounds="-124.427916666667,231.550077229673,33.2875923576579,206.115122957635" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="8">
+      <Category Ref="CodeMap_ProjectReference" />
+      <Category Ref="CodeSchema_Calls" />
+      <Category Ref="InheritsFrom" />
+    </Link>
+    <Link Source="@20" Target="@32" Category="CodeMap_ProjectReference" Bounds="920.373660370549,307.932982423193,399.112468918165,826.893878856753" />
+    <Link Source="@20" Target="@43" Category="CodeMap_ExternalReference" Bounds="-135.935862983879,231.550077229673,9.13353317167227,321.003640882136" />
+    <Link Source="@20" Target="@45" Category="CodeMap_ProjectReference" Bounds="-455.989216996179,231.550077229673,317.285478733268,323.573902055133" />
+    <Link Source="@20" Target="@47" Category="CodeMap_ExternalReference" Bounds="-136.064955502064,231.550077229673,9.33771013169313,416.002266406591" />
+    <Link Source="@20" Target="@49" Category="CodeMap_ExternalReference" Bounds="-136.117500519563,231.550077229673,9.42081322583358,471.001799757044" />
+    <Link Source="@22" Target="@26" Category="CodeSchema_Calls" Bounds="643.262142857143,116.550077229673,331.052502321002,318.757567571803" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@22" Target="@34" Category="CodeMap_ProjectReference" Bounds="218.900256410256,23.9215011817046,288.300181614071,293.578573818208" />
-    <Link Source="@22" Target="@36" Category="CodeMap_ExternalReference" Bounds="223.970471014492,117.761938925867,277.164163980894,199.738136074046" />
-    <Link Source="@22" Target="@38" Category="CodeMap_ExternalReference" Bounds="229.421904761904,171.827161732388,265.671322411917,145.672913267524" />
-    <Link Source="@24" Target="@22" Category="CodeSchema_Calls" Bounds="306.868192726741,72.2371986005172,520.528261140941,49.2285657645809" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@24" Target="@43" Category="References" Bounds="-127.717138409393,471.550077229673,34.7195115977988,81.7166544522067" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@24" Target="@34" Category="CodeMap_ExternalReference" Bounds="204.674624453303,146.389811622105,866.312512386424,371.175520088114" />
-    <Link Source="@24" Target="@36" Category="CodeMap_ExternalReference" Bounds="199.072284840419,146.389811622105,877.838624671434,465.503572635325" />
-    <Link Source="@24" Target="@38" Category="CodeMap_ExternalReference" Bounds="196.71385560182,146.389811622105,882.75269591319,520.15102327594" />
-    <Link Source="@26" Target="@22" Category="CodeSchema_Calls" Bounds="391.2475,2.64763926966543,0,61" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@24" Target="@45" Category="References" Bounds="-423.870504979198,471.550077229673,294.133747732821,87.4355273906193" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="4">
       <Category Ref="CodeMap_ProjectReference" />
+      <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@28" Target="@32" Category="References" Bounds="-69.6255148573216,64.5,828.730871164697,354.09410764244" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@24" Target="@47" Category="References" Bounds="-131.599560101072,471.550077229673,41.0045104978968,176.234145369843" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="4">
       <Category Ref="CodeMap_ExternalReference" />
     </Link>
-    <Link Source="@28" Target="@34" Category="References" Bounds="-58.5835246823737,64.5,1144.32713953743,354.963885258807" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@24" Target="@49" Category="References" Bounds="-132.610826809942,471.550077229673,42.6194038539672,231.149189459206" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
       <Category Ref="CodeMap_ExternalReference" />
+      <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@28" Target="@36" Category="References" Bounds="-66.5986031467211,64.5,1160.56044649074,449.380525982078" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
-      <Category Ref="CodeMap_ExternalReference" />
-    </Link>
-    <Link Source="@28" Target="@38" Category="References" Bounds="-69.9321023191489,64.5,1167.35761566857,504.062516201738" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
-      <Category Ref="CodeMap_ExternalReference" />
-    </Link>
-    <Link Source="@30" Target="@22" Category="CodeSchema_Calls" Bounds="763.064272069485,-52.7699801274964,247.738754246305,67.6298323373532" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@26" Target="@45" Category="CodeMap_ProjectReference" Bounds="-312.626624882734,465.835047405849,1162.20499324641,94.9819431901738" />
+    <Link Source="@26" Target="@47" Category="CodeMap_ExternalReference" Bounds="-61.9893060668704,466.550077229673,990.052590950591,188.318259136735" />
+    <Link Source="@26" Target="@49" Category="CodeMap_ExternalReference" Bounds="-75.4637953860301,466.550077229673,1016.91381853418,242.909007348957" />
+    <Link Source="@28" Target="@26" Category="CodeSchema_Calls" Bounds="352.015714285714,116.550077229673,610.029589849311,320.810913223368" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@30" Target="@34" Category="CodeMap_ExternalReference" Bounds="688.487693307437,-52.7699801274963,359.73465448358,537.22836440401" />
-    <Link Source="@30" Target="@36" Category="CodeMap_ExternalReference" Bounds="686.763735947957,-52.7699801274964,362.65487776351,631.901007308913" />
-    <Link Source="@30" Target="@38" Category="CodeMap_ExternalReference" Bounds="685.950625940239,-52.7699801274964,364.016217118525,686.754951899472" />
-    <Link Source="@32" Target="@36" Category="Implements" Bounds="45.6178508771929,75,240.388355678129,67.5647745249178" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@28" Target="@45" Category="CodeMap_ExternalReference" Bounds="-445.429763564098,116.550077229673,752.325521542821,440.452870495188" />
+    <Link Source="@28" Target="@47" Category="CodeMap_ExternalReference" Bounds="-120.546743484335,116.550077229673,438.510353366341,533.049610817654" />
+    <Link Source="@28" Target="@49" Category="CodeMap_ExternalReference" Bounds="-121.778180037759,116.550077229673,440.653996570017,587.798852624895" />
+    <Link Source="@30" Target="@45" Category="CodeMap_ProjectReference" Bounds="1248.2392578125,887.93212890625,95.533203125,27.5095825195313" />
+    <Link Source="@30" Target="@47" Category="CodeMap_ExternalReference" Bounds="1115.31070635,891.518057009872,284.105475407282,67.9079253334066" />
+    <Link Source="@30" Target="@49" Category="References" Bounds="1096.48633323669,891.518057009872,322.167436146129,121.817191268555" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="30">
+      <Category Ref="CodeMap_ExternalReference" />
+    </Link>
+    <Link Source="@35" Target="@39" Category="References" Bounds="-386.479240090492,341.550077229673,250.928695218697,101.621685386153" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="8">
+      <Category Ref="CodeMap_ProjectReference" />
+      <Category Ref="CodeSchema_Calls" />
+      <Category Ref="InheritsFrom" />
+    </Link>
+    <Link Source="@35" Target="@43" Category="CodeMap_ExternalReference" Bounds="-133.761177392477,341.550077229673,27.4505396373747,211.075157666751" />
+    <Link Source="@35" Target="@45" Category="CodeMap_ExternalReference" Bounds="-448.173797677805,341.550077229673,324.618261963519,215.029839956908" />
+    <Link Source="@35" Target="@47" Category="CodeMap_ExternalReference" Bounds="-134.536344749832,341.550077229673,28.6799293086554,306.039261355603" />
+    <Link Source="@35" Target="@49" Category="CodeMap_ExternalReference" Bounds="-134.815562457234,341.550077229673,29.1222554952082,361.029138347817" />
+    <Link Source="@35" Target="@55" Category="CodeMap_ProjectReference" Bounds="-325.209732068243,313.098326803876,68.5148104557053,4.95604799792693" />
+    <Link Source="@37" Target="@26" Category="CodeSchema_Calls" Bounds="410.369903846154,336.550077229673,512.522353130981,103.223061942023" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@32" Target="@38" Category="References" Bounds="259.461582663202,95.8333777777334,130.50744638018,118.937728280177" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="10">
+    <Link Source="@39" Target="@43" Category="References" Bounds="-394.258496376812,471.550077229673,217.920012570859,86.6738385344388" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeMap_ProjectReference" />
+    </Link>
+    <Link Source="@39" Target="@45" Category="References" Bounds="-465.717138409393,471.550077229673,34.7195115977989,81.7166544522067" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeMap_ProjectReference" />
+    </Link>
+    <Link Source="@39" Target="@47" Category="References" Bounds="-408.476001984127,471.550077229673,247.435823343066,179.711118009645" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeMap_ExternalReference" />
+    </Link>
+    <Link Source="@39" Target="@49" Category="References" Bounds="-412.04802672956,471.550077229673,255.226993924562,233.919029959653" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeMap_ExternalReference" />
+    </Link>
+    <Link Source="@4" Target="@26" Category="CodeSchema_Calls" Bounds="975.644018691589,199.050077229673,16.6084819249388,233.522676211359" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+      <Category Ref="CodeMap_ProjectReference" />
+    </Link>
+    <Link Source="@41" Target="@26" Category="CodeSchema_Calls" Bounds="390.954662162162,281.550077229673,550.489629201465,157.524004179793" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+      <Category Ref="CodeMap_ProjectReference" />
+    </Link>
+    <Link Source="@41" Target="@45" Category="CodeMap_ExternalReference" Bounds="-432.428731325032,281.550077229673,746.019284603721,276.868550933206" />
+    <Link Source="@41" Target="@47" Category="CodeMap_ExternalReference" Bounds="-114.491771670678,281.550077229673,446.644089379011,369.265312456488" />
+    <Link Source="@41" Target="@49" Category="CodeMap_ExternalReference" Bounds="-116.699535827763,281.550077229673,450.679467146445,423.834299423095" />
+    <Link Source="@43" Target="@47" Category="Implements" Bounds="-136.5475,586.550077229673,5.6843418860808E-14,61.0000000000001" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeMap_ProjectReference" />
+    </Link>
+    <Link Source="@43" Target="@49" Category="References" Bounds="-136.5475,586.550077229673,5.6843418860808E-14,116" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="10">
       <Category Ref="CodeMap_ExternalReference" />
       <Category Ref="CodeSchema_Calls" />
       <Category Ref="CodeSchema_ReturnTypeLink" />
     </Link>
-    <Link Source="@34" Target="@36" Category="References" Bounds="339.144166666667,75,5.6843418860808E-14,61" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3">
+    <Link Source="@45" Target="@47" Category="References" Bounds="-430.073815789474,586.550077229673,240.388355678129,67.564774524918" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3">
       <Category Ref="CodeMap_ProjectReference" />
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@34" Target="@38" Category="References" Bounds="431.546054796685,95.8333777777334,137.305897310961,119.102678375105" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="13">
+    <Link Source="@45" Target="@49" Category="References" Bounds="-446.380833333334,586.550077229673,273.440356695334,121.349270722781" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="13">
       <Category Ref="CodeMap_ProjectReference" />
       <Category Ref="Implements" />
     </Link>
-    <Link Source="@36" Target="@38" Category="References" Bounds="1751.953125,664.857238769531,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@47" Target="@49" Category="References" Bounds="1387.18151855469,1037.93212890625,0,21" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@4" Target="@22" Category="CodeSchema_Calls" Bounds="266.469410230488,177.027796367499,346.441531859363,48.6660431532345" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@51" Target="@24" Category="References" Bounds="-107.977950450451,286.550077229673,17.7694745095803,151.061627522662" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="8">
       <Category Ref="CodeMap_ProjectReference" />
+      <Category Ref="CodeSchema_Calls" />
+      <Category Ref="InheritsFrom" />
     </Link>
-    <Link Source="@40" Target="@28" Category="References" Bounds="820.0077,112.064113665469,17.2716657879739,41.6854363346111" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+    <Link Source="@51" Target="@30" Category="CodeMap_ProjectReference" Bounds="1323.8171588992,366.516857009872,122.59659052799,491.26899541879" />
+    <Link Source="@51" Target="@43" Category="CodeMap_ExternalReference" Bounds="-134.608689674051,286.550077229673,24.0312243962727,266.036495053913" />
+    <Link Source="@51" Target="@45" Category="CodeMap_ProjectReference" Bounds="-452.381405712025,286.550077229673,327.720607100913,269.286240853122" />
+    <Link Source="@51" Target="@47" Category="CodeMap_ExternalReference" Bounds="-135.07393003649,286.550077229673,24.7680281377551,361.021105731911" />
+    <Link Source="@51" Target="@49" Category="CodeMap_ExternalReference" Bounds="-135.253742121524,286.550077229673,25.0526541585601,416.016274966099" />
+    <Link Source="@53" Target="@39" Category="References" Bounds="-360.567038576822,396.550077229673,216.547038576821,48.0503783824308" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="8">
+      <Category Ref="CodeMap_ProjectReference" />
+      <Category Ref="CodeSchema_Calls" />
+      <Category Ref="InheritsFrom" />
+    </Link>
+    <Link Source="@53" Target="@43" Category="CodeMap_ExternalReference" Bounds="-131.091443330324,396.550077229673,40.1902481548854,156.283604443127" />
+    <Link Source="@53" Target="@45" Category="CodeMap_ExternalReference" Bounds="-441.017835540023,396.550077229673,327.879798259321,161.032485848971" />
+    <Link Source="@53" Target="@47" Category="CodeMap_ExternalReference" Bounds="-132.88369507204,396.550077229673,43.0540093995253,251.129418836451" />
+    <Link Source="@53" Target="@49" Category="CodeMap_ExternalReference" Bounds="-133.470922912226,396.550077229673,43.9879020788923,306.091519250048" />
+    <Link Source="@53" Target="@55" Category="CodeMap_ProjectReference" Bounds="-415.868904494934,315.880474780274,268.004712575741,55.6696024493992" />
+    <Link Source="@55" Target="@39" Category="References" Bounds="-480.16216931217,314.050077229673,46.6141086024938,124.074958818569" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
       <Category Ref="CodeMap_ProjectReference" />
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@40" Target="@32" Category="CodeMap_ExternalReference" Bounds="649.45096642918,178.74955000008,161.210559706739,483.592156400472" />
-    <Link Source="@40" Target="@34" Category="CodeMap_ExternalReference" Bounds="818.831615029235,178.74955000008,154.858104974881,483.559032574278" />
-    <Link Source="@40" Target="@36" Category="References" Bounds="818.210353835851,178.74955000008,156.495115044011,578.442568608757" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="14">
+    <Link Source="@55" Target="@43" Category="CodeMap_ExternalReference" Bounds="-468.880772171254,314.050077229673,309.26726640629,241.954375318159" />
+    <Link Source="@55" Target="@45" Category="CodeMap_ExternalReference" Bounds="-484.385359327217,314.050077229673,9.02458755312432,238.506435777229" />
+    <Link Source="@55" Target="@47" Category="References" Bounds="-473.011026077098,314.050077229673,318.42508449879,335.967783239507" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="14">
       <Category Ref="CodeMap_ExternalReference" />
       <Category Ref="CodeSchema_Calls" />
       <Category Ref="CodeSchema_ReturnTypeLink" />
     </Link>
-    <Link Source="@40" Target="@38" Category="References" Bounds="817.931547513611,178.74955000008,157.234780428816,633.395350834193" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="14">
+    <Link Source="@55" Target="@49" Category="References" Bounds="-474.553279092703,314.050077229673,321.975739905782,390.555610367731" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="13">
       <Category Ref="CodeMap_ExternalReference" />
       <Category Ref="CodeSchema_Calls" />
       <Category Ref="CodeSchema_ReturnTypeLink" />
     </Link>
-    <Link Source="@42" Target="@28" Category="InheritsFrom" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="7">
+    <Link Source="@57" Target="@39" Category="InheritsFrom" Bounds="-417.813719068085,76.5500772296732,136.051957464709,361.576571527815" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="7">
       <Category Ref="CodeMap_ProjectReference" />
       <Category Ref="CodeSchema_Calls" />
     </Link>
-    <Link Source="@42" Target="@32" Category="CodeMap_ExternalReference" />
-    <Link Source="@42" Target="@34" Category="CodeMap_ExternalReference" />
-    <Link Source="@42" Target="@36" Category="CodeMap_ExternalReference" />
-    <Link Source="@42" Target="@38" Category="CodeMap_ExternalReference" />
-    <Link Source="@42" Target="@40" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@57" Target="@43" Category="CodeMap_ExternalReference" Bounds="-273.614440359477,76.5500772296732,131.232513706768,476.32328698583" />
+    <Link Source="@57" Target="@45" Category="CodeMap_ExternalReference" Bounds="-466.457133216085,76.5500772296732,184.558379131117,476.607273935886" />
+    <Link Source="@57" Target="@47" Category="CodeMap_ExternalReference" Bounds="-274.155216942149,76.5500772296732,132.66854766954,571.233330811303" />
+    <Link Source="@57" Target="@49" Category="CodeMap_ExternalReference" Bounds="-274.397143308081,76.5500772296732,133.314396065535,626.19727828758" />
+    <Link Source="@57" Target="@55" Category="References" Bounds="-467.995151667425,76.5500772296732,179.999976228828,205.726633081552" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@44" Target="@22" Category="CodeSchema_Calls" Bounds="236.165270572934,-32.0745380195628,258.098365355118,174.950202932156" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@6" Target="@26" Category="CodeSchema_Calls" Bounds="993.034901960784,254.050077229673,0.665000232679517,178.500062456097" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@6" Target="@22" Category="CodeSchema_Calls" Bounds="209.313938133524,-6.20648894721723,233.695263974081,120.865500318533" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@60" Target="@26" Category="CodeSchema_Calls" Bounds="636.089742798354,61.5500772296732,340.236704868243,373.347900794237" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@8" Target="@22" Category="CodeSchema_Calls" Bounds="744.832181492147,-68.6742120991978,274.248392795012,121.358043607271" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="@8" Target="@26" Category="CodeSchema_Calls" Bounds="993.78,309.050077229673,2.27373675443232E-13,123.5" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="Abstractions{7976F7F1-F883-4E90-982F-99966DB89262}" Target="@36" Category="Contains" FetchingParent="Abstractions{7976F7F1-F883-4E90-982F-99966DB89262}" />
-    <Link Source="Abstractions{7976F7F1-F883-4E90-982F-99966DB89262}" Target="@38" Category="Contains" FetchingParent="Abstractions{7976F7F1-F883-4E90-982F-99966DB89262}" />
-    <Link Source="Applications{63159B48-79FB-4666-82C9-5A38EA2784A2}" Target="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Category="Contains" FetchingParent="Applications{63159B48-79FB-4666-82C9-5A38EA2784A2}" />
-    <Link Source="Applications{63159B48-79FB-4666-82C9-5A38EA2784A2}" Target="Hybrid{6C972E8B-1859-4704-A92C-9B592448223D}" Category="Contains" />
-    <Link Source="Applications{63159B48-79FB-4666-82C9-5A38EA2784A2}" Target="Shared{A6742153-6912-4EC2-8F54-B36CBFBEA783}" Category="Contains" FetchingParent="Applications{63159B48-79FB-4666-82C9-5A38EA2784A2}" />
-    <Link Source="Applications{63159B48-79FB-4666-82C9-5A38EA2784A2}" Target="Web{6F31457E-BFD0-4100-82BB-FE41A504E637}" Category="Contains" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@10" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@12" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@14" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@16" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@2" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@20" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@24" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@26" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@30" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@4" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@44" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@6" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="@8" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" Target="Shared{94741542-624A-4CB5-9D00-0064A6B80301}" Category="Contains" FetchingParent="Cross{18EE88CB-2140-4F37-8981-C9278F9D5850}" />
-    <Link Source="Hybrid{6C972E8B-1859-4704-A92C-9B592448223D}" Target="@18" Category="Contains" FetchingParent="Hybrid{6C972E8B-1859-4704-A92C-9B592448223D}" />
-    <Link Source="Hybrid{6C972E8B-1859-4704-A92C-9B592448223D}" Target="@42" Category="Contains" FetchingParent="Hybrid{6C972E8B-1859-4704-A92C-9B592448223D}" />
-    <Link Source="Shared{94741542-624A-4CB5-9D00-0064A6B80301}" Target="@22" Category="Contains" FetchingParent="Shared{94741542-624A-4CB5-9D00-0064A6B80301}" />
-    <Link Source="Shared{A6742153-6912-4EC2-8F54-B36CBFBEA783}" Target="@32" Category="Contains" FetchingParent="Shared{A6742153-6912-4EC2-8F54-B36CBFBEA783}" />
-    <Link Source="Shared{A6742153-6912-4EC2-8F54-B36CBFBEA783}" Target="@34" Category="Contains" FetchingParent="Shared{A6742153-6912-4EC2-8F54-B36CBFBEA783}" />
-    <Link Source="Shared{A6742153-6912-4EC2-8F54-B36CBFBEA783}" Target="Abstractions{7976F7F1-F883-4E90-982F-99966DB89262}" Category="Contains" FetchingParent="Shared{A6742153-6912-4EC2-8F54-B36CBFBEA783}" />
-    <Link Source="Shared{BFE33CE2-CA9B-48DF-B95F-BAF0FF8BEF35}" Target="@28" Category="Contains" FetchingParent="Shared{BFE33CE2-CA9B-48DF-B95F-BAF0FF8BEF35}" />
-    <Link Source="Web{6F31457E-BFD0-4100-82BB-FE41A504E637}" Target="@40" Category="Contains" FetchingParent="Web{6F31457E-BFD0-4100-82BB-FE41A504E637}" />
-    <Link Source="Web{6F31457E-BFD0-4100-82BB-FE41A504E637}" Target="Shared{BFE33CE2-CA9B-48DF-B95F-BAF0FF8BEF35}" Category="Contains" FetchingParent="Web{6F31457E-BFD0-4100-82BB-FE41A504E637}" />
+    <Link Source="Abstractions{F9BC7EDF-9A47-4FBC-9FBA-DA485007F877}" Target="@47" Category="Contains" FetchingParent="Abstractions{F9BC7EDF-9A47-4FBC-9FBA-DA485007F877}" />
+    <Link Source="Abstractions{F9BC7EDF-9A47-4FBC-9FBA-DA485007F877}" Target="@49" Category="Contains" FetchingParent="Abstractions{F9BC7EDF-9A47-4FBC-9FBA-DA485007F877}" />
+    <Link Source="Applications{12845FC3-EBC3-48B1-BE84-EC6650C65190}" Target="Cross-Platform{01328470-CF06-4C2C-BB3C-6F5807E0FF97}" Category="Contains" FetchingParent="Applications{12845FC3-EBC3-48B1-BE84-EC6650C65190}" />
+    <Link Source="Applications{12845FC3-EBC3-48B1-BE84-EC6650C65190}" Target="Hybrid{0CDCD99B-7442-4BB1-9B71-73C82E92D52E}" Category="Contains" FetchingParent="Applications{12845FC3-EBC3-48B1-BE84-EC6650C65190}" />
+    <Link Source="Applications{12845FC3-EBC3-48B1-BE84-EC6650C65190}" Target="Shared{8EBA4270-2275-4F99-A20A-8DFB9B686139}" Category="Contains" FetchingParent="Applications{12845FC3-EBC3-48B1-BE84-EC6650C65190}" />
+    <Link Source="Applications{12845FC3-EBC3-48B1-BE84-EC6650C65190}" Target="Web{52031280-C6C5-45B3-8B4E-019C631840AC}" Category="Contains" FetchingParent="Applications{12845FC3-EBC3-48B1-BE84-EC6650C65190}" />
+    <Link Source="Cross-Platform{01328470-CF06-4C2C-BB3C-6F5807E0FF97}" Target="@26" Category="Contains" FetchingParent="Cross-Platform{01328470-CF06-4C2C-BB3C-6F5807E0FF97}" />
+    <Link Source="Cross-Platform{01328470-CF06-4C2C-BB3C-6F5807E0FF97}" Target="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" Category="Contains" FetchingParent="Cross-Platform{01328470-CF06-4C2C-BB3C-6F5807E0FF97}" />
+    <Link Source="Cross-Platform{01328470-CF06-4C2C-BB3C-6F5807E0FF97}" Target="Windows{41E2D34F-ABEF-40BE-A72F-9921B76C2E98}" Category="Contains" FetchingParent="Cross-Platform{01328470-CF06-4C2C-BB3C-6F5807E0FF97}" />
+    <Link Source="Hybrid{0CDCD99B-7442-4BB1-9B71-73C82E92D52E}" Target="@18" Category="Contains" FetchingParent="Hybrid{0CDCD99B-7442-4BB1-9B71-73C82E92D52E}" />
+    <Link Source="Hybrid{0CDCD99B-7442-4BB1-9B71-73C82E92D52E}" Target="@57" Category="Contains" FetchingParent="Hybrid{0CDCD99B-7442-4BB1-9B71-73C82E92D52E}" />
+    <Link Source="MPA{BE131DC3-D9E9-46B4-ACF5-690B27B4194B}" Target="@20" Category="Contains" FetchingParent="MPA{BE131DC3-D9E9-46B4-ACF5-690B27B4194B}" />
+    <Link Source="MPA{BE131DC3-D9E9-46B4-ACF5-690B27B4194B}" Target="@35" Category="Contains" FetchingParent="MPA{BE131DC3-D9E9-46B4-ACF5-690B27B4194B}" />
+    <Link Source="MPA{BE131DC3-D9E9-46B4-ACF5-690B27B4194B}" Target="@51" Category="Contains" FetchingParent="MPA{BE131DC3-D9E9-46B4-ACF5-690B27B4194B}" />
+    <Link Source="MPA{BE131DC3-D9E9-46B4-ACF5-690B27B4194B}" Target="@53" Category="Contains" FetchingParent="MPA{BE131DC3-D9E9-46B4-ACF5-690B27B4194B}" />
+    <Link Source="SPA{ACE5C349-5C86-4C6D-A832-C1516EDAF431}" Target="(@33)" Category="Contains" FetchingParent="SPA{ACE5C349-5C86-4C6D-A832-C1516EDAF431}" />
+    <Link Source="SPA{ACE5C349-5C86-4C6D-A832-C1516EDAF431}" Target="(@58)" Category="Contains" FetchingParent="SPA{ACE5C349-5C86-4C6D-A832-C1516EDAF431}" />
+    <Link Source="SPA{ACE5C349-5C86-4C6D-A832-C1516EDAF431}" Target="@55" Category="Contains" FetchingParent="SPA{ACE5C349-5C86-4C6D-A832-C1516EDAF431}" />
+    <Link Source="Shared{8EBA4270-2275-4F99-A20A-8DFB9B686139}" Target="@30" Category="Contains" FetchingParent="Shared{8EBA4270-2275-4F99-A20A-8DFB9B686139}" />
+    <Link Source="Shared{8EBA4270-2275-4F99-A20A-8DFB9B686139}" Target="@32" Category="Contains" FetchingParent="Shared{8EBA4270-2275-4F99-A20A-8DFB9B686139}" />
+    <Link Source="Shared{8EBA4270-2275-4F99-A20A-8DFB9B686139}" Target="@43" Category="Contains" FetchingParent="Shared{8EBA4270-2275-4F99-A20A-8DFB9B686139}" />
+    <Link Source="Shared{8EBA4270-2275-4F99-A20A-8DFB9B686139}" Target="@45" Category="Contains" FetchingParent="Shared{8EBA4270-2275-4F99-A20A-8DFB9B686139}" />
+    <Link Source="Shared{8EBA4270-2275-4F99-A20A-8DFB9B686139}" Target="Abstractions{F9BC7EDF-9A47-4FBC-9FBA-DA485007F877}" Category="Contains" FetchingParent="Shared{8EBA4270-2275-4F99-A20A-8DFB9B686139}" />
+    <Link Source="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" Target="@10" Category="Contains" FetchingParent="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" />
+    <Link Source="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" Target="@12" Category="Contains" FetchingParent="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" />
+    <Link Source="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" Target="@14" Category="Contains" FetchingParent="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" />
+    <Link Source="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" Target="@16" Category="Contains" FetchingParent="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" />
+    <Link Source="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" Target="@22" Category="Contains" FetchingParent="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" />
+    <Link Source="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" Target="@28" Category="Contains" FetchingParent="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" />
+    <Link Source="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" Target="@37" Category="Contains" FetchingParent="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" />
+    <Link Source="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" Target="@41" Category="Contains" FetchingParent="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" />
+    <Link Source="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" Target="@60" Category="Contains" FetchingParent="Unix{E0F4F189-BE91-4E4C-BDA5-5B1D4325C622}" />
+    <Link Source="Web{52031280-C6C5-45B3-8B4E-019C631840AC}" Target="@24" Category="Contains" FetchingParent="Web{52031280-C6C5-45B3-8B4E-019C631840AC}" />
+    <Link Source="Web{52031280-C6C5-45B3-8B4E-019C631840AC}" Target="@39" Category="Contains" FetchingParent="Web{52031280-C6C5-45B3-8B4E-019C631840AC}" />
+    <Link Source="Web{52031280-C6C5-45B3-8B4E-019C631840AC}" Target="MPA{BE131DC3-D9E9-46B4-ACF5-690B27B4194B}" Category="Contains" FetchingParent="Web{52031280-C6C5-45B3-8B4E-019C631840AC}" />
+    <Link Source="Web{52031280-C6C5-45B3-8B4E-019C631840AC}" Target="SPA{ACE5C349-5C86-4C6D-A832-C1516EDAF431}" Category="Contains" FetchingParent="Web{52031280-C6C5-45B3-8B4E-019C631840AC}" />
+    <Link Source="Windows{41E2D34F-ABEF-40BE-A72F-9921B76C2E98}" Target="@2" Category="Contains" FetchingParent="Windows{41E2D34F-ABEF-40BE-A72F-9921B76C2E98}" />
+    <Link Source="Windows{41E2D34F-ABEF-40BE-A72F-9921B76C2E98}" Target="@4" Category="Contains" FetchingParent="Windows{41E2D34F-ABEF-40BE-A72F-9921B76C2E98}" />
+    <Link Source="Windows{41E2D34F-ABEF-40BE-A72F-9921B76C2E98}" Target="@6" Category="Contains" FetchingParent="Windows{41E2D34F-ABEF-40BE-A72F-9921B76C2E98}" />
+    <Link Source="Windows{41E2D34F-ABEF-40BE-A72F-9921B76C2E98}" Target="@8" Category="Contains" FetchingParent="Windows{41E2D34F-ABEF-40BE-A72F-9921B76C2E98}" />
   </Links>
   <Categories>
     <Category Id="CodeMap_ExternalReference" Label="External Reference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
@@ -208,6 +289,7 @@
     <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
     <Property Id="DelayedChildNodesState" Label="Delayed Child Nodes State" Description="Unspecified if the delayed child nodes state is not specified. NotFetched if the group contains child nodes that are not fetched into the graph yet. Fetched if the group has all its delayed child nodes already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
     <Property Id="DelayedCrossGroupLinksState" Label="Delayed Cross-Group Links State" Description="Unspecified if the delayed cross-group links state is not specified. NotFetched if delayed cross-group links on this node are not fetched into the graph yet. Fetched if all delayed cross-group links have already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="ErrorLevel" Label="Error Level" Description="Used to associate an error level with a node or link in the graph" Group="Analysis" DataType="Microsoft.VisualStudio.Progression.ErrorLevel" />
     <Property Id="Expression" DataType="System.String" />
     <Property Id="FetchingParent" DataType="Microsoft.VisualStudio.GraphModel.GraphNodeId" />
     <Property Id="FilePath" Label="File Path" Description="File Path" DataType="System.String" />
@@ -251,36 +333,56 @@
     <Alias n="14" Id="(@13)" />
     <Alias n="15" Uri="Assembly=$(c2e0b63b-c99d-4da4-ab71-6bdeb14c4c7b.OutputPathUri)" />
     <Alias n="16" Id="(@15)" />
-    <Alias n="17" Uri="Assembly=$(6dfbcd2b-9368-4451-a806-25b4726c6e81.OutputPathUri)" />
+    <Alias n="17" Uri="Assembly=$(eba42083-eca2-47d7-b6c7-2990fb423b5e.OutputPathUri)" />
     <Alias n="18" Id="(@17)" />
-    <Alias n="19" Uri="Assembly=$(7cbc6077-0655-4007-a5c9-f07e65592c9f.OutputPathUri)" />
+    <Alias n="19" Uri="Assembly=$(4aeb5506-20b5-4e8c-bd0b-ac6745528a60.OutputPathUri)" />
     <Alias n="20" Id="(@19)" />
-    <Alias n="21" Uri="Assembly=$(199309e9-f428-41d9-8afb-8bb593c31cc4.OutputPathUri)" />
+    <Alias n="21" Uri="Assembly=$(7cbc6077-0655-4007-a5c9-f07e65592c9f.OutputPathUri)" />
     <Alias n="22" Id="(@21)" />
-    <Alias n="23" Uri="Assembly=$(ddcdd8d4-a971-45da-aef9-b49e8c4c7688.OutputPathUri)" />
+    <Alias n="23" Uri="Assembly=$(8fe7d070-dce1-4c8b-97aa-877a7ee73469.OutputPathUri)" />
     <Alias n="24" Id="(@23)" />
-    <Alias n="25" Uri="Assembly=$(a282ed13-e36a-4d0e-9b63-032c4a311293.OutputPathUri)" />
+    <Alias n="25" Uri="Assembly=$(199309e9-f428-41d9-8afb-8bb593c31cc4.OutputPathUri)" />
     <Alias n="26" Id="(@25)" />
-    <Alias n="27" Uri="Assembly=$(ebbe56b5-8275-424b-983c-ec2dfa7ead00.OutputPathUri)" />
+    <Alias n="27" Uri="Assembly=$(ddcdd8d4-a971-45da-aef9-b49e8c4c7688.OutputPathUri)" />
     <Alias n="28" Id="(@27)" />
-    <Alias n="29" Uri="Assembly=$(67a0d60b-de70-49b7-91df-5d7e90fd4f32.OutputPathUri)" />
+    <Alias n="29" Uri="Assembly=$(f5a124f5-a60d-4d21-9800-de44c14d7e6e.OutputPathUri)" />
     <Alias n="30" Id="(@29)" />
-    <Alias n="31" Uri="Assembly=$(ced2b48c-dd49-4b5d-97b4-d80e72b5d71b.OutputPathUri)" />
+    <Alias n="31" Uri="Assembly=$(4e7b0102-4493-498d-9861-7dae0aea5635.OutputPathUri)" />
     <Alias n="32" Id="(@31)" />
-    <Alias n="33" Uri="Assembly=$(8a6779e4-35f1-447b-8636-0ddea5602680.OutputPathUri)" />
-    <Alias n="34" Id="(@33)" />
-    <Alias n="35" Uri="Assembly=$(aac17b69-5ebe-458e-bddf-c712ba937cdd.OutputPathUri)" />
-    <Alias n="36" Id="(@35)" />
-    <Alias n="37" Uri="Assembly=$(9734958d-d791-4f18-b4dd-ca245706ee6c.OutputPathUri)" />
-    <Alias n="38" Id="(@37)" />
-    <Alias n="39" Uri="Assembly=$(0a4322d1-5e55-4d03-bd30-352378dd30c2.OutputPathUri)" />
-    <Alias n="40" Id="(@39)" />
-    <Alias n="41" Uri="Assembly=$(bbc09c0e-4c03-4a87-bf38-c3a74ed1f01a.OutputPathUri)" />
-    <Alias n="42" Id="(@41)" />
-    <Alias n="43" Uri="Assembly=$(fafe5226-58fb-4dce-ac3b-31fdff352746.OutputPathUri)" />
-    <Alias n="44" Id="(@43)" />
+    <Alias n="33" Uri="Assembly=$(3f2a95b9-286e-473c-88dc-f5579f891c1b.OutputPathUri)" />
+    <Alias n="34" Uri="Assembly=$(1e33b304-9298-4bac-946f-f8abd3a5dfa4.OutputPathUri)" />
+    <Alias n="35" Id="(@34)" />
+    <Alias n="36" Uri="Assembly=$(a282ed13-e36a-4d0e-9b63-032c4a311293.OutputPathUri)" />
+    <Alias n="37" Id="(@36)" />
+    <Alias n="38" Uri="Assembly=$(ebbe56b5-8275-424b-983c-ec2dfa7ead00.OutputPathUri)" />
+    <Alias n="39" Id="(@38)" />
+    <Alias n="40" Uri="Assembly=$(67a0d60b-de70-49b7-91df-5d7e90fd4f32.OutputPathUri)" />
+    <Alias n="41" Id="(@40)" />
+    <Alias n="42" Uri="Assembly=$(ced2b48c-dd49-4b5d-97b4-d80e72b5d71b.OutputPathUri)" />
+    <Alias n="43" Id="(@42)" />
+    <Alias n="44" Uri="Assembly=$(8a6779e4-35f1-447b-8636-0ddea5602680.OutputPathUri)" />
+    <Alias n="45" Id="(@44)" />
+    <Alias n="46" Uri="Assembly=$(aac17b69-5ebe-458e-bddf-c712ba937cdd.OutputPathUri)" />
+    <Alias n="47" Id="(@46)" />
+    <Alias n="48" Uri="Assembly=$(9734958d-d791-4f18-b4dd-ca245706ee6c.OutputPathUri)" />
+    <Alias n="49" Id="(@48)" />
+    <Alias n="50" Uri="Assembly=$(381bc12f-84be-4600-aade-e1a22cb42a88.OutputPathUri)" />
+    <Alias n="51" Id="(@50)" />
+    <Alias n="52" Uri="Assembly=$(c2fc2140-1e29-4ff9-9a89-a08db41cc90a.OutputPathUri)" />
+    <Alias n="53" Id="(@52)" />
+    <Alias n="54" Uri="Assembly=$(0a4322d1-5e55-4d03-bd30-352378dd30c2.OutputPathUri)" />
+    <Alias n="55" Id="(@54)" />
+    <Alias n="56" Uri="Assembly=$(a8cdeeea-fe40-4077-86bf-59358b46075b.OutputPathUri)" />
+    <Alias n="57" Id="(@56)" />
+    <Alias n="58" Uri="Assembly=$(93bad24f-c421-4316-a158-e12c2dfbdb15.OutputPathUri)" />
+    <Alias n="59" Uri="Assembly=$(fafe5226-58fb-4dce-ac3b-31fdff352746.OutputPathUri)" />
+    <Alias n="60" Id="(@59)" />
   </IdentifierAliases>
   <Styles>
+    <Style TargetType="Node" GroupLabel="Error" ValueLabel="Error Level">
+      <Condition Expression="HasValue('ErrorLevel')" />
+      <Setter Property="Icon" Value="Node.Error" />
+    </Style>
     <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
       <Condition Expression="HasCategory('QueryResult')" />
       <Setter Property="Background" Value="#FFBCFFBE" />
@@ -502,17 +604,27 @@
     <Path Id="0a4322d1-5e55-4d03-bd30-352378dd30c2.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Web/BlazorClient/bin/Debug/netstandard2.1/TheSharpFactory.Apps.Web.BlazorClient.dll" />
     <Path Id="199309e9-f428-41d9-8afb-8bb593c31cc4.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\SharedUI\bin\Debug\netstandard2.0\TheSharpFactory.Apps.Cross.SharedUI.dll" />
     <Path Id="199309e9-f428-41d9-8afb-8bb593c31cc4.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/SharedUI/bin/Debug/netstandard2.0/TheSharpFactory.Apps.Cross.SharedUI.dll" />
+    <Path Id="1e33b304-9298-4bac-946f-f8abd3a5dfa4.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Web\BlazorServer\bin\Debug\netcoreapp3.1\TheSharpFactory.Apps.Web.BlazorServer.dll" />
+    <Path Id="1e33b304-9298-4bac-946f-f8abd3a5dfa4.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Web/BlazorServer/bin/Debug/netcoreapp3.1/TheSharpFactory.Apps.Web.BlazorServer.dll" />
     <Path Id="2407e563-c06f-4d81-b094-311dc85b4b4a.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Windows\WPF.Blazor\bin\Debug\TheSharpFactory.Apps.Cross.WPF.Blazor.exe" />
     <Path Id="2407e563-c06f-4d81-b094-311dc85b4b4a.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Windows/WPF.Blazor/bin/Debug/TheSharpFactory.Apps.Cross.WPF.Blazor.exe" />
     <Path Id="26ab7e0b-36fc-4c01-bf83-913540c0d4ff.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Windows\WPF\bin\Debug\TheSharpFactory.Apps.Cross.WPF.exe" />
     <Path Id="26ab7e0b-36fc-4c01-bf83-913540c0d4ff.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Windows/WPF/bin/Debug/TheSharpFactory.Apps.Cross.WPF.exe" />
     <Path Id="3599f073-739b-43c5-a044-a460979ccb8c.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Windows\UWP\bin\x86\Debug\TheSharpFactory.Apps.Cross.UWP.exe" />
     <Path Id="3599f073-739b-43c5-a044-a460979ccb8c.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Windows/UWP/bin/x86/Debug/TheSharpFactory.Apps.Cross.UWP.exe" />
+    <Path Id="381bc12f-84be-4600-aade-e1a22cb42a88.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Web\MVCDirect\bin\Debug\netcoreapp3.1\TheSharpFactory.Apps.Web.MVCDirect.dll" />
+    <Path Id="381bc12f-84be-4600-aade-e1a22cb42a88.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Web/MVCDirect/bin/Debug/netcoreapp3.1/TheSharpFactory.Apps.Web.MVCDirect.dll" />
     <Path Id="387c7d9f-8675-4d46-84ce-7adb1c9be51a.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Linux\macOS.Blazor\bin\Debug\TheSharpFactory.Apps.Cross.macOS.Blazor.exe" />
     <Path Id="387c7d9f-8675-4d46-84ce-7adb1c9be51a.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Linux/macOS.Blazor/bin/Debug/TheSharpFactory.Apps.Cross.macOS.Blazor.exe" />
     <Path Id="3b54bc0e-dbad-41ac-b21b-1ee74110b2e0.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Data\Entity\bin\Debug\netstandard2.0\TheSharpFactory.Data.Entity.dll" />
+    <Path Id="3f2a95b9-286e-473c-88dc-f5579f891c1b.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Web\Angular\bin\Debug\netcoreapp3.1\SharpFactory.Apps.Web.Angular.dll" />
+    <Path Id="3f2a95b9-286e-473c-88dc-f5579f891c1b.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Web/Angular/bin/Debug/netcoreapp3.1/SharpFactory.Apps.Web.Angular.dll" />
     <Path Id="44b1f453-0300-49c0-b9e9-2205e9eeae2c.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Linux\iOS.Blazor\bin\iPhone\Debug\TheSharpFactory.Apps.Cross.iOS.Blazor.exe" />
     <Path Id="44b1f453-0300-49c0-b9e9-2205e9eeae2c.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Linux/iOS.Blazor/bin/iPhone/Debug/TheSharpFactory.Apps.Cross.iOS.Blazor.exe" />
+    <Path Id="4aeb5506-20b5-4e8c-bd0b-ac6745528a60.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Web\MVC\bin\Debug\netcoreapp3.1\TheSharpFactory.Apps.Web.MVC.dll" />
+    <Path Id="4aeb5506-20b5-4e8c-bd0b-ac6745528a60.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Web/MVC/bin/Debug/netcoreapp3.1/TheSharpFactory.Apps.Web.MVC.dll" />
+    <Path Id="4e7b0102-4493-498d-9861-7dae0aea5635.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Shared\ViewModels.Mappers\DTO\bin\Debug\netstandard2.0\TheSharpFactory.Apps.Shared.ViewModels.Mappers.DTO.dll" />
+    <Path Id="4e7b0102-4493-498d-9861-7dae0aea5635.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Shared/ViewModels.Mappers/DTO/bin/Debug/netstandard2.0/TheSharpFactory.Apps.Shared.ViewModels.Mappers.DTO.dll" />
     <Path Id="5614acd3-e32d-4e0c-a996-5a1a2398925c.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Data\Repository.Interfaces\bin\Debug\netstandard2.0\TheSharpFactory.Data.Repository.Interfaces.dll" />
     <Path Id="5663ac88-d6cb-4684-a55e-8a4e136d7677.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Linux\macOS\bin\Debug\TheSharpFactory.Apps.Cross.macOS.exe" />
     <Path Id="5663ac88-d6cb-4684-a55e-8a4e136d7677.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Linux/macOS/bin/Debug/TheSharpFactory.Apps.Cross.macOS.exe" />
@@ -520,30 +632,40 @@
     <Path Id="67a0d60b-de70-49b7-91df-5d7e90fd4f32.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Linux\Tizen.Blazor\bin\Debug\tizen40\TheSharpFactory.Apps.Cross.Tizen.Blazor.dll" />
     <Path Id="67a0d60b-de70-49b7-91df-5d7e90fd4f32.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Linux/Tizen.Blazor/bin/Debug/tizen40/TheSharpFactory.Apps.Cross.Tizen.Blazor.dll" />
     <Path Id="6dfbcd2b-9368-4451-a806-25b4726c6e81.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Hybrid\Desktop.ElectronWeb\bin\Debug\netcoreapp3.1\TheSharpFactory.Apps.Cross.Desktop.ElectronWeb.dll" />
-    <Path Id="6dfbcd2b-9368-4451-a806-25b4726c6e81.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Hybrid/Desktop.ElectronWeb/bin/Debug/netcoreapp3.1/TheSharpFactory.Apps.Cross.Desktop.ElectronWeb.dll" />
     <Path Id="7cbc6077-0655-4007-a5c9-f07e65592c9f.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Linux\Android\bin\Debug\TheSharpFactory.Apps.Cross.Droid.dll" />
     <Path Id="7cbc6077-0655-4007-a5c9-f07e65592c9f.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Linux/Android/bin/Debug/TheSharpFactory.Apps.Cross.Droid.dll" />
     <Path Id="8a6779e4-35f1-447b-8636-0ddea5602680.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Shared\ViewModels\bin\Debug\netstandard2.0\TheSharpFactory.Apps.Shared.ViewModels.dll" />
     <Path Id="8a6779e4-35f1-447b-8636-0ddea5602680.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Shared/ViewModels/bin/Debug/netstandard2.0/TheSharpFactory.Apps.Shared.ViewModels.dll" />
+    <Path Id="8fe7d070-dce1-4c8b-97aa-877a7ee73469.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Web\SharedUI\bin\Debug\netcoreapp3.1\TheSharpFactory.Apps.Web.SharedUI.dll" />
+    <Path Id="8fe7d070-dce1-4c8b-97aa-877a7ee73469.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Web/SharedUI/bin/Debug/netcoreapp3.1/TheSharpFactory.Apps.Web.SharedUI.dll" />
+    <Path Id="93bad24f-c421-4316-a158-e12c2dfbdb15.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Web\React\bin\Debug\netcoreapp3.1\SharpFactory.Apps.Web.ReactWithRedux.dll" />
+    <Path Id="93bad24f-c421-4316-a158-e12c2dfbdb15.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Web/React/bin/Debug/netcoreapp3.1/SharpFactory.Apps.Web.ReactWithRedux.dll" />
     <Path Id="9734958d-d791-4f18-b4dd-ca245706ee6c.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Shared\Abstractions\ViewModels\bin\Debug\netstandard2.0\TheSharpFactory.Apps.Shared.ViewModels.Abstractions.dll" />
     <Path Id="9734958d-d791-4f18-b4dd-ca245706ee6c.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Shared/Abstractions/ViewModels/bin/Debug/netstandard2.0/TheSharpFactory.Apps.Shared.ViewModels.Abstractions.dll" />
     <Path Id="9ee60d61-357b-4454-83f1-063166d6e74a.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Windows\UWP.Blazor\bin\x86\Debug\TheSharpFactory.Apps.Cross.UWP.Blazor.exe" />
     <Path Id="9ee60d61-357b-4454-83f1-063166d6e74a.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Windows/UWP.Blazor/bin/x86/Debug/TheSharpFactory.Apps.Cross.UWP.Blazor.exe" />
     <Path Id="a282ed13-e36a-4d0e-9b63-032c4a311293.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Linux\Android.Blazor\bin\Debug\TheSharpFactory.Apps.Cross.Droid.Blazor.dll" />
     <Path Id="a282ed13-e36a-4d0e-9b63-032c4a311293.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Linux/Android.Blazor/bin/Debug/TheSharpFactory.Apps.Cross.Droid.Blazor.dll" />
+    <Path Id="a8cdeeea-fe40-4077-86bf-59358b46075b.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Hybrid\Desktop.WebWindow\bin\Debug\netcoreapp3.1\TheSharpFactory.Apps.Hybrid.Desktop.WebWindow.dll" />
+    <Path Id="a8cdeeea-fe40-4077-86bf-59358b46075b.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Hybrid/Desktop.WebWindow/bin/Debug/netcoreapp3.1/TheSharpFactory.Apps.Hybrid.Desktop.WebWindow.dll" />
     <Path Id="aac17b69-5ebe-458e-bddf-c712ba937cdd.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Shared\Abstractions\Services\bin\Debug\netstandard2.0\TheSharpFactorty.Apps.Shared.Services.Abstractions.dll" />
     <Path Id="aac17b69-5ebe-458e-bddf-c712ba937cdd.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Shared/Abstractions/Services/bin/Debug/netstandard2.0/TheSharpFactorty.Apps.Shared.Services.Abstractions.dll" />
     <Path Id="bbc09c0e-4c03-4a87-bf38-c3a74ed1f01a.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Hybrid\Desktop.WebWindow\bin\Debug\netcoreapp3.1\TheSharpFactory.Apps.Cross.Desktop.WebWindow.dll" />
-    <Path Id="bbc09c0e-4c03-4a87-bf38-c3a74ed1f01a.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Hybrid/Desktop.WebWindow/bin/Debug/netcoreapp3.1/TheSharpFactory.Apps.Cross.Desktop.WebWindow.dll" />
     <Path Id="c2e0b63b-c99d-4da4-ab71-6bdeb14c4c7b.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Linux\iOS\bin\iPhone\Debug\TheSharpFactory.Apps.Cross.iOS.exe" />
     <Path Id="c2e0b63b-c99d-4da4-ab71-6bdeb14c4c7b.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Linux/iOS/bin/iPhone/Debug/TheSharpFactory.Apps.Cross.iOS.exe" />
+    <Path Id="c2fc2140-1e29-4ff9-9a89-a08db41cc90a.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Web\BlazorServerDirect\bin\Debug\netcoreapp3.1\TheSharpFactory.Apps.Web.BlazorServerDirect.dll" />
+    <Path Id="c2fc2140-1e29-4ff9-9a89-a08db41cc90a.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Web/BlazorServerDirect/bin/Debug/netcoreapp3.1/TheSharpFactory.Apps.Web.BlazorServerDirect.dll" />
     <Path Id="ced2b48c-dd49-4b5d-97b4-d80e72b5d71b.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Shared\Services\bin\Debug\netstandard2.0\TheSharpFactory.Apps.Shared.Services.dll" />
     <Path Id="ced2b48c-dd49-4b5d-97b4-d80e72b5d71b.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Shared/Services/bin/Debug/netstandard2.0/TheSharpFactory.Apps.Shared.Services.dll" />
     <Path Id="d24b5b16-c3e9-49ab-b94f-69b1085beaac.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Data\Query\bin\Debug\netstandard2.0\TheSharpFactory.Data.Query.dll" />
     <Path Id="ddcdd8d4-a971-45da-aef9-b49e8c4c7688.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Linux\Tizen\bin\Debug\tizen55\TheSharpFactory.Apps.Cross.Tizen.dll" />
     <Path Id="ddcdd8d4-a971-45da-aef9-b49e8c4c7688.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Linux/Tizen/bin/Debug/tizen55/TheSharpFactory.Apps.Cross.Tizen.dll" />
+    <Path Id="eba42083-eca2-47d7-b6c7-2990fb423b5e.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Hybrid\Desktop.ElectronWeb\bin\Debug\netcoreapp3.1\TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb.dll" />
+    <Path Id="eba42083-eca2-47d7-b6c7-2990fb423b5e.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Hybrid/Desktop.ElectronWeb/bin/Debug/netcoreapp3.1/TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb.dll" />
     <Path Id="ebbe56b5-8275-424b-983c-ec2dfa7ead00.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Web\SharedUI.Blazor\bin\Debug\netstandard2.1\TheSharpFactory.Apps.Web.SharedUI.Blazor.dll" />
     <Path Id="ebbe56b5-8275-424b-983c-ec2dfa7ead00.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Web/SharedUI.Blazor/bin/Debug/netstandard2.1/TheSharpFactory.Apps.Web.SharedUI.Blazor.dll" />
+    <Path Id="f5a124f5-a60d-4d21-9800-de44c14d7e6e.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Shared\ViewModels.Mappers\Domain\bin\Debug\netstandard2.0\TheSharpFactory.Apps.Shared.ViewModels.Mappers.Domain.dll" />
+    <Path Id="f5a124f5-a60d-4d21-9800-de44c14d7e6e.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Shared/ViewModels.Mappers/Domain/bin/Debug/netstandard2.0/TheSharpFactory.Apps.Shared.ViewModels.Mappers.Domain.dll" />
     <Path Id="fafe5226-58fb-4dce-ac3b-31fdff352746.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Applications\Cross-Platform\Linux\GTK\bin\Debug\TheSharpFactory.Apps.Cross.Linux.dll" />
     <Path Id="fafe5226-58fb-4dce-ac3b-31fdff352746.OutputPathUri" Value="file:///D:/Works/Projects/TheSharpFactory/samples/sources/Applications/Cross-Platform/Linux/GTK/bin/Debug/TheSharpFactory.Apps.Cross.Linux.dll" />
     <Path Id="fc10c9a7-2fd6-4f04-8709-488cd6d72c42.OutputPath" Value="D:\Works\Projects\TheSharpFactory\samples\sources\Data\Entity.Utils\bin\Debug\netstandard2.0\TheSharpFactory.Data.Entity.Utils.dll" />

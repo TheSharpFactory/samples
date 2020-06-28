@@ -40,7 +40,7 @@
         <dependencyFromLayerToLayer Id="c971e0a2-f034-484d-b1b8-64ca3909c7fe" direction="Bidirectional">
           <layerMoniker Id="dc9b1a80-6ae2-4466-b34b-f41e923745b9" />
         </dependencyFromLayerToLayer>
-        <dependencyFromLayerToLayer Id="26916ab5-8294-4656-a859-39ef010adc05" direction="Forward">
+        <dependencyFromLayerToLayer Id="129e1198-ea1b-44ed-b379-a9dc298f8427" direction="Forward">
           <layerMoniker Id="5a37c67c-6a6c-4630-8deb-f0ea343f5e6e" />
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
@@ -101,6 +101,36 @@
                 </reference>
               </references>
             </layer>
+            <layer Id="c66dc5e5-6f57-4459-8160-71b51a3c3ab4" name="Mappers&#xD;&#xA;">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="96d2c9c3-55a2-494e-b690-34563e18dcbe" direction="Forward">
+                  <layerMoniker Id="33a93e0f-4521-4a8f-8942-ba6e3016ca0a" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <childLayers>
+                <layer Id="71d33dfa-e28b-40d4-b9d3-deb0d9e899cb" name="Profiles">
+                  <references>
+                    <reference Id="30fcafd6-5433-42b9-a3c8-761851dacd3a" name="DomainModelToViewModelMappingProfile">
+                      <ArtifactNode Label="DomainModelToViewModelMappingProfile" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Shared.ViewModels.Mappers.Domain Namespace=TheSharpFactory.Apps.Shared.ViewModels Type=DomainModelToViewModelMappingProfile)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Shared.ViewModels.Mappers.Domain Namespace=TheSharpFactory.Apps.Shared.ViewModels Type=DomainModelToViewModelMappingProfile)" Label="DomainModelToViewModelMappingProfile" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Contains" />
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                  </references>
+                </layer>
+              </childLayers>
+              <references>
+                <reference Id="0c248bc6-3b8e-409c-bc83-3eae0caf2008" name="TheSharpFactory.Apps.Shared.ViewModels.Mappers.Domain.dll">
+                  <ArtifactNode Label="TheSharpFactory.Apps.Shared.ViewModels.Mappers.Domain.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Shared.ViewModels.Mappers.Domain)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Shared.ViewModels.Mappers.Domain)" Label="TheSharpFactory.Apps.Shared.ViewModels.Mappers.Domain.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
           </childLayers>
         </layer>
         <layer Id="6dfa2b4b-3f32-447b-8cce-9a1aa198da70" name="UI">
@@ -112,7 +142,7 @@
           <childLayers>
             <layer Id="cb91287e-4d6d-400a-9cc7-3ac17b97e4d8" name="Shared">
               <childLayers>
-                <layer Id="2383e939-7db9-4ad3-b9ec-b09f6d5451fa" name="MVC Views">
+                <layer Id="2383e939-7db9-4ad3-b9ec-b09f6d5451fa" name="MVC&#xD;&#xA;">
                   <childLayers>
                     <layer Id="cfcec426-119c-40b6-bfbb-adcde057899d" name="Controllers">
                       <references>
@@ -126,7 +156,7 @@
                     </layer>
                   </childLayers>
                   <references>
-                    <reference Id="f782a5ac-092c-49b5-b3d0-7802b80d133f" name="TheSharpFactory.Apps.Web.SharedUI.dll">
+                    <reference Id="6b3080e0-3001-486e-9730-f37dfb3e8d96" name="TheSharpFactory.Apps.Web.SharedUI.dll">
                       <ArtifactNode Label="TheSharpFactory.Apps.Web.SharedUI.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Web.SharedUI)" />
                       <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Web.SharedUI)" Label="TheSharpFactory.Apps.Web.SharedUI.dll" Category="CodeSchema_Assembly">
                         <Category Ref="FileSystem.Category.FileOfType.dll" />
@@ -163,9 +193,6 @@
               <childLayers>
                 <layer Id="94303162-b52a-4561-b5ef-d60fba344889" name="Components">
                   <references>
-                    <reference Id="0e1c94ca-4675-4aaf-888a-be422fca1f46" name="_Host.cshtml">
-                      <ArtifactNode Label="_Host.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorServerDirect/Apps.Web.BlazorServerDirect.csproj File=../Applications/Web/BlazorServerDirect/Pages/_Host.cshtml)" />
-                    </reference>
                     <reference Id="e75b259e-c1c3-4409-bd2b-cf019843e549" name="_Imports.razor">
                       <ArtifactNode Label="_Imports.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorClient/Apps.Web.BlazorClient.csproj File=../Applications/Web/BlazorClient/Pages/_Imports.razor)" />
                     </reference>
@@ -211,13 +238,6 @@
                       <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Web.BlazorServerDirect Namespace=TheSharpFactory.Apps.Web.BlazorServerDirect Type=Program)" Label="Program" Category="CodeSchema_Class">
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
-                    </reference>
-                  </references>
-                </layer>
-                <layer Id="05a84532-dd88-4334-9df1-34f7519d8f7b" name="Views">
-                  <references>
-                    <reference Id="3332604d-c10c-4001-89f5-9afbdef9dd3a" name="_Host.cshtml">
-                      <ArtifactNode Label="_Host.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorServerDirect/Apps.Web.BlazorServerDirect.csproj File=../Applications/Web/BlazorServerDirect/Pages/_Host.cshtml)" />
                     </reference>
                   </references>
                 </layer>
@@ -409,46 +429,6 @@
           </references>
         </layer>
       </childLayers>
-    </layer>
-    <layer Id="807037a7-4052-4d5b-aaad-167ac46b763a" name="Views">
-      <references>
-        <reference Id="ab1fb63c-0302-437f-bb29-c48a44bd66f3" name="Index.cshtml">
-          <ArtifactNode Label="Index.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/Home/Index.cshtml)" />
-        </reference>
-        <reference Id="cafdd979-d6e3-4430-a231-cc5eb8e74732" name="FetchData.cshtml">
-          <ArtifactNode Label="FetchData.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/Home/FetchData.cshtml)" />
-        </reference>
-        <reference Id="9cb4b5d1-3c1d-4db1-8b29-010906e9d34d" name="Counter.cshtml">
-          <ArtifactNode Label="Counter.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/Home/Counter.cshtml)" />
-        </reference>
-        <reference Id="1a9743b9-0a3f-4a41-8185-43eca7987e17" name="Privacy.cshtml">
-          <ArtifactNode Label="Privacy.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/Home/Privacy.cshtml)" />
-        </reference>
-        <reference Id="e50886ca-31f2-46f8-bdad-4d9aaa8487b0" name="_ViewImports.cshtml">
-          <ArtifactNode Label="_ViewImports.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/_ViewImports.cshtml)" />
-        </reference>
-        <reference Id="a3399901-871a-413f-a6da-a8bc94c222b6" name="_ViewStart.cshtml">
-          <ArtifactNode Label="_ViewStart.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/_ViewStart.cshtml)" />
-        </reference>
-        <reference Id="714cac67-5664-4b87-be8b-51b780bce5c6" name="_ViewImports.cshtml1">
-          <ArtifactNode Label="_ViewImports.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/_ViewImports.cshtml)" />
-        </reference>
-        <reference Id="27fa4546-bfb1-432a-9664-40b9944b6c41" name="_ViewStart.cshtml1">
-          <ArtifactNode Label="_ViewStart.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/_ViewStart.cshtml)" />
-        </reference>
-        <reference Id="22667f00-3c86-49fe-8427-2290ff8f3b71" name="_Layout.cshtml">
-          <ArtifactNode Label="_Layout.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/Shared/_Layout.cshtml)" />
-        </reference>
-        <reference Id="529a4670-c0d6-44c8-a1aa-333f0b0f3354" name="_ValidationScriptsPartial.cshtml">
-          <ArtifactNode Label="_ValidationScriptsPartial.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/Shared/_ValidationScriptsPartial.cshtml)" />
-        </reference>
-        <reference Id="ef011202-bf95-4c4b-a446-74931db1bb98" name="Error.cshtml">
-          <ArtifactNode Label="Error.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/Shared/Error.cshtml)" />
-        </reference>
-        <reference Id="d30ed54e-6443-49d2-8f0b-9559c5feb4f5" name="NavMenu.cshtml">
-          <ArtifactNode Label="NavMenu.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/Shared/NavMenu.cshtml)" />
-        </reference>
-      </references>
     </layer>
   </layers>
 </layerModel>

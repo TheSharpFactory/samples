@@ -101,6 +101,35 @@
                 </reference>
               </references>
             </layer>
+            <layer Id="02394fdd-e78a-4f6d-83b9-1256edabc584" name="Mappers&#xD;&#xA;">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="5f34e567-dcf6-44a4-adc8-72382c05894b" direction="Forward">
+                  <layerMoniker Id="33a93e0f-4521-4a8f-8942-ba6e3016ca0a" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <childLayers>
+                <layer Id="333f914d-3315-45b2-ae00-058f1bfe85fd" name="Profiles">
+                  <references>
+                    <reference Id="2a872158-f70e-4ba4-9ce2-6172c7da4efa" name="DTOToViewModelMappingProfile1">
+                      <ArtifactNode Label="DTOToViewModelMappingProfile" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Shared.ViewModels.Mappers.DTO Namespace=TheSharpFactory.Apps.Shared.ViewModels Type=DTOToViewModelMappingProfile)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Shared.ViewModels.Mappers.DTO Namespace=TheSharpFactory.Apps.Shared.ViewModels Type=DTOToViewModelMappingProfile)" Label="DTOToViewModelMappingProfile" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                  </references>
+                </layer>
+              </childLayers>
+              <references>
+                <reference Id="3999bd33-3ebd-45c2-a6f1-a0e572e4071c" name="TheSharpFactory.Apps.Shared.ViewModels.Mappers.DTO.dll">
+                  <ArtifactNode Label="TheSharpFactory.Apps.Shared.ViewModels.Mappers.DTO.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Shared.ViewModels.Mappers.DTO)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Shared.ViewModels.Mappers.DTO)" Label="TheSharpFactory.Apps.Shared.ViewModels.Mappers.DTO.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
           </childLayers>
         </layer>
         <layer Id="6dfa2b4b-3f32-447b-8cce-9a1aa198da70" name="UI">
@@ -114,46 +143,6 @@
               <childLayers>
                 <layer Id="2383e939-7db9-4ad3-b9ec-b09f6d5451fa" name="MVC">
                   <childLayers>
-                    <layer Id="b0fdceab-432d-4049-a468-52965d4801c3" name="Views">
-                      <references>
-                        <reference Id="12f95b12-2520-4bf2-8e7d-766c8f284037" name="Index.cshtml">
-                          <ArtifactNode Label="Index.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/Home/Index.cshtml)" />
-                        </reference>
-                        <reference Id="6b53490a-1920-4722-8946-c4f7fe6f4d3e" name="FetchData.cshtml">
-                          <ArtifactNode Label="FetchData.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/Home/FetchData.cshtml)" />
-                        </reference>
-                        <reference Id="51b692c6-e98e-4fb2-813e-9af086e2176d" name="Counter.cshtml">
-                          <ArtifactNode Label="Counter.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/Home/Counter.cshtml)" />
-                        </reference>
-                        <reference Id="d8e299f2-4117-49a4-8b9e-7071edd709f8" name="Privacy.cshtml">
-                          <ArtifactNode Label="Privacy.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/Home/Privacy.cshtml)" />
-                        </reference>
-                        <reference Id="fb0b4709-b147-4ce1-b749-bfdf9570945d" name="_ViewImports.cshtml">
-                          <ArtifactNode Label="_ViewImports.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/_ViewImports.cshtml)" />
-                        </reference>
-                        <reference Id="46fb3d82-df8f-489c-9564-a83f2209f668" name="_ViewStart.cshtml">
-                          <ArtifactNode Label="_ViewStart.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Areas/Landing/Views/_ViewStart.cshtml)" />
-                        </reference>
-                        <reference Id="445f7ab9-8417-4ed0-9243-3cc25f5fdbcd" name="_ViewImports.cshtml1">
-                          <ArtifactNode Label="_ViewImports.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/_ViewImports.cshtml)" />
-                        </reference>
-                        <reference Id="4d3558cd-2da9-48a8-b0c1-a2267b576cc6" name="_ViewStart.cshtml1">
-                          <ArtifactNode Label="_ViewStart.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/_ViewStart.cshtml)" />
-                        </reference>
-                        <reference Id="b2b6f440-f8de-44a6-a37b-25f81349a3dc" name="_Layout.cshtml">
-                          <ArtifactNode Label="_Layout.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/Shared/_Layout.cshtml)" />
-                        </reference>
-                        <reference Id="77e1d40c-44d9-416e-a2a4-35e0bae6fbbb" name="_ValidationScriptsPartial.cshtml">
-                          <ArtifactNode Label="_ValidationScriptsPartial.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/Shared/_ValidationScriptsPartial.cshtml)" />
-                        </reference>
-                        <reference Id="94719789-4976-42ba-8861-bbf9aab62f5e" name="Error.cshtml">
-                          <ArtifactNode Label="Error.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/Shared/Error.cshtml)" />
-                        </reference>
-                        <reference Id="a3b49ddd-b234-4d76-80d4-634b629aad76" name="NavMenu.cshtml">
-                          <ArtifactNode Label="NavMenu.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/SharedUI/Apps.Web.SharedUI.csproj File=../Applications/Web/SharedUI/Views/Shared/NavMenu.cshtml)" />
-                        </reference>
-                      </references>
-                    </layer>
                     <layer Id="bf1eb762-956a-48c6-9568-f8b1157931ce" name="Controllers">
                       <references>
                         <reference Id="67528e95-c826-4c59-a0cf-0ceb82381cc0" name="HomeController1">
@@ -280,32 +269,6 @@
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
-                    <reference Id="f0f21906-0aec-43ec-86c3-62eba1ec9b88" name="Startup1">
-                      <ArtifactNode Label="Startup" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Namespace=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Type=Startup)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Namespace=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Type=Startup)" Label="Startup" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Contains" />
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="aa02cb33-c62e-4f11-b3e1-47654cc7ff33" name="Program14">
-                      <ArtifactNode Label="Program" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Namespace=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Type=Program)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Namespace=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Type=Program)" Label="Program" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="60fda4c3-4355-4977-b631-8eb07ea8272a" name="Program">
-                      <ArtifactNode Label="Program" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.WebWindow Namespace=TheSharpFactory.Apps.Cross.Desktop.WebView Type=Program)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.WebWindow Namespace=TheSharpFactory.Apps.Cross.Desktop.WebView Type=Program)" Label="Program" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Contains" />
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
-                    <reference Id="b003588d-eb58-49b6-a1a3-d17d3a7dd439" name="Startup11">
-                      <ArtifactNode Label="Startup" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.WebWindow Namespace=TheSharpFactory.Apps.Cross.Desktop.WebView Type=Startup)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.WebWindow Namespace=TheSharpFactory.Apps.Cross.Desktop.WebView Type=Startup)" Label="Startup" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
-                    </reference>
                     <reference Id="9f6dcc34-996c-4ed3-903e-96bc95ff7d20" name="App14">
                       <ArtifactNode Label="App" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.UWP Namespace=TheSharpFactory.Apps.Cross.UWP Type=App)" />
                       <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.UWP Namespace=TheSharpFactory.Apps.Cross.UWP Type=App)" Label="App" Category="CodeSchema_Class">
@@ -408,13 +371,22 @@
                         <LinkCategory Ref="Represents" />
                       </ExpandedNode>
                     </reference>
+                    <reference Id="8d50d8fd-39f1-4c6d-a438-4e426c49dccf" name="Startup1">
+                      <ArtifactNode Label="Startup" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Hybrid.Desktop.WebWindow Namespace=TheSharpFactory.Apps.Hybrid.Desktop.WebWindow Type=Startup)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Hybrid.Desktop.WebWindow Namespace=TheSharpFactory.Apps.Hybrid.Desktop.WebWindow Type=Startup)" Label="Startup" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
+                    <reference Id="ddd04560-f1dd-4732-8f05-3209c161ffe2" name="Program1">
+                      <ArtifactNode Label="Program" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Hybrid.Desktop.WebWindow Namespace=TheSharpFactory.Apps.Hybrid.Desktop.WebWindow Type=Program)" />
+                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Hybrid.Desktop.WebWindow Namespace=TheSharpFactory.Apps.Hybrid.Desktop.WebWindow Type=Program)" Label="Program" Category="CodeSchema_Class">
+                        <LinkCategory Ref="Represents" />
+                      </ExpandedNode>
+                    </reference>
                   </references>
                 </layer>
                 <layer Id="f2210849-51aa-4e1d-b6e7-731c5b2488c2" name="Components">
                   <references>
-                    <reference Id="162373cf-e7c3-4033-a1fa-f14bef8123f1" name="_Host.cshtml">
-                      <ArtifactNode Label="_Host.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorServerDirect/Apps.Web.BlazorServerDirect.csproj File=../Applications/Web/BlazorServerDirect/Pages/_Host.cshtml)" />
-                    </reference>
                     <reference Id="325a7004-ce0d-4fd9-9122-b21313a7125a" name="_Imports.razor">
                       <ArtifactNode Label="_Imports.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorClient/Apps.Web.BlazorClient.csproj File=../Applications/Web/BlazorClient/Pages/_Imports.razor)" />
                     </reference>
@@ -438,23 +410,6 @@
                     </reference>
                     <reference Id="97fdc07d-9bda-439e-8a54-7561332a0113" name="_Imports.razor3">
                       <ArtifactNode Label="_Imports.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/Hybrid/Desktop.WebWindow/Apps.Cross.Desktop.WebWindow.csproj File=../Applications/Cross-Platform/Hybrid/Desktop.WebWindow/_Imports.razor)" />
-                    </reference>
-                  </references>
-                </layer>
-                <layer Id="b244576f-3109-48bd-a449-a85450f42b6e" name="Views">
-                  <references>
-                    <reference Id="639443bd-d774-4ad9-8eb5-dff3bb290d97" name="_Host.cshtml">
-                      <ArtifactNode Label="_Host.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Web/BlazorServer/Apps.Web.BlazorServer.csproj File=../Applications/Web/BlazorServer/Pages/_Host.cshtml)" />
-                    </reference>
-                    <reference Id="a42a305d-2213-412a-a221-4433c46775f4" name="_Imports.razor">
-                      <ArtifactNode Label="_Imports.razor" Category="CodeSchema_ProjectItem" Id="(Assembly=../Applications/Cross-Platform/Hybrid/Desktop.WebWindow/Apps.Cross.Desktop.WebWindow.csproj File=../Applications/Cross-Platform/Hybrid/Desktop.WebWindow/_Imports.razor)" />
-                    </reference>
-                    <reference Id="2c01ad04-9356-41c1-8b59-e17dc1cd7451" name="_Pages__Host">
-                      <ArtifactNode Label="_Pages__Host" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Namespace=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb.Pages Type=_Pages__Host)" />
-                      <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb Namespace=TheSharpFactory.Apps.Cross.Desktop.ElectronWeb.Pages Type=_Pages__Host)" Label="_Pages__Host" Category="CodeSchema_Class">
-                        <LinkCategory Ref="Contains" />
-                        <LinkCategory Ref="Represents" />
-                      </ExpandedNode>
                     </reference>
                   </references>
                 </layer>
@@ -599,6 +554,22 @@
                 <reference Id="0a2f63e9-bf5e-425e-9008-5af60f1a6660" name="TheSharpFactory.Apps.Web.MVC.dll1">
                   <ArtifactNode Label="TheSharpFactory.Apps.Web.MVC.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Web.MVC)" />
                   <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Web.MVC)" Label="TheSharpFactory.Apps.Web.MVC.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+                <reference Id="673efab8-e8b8-4505-8669-6a099077c411" name="TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb.dll">
+                  <ArtifactNode Label="TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb)" Label="TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+                <reference Id="04b74f9e-97f8-42bc-9b4b-11e21169c954" name="TheSharpFactory.Apps.Hybrid.Desktop.WebWindow.dll">
+                  <ArtifactNode Label="TheSharpFactory.Apps.Hybrid.Desktop.WebWindow.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Hybrid.Desktop.WebWindow)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Hybrid.Desktop.WebWindow)" Label="TheSharpFactory.Apps.Hybrid.Desktop.WebWindow.dll" Category="CodeSchema_Assembly">
                     <Category Ref="FileSystem.Category.FileOfType.dll" />
                     <LinkCategory Ref="Produces" />
                     <LinkCategory Ref="Represents" />

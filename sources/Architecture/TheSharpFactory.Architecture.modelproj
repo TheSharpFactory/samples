@@ -65,14 +65,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Applications\Cross-Platform\Hybrid\Desktop.ElectronWeb\Apps.Cross.Desktop.ElectronWeb.csproj">
-      <Name>Apps.Cross.Desktop.ElectronWeb</Name>
-      <Project>{9efb7310-8073-4435-b17d-f1837eeeba77}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Applications\Cross-Platform\Hybrid\Desktop.WebWindow\Apps.Cross.Desktop.WebWindow.csproj">
-      <Name>Apps.Cross.Desktop.WebWindow</Name>
-      <Project>{b3826e21-4f02-4879-a4c2-257821b729fd}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\Applications\Cross-Platform\Linux\Android.Blazor\Apps.Cross.Droid.Blazor.csproj">
       <Name>Apps.Cross.Droid.Blazor</Name>
       <Project>{a282ed13-e36a-4d0e-9b63-032c4a311293}</Project>
@@ -129,6 +121,14 @@
       <Name>Apps.Cross.WPF</Name>
       <Project>{26ab7e0b-36fc-4c01-bf83-913540c0d4ff}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Applications\Hybrid\Desktop.ElectronWeb\Apps.Hybrid.Desktop.ElectronWeb.csproj">
+      <Name>Apps.Hybrid.Desktop.ElectronWeb</Name>
+      <Project>{eba42083-eca2-47d7-b6c7-2990fb423b5e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Hybrid\Desktop.WebWindow\Apps.Hybrid.Desktop.WebWindow.csproj">
+      <Name>Apps.Hybrid.Desktop.WebWindow</Name>
+      <Project>{a8cdeeea-fe40-4077-86bf-59358b46075b}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Applications\Shared\Abstractions\Services\Apps.Shared.Abstractions.Services.csproj">
       <Name>Apps.Shared.Abstractions.Services</Name>
       <Project>{b2373ada-437a-46a3-97a2-a560ddfcf05a}</Project>
@@ -140,6 +140,14 @@
     <ProjectReference Include="..\Applications\Shared\Services\Apps.Shared.Services.csproj">
       <Name>Apps.Shared.Services</Name>
       <Project>{7545e23a-6a0f-4ac0-9a18-7feca06cddd6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Shared\ViewModels.Mappers\Domain\Apps.Shared.ViewModels.Mappers.Domain.csproj">
+      <Name>Apps.Shared.ViewModels.Mappers.Domain</Name>
+      <Project>{f5a124f5-a60d-4d21-9800-de44c14d7e6e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Applications\Shared\ViewModels.Mappers\DTO\Apps.Shared.ViewModels.Mappers.DTO.csproj">
+      <Name>Apps.Shared.ViewModels.Mappers.DTO</Name>
+      <Project>{4e7b0102-4493-498d-9861-7dae0aea5635}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Applications\Shared\ViewModels\Apps.Shared.ViewModels.csproj">
       <Name>Apps.Shared.ViewModels</Name>
