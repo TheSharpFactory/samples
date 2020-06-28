@@ -10,7 +10,8 @@ using Xamarin.Forms;
 
 namespace TheSharpFactory.Apps.Cross.SharedUI.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class ItemsViewModel
+        : BaseViewModel
     {
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
