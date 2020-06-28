@@ -1,5 +1,5 @@
 ﻿{
-  "executable": "TheSharpFactory.Apps.Cross.Desktop.ElectronWeb",
+  "executable": "TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb",
   "splashscreen": {
     "imageFile": ""
   },
@@ -7,8 +7,8 @@
   "author": "",
   "singleInstance": false,
   "build": {
-    "appId": "com.TheSharpFactory.Apps.Cross.Desktop.ElectronWeb.app",
-    "productName": "TheSharpFactory.Apps.Cross.Desktop.ElectronWeb",
+    "appId": "com.TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb.app",
+    "productName": "TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb",
     "copyright": "Copyright © 2020",
     "buildVersion": "1.0.0",
     "compression": "maximum",

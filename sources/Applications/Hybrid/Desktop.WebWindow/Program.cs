@@ -5,7 +5,7 @@ using WebWindows.Blazor;
 
 using StartupBase = TheSharpFactory.Apps.Web.SharedUI.StartupBase;
 
-namespace TheSharpFactory.Apps.Hybrid.Desktop.WebView
+namespace TheSharpFactory.Apps.Hybrid.Desktop.WebWindow
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "RCS1102:Make class static.", Justification = "<Pending>")]
     public static class Program

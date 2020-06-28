@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Apps.Cross.Desktop.WebView": {
+    "Apps.Cross.Desktop.WebWindow": {
       "commandName": "Project",
       "environmentVariables": {
         "IS_WEBWINDOW": "True"

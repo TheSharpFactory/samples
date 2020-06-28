@@ -10,13 +10,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="..\..\Web\BlazorClient\wwwroot\index.html" Link="wwwroot\index.html" Visible="true" />
-    <Content Include="..\..\Web\BlazorClient\wwwroot\favicon.ico" Link="wwwroot\favicon.ico" Visible="true" />
-    <Content Include="..\..\Web\BlazorClient\wwwroot\icon-512.png" Link="wwwroot\icon-512.png" Visible="true" />
-    <Content Include="..\..\Web\BlazorClient\wwwroot\manifest.json" Link="wwwroot\manifest.json" Visible="true" />
-    <Content Include="..\..\Web\BlazorClient\wwwroot\service-worker.shared.js" Link="wwwroot\service-worker.shared.js" Visible="true" />
-    <Content Include="..\..\Web\BlazorClient\wwwroot\service-worker.js" Link="wwwroot\service-worker.js" Visible="true" />
-    <Content Include="..\..\Web\BlazorClient\wwwroot\service-worker.published.js" Link="wwwroot\service-worker.published.js" Visible="true" />
+    <Content Include="..\..\Web\BlazorClient\wwwroot\favicon.ico" Link="wwwroot\favicon.ico" Visible="true" >
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Web\BlazorClient\wwwroot\icon-512.png" Link="wwwroot\icon-512.png" Visible="true" >
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Web\BlazorClient\wwwroot\manifest.json" Link="wwwroot\manifest.json" Visible="true" >
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Web\BlazorClient\wwwroot\service-worker.shared.js" Link="wwwroot\service-worker.shared.js" Visible="true" >
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Web\BlazorClient\wwwroot\service-worker.js" Link="wwwroot\service-worker.js" Visible="true" >
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Web\BlazorClient\wwwroot\service-worker.published.js" Link="wwwroot\service-worker.published.js" Visible="true" >
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -27,11 +38,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Blazor" Version="3.2.0-preview1.20073.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.5" />
     <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.4" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.4" />
-    <PackageReference Include="Microsoft.JSInterop" Version="3.1.4" />
+    <PackageReference Include="Microsoft.JSInterop" Version="3.1.5" />
     <PackageReference Include="WebWindow.Blazor" Version="0.1.0-20200214.10" />
   </ItemGroup>
 
