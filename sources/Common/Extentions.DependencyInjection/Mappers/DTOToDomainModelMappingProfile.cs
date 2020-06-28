@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 using AutoMapper;
 
 using TheSharpFactory.Domain.Models;
@@ -12,7 +9,6 @@ namespace TheSharpFactory.Common.DTO
         : Profile
     {
         public DTOToDomainModelMappingProfile()
-            : base()
         {
             CreateMap<CustomerDTO, Customer>()
                 .ForMember(
