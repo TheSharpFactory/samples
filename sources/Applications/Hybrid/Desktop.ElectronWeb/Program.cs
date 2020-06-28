@@ -1,12 +1,6 @@
 ﻿
-using ElectronNET.API;
-
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-
-using TheSharpFactory.Apps.Web.SharedUI;
-
-using StartupBase = TheSharpFactory.Apps.Web.SharedUI.StartupBase;
 
 namespace TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb
 {
@@ -14,30 +8,13 @@ namespace TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb
     {
         public static void Main(string[] args)
         {
-            StartupBase.AppModel = new BlazorApplicationModel
-            {
-                Flavor = BlazorFlavor.WebAssembly | BlazorFlavor.Hybrid,
-                Platform = BlazorPlatform.Web | BlazorPlatform.Electron
-            };
+            var builder = Host.CreateDefaultBuilder(args);
 
-            CreateHostBuilder(args).Build().Run();
-            //var builder = Host.CreateDefaultBuilder(args);
-
-            //Web
-            //    .SharedUI
-            //    .Program
-            //    .BuildBlazorHost(builder, true, args)
-            //    .Run();
+            Web
+                .SharedUI
+                .Program
+                .BuildBlazorHost<Startup>(builder, true, args)
+                .Run();
         }
-
-        public static IHostBuilder CreateHostBuilder(string[] args)
-            => Host
-                .CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseElectron(args);
-                    webBuilder.UseStartup<Startup>();
-                }
-                );
     }
 }

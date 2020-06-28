@@ -4,9 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-//using Data.Repository.Common;
-//using Data.Repository.Container;
-//using Data.Repository.Container.Interfaces;
+using TheSharpFactory.Common.Extensions.DependencyInjection.Mappers;
+using TheSharpFactory.Domain.Extensions.DependencyInjection;
+
 
 namespace TheSharpFactory.Services.Unified
 {
@@ -19,13 +19,11 @@ namespace TheSharpFactory.Services.Unified
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-            //Database.RegisterModelConnectionString(
-            //    RepoLookup.ModelId.WWI,
-            //    Configuration.GetConnectionString("WWIConnectionString")
-            //);
-
-            //services.AddSingleton<IRepositoryContainer, RepositoryContainer>();
-            => _ = services.AddControllers();
+        {
+            _ = services.AddControllers();
+            _ = services.AddMapper(true, true);
+            _ = services.AddSharpFactoryDomain(() => Configuration.GetConnectionString("WWI"));
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
