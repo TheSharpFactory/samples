@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Extentions.DependencyInjection\Common.Extentions.DependencyInjection.csproj" />
     <ProjectReference Include="..\..\Domain\Extensions\Domain.Extensions.csproj" />
+    <ProjectReference Include="..\Abstractions\Services.Abstractions.csproj" />
   </ItemGroup>
   
 </Project>

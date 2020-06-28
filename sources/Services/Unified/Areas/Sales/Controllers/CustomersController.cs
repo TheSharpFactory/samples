@@ -1,12 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-using AutoMapper;
-
 using Microsoft.AspNetCore.Mvc;
 
 using TheSharpFactory.Common.DTO;
-using TheSharpFactory.Domain.Models;
 
 namespace TheSharpFactory.Services.Unified.Areas.Sales.Controllers
 {
@@ -15,27 +12,17 @@ namespace TheSharpFactory.Services.Unified.Areas.Sales.Controllers
     public class CustomersController
         : ControllerBase
     {
-        private readonly ISalesAggregate _sales;
-        private readonly IMapper _mapper;
+        private readonly ISalesService _sales;
 
         public CustomersController(
-            ISalesAggregate sales,
-            IMapper mapper
+            ISalesService sales
         )
-        {
-            _sales = sales;
-            _mapper = mapper;
-        }
+            => _sales = sales;
 
         public List<CustomerDTO> Get()
         {
-            _sales.FetchAllCustomers();
-            return _sales
-                        .Customers
-                        .Select(c =>
-                            _mapper.Map<CustomerDTO>(c)
-                        )
-                        .ToList();
+            _sales.FetchCustomers();
+            return _sales.Customers.ToList();
         }
     }
 }
