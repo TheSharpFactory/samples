@@ -18,12 +18,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />    
     <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.5" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Applications\Shared\ViewModels\Apps.Shared.ViewModels.csproj" />
     <ProjectReference Include="..\..\Domain\Extensions\Domain.Extensions.csproj" />
     <ProjectReference Include="..\DTO\Common.DTO.csproj" />
   </ItemGroup>

@@ -17,5 +17,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Extentions.DependencyInjection\Common.Extentions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Domain\Extensions\Domain.Extensions.csproj" />
+  </ItemGroup>
   
 </Project>
