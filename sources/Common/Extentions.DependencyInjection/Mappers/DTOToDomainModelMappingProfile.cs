@@ -1,9 +1,10 @@
 ﻿
 using AutoMapper;
 
+using TheSharpFactory.Common.DTO;
 using TheSharpFactory.Domain.Models;
 
-namespace TheSharpFactory.Common.DTO
+namespace TheSharpFactory.Common.Extensions.DependencyInjection.Mappers
 {
     public class DTOToDomainModelMappingProfile
         : Profile
