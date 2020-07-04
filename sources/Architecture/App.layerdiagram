@@ -33,6 +33,66 @@
           </references>
         </layer>
         <layer Id="07c49282-7cea-4906-b341-8ebbcf3cf1ad" name="Authentication,&#xD;&#xA;Authorization&#xD;&#xA;&amp; &#xD;&#xA;Accounting&#xD;&#xA;" />
+        <layer Id="dfd18dfa-8dbb-4f08-b4ae-8a391347973a" name="SDK">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="3ce702de-f08d-475d-a578-3bcb94dbb4df" direction="Forward">
+              <layerMoniker Id="2e99d0bf-63a2-46d1-8f40-21983cbc175e" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="8a28029e-7c4f-4449-b0cf-3d6038cbf60a" name="Abstractions">
+              <references>
+                <reference Id="8b9c62b0-867b-437a-bd6c-8dd75f883991" name="TheSharpFactory.Common.SDK.Abstractions.dll">
+                  <ArtifactNode Label="TheSharpFactory.Common.SDK.Abstractions.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Common.SDK.Abstractions)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.Common.SDK.Abstractions)" Label="TheSharpFactory.Common.SDK.Abstractions.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="d9a29ec9-dc02-4fdd-8a8f-1b0a0ecc17e1" name="SDK">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="0271d150-9604-464f-8c9f-751f00bc956c" direction="Forward">
+                  <layerMoniker Id="8a28029e-7c4f-4449-b0cf-3d6038cbf60a" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="7f41f55c-6db4-4b0a-a0d1-08d6a1c9e3bd" name="TheSharpFactory.SDK.dll">
+                  <ArtifactNode Label="TheSharpFactory.SDK.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.SDK)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.SDK)" Label="TheSharpFactory.SDK.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="323e5c00-d6fc-4157-a288-074c3b1a75ce" name="Extensions">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="51d96e10-3e62-42b2-8641-8d98d8711391" direction="Forward">
+                  <layerMoniker Id="8a28029e-7c4f-4449-b0cf-3d6038cbf60a" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="fad0a861-2f47-4681-b6d9-479527f20cf2" direction="Forward">
+                  <layerMoniker Id="d9a29ec9-dc02-4fdd-8a8f-1b0a0ecc17e1" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="54737757-1efa-494c-9384-1b4d0bffcbf5" name="SDK.Extensions">
+                  <ArtifactNode Label="SDK.Extensions" Category="CodeSchema_Project" Id="(Assembly=../Common/SDK.Extensions/SDK.Extensions.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.SDK.Extensions)" Label="TheSharpFactory.SDK.Extensions.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+        </layer>
       </childLayers>
     </layer>
     <layer Id="79995384-62f4-47fe-8ec4-868f2e8aa3d5" name="Application Layer">
@@ -49,17 +109,17 @@
           <childLayers>
             <layer Id="33a93e0f-4521-4a8f-8942-ba6e3016ca0a" name="Abstraction Layer">
               <references>
-                <reference Id="9c7455d2-f1ad-48ad-b87e-1bbe692504e1" name="TheSharpFactorty.Apps.Shared.Services.Abstractions.dll">
-                  <ArtifactNode Label="TheSharpFactorty.Apps.Shared.Services.Abstractions.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactorty.Apps.Shared.Services.Abstractions)" />
-                  <ExpandedNode Id="(Assembly=TheSharpFactorty.Apps.Shared.Services.Abstractions)" Label="TheSharpFactorty.Apps.Shared.Services.Abstractions.dll" Category="CodeSchema_Assembly">
+                <reference Id="1d964843-ff8c-40a1-abfc-a7fe74fde0c0" name="TheSharpFactory.Apps.Shared.Abstractions.Services.dll">
+                  <ArtifactNode Label="TheSharpFactory.Apps.Shared.Abstractions.Services.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Shared.Abstractions.Services)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Shared.Abstractions.Services)" Label="TheSharpFactory.Apps.Shared.Abstractions.Services.dll" Category="CodeSchema_Assembly">
                     <Category Ref="FileSystem.Category.FileOfType.dll" />
                     <LinkCategory Ref="Produces" />
                     <LinkCategory Ref="Represents" />
                   </ExpandedNode>
                 </reference>
-                <reference Id="f351fa97-4a23-4da1-90c9-cf8562448292" name="TheSharpFactory.Apps.Shared.ViewModels.Abstractions.dll">
-                  <ArtifactNode Label="TheSharpFactory.Apps.Shared.ViewModels.Abstractions.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Shared.ViewModels.Abstractions)" />
-                  <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Shared.ViewModels.Abstractions)" Label="TheSharpFactory.Apps.Shared.ViewModels.Abstractions.dll" Category="CodeSchema_Assembly">
+                <reference Id="268ee877-7e7e-4009-8cbe-cba9df21320a" name="TheSharpFactory.Apps.Shared.Abstractions.ViewModels.dll">
+                  <ArtifactNode Label="TheSharpFactory.Apps.Shared.Abstractions.ViewModels.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Shared.Abstractions.ViewModels)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Shared.Abstractions.ViewModels)" Label="TheSharpFactory.Apps.Shared.Abstractions.ViewModels.dll" Category="CodeSchema_Assembly">
                     <Category Ref="FileSystem.Category.FileOfType.dll" />
                     <LinkCategory Ref="Produces" />
                     <LinkCategory Ref="Represents" />
@@ -591,7 +651,18 @@
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <childLayers>
-        <layer Id="dfefd68b-1d20-4091-a3dd-be53ad58cc72" name="Layer of Abstraction" />
+        <layer Id="dfefd68b-1d20-4091-a3dd-be53ad58cc72" name="Layer of Abstraction">
+          <references>
+            <reference Id="a48f34f4-4d67-44c8-8f9d-f4172c0285f2" name="TheSharpFactory.Services.Abstractions.dll">
+              <ArtifactNode Label="TheSharpFactory.Services.Abstractions.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Services.Abstractions)" />
+              <ExpandedNode Id="(Assembly=TheSharpFactory.Services.Abstractions)" Label="TheSharpFactory.Services.Abstractions.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
         <layer Id="d7216d08-78bb-4083-8f70-81391759fb47" name="Services">
           <dependencyToLayers>
             <dependencyFromLayerToLayer Id="ea23aeec-0886-48c5-9b0f-21632596d598" direction="Forward">

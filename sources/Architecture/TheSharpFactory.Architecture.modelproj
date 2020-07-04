@@ -197,6 +197,18 @@
       <Name>Common.Extentions.DependencyInjection</Name>
       <Project>{ed722584-627b-416d-9a3d-19a24e9df6b5}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Common\SDK.Abstractions\SDK.Abstractions.csproj">
+      <Name>SDK.Abstractions</Name>
+      <Project>{097be146-421a-4a21-8f25-5d9ae7d6b078}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\SDK.Extensions\SDK.Extensions.csproj">
+      <Name>SDK.Extensions</Name>
+      <Project>{f577149d-2ad6-4f2c-a717-cec65cdb1fcd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\SDK\SDK.csproj">
+      <Name>SDK</Name>
+      <Project>{b4a4b335-08ba-4401-a861-691e4f853abc}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Data\Entity.Utils\Data.Entity.Utils.csproj">
       <Name>Data.Entity.Utils</Name>
       <Project>{c9c13f26-e5ce-489d-bf41-c2c36f82480c}</Project>
@@ -229,9 +241,9 @@
       <Name>Domain.Models</Name>
       <Project>{e9db20ae-ea13-4c57-998c-2c38b0d17395}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Services\Unified\Services.Unified.csproj">
-      <Name>Services.Unified</Name>
-      <Project>{4751524a-f5bf-4cfb-8911-e029e388a436}</Project>
+    <ProjectReference Include="..\Services\Abstractions\Services.Abstractions.csproj">
+      <Name>Services.Abstractions</Name>
+      <Project>{1b6089dc-182b-4b8b-a249-1637ece80806}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
