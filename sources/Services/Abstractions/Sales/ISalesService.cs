@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using TheSharpFactory.Common.DTO;
 
-namespace TheSharpFactory.Services
+namespace TheSharpFactory.Services.Sales
 {
     public interface ISalesService
     {
