@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 
 using Microsoft.AspNetCore.Mvc;
-using System.Net.Http;
+
 using TheSharpFactory.Common.DTO;
-using TheSharpFactory.Services.Sales;
-using System.Net;
 using TheSharpFactory.SDK;
+using TheSharpFactory.Services.Sales;
 
 namespace TheSharpFactory.Services.Unified.Areas.Sales.Controllers
 {
