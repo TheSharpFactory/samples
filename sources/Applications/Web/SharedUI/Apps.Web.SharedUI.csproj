@@ -12,8 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Domain\Models\Domain.Models.csproj" />
+    <ProjectReference Include="..\..\..\Common\Extentions.DependencyInjection\Common.Extentions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\..\Common\SDK.Extensions\SDK.Extensions.csproj" />
     <ProjectReference Include="..\..\Shared\Services\Apps.Shared.Services.csproj" />
+    <ProjectReference Include="..\..\Shared\ViewModels.Mappers\DTO\Apps.Shared.ViewModels.Mappers.DTO.csproj" />
     <ProjectReference Include="..\..\Shared\ViewModels\Apps.Shared.ViewModels.csproj" />
   </ItemGroup>
 
@@ -32,6 +34,10 @@
     <AdditionalFiles Include="..\..\..\Architecture\AppDirect.layerdiagram" Link="AppDirect.layerdiagram" Visible="False" />
     <None Include="..\..\..\Architecture\AppDirect.layerdiagram.layout" Link="AppDirect.layerdiagram.layout" Visible="False" />
     <None Include="..\..\..\Architecture\AppDirect.layerdiagram.suppressions" Link="AppDirect.layerdiagram.suppressions" Visible="False" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.2.0" />
   </ItemGroup>
 
 </Project>
