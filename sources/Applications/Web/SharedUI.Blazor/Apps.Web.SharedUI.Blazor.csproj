@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
-    <PackageReference Include="ElectronNET.API" Version="8.31.2" />
+    <PackageReference Include="ElectronNET.API" Version="9.31.1" />
     <PackageReference Include="WebWindow.Blazor">
       <Version>0.1.0-20200214.10</Version>
     </PackageReference>
