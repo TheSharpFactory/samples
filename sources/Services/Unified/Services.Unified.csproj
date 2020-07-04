@@ -1,12 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\Applications\Web\TheSharpFactory</DockerfileContext>
     <AssemblyName>TheSharpFactory.Services.Unified</AssemblyName>
     <RootNamespace>TheSharpFactory.Services.Unified</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\..\Schemas\sales.proto" GrpcServices="Server" Link="schemas\sales.proto" />
+    <None Update="schemas\sales.proto">
+      <GrpcServices>Server</GrpcServices>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <AdditionalFiles Include="..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
@@ -15,13 +26,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.29.0" />
+    <PackageReference Include="Grpc.AspNetCore.Web" Version="2.29.0" />
     <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Extentions.DependencyInjection\Common.Extentions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Common\SDK.Abstractions\SDK.Abstractions.csproj" />
     <ProjectReference Include="..\..\Domain\Extensions\Domain.Extensions.csproj" />
     <ProjectReference Include="..\Abstractions\Services.Abstractions.csproj" />
+    <ProjectReference Include="..\Services.GraphTypes\Services.GraphTypes.csproj" />
   </ItemGroup>
   
 </Project>

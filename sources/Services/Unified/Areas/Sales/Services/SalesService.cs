@@ -15,6 +15,7 @@ namespace TheSharpFactory.Services.Sales
         private readonly IMapper _mapper;
 
         public IReadOnlyCollection<CustomerDTO> Customers { get; private set; }
+            = new List<CustomerDTO>();
 
         public SalesService(
             ISalesAggregate sales,
