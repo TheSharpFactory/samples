@@ -3,6 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<LangVersion>8.0</LangVersion>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{3599F073-739B-43C5-A044-A460979CCB8C}</ProjectGuid>
     <TemplateGuid>{98C37F10-6541-44BE-B1E6-7EB3EB8C08F1}</TemplateGuid>
