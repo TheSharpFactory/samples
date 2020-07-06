@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
-    <DefineConstants Condition="'$(IsNetStd20)'=='true'">DEBUG;netstandard20</DefineConstants>
+    <DefineConstants Condition="'$(IsNetStd20)'=='true'">TRACE;netstandard20</DefineConstants>
     <DefineConstants Condition="'$(IsNetStd21)'=='true'">TRACE;netstandard21</DefineConstants>
     <DefineConstants Condition="'$(IsNetCore31)'=='true'">TRACE;netcoreapp31</DefineConstants>
   </PropertyGroup>
