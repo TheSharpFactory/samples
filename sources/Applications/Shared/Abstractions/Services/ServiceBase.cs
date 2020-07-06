@@ -20,7 +20,8 @@ namespace TheSharpFactory.Apps.Shared.Services
     public abstract class ServiceBase<TDtoInterface, TDto, TMessage, TGrpcClient, TOperation>
         where TDtoInterface : IDto
         where TDto : class, TDtoInterface
-        where TGrpcClient : ClientBase<TGrpcClient>
+        where TMessage : class
+        where TGrpcClient : GrpcClient<TMessage>
     {
         #region Common
         #region Protected Members

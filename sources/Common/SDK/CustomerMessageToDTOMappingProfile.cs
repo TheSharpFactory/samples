@@ -2,7 +2,7 @@
 using AutoMapper;
 
 using TheSharpFactory.Common.DTO;
-using TheSharpFactory.Services.GRPC.Sales;
+using TheSharpFactory.SDK.gRPC;
 
 namespace TheSharpFactory.SDK
 {
@@ -11,7 +11,7 @@ namespace TheSharpFactory.SDK
     {
         public CustomerMessageToDTOMappingProfile()
         {
-            CreateMap<Customer, CustomerDTO>()
+            CreateMap<CustomerMessage, CustomerDTO>()
                 .ForMember(
                     dto => dto.Id,
                     opt => opt.MapFrom(message => message.Id)
@@ -25,7 +25,7 @@ namespace TheSharpFactory.SDK
                     opt => opt.MapFrom(message => message.Phone)
                 );
 
-            CreateMap<CustomerDTO, Customer>()
+            CreateMap<CustomerDTO, CustomerMessage>()
                 .ForMember(
                     m => m.Id,
                     opt => opt.MapFrom(message => message.Id)

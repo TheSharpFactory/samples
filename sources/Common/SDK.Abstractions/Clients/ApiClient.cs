@@ -18,7 +18,8 @@ namespace TheSharpFactory.SDK.Clients
     public abstract class ApiClient<TDtoInterface, TDto, TMessage, TGrpcClient, TOperation>
         where TDtoInterface : IDto
         where TDto : class, TDtoInterface
-        where TGrpcClient : ClientBase<TGrpcClient>
+        where TMessage : class
+        where TGrpcClient : GrpcClient<TMessage>, IGrpcClient<TMessage>
     {
         #region Common
         #region Protected Members
@@ -26,7 +27,7 @@ namespace TheSharpFactory.SDK.Clients
         protected readonly IMapper _mapper;
         protected readonly IRestClient<TDtoInterface, TDto> _restClient;
         protected readonly IGraphQLClient _graphClient;
-        protected readonly IGrpcClient<TGrpcClient, TMessage> _grpcClient;
+        protected readonly TGrpcClient _grpcClient;
         #endregion
 
         #region Constructors
@@ -34,7 +35,7 @@ namespace TheSharpFactory.SDK.Clients
             IMapper mapper,
             IRestClient<TDtoInterface, TDto> restClient,
             IGraphQLClient graphClient,
-            IGrpcClient<TGrpcClient, TMessage> grpcClient,
+            TGrpcClient grpcClient,
             string module,
             string component
         )
@@ -106,17 +107,9 @@ namespace TheSharpFactory.SDK.Clients
             IOperation<TOperation> operation = null,
             CancellationToken token = default
         );
-        public async Task<IEnumerable<TDtoInterface>> ReadGrpc(
+        public abstract Task<IEnumerable<TDtoInterface>> ReadGrpc(
             CancellationToken token = default
-        )
-        {
-            var list = await _grpcClient
-                            .ReadList(token)
-                            .ConfigureAwait(false);
-
-            return list
-                        .Select(c => _mapper.Map<TDtoInterface>(c));
-        }
+        );
         #endregion
         #endregion
 #endif
@@ -165,13 +158,9 @@ namespace TheSharpFactory.SDK.Clients
             IOperation<TOperation>? operation = null,
             CancellationToken token = default
         );
-        public async IAsyncEnumerable<TDtoInterface> ReadGrpc(
-            [EnumeratorCancellation] CancellationToken token = default
-        )
-        {
-            await foreach (var c in _grpcClient.ReadStream(token))
-                yield return _mapper.Map<TDtoInterface>(c);
-        }
+        public abstract IAsyncEnumerable<TDtoInterface> ReadGrpc(
+            CancellationToken token = default
+        );
         #endregion
         #endregion
 #endif

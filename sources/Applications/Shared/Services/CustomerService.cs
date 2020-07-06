@@ -12,16 +12,16 @@ using TheSharpFactory.Common.DTO;
 using TheSharpFactory.SDK;
 using TheSharpFactory.SDK.Clients;
 using TheSharpFactory.SDK.Graph;
-using TheSharpFactory.Services.GRPC.Sales;
+using TheSharpFactory.SDK.gRPC;
 
 namespace TheSharpFactory.Apps.Shared.Services
 {
     public class CustomerService
-        : ServiceBase<ICustomerDTO, CustomerDTO, Customer, SalesAggregatorService.SalesAggregatorServiceClient, IGetCustomers>
+        : ServiceBase<ICustomerDTO, CustomerDTO, CustomerMessage, GrpcClient<CustomerMessage>, IGetCustomers>
     {
         public CustomerService(
             IMapper mapper,
-            ApiClient<ICustomerDTO, CustomerDTO, Customer, SalesAggregatorService.SalesAggregatorServiceClient, IGetCustomers> apiClient
+            ApiClient<ICustomerDTO, CustomerDTO, CustomerMessage, GrpcClient<CustomerMessage>, IGetCustomers> apiClient
         )
             : base(mapper, apiClient)
         {

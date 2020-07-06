@@ -2,8 +2,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Http;
 
-using AutoMapper;
-
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -14,7 +12,7 @@ using StrawberryShake.Http;
 using TheSharpFactory.Common.DTO;
 using TheSharpFactory.SDK.Clients;
 using TheSharpFactory.SDK.Graph;
-using TheSharpFactory.Services.GRPC.Sales;
+using TheSharpFactory.SDK.gRPC;
 
 namespace TheSharpFactory.SDK
 {
@@ -80,15 +78,12 @@ namespace TheSharpFactory.SDK
         {
 #if netstandard21 || netcoreapp31
             _ = services
-                    .AddGrpcClient<SalesAggregatorService.SalesAggregatorServiceClient>(
+                    .AddGrpcClient<GrpcService.GrpcServiceClient>(
                         ClientNames.SalesGrpcClient,
                         opt => opt.Address = apiEndpointUrl
                     );
-#if netcoreapp31
-            _ = services.AddGrpc();
 #endif
-#endif
-            _ = services.AddSingleton<GrpcClient<SalesAggregatorService.SalesAggregatorServiceClient, Customer>, CustomerGrpcClient>();
+            _ = services.AddSingleton<GrpcClient<CustomerMessage>, CustomerGrpcClient>();
 
             return services;
         }
@@ -113,7 +108,7 @@ namespace TheSharpFactory.SDK
             _ = services.AddGrpcClients(apiEndpointUrl);
 
             _ = services
-                .AddSingleton<ApiClient<ICustomerDTO, CustomerDTO, Customer, SalesAggregatorService.SalesAggregatorServiceClient, IGetCustomers>, CustomerClient>();
+                .AddSingleton<ApiClient<ICustomerDTO, CustomerDTO, CustomerMessage, GrpcClient<CustomerMessage>, IGetCustomers>, CustomerClient>();
 
             return services;
         }

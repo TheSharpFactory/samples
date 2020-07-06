@@ -11,8 +11,9 @@ using StrawberryShake;
 using TheSharpFactory.Apps.Shared.Services;
 using TheSharpFactory.Common.DTO;
 using TheSharpFactory.SDK;
+using TheSharpFactory.SDK.Clients;
 using TheSharpFactory.SDK.Graph;
-using TheSharpFactory.Services.GRPC.Sales;
+using TheSharpFactory.SDK.gRPC;
 
 namespace TheSharpFactory.Apps.Shared.ViewModels.Conventional
 {
@@ -23,7 +24,7 @@ namespace TheSharpFactory.Apps.Shared.ViewModels.Conventional
         #region Private Members
         #region Fields
         private readonly IMapper _mapper;
-        private readonly ServiceBase<ICustomerDTO, CustomerDTO, Customer, SalesAggregatorService.SalesAggregatorServiceClient, IGetCustomers> _customerService;
+        private readonly ServiceBase<ICustomerDTO, CustomerDTO, CustomerMessage, GrpcClient<CustomerMessage>, IGetCustomers> _customerService;
         #endregion
         #endregion
 
@@ -36,7 +37,7 @@ namespace TheSharpFactory.Apps.Shared.ViewModels.Conventional
         #region Constructors
         public CustomersViewModel(
             IMapper mapper,
-            ServiceBase<ICustomerDTO, CustomerDTO, Customer, SalesAggregatorService.SalesAggregatorServiceClient, IGetCustomers> customerService
+            ServiceBase<ICustomerDTO, CustomerDTO, CustomerMessage, GrpcClient<CustomerMessage>, IGetCustomers> customerService
         )
         {
             _customerService = customerService;

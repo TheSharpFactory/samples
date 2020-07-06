@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 using AutoMapper;
 
+using Google.Protobuf.WellKnownTypes;
+
+using Grpc.Core;
+using Grpc.Core.Utils;
+
 using StrawberryShake;
 
 using TheSharpFactory.Common.DTO;
 using TheSharpFactory.SDK.Graph;
-using TheSharpFactory.Services.GRPC.Sales;
+using TheSharpFactory.SDK.gRPC;
 
 namespace TheSharpFactory.SDK.Clients
 {
     public class CustomerClient
-        : ApiClient<ICustomerDTO, CustomerDTO, Customer, SalesAggregatorService.SalesAggregatorServiceClient, IGetCustomers>
+        : ApiClient<ICustomerDTO, CustomerDTO, CustomerMessage, GrpcClient<CustomerMessage>, IGetCustomers>
                                                              
     {
         #region Common
@@ -25,7 +30,7 @@ namespace TheSharpFactory.SDK.Clients
             IMapper mapper,
             RestClient<ICustomerDTO, CustomerDTO> restClient,
             IGraphQLClient graphClient,
-            GrpcClient<SalesAggregatorService.SalesAggregatorServiceClient, Customer> grpcClient
+            GrpcClient<CustomerMessage> grpcClient
         )
             : base(
                   mapper,
@@ -60,6 +65,21 @@ namespace TheSharpFactory.SDK.Clients
                                 .ConfigureAwait(false);
             return response.Data.Customers;
         }
+        public override async Task<IEnumerable<ICustomerDTO>> ReadGrpc(
+            CancellationToken token = default
+        )
+        {
+            var result = await _grpcClient
+                            .GetCustomersStream(
+                                new Empty(),
+                                cancellationToken: token
+                            )
+                            .ResponseStream
+                            .ToListAsync();
+            return result
+                    .Select(c => _mapper.Map<CustomerDTO>(c))
+                    .ToList();
+        }
         #endregion
         #endregion
 #endif
@@ -84,6 +104,22 @@ namespace TheSharpFactory.SDK.Clients
 
             foreach (var c in response!.Data!.Customers)
                 yield return c;
+        }
+
+        public override async IAsyncEnumerable<ICustomerDTO> ReadGrpc(
+            [EnumeratorCancellation] CancellationToken token = default
+        )
+        {
+            var result = _grpcClient
+                            .GetCustomersStream(
+                                new Empty(),
+                                cancellationToken: token
+                            )
+                            .ResponseStream
+                            .ReadAllAsync();
+            await foreach (var c in result)
+                yield return _mapper.Map<CustomerDTO>(c);
+
         }
         #endregion
         #endregion

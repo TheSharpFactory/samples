@@ -1,37 +1,37 @@
 ﻿using System;
-using Grpc.Core;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 
 using Google.Protobuf.WellKnownTypes;
 
-using TheSharpFactory.Services.GRPC.Sales;
+using Grpc.Core;
+
+using TheSharpFactory.SDK.gRPC;
 
 namespace TheSharpFactory.SDK.Clients
 {
     public class CustomerGrpcClient
-        : GrpcClient<SalesAggregatorService.SalesAggregatorServiceClient, Customer>
+        : GrpcClient<CustomerMessage>
     {
         #region Common
         #region Public Members
         #region Constructors
         public CustomerGrpcClient(
-            SalesAggregatorService.SalesAggregatorServiceClient client
-        ) : base(client)
+            ChannelBase channel
+        ) : base(channel)
         {
         }
         #endregion
 
         #region Methods
-        public override async Task<IEnumerable<Customer>> ReadList(
+        public override async Task<IEnumerable<CustomerMessage>> ReadList(
             CancellationToken token = default
         )
         {
-            IList<Customer> list = new List<Customer>();
-            using (var stream = _client.GetCustomersStream(new Empty(), cancellationToken: token))
+            IList<CustomerMessage> list = new List<CustomerMessage>();
+            using (var stream = GetCustomersStream(new Empty(), cancellationToken: token))
             {
                 while (await stream.ResponseStream.MoveNext(token).ConfigureAwait(false))
                 {
@@ -49,11 +49,11 @@ namespace TheSharpFactory.SDK.Clients
 #if netstandard21 || netcoreapp31
         #region Public Members
         #region Methods
-        public override async IAsyncEnumerable<Customer> ReadStream(
+        public override async IAsyncEnumerable<CustomerMessage> ReadStream(
             [EnumeratorCancellation] CancellationToken token = default
         )
         {
-            using (var stream = _client.GetCustomersStream(new Empty(), cancellationToken: token))
+            using (var stream = GetCustomersStream(new Empty(), cancellationToken: token))
             {
                 await foreach (var c in stream.ResponseStream.ReadAllAsync(token).ConfigureAwait(false))
                 {

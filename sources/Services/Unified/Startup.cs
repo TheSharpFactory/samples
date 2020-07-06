@@ -15,7 +15,7 @@ using TheSharpFactory.SDK.Clients;
 using TheSharpFactory.Services.GraphTypes;
 using TheSharpFactory.Services.Sales;
 
-using GRPCSalesService = TheSharpFactory.Services.GRPC.Sales.SalesService;
+using GrpcService = TheSharpFactory.Services.Unified.Services.GrpcService;
 
 namespace TheSharpFactory.Services.Unified
 {
@@ -106,7 +106,7 @@ namespace TheSharpFactory.Services.Unified
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<GRPCSalesService>().RequireCors("AllowAll");
+                endpoints.MapGrpcService<GrpcService>().RequireCors("AllowAll");
                 endpoints.MapAreaControllerRoute("areas", "sales", "{area:exists}/{Controller=Customers}");
                 endpoints.MapControllers();
             });
