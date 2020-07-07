@@ -96,7 +96,7 @@ namespace TheSharpFactory.Services.Unified
             app.UseStaticFiles();
             app.UseStaticFiles(new StaticFileOptions
             {
-                RequestPath = "/schemas/sales.proto"
+                RequestPath = "/schemas/grpc.proto"
             });
 
             app.UseAuthorization();
