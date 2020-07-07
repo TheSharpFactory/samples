@@ -27,7 +27,7 @@ namespace TheSharpFactory.Services.Unified.Areas.Sales.Controllers
             => _sales = sales;
 
         /// <summary>
-        /// Fatch all the customers
+        /// Fetch all the customers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
