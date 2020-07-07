@@ -11,7 +11,7 @@ namespace TheSharpFactory.Apps.Shared.ViewModels
     {
         public DTOToViewModelMappingProfile()
         {
-            CreateMap<CustomerDTO, ICustomerViewModel>()
+            CreateMap<CustomerDTO, CustomerViewModel>()
                 .ForMember(
                     dto => dto.Id,
                     opt => opt.MapFrom(vm => vm.Id)
@@ -24,7 +24,7 @@ namespace TheSharpFactory.Apps.Shared.ViewModels
                     dto => dto.PhoneNumber,
                     opt => opt.MapFrom(vm => vm.Phone)
                 );
-            CreateMap<ICustomerViewModel, CustomerDTO>()
+            CreateMap<CustomerViewModel, CustomerDTO>()
                 .ForMember(
                     vm => vm.Id,
                     opt => opt.MapFrom(dto => dto.Id)

@@ -101,7 +101,11 @@ namespace TheSharpFactory.Apps.Shared.Services
                 }
                 break;
                 default:
-                throw new Exception();
+                await foreach (var c in _apiClient.Read(HttpServiceTypes.REST, null, token).ConfigureAwait(false))
+                {
+                    yield return c;
+                }
+                break;
             }
         }
         #endregion
