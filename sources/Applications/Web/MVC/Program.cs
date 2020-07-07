@@ -2,8 +2,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-using TheSharpFactory.Apps.Web.SharedUI;
-
 namespace TheSharpFactory.Apps.Web.MVC
 {
     public static class Program
