@@ -8,9 +8,12 @@ using Microsoft.Extensions.Hosting;
 using TheSharpFactory.Apps.Shared.Services;
 using TheSharpFactory.Apps.Shared.ViewModels;
 using TheSharpFactory.Apps.Shared.ViewModels.Conventional;
+using TheSharpFactory.Common.DTO;
 using TheSharpFactory.Common.Extensions.DependencyInjection.Mappers;
 using TheSharpFactory.SDK;
 using TheSharpFactory.SDK.Clients;
+using TheSharpFactory.SDK.Graph;
+using TheSharpFactory.SDK.gRPC;
 
 namespace TheSharpFactory.Apps.Web.SharedUI
 {
@@ -33,11 +36,15 @@ namespace TheSharpFactory.Apps.Web.SharedUI
                     typeof(DTOToViewModelMappingProfile).Assembly,
                     typeof(CustomerMessageToDTOMappingProfile).Assembly
                 );
-                var apiConf = Configuration.GetSection("Api").Get<ApiConfiguration>();
-                services.AddSharpFactoryApiClients(apiConf.Url);
+                var apiUrl = Configuration
+                                .GetSection("Api")
+                                .Get<ApiConfiguration>()
+                                .Url;
+                services.AddSharpFactoryApiClients(apiUrl);
             }
 
             services.AddSingleton(_ => AppModel);
+            services.AddSingleton<ServiceBase<ICustomerDTO, CustomerDTO, CustomerMessage, GrpcClient<CustomerMessage>, IGetCustomers>, CustomerService>();
             services.AddTransient<IWeatherForecastDTO, WeatherForecastDTO>();
             services.AddTransient<IWeatherForecastService, WeatherForecastService>();
             services.AddTransient<IFetchDataViewModel, FetchDataViewModel>();
