@@ -50,7 +50,7 @@ namespace TheSharpFactory.SDK.Clients
 
         #region Methods
 
-        protected async Task<ICollection<TDtoInterface>> ReadRest(
+        protected async Task<ICollection<TDto>> ReadRest(
             CancellationToken token = default
         )
             => await _restClient.GetAsync(token)
@@ -83,7 +83,6 @@ namespace TheSharpFactory.SDK.Clients
                 default:
                 return await ReadRest(token)
                             .ConfigureAwait(false);
-
             }
         }
         public async Task<IEnumerable<TDtoInterface>> Read(
@@ -133,7 +132,7 @@ namespace TheSharpFactory.SDK.Clients
             switch (apiType)
             {
                 case HttpServiceTypes.GraphQL:
-                if (operation is null)
+                if (operation != null)
                 {
                     await foreach (var c in ReadGraph(null, token).ConfigureAwait(false))
                         yield return c;
@@ -151,7 +150,6 @@ namespace TheSharpFactory.SDK.Clients
                 foreach (var c in data)
                     yield return c;
                 break;
-
             }
         }
         public abstract IAsyncEnumerable<TDtoInterface> ReadGraph(

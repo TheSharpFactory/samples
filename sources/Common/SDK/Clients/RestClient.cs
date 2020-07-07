@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -28,8 +29,8 @@ namespace TheSharpFactory.SDK.Clients
         #region Fields
         private readonly HttpClient _httpClient;
         private readonly Lazy<JsonSerializerSettings> _settings;
-        private readonly string _module;
-        private readonly string _component;
+        private string _module;
+        private string _component;
         #endregion
 
         #region Methods
@@ -106,8 +107,16 @@ namespace TheSharpFactory.SDK.Clients
         #region Public Members
         #region Properties
         public bool ReadResponseAsString { get; set; }
-        public string Module { get; protected set; }
-        public string Component { get; protected set; }
+        public string Module
+        {
+            get => _module;
+            protected set => _module = value;
+        }
+        public string Component
+        {
+            get => _component;
+            protected set => _component = value;
+        }
         #endregion
 
         #region Contructors
@@ -135,34 +144,47 @@ namespace TheSharpFactory.SDK.Clients
                 throw new ArgumentNullException(nameof(module));
             if (string.IsNullOrEmpty(component))
                 throw new ArgumentException(nameof(component));
-            Module = module;
-            Component = Component;
+            _module = module;
+            _component = component;
         }
 
         /// <summary>Fatch all the customers</summary>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Task<ICollection<TDtoInterface>> GetAsync()
+        public Task<ICollection<TDto>> GetAsync()
             => GetAsync(CancellationToken.None);
+
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>Fatch all the customers</summary>
         /// <returns>Success</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async Task<ICollection<TDtoInterface>> GetAsync(CancellationToken cancellationToken)
+        /// <exception cref="ApiException">A server side error occurred.</exception>        
+        public async Task<ICollection<TDto>> GetAsync(
+            CancellationToken cancellationToken
+        )
         {
             var urlBuilder_ = new StringBuilder();
-            urlBuilder_.Append(_module).Append('/').Append(_component);
+            urlBuilder_ = urlBuilder_
+                            .Append(_module)
+                            .Append('/')
+                            .Append(_component);
 
             var client_ = _httpClient;
+
             using (var request_ = new HttpRequestMessage())
             {
                 request_.Method = new HttpMethod("GET");
-                request_.Headers.Accept.Add(MediaTypeWithQualityHeaderValue.Parse("text/plain"));
+                request_.Headers.Accept.Add(
+                    MediaTypeWithQualityHeaderValue.Parse("text/json")
+                );
 
                 PrepareRequest(client_, request_, urlBuilder_);
                 var url_ = urlBuilder_.ToString();
-                request_.RequestUri = new Uri(url_, UriKind.RelativeOrAbsolute);
+
+                request_.RequestUri = new Uri(
+                    url_,
+                    UriKind.RelativeOrAbsolute
+                );
                 PrepareRequest(client_, request_, url_);
 
                 var response_ = await client_.SendAsync(
@@ -189,7 +211,8 @@ namespace TheSharpFactory.SDK.Clients
                     var status_ = ((int)response_.StatusCode).ToString();
                     if (status_ == "200")
                     {
-                        var objectResponse_ = await ReadObjectResponseAsync<ICollection<TDtoInterface>>(response_, headers_).ConfigureAwait(false);
+                        var objectResponse_ = await ReadObjectResponseAsync<ICollection<TDto>>(response_, headers_)
+                                                .ConfigureAwait(false);
                         return objectResponse_.Object;
                     }
                     else
@@ -306,6 +329,6 @@ namespace TheSharpFactory.SDK.Clients
         partial void UpdateJsonSerializerSettings(JsonSerializerSettings settings);
         partial void PrepareRequest(HttpClient client, HttpRequestMessage request, string url);
         partial void PrepareRequest(HttpClient client, HttpRequestMessage request, StringBuilder urlBuilder);
-        partial void ProcessResponse(HttpClient client, HttpResponseMessage response);        
+        partial void ProcessResponse(HttpClient client, HttpResponseMessage response);
     }
 }

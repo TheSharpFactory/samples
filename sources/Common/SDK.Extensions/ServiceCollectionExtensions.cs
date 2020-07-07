@@ -14,10 +14,15 @@ using TheSharpFactory.SDK.Clients;
 using TheSharpFactory.SDK.Graph;
 using TheSharpFactory.SDK.gRPC;
 
+#if netstandard21 || netcoreapp31
+using Grpc.Net.Client;
+#endif
+
 namespace TheSharpFactory.SDK
 {
     public static class ServiceCollectionExtensions
     {
+
         internal static IServiceCollection AddHttpClient(
             this IServiceCollection services,
             Uri apiEndpointUrl
@@ -25,66 +30,91 @@ namespace TheSharpFactory.SDK
         {
             _ = services
                     .AddHttpClient(
-                        ClientNames.RestClient,
-                        c => c.BaseAddress = apiEndpointUrl
+                        ClientNames.ApiClient,
+                        client => client.BaseAddress = apiEndpointUrl
                     );
-            _ = services.AddSingleton<IRestClient<ICustomerDTO, CustomerDTO>>(sp =>
-            {
-                var httpClientFactory = sp.GetRequiredService<IHttpClientFactory>();
-                return new RestClient<ICustomerDTO, CustomerDTO>(
-                    httpClientFactory.CreateClient(ClientNames.RestClient)
-                );
-            });
 
             return services;
         }
 
-        public static IOperationClientBuilder AddGraphQLClient(
-            this IServiceCollection serviceCollection
+        private static IServiceCollection AddRestClient(
+            this IServiceCollection services
         )
         {
-            if (serviceCollection is null)
+            _ = services.AddSingleton<IRestClient<ICustomerDTO, CustomerDTO>>(sp =>
             {
-                throw new ArgumentNullException(nameof(serviceCollection));
-            }
+                var httpClientFactory = sp.GetRequiredService<IHttpClientFactory>();
+                return new RestClient<ICustomerDTO, CustomerDTO>(
+                    httpClientFactory.CreateClient(ClientNames.ApiClient)
+                );
+            });
+            return services;
+        }
 
-            serviceCollection.AddSingleton<IGraphQLClient, GraphQLClient>();
+        public static IOperationClientBuilder AddGraphQLClient(
+            this IServiceCollection services
+        )
+        {
+            _ = services.AddSingleton<IOperationExecutorFactory>(sp =>
+                    new HttpOperationExecutorFactory(
+                        ClientNames.ApiClient,
+                        sp.GetRequiredService<IHttpClientFactory>().CreateClient,
+                        sp.GetRequiredService<IClientOptions>().GetOperationPipeline<IHttpOperationContext>(ClientNames.ApiClient),
+                        sp.GetRequiredService<IClientOptions>().GetOperationFormatter(ClientNames.ApiClient),
+                        sp.GetRequiredService<IClientOptions>().GetResultParsers(ClientNames.ApiClient)
+                    )
+                );
 
-            serviceCollection.AddSingleton<IOperationExecutorFactory>(sp =>
-                new HttpOperationExecutorFactory(
-                    ClientNames.GraphClient,
-                    sp.GetRequiredService<IHttpClientFactory>().CreateClient,
-                    sp.GetRequiredService<IClientOptions>().GetOperationPipeline<IHttpOperationContext>(ClientNames.GraphClient),
-                    sp.GetRequiredService<IClientOptions>().GetOperationFormatter(ClientNames.GraphClient),
-                    sp.GetRequiredService<IClientOptions>().GetResultParsers(ClientNames.GraphClient)
-                )
-            );
-
-            var builder = serviceCollection
-                            .AddOperationClientOptions(ClientNames.GraphClient)
+            var builder = services
+                            .AddOperationClientOptions(ClientNames.ApiClient)
                             .AddResultParser(serializers => new GetCustomersResultParser(serializers))
                             .AddOperationFormatter(serializers => new JsonOperationFormatter(serializers))
                             .AddHttpOperationPipeline(b => b.UseHttpDefaultPipeline());
 
-            serviceCollection.TryAddSingleton<IOperationExecutorPool, OperationExecutorPool>();
+            services.TryAddSingleton<IOperationExecutorPool, OperationExecutorPool>();
+
+            _ = services.AddSingleton<IGraphQLClient>(sp
+                => new GraphQLClient(
+                    sp.GetRequiredService<IOperationExecutorPool>()
+                )
+            );
+
             return builder;
         }
 
         [SuppressMessage("Redundancy", "RCS1163:Unused parameter.", Justification = "<Pending>")]
         internal static IServiceCollection AddGrpcClients(
-            this IServiceCollection services,
-            Uri apiEndpointUrl
+            this IServiceCollection services
         )
         {
+            IHttpClientFactory factory;
+            HttpClient client;
+            Uri apiEndpointUrl;
+            using (var sp = services.BuildServiceProvider())
+            {
+                factory = sp.GetRequiredService<IHttpClientFactory>();
+                client = factory.CreateClient(ClientNames.ApiClient);
+                apiEndpointUrl = client.BaseAddress;
+            }
 #if netstandard21 || netcoreapp31
             _ = services
                     .AddGrpcClient<GrpcService.GrpcServiceClient>(
-                        ClientNames.SalesGrpcClient,
+                        ClientNames.ApiClient,
                         opt => opt.Address = apiEndpointUrl
                     );
+            var channel = GrpcChannel
+                            .ForAddress(
+                                apiEndpointUrl,
+                                new GrpcChannelOptions
+                                {
+                                    HttpClient = client,
+                                    DisposeHttpClient = true
+                                }
+                            );
+            _ = services.AddSingleton<GrpcClient<CustomerMessage>, CustomerGrpcClient>(_
+                    => new CustomerGrpcClient(channel)
+                );
 #endif
-            _ = services.AddSingleton<GrpcClient<CustomerMessage>, CustomerGrpcClient>();
-
             return services;
         }
 
@@ -93,9 +123,11 @@ namespace TheSharpFactory.SDK
             string apiEndpoint
         )
         {
+            if (services is null)
+                throw new ArgumentNullException(nameof(services));
             if (string.IsNullOrEmpty(apiEndpoint))
                 throw new ArgumentNullException(nameof(apiEndpoint));
-         
+
             if (!Uri.TryCreate(apiEndpoint, UriKind.Absolute, out var apiEndpointUrl)
              || apiEndpointUrl == null
             )
@@ -104,8 +136,9 @@ namespace TheSharpFactory.SDK
             }
 
             _ = services.AddHttpClient(apiEndpointUrl);
+            _ = services.AddRestClient();
             _ = services.AddGraphQLClient();
-            _ = services.AddGrpcClients(apiEndpointUrl);
+            _ = services.AddGrpcClients();
 
             _ = services
                 .AddSingleton<ApiClient<ICustomerDTO, CustomerDTO, CustomerMessage, GrpcClient<CustomerMessage>, IGetCustomers>, CustomerClient>();

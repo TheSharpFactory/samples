@@ -12,12 +12,10 @@ namespace TheSharpFactory.SDK.Clients
     public partial class GraphQLClient
         : IGraphQLClient
     {
-        private const string _clientName = "GraphQLClient";
-
         private readonly IOperationExecutor _executor;
 
         public GraphQLClient(IOperationExecutorPool executorPool)
-            => _executor = executorPool.CreateExecutor(_clientName);
+            => _executor = executorPool.CreateExecutor(ClientNames.ApiClient);
 
         public Task<IOperationResult<IGetCustomers>> GetCustomersAsync(
             global::System.Threading.CancellationToken cancellationToken = default)

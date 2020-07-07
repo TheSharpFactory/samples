@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -10,7 +7,6 @@ using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Grpc.Core.Utils;
 
-using TheSharpFactory.Common.DTO;
 using TheSharpFactory.SDK.gRPC;
 
 namespace TheSharpFactory.SDK.Clients

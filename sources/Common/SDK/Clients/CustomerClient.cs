@@ -20,15 +20,14 @@ using TheSharpFactory.SDK.gRPC;
 namespace TheSharpFactory.SDK.Clients
 {
     public class CustomerClient
-        : ApiClient<ICustomerDTO, CustomerDTO, CustomerMessage, GrpcClient<CustomerMessage>, IGetCustomers>
-                                                             
+        : ApiClient<ICustomerDTO, CustomerDTO, CustomerMessage, GrpcClient<CustomerMessage>, IGetCustomers>                                                    
     {
         #region Common
         #region Public Members
         #region Contructors
         public CustomerClient(
             IMapper mapper,
-            RestClient<ICustomerDTO, CustomerDTO> restClient,
+            IRestClient<ICustomerDTO, CustomerDTO> restClient,
             IGraphQLClient graphClient,
             GrpcClient<CustomerMessage> grpcClient
         )
@@ -37,8 +36,8 @@ namespace TheSharpFactory.SDK.Clients
                   restClient,
                   graphClient,
                   grpcClient,
-                  "sales",
-                  "customers"
+                  "Sales",
+                  "Customers"
             )
         {
         }

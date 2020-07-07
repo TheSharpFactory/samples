@@ -1,7 +1,10 @@
-﻿namespace TheSharpFactory.SDK.Clients
+﻿using Newtonsoft.Json;
+
+namespace TheSharpFactory.SDK.Clients
 {
     public class ApiConfiguration
     {
-        public string Url { get; set; } = "";
+        //[JsonProperty("url")]
+        public string Url { get; set; }
     }
 }
