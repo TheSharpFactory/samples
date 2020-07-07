@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@types/chartist": "^0.9.47",
+    "bootstrap": "4.5.0",
+    "chartist": "^0.11.4",
+    "open-iconic": "1.1.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "name": "TheSharpFactory-Sample",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build:Debug": "webpack --mode development",
+    "build:Release": "webpack --mode production"
+  }
+}
