@@ -5,8 +5,8 @@
     <OutputType>Library</OutputType>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
-    <RootNamespace>TheSharpFactory.Services</RootNamespace>
     <AssemblyName>TheSharpFactory.Services.Abstractions</AssemblyName>
+    <RootNamespace>TheSharpFactory.Services</RootNamespace>
   </PropertyGroup>  
 
   <ItemGroup>
