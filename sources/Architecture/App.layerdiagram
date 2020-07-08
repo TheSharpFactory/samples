@@ -166,6 +166,12 @@
                 <dependencyFromLayerToLayer Id="5f34e567-dcf6-44a4-adc8-72382c05894b" direction="Forward">
                   <layerMoniker Id="33a93e0f-4521-4a8f-8942-ba6e3016ca0a" />
                 </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="943df12e-d14d-4726-970a-271035fa52e4" direction="Forward">
+                  <layerMoniker Id="02394fdd-e78a-4f6d-83b9-1256edabc584" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="d44d7a27-45cc-48f3-87d8-f419e4478fe7" direction="Forward">
+                  <layerMoniker Id="bd765e27-b923-4425-a3a3-668a409a357b" />
+                </dependencyFromLayerToLayer>
               </dependencyToLayers>
               <childLayers>
                 <layer Id="333f914d-3315-45b2-ae00-058f1bfe85fd" name="Profiles">
