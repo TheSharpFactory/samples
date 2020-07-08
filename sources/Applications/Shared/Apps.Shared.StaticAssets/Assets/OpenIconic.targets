@@ -1,0 +1,19 @@
+<Project>
+
+  <Import Project="Chartist.targets" />
+
+  <!-- Also place open-iconic's .(s)css into the wwwroot output -->
+  <Target Name="CopyCss" BeforeTargets="CoreBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic.css; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic.min.css; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic.scss; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic-bootstrap.css; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic-bootstrap.min.css; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic-bootstrap.scss; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic-foundation.css; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic-foundation.min.css; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic-foundation.scss;"
+          DestinationFolder="$(MSBuildThisFileDirectory)..\wwwroot\libraries\open-iconic\styles"
+          SkipUnchangedFiles="true" />
+  </Target>
+
+  <!-- Also place open-iconic's fonts into the wwwroot output -->
+  <Target Name="CopyFont" BeforeTargets="CoreBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)node_modules\open-iconic\font\fonts\open-iconic.eot; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\fonts\open-iconic.otf; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\fonts\open-iconic.svg; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\fonts\open-iconic.ttf; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\fonts\open-iconic.woff;"
+          DestinationFolder="$(MSBuildThisFileDirectory)..\wwwroot\libraries\open-iconic\fonts"
+          SkipUnchangedFiles="true" />
+  </Target>
+
+</Project>

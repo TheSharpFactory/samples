@@ -1,4 +1,5 @@
 ﻿@using Microsoft.JSInterop
+@using System.Runtime.InteropServices 
 
 @namespace TheSharpFactory.Apps.Web.SharedUI.Layout
 
@@ -57,7 +58,8 @@
                     break;
                }
           }
-          else if (appModel.Flavor == BlazorFlavor.WebAssembly)
+          else if ((appModel.Flavor & BlazorFlavor.WebAssembly) != 0
+                 || RuntimeInformation.IsOSPlatform(OSPlatform.Create("WEBASSEMBLY")) )
           {
                switch (appModel.Platform)
                {

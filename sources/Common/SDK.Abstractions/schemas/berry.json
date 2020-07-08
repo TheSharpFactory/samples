@@ -1,0 +1,11 @@
+{
+  "Schemas": [
+    {
+      "Name": "TheSharpFactory",
+      "Type": "http",
+      "File": "schema.graphql",
+      "Url": "https://localhost:6050/graph"
+    }
+  ],
+  "ClientName": "GraphQLClient"
+}

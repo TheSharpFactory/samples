@@ -27,10 +27,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <AdditionalFiles Include="..\..\..\Architecture\AppDirect.layerdiagram" Link="AppDirect.layerdiagram" Visible="False" />
+    <None Include="..\..\..\Architecture\AppDirect.layerdiagram.layout" Link="AppDirect.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\Architecture\AppDirect.layerdiagram.suppressions" Link="AppDirect.layerdiagram.suppressions" Visible="False" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Extentions.DependencyInjection\Common.Extentions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\..\Domain\Extensions\Domain.Extensions.csproj" />
+    <ProjectReference Include="..\..\Shared\ViewModels.Mappers\Domain\Apps.Shared.ViewModels.Mappers.Domain.csproj" />
     <ProjectReference Include="..\BlazorClient\Apps.Web.BlazorClient.csproj" />
     <ProjectReference Include="..\SharedUI.Blazor\Apps.Web.SharedUI.Blazor.csproj" />
   </ItemGroup>

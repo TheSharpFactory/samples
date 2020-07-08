@@ -24,13 +24,13 @@ namespace TheSharpFactory.Apps.Web.SharedUI
     {
         public IConfiguration Configuration { get; internal set; }
 
-        public static BlazorApplicationModel AppModel { get; set; }
+        public BlazorApplicationModel AppModel { get; protected set; }
 
-        public StartupBase()
+        protected StartupBase()
         {
         }
 
-        public StartupBase(IConfiguration configuration)
+        protected StartupBase(IConfiguration configuration)
             => Configuration = configuration;
 
 #if netcoreapp31
@@ -61,6 +61,7 @@ namespace TheSharpFactory.Apps.Web.SharedUI
 
             var flavor = AppModel.Flavor;
             var platform = AppModel.Platform;
+            var communicationWay = AppModel.CommunicationWay;
 
 #if netcoreapp31
             if (flavor == BlazorFlavor.Server || flavor == BlazorFlavor.Hybrid || flavor == (BlazorFlavor.Server | BlazorFlavor.Hybrid))
@@ -78,7 +79,11 @@ namespace TheSharpFactory.Apps.Web.SharedUI
         }
 
 #if netcoreapp31
-        public void ConfigureBlazorServer(IApplicationBuilder app, IWebHostEnvironment env, BlazorApplicationModel appModel)
+        public void ConfigureBlazorServer(
+            IApplicationBuilder app,
+            IWebHostEnvironment env,
+            BlazorApplicationModel appModel
+        )
         {
             var flavor = appModel.Flavor;
             var platform = appModel.Platform;

@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-using AutoMapper;
-
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using TheSharpFactory.Data.Repository.Common;
 using TheSharpFactory.Data.Repository.Container;
 using TheSharpFactory.Data.Repository.Container.Interfaces;
 using TheSharpFactory.Domain.Models;
-
-using CustomerEntity = TheSharpFactory.Data.Entity.WorldWideImporters.Sales.Customer;
 
 namespace TheSharpFactory.Domain.Extensions.DependencyInjection
 {

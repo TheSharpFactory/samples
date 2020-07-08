@@ -17,11 +17,15 @@ namespace TheSharpFactory.Apps.Shared.ViewModels.Conventional
 
         #region Properties
         public ICollection<IWeatherForecastDTO> Forecasts { get; private set; }
+            = new List<IWeatherForecastDTO>();
         #endregion
 
         #region Constructors
         public FetchDataViewModel(IWeatherForecastService service)
-            => _service = service;
+        {
+            _service = service;
+            _getForecastsAsyncTask = GetForecastsAsyncTask(DateTime.Now);
+        }
         #endregion
 
         #region Private Methods
@@ -47,7 +51,7 @@ namespace TheSharpFactory.Apps.Shared.ViewModels.Conventional
                 if (disposing)
                 {
                     // TODO: dispose managed state (managed objects)
-                    Forecasts = null;
+                    Forecasts = new List<IWeatherForecastDTO>();
                     _service.Dispose();
                 }
 

@@ -14,12 +14,12 @@ namespace TheSharpFactory.Apps.Web.SharedUI.Areas.Landing.Controllers
     public class HomeController
         : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<CustomersController> _logger;
         private readonly ICounterService _counterService;
         private readonly IFetchDataViewModel _fetchDataViewModel;
 
         public HomeController(
-            ILogger<HomeController> logger,
+            ILogger<CustomersController> logger,
             ICounterService counterService,
             IFetchDataViewModel fetchDataViewModel
         )

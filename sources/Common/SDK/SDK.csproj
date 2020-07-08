@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp3.1;</TargetFrameworks>
+    <OutputType>Library</OutputType>
+    <IsNetStd20 Condition="'$(TargetFramework)'=='netstandard2.0'">true</IsNetStd20>
+    <IsNetStd21 Condition="'$(TargetFramework)'=='netstandard2.1'">true</IsNetStd21>
+    <IsNetCore31 Condition="'$(TargetFramework)'=='netcoreapp3.1'">true</IsNetCore31>
+    <LangVersion Condition="'$(IsNetStd20)'=='true'">7.3</LangVersion>
+    <LangVersion Condition="'$(IsNetStd21)'=='true' Or '$(IsNetCore31)'=='true'">8.0</LangVersion>
+    <Nullable Condition="'$(IsNetStd21)'=='true' Or '$(IsNetCore31)'=='true'">enable</Nullable>
+    <AssemblyName>TheSharpFactory.SDK</AssemblyName>
+    <RootNamespace>TheSharpFactory.SDK</RootNamespace>
+    <BerryNamespace>$(RootNamespace)</BerryNamespace>
+    <BerryLangVersion Condition="'$(IsNetStd21)'=='true' Or '$(IsNetCore31)'=='true'">CSharp_8_0</BerryLangVersion>
+    <BerryEnableDI>false</BerryEnableDI>
+  </PropertyGroup>
+  <ItemGroup>
+    <OpenApiReference Include="schemas\swagger.json" CodeGenerator="NSwagCSharp" Namespace="TheSharpFactory.SDK" SourceUri="">
+      <SourceUri>https://localhost:6050/swagger/v1/swagger.json</SourceUri>
+    </OpenApiReference>
+    <Content Update="schemas\swagger.json" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DefineConstants Condition="'$(IsNetStd20)'=='true'">DEBUG;netstandard20</DefineConstants>
+    <DefineConstants Condition="'$(IsNetStd21)'=='true'">DEBUG;netstandard21</DefineConstants>
+    <DefineConstants Condition="'$(IsNetCore31)'=='true'">DEBUG;netcoreapp31</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DefineConstants Condition="'$(IsNetStd20)'=='true'">DEBUG;netstandard20</DefineConstants>
+    <DefineConstants Condition="'$(IsNetStd21)'=='true'">TRACE;netstandard21</DefineConstants>
+    <DefineConstants Condition="'$(IsNetCore31)'=='true'">TRACE;netcoreapp31</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>            
+    <PackageReference Include="HotChocolate.AspNetCore" Version="10.4.3" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
+    <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NSwag.ApiDescription.Client" Version="13.6.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="StrawberryShake.CodeGeneration.CSharp" Version="11.0.0-preview.138" />
+    <PackageReference Include="StrawberryShake.Http" Version="11.0.0-preview.138" />
+    <PackageReference Include="System.Linq.Async" Version="4.1.1" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(IsNetCore31)'=='true'">
+    
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\Common.DTO.csproj" />
+    <ProjectReference Include="..\SDK.Abstractions\SDK.Abstractions.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties schemas_4swagger_1json__JsonSchema="https://json.schemastore.org/swagger-3.0" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
