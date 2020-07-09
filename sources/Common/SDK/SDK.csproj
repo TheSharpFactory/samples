@@ -39,9 +39,4 @@
     <None Include="..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
     <None Include="..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
   </ItemGroup>
-  <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties schemas_4swagger_1json__JsonSchema="https://json.schemastore.org/swagger-3.0" />
-    </VisualStudio>
-  </ProjectExtensions>
 </Project>
