@@ -147,7 +147,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.GraphTypes", "Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Unified", "Services\Unified\Services.Unified.csproj", "{9EE19129-B9E5-4E4A-A6AD-A400490C44E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apps.Shared.StaticAssets", "Applications\Shared\Apps.Shared.StaticAssets\Apps.Shared.StaticAssets.csproj", "{DDAABAFD-DAC8-4102-A4FA-8DDCA66A4567}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apps.Shared.StaticAssets", "Applications\Shared\Apps.Shared.StaticAssets\Apps.Shared.StaticAssets.csproj", "{DDAABAFD-DAC8-4102-A4FA-8DDCA66A4567}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,13 +11,6 @@
 
   <Import Project="..\..\build\sdk-style-project.props" />
   
-  <ItemGroup>
-    <OpenApiReference Include="schemas\swagger.json" CodeGenerator="NSwagCSharp" Namespace="TheSharpFactory.SDK" SourceUri="">
-      <SourceUri>https://localhost:6050/swagger/v1/swagger.json</SourceUri>
-    </OpenApiReference>
-    <Content Update="schemas\swagger.json" />
-  </ItemGroup>
-  
   <ItemGroup>            
     <PackageReference Include="HotChocolate.AspNetCore" Version="10.4.3" />
     <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
