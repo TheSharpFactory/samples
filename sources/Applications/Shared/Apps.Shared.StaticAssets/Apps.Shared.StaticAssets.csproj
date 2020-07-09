@@ -1,8 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <Import Project="Assets\Bootstrap.targets" />
-  <Import Project="Assets\Chartist.targets" />
-  <Import Project="Assets\OpenIconic.targets" />
+  <ImportGroup Label="libraries">
+    <Import Project="Assets\Bootstrap.targets" />
+    <Import Project="Assets\Chartist.targets" />
+    <Import Project="Assets\OpenIconic.targets" />
+  </ImportGroup>
+
   <Import Project="Assets\app.css.targets" />
 
   <PropertyGroup>
