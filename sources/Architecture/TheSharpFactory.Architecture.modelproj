@@ -137,6 +137,10 @@
       <Name>Apps.Shared.Abstractions.ViewModels</Name>
       <Project>{291d61de-55b8-4339-a72f-b4eb5334f5a8}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Applications\Shared\Apps.Shared.StaticAssets\Apps.Shared.StaticAssets.csproj">
+      <Name>Apps.Shared.StaticAssets</Name>
+      <Project>{ddaabafd-dac8-4102-a4fa-8ddca66a4567}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Applications\Shared\Services\Apps.Shared.Services.csproj">
       <Name>Apps.Shared.Services</Name>
       <Project>{7545e23a-6a0f-4ac0-9a18-7feca06cddd6}</Project>
