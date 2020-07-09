@@ -1,27 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
-    <IsNetStd20 Condition="'$(TargetFramework)'=='netstandard2.0'">true</IsNetStd20>
-    <IsNetStd21 Condition="'$(TargetFramework)'=='netstandard2.1'">true</IsNetStd21>
-    <IsNetCore31 Condition="'$(TargetFramework)'=='netcoreapp3.1'">true</IsNetCore31>
-    <LangVersion Condition="'$(IsNetStd20)'=='true'">7.3</LangVersion>
-    <LangVersion Condition="'$(IsNetStd21)'=='true' Or '$(IsNetCore31)'=='true'">8.0</LangVersion>
-    <Nullable Condition="'$(IsNetStd21)'=='true' Or '$(IsNetCore31)'=='true'">enable</Nullable>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>    
     <AssemblyName>TheSharpFactory.Common.DTO</AssemblyName>
     <RootNamespace>TheSharpFactory.Common.DTO</RootNamespace>
   </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
-    <DefineConstants Condition="'$(IsNetStd20)'=='true'">DEBUG;netstandard20</DefineConstants>
-    <DefineConstants Condition="'$(IsNetStd21)'=='true'">DEBUG;netstandard21</DefineConstants>
-    <DefineConstants Condition="'$(IsNetCore31)'=='true'">DEBUG;netcoreapp31</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)'=='Release'">
-    <DefineConstants Condition="'$(IsNetStd20)'=='true'">TRACE;netstandard20</DefineConstants>
-    <DefineConstants Condition="'$(IsNetStd21)'=='true'">TRACE;netstandard21</DefineConstants>
-    <DefineConstants Condition="'$(IsNetCore31)'=='true'">TRACE;netcoreapp31</DefineConstants>
-  </PropertyGroup>
+
+  <Import Project="..\..\build\sdk-style-project.props" />
 
   <ItemGroup>
     <AdditionalFiles Include="..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
