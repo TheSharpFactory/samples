@@ -1,0 +1,8 @@
+<Project>
+  <!-- Build Variables -->
+  <PropertyGroup>
+    <IsNetStd20 Condition="'$(TargetFramework)'=='netstandard2.0'">true</IsNetStd20>
+    <IsNetStd21 Condition="'$(TargetFramework)'=='netstandard2.1'">true</IsNetStd21>
+    <IsNetCore31 Condition="'$(TargetFramework)'=='netcoreapp3.1'">true</IsNetCore31>
+  </PropertyGroup>
+</Project>

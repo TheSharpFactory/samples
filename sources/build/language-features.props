@@ -1,0 +1,8 @@
+<Project>
+  <!-- Language Features -->
+  <PropertyGroup>
+    <LangVersion Condition="'$(IsNetStd20)'=='true'">7.3</LangVersion>
+    <LangVersion Condition="'$(IsNetStd21)'=='true' Or '$(IsNetCore31)'=='true'">8.0</LangVersion>
+    <Nullable Condition="'$(IsNetStd21)'=='true' Or '$(IsNetCore31)'=='true'">enable</Nullable>
+  </PropertyGroup>
+</Project>

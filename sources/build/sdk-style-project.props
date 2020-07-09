@@ -1,0 +1,7 @@
+<Project>
+  <ImportGroup Label="SDK-style Project">
+    <Import Project="variables.props" />
+    <Import Project="language-features.props" />
+    <Import Project="build-constants.props" />
+  </ImportGroup>
+</Project>
