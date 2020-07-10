@@ -143,7 +143,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "schemas", "schemas", "{896F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.DTO.Abstractions", "Common\Common.DTO.Abstractions\Common.DTO.Abstractions.csproj", "{CF18325A-53FA-47F2-B454-03C5A5213ED3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.GraphTypes", "Services\Services.GraphTypes\Services.GraphTypes.csproj", "{2052539A-D4CD-4DF6-9D20-9E5B5CD930DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.GraphTypes", "Services\GraphTypes\Services.GraphTypes.csproj", "{2052539A-D4CD-4DF6-9D20-9E5B5CD930DB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Unified", "Services\Unified\Services.Unified.csproj", "{9EE19129-B9E5-4E4A-A6AD-A400490C44E3}"
 EndProject
