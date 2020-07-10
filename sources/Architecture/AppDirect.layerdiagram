@@ -430,5 +430,17 @@
         </layer>
       </childLayers>
     </layer>
+    <layer Id="28a1a90f-98b7-42a4-8cd7-c37bb760ace2" name="Static Assets">
+      <references>
+        <reference Id="b50a8407-8edb-456b-9feb-73d1743b30c1" name="TheSharpFactory.Apps.Shared.StaticAssets.dll">
+          <ArtifactNode Label="TheSharpFactory.Apps.Shared.StaticAssets.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Shared.StaticAssets)" />
+          <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Shared.StaticAssets)" Label="TheSharpFactory.Apps.Shared.StaticAssets.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
   </layers>
 </layerModel>
