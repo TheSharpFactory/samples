@@ -74,6 +74,9 @@
                 <dependencyFromLayerToLayer Id="fad0a861-2f47-4681-b6d9-479527f20cf2" direction="Forward">
                   <layerMoniker Id="d9a29ec9-dc02-4fdd-8a8f-1b0a0ecc17e1" />
                 </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="eb730c0f-03d5-457a-8e46-70d4a5763eaa" direction="Forward">
+                  <layerMoniker Id="8a28029e-7c4f-4449-b0cf-3d6038cbf60a" />
+                </dependencyFromLayerToLayer>
               </dependencyToLayers>
               <references>
                 <reference Id="54737757-1efa-494c-9384-1b4d0bffcbf5" name="SDK.Extensions">
@@ -106,7 +109,7 @@
           <childLayers>
             <layer Id="33a93e0f-4521-4a8f-8942-ba6e3016ca0a" name="Abstraction Layer">
               <references>
-                <reference Id="1d964843-ff8c-40a1-abfc-a7fe74fde0c0" name="TheSharpFactory.Apps.Shared.Abstractions.Services.dll">
+                <reference Id="e1d02011-7eec-4eae-9b29-719861da6a23" name="TheSharpFactory.Apps.Shared.Abstractions.Services.dll">
                   <ArtifactNode Label="TheSharpFactory.Apps.Shared.Abstractions.Services.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Shared.Abstractions.Services)" />
                   <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Shared.Abstractions.Services)" Label="TheSharpFactory.Apps.Shared.Abstractions.Services.dll" Category="CodeSchema_Assembly">
                     <Category Ref="FileSystem.Category.FileOfType.dll" />
@@ -114,7 +117,7 @@
                     <LinkCategory Ref="Represents" />
                   </ExpandedNode>
                 </reference>
-                <reference Id="268ee877-7e7e-4009-8cbe-cba9df21320a" name="TheSharpFactory.Apps.Shared.Abstractions.ViewModels.dll">
+                <reference Id="2b6280d6-7b90-4d17-a36e-41c464a6063f" name="TheSharpFactory.Apps.Shared.Abstractions.ViewModels.dll">
                   <ArtifactNode Label="TheSharpFactory.Apps.Shared.Abstractions.ViewModels.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Shared.Abstractions.ViewModels)" />
                   <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Shared.Abstractions.ViewModels)" Label="TheSharpFactory.Apps.Shared.Abstractions.ViewModels.dll" Category="CodeSchema_Assembly">
                     <Category Ref="FileSystem.Category.FileOfType.dll" />
@@ -683,11 +686,26 @@
             <dependencyFromLayerToLayer Id="ea23aeec-0886-48c5-9b0f-21632596d598" direction="Forward">
               <layerMoniker Id="dfefd68b-1d20-4091-a3dd-be53ad58cc72" />
             </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="91e327de-649f-42d4-bf94-be5851afcd7f" direction="Forward">
+              <layerMoniker Id="a6c04259-9509-4657-87f1-13cd3f7d1ed6" />
+            </dependencyFromLayerToLayer>
           </dependencyToLayers>
           <references>
             <reference Id="55908a3f-e095-4b76-b5e6-e494f66802cc" name="TheSharpFactory.Services.Unified.dll">
               <ArtifactNode Label="TheSharpFactory.Services.Unified.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Services.Unified)" />
               <ExpandedNode Id="(Assembly=TheSharpFactory.Services.Unified)" Label="TheSharpFactory.Services.Unified.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="a6c04259-9509-4657-87f1-13cd3f7d1ed6" name="Graph Types">
+          <references>
+            <reference Id="41de8a05-40a0-42d0-b803-82d468178650" name="TheSharpFactory.Services.GraphTypes.dll">
+              <ArtifactNode Label="TheSharpFactory.Services.GraphTypes.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Services.GraphTypes)" />
+              <ExpandedNode Id="(Assembly=TheSharpFactory.Services.GraphTypes)" Label="TheSharpFactory.Services.GraphTypes.dll" Category="CodeSchema_Assembly">
                 <Category Ref="FileSystem.Category.FileOfType.dll" />
                 <LinkCategory Ref="Produces" />
                 <LinkCategory Ref="Represents" />

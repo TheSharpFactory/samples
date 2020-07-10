@@ -49,21 +49,11 @@
           <childLayers>
             <layer Id="33a93e0f-4521-4a8f-8942-ba6e3016ca0a" name="Abstraction Layer">
               <references>
-                <reference Id="9c7455d2-f1ad-48ad-b87e-1bbe692504e1" name="TheSharpFactorty.Apps.Shared.Services.Abstractions.dll">
-                  <ArtifactNode Label="TheSharpFactorty.Apps.Shared.Services.Abstractions.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactorty.Apps.Shared.Services.Abstractions)" />
-                  <ExpandedNode Id="(Assembly=TheSharpFactorty.Apps.Shared.Services.Abstractions)" Label="TheSharpFactorty.Apps.Shared.Services.Abstractions.dll" Category="CodeSchema_Assembly">
-                    <Category Ref="FileSystem.Category.FileOfType.dll" />
-                    <LinkCategory Ref="Produces" />
-                    <LinkCategory Ref="Represents" />
-                  </ExpandedNode>
+                <reference Id="ebcc6a2d-7dc1-43bf-af4e-fb3efd4b15bc" name="Apps.Shared.Abstractions.Services">
+                  <ArtifactNode Label="Apps.Shared.Abstractions.Services" Category="CodeSchema_Project" Id="(Assembly=../Applications/Shared/Abstractions/Services/Apps.Shared.Abstractions.Services.csproj)" />
                 </reference>
-                <reference Id="f351fa97-4a23-4da1-90c9-cf8562448292" name="TheSharpFactory.Apps.Shared.ViewModels.Abstractions.dll">
-                  <ArtifactNode Label="TheSharpFactory.Apps.Shared.ViewModels.Abstractions.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Apps.Shared.ViewModels.Abstractions)" />
-                  <ExpandedNode Id="(Assembly=TheSharpFactory.Apps.Shared.ViewModels.Abstractions)" Label="TheSharpFactory.Apps.Shared.ViewModels.Abstractions.dll" Category="CodeSchema_Assembly">
-                    <Category Ref="FileSystem.Category.FileOfType.dll" />
-                    <LinkCategory Ref="Produces" />
-                    <LinkCategory Ref="Represents" />
-                  </ExpandedNode>
+                <reference Id="23330520-57ae-4071-8e11-b70568cfbcc0" name="Apps.Shared.Abstractions.ViewModels">
+                  <ArtifactNode Label="Apps.Shared.Abstractions.ViewModels" Category="CodeSchema_Project" Id="(Assembly=../Applications/Shared/Abstractions/ViewModels/Apps.Shared.Abstractions.ViewModels.csproj)" />
                 </reference>
               </references>
             </layer>

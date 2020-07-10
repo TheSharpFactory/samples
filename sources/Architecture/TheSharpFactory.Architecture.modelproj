@@ -249,6 +249,10 @@
       <Name>Services.Abstractions</Name>
       <Project>{1b6089dc-182b-4b8b-a249-1637ece80806}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Services\GraphTypes\Services.GraphTypes.csproj">
+      <Name>Services.GraphTypes</Name>
+      <Project>{2052539a-d4cd-4df6-9d20-9e5b5cd930db}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
