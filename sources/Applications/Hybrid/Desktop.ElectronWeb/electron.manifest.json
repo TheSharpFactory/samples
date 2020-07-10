@@ -1,0 +1,34 @@
+﻿{
+  "executable": "TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb",
+  "splashscreen": {
+    "imageFile": ""
+  },
+  "name": "TheSharpFactorySamples",
+  "author": "",
+  "singleInstance": false,
+  "build": {
+    "appId": "com.TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb.app",
+    "productName": "TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb",
+    "copyright": "Copyright © 2020",
+    "buildVersion": "1.0.0",
+    "compression": "maximum",
+    "directories": {
+      "output": "../../../bin/Desktop"
+    },
+    "extraResources": [
+      {
+        "from": "./bin",
+        "to": "bin",
+        "filter": [ "**/*" ]
+      }
+    ],
+    "files": [
+      {
+        "from": "./ElectronHostHook/node_modules",
+        "to": "ElectronHostHook/node_modules",
+        "filter": [ "**/*" ]
+      },
+      "**/*"
+    ]
+  }
+}

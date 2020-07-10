@@ -1,31 +1,21 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 
 using TheSharpFactory.Apps.Web.SharedUI;
+
+using StartupBase = TheSharpFactory.Apps.Web.SharedUI.StartupBase;
 
 namespace TheSharpFactory.Apps.Web.MVC
 {
     public class Startup
-        : SharedUI.StartupBase
+        : StartupBase
     {
-        public Startup(IConfiguration configuration)
+        public Startup(
+            IConfiguration configuration
+        )
             : base(configuration)
-        {
-
-        }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public override void ConfigureServices(IServiceCollection services)
-        {
-            /// register HttpClient services here
-            /// register SDK services here
-
-            base.ConfigureServices(services);
-        }
-
-        public override void Configure(IApplicationBuilder app, IWebHostEnvironment env, MvcApplicationModel appModel)
-            => base.Configure(app, env, appModel);
+        => AppModel = new MvcApplicationModel()
+            {
+                CommunicationWay = MvcCommunicationWay.ViaAPI
+            };
     }
 }

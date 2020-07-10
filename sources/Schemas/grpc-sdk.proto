@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "TheSharpFactory.SDK.gRPC";
+import "google/protobuf/empty.proto";
+
+package sales;
+
+// The greeting service definition.
+service GrpcService {
+  // Sends a greeting
+  rpc GetCustomersStream (google.protobuf.Empty) returns (stream CustomerMessage);
+}
+
+// The request message containing the user's name.
+message CustomerMessage {
+  string id = 1;
+  string name = 2;
+  string phone = 3;
+}

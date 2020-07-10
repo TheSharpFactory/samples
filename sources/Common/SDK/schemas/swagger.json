@@ -1,0 +1,84 @@
+{
+  "components": {
+    "schemas": {
+      "CustomerDTO": {
+        "required": [
+          "id",
+          "name",
+          "phone"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "format": "tel"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "info": {
+    "title": "The Sharp Factory API",
+    "description": "A simple example ASP.NET Core Web API",
+    "termsOfService": "https://localhost:6050/terms",
+    "contact": {
+      "name": "Shayne Boyer",
+      "url": "https://twitter.com/spboyer",
+      "email": ""
+    },
+    "license": {
+      "name": "Use under LICX",
+      "url": "https://localhost:6050/license"
+    },
+    "version": "v1"
+  },
+  "openapi": "3.0.1",
+  "paths": {
+    "/Sales/Customers": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Fatch all the customers",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CustomerDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CustomerDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CustomerDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

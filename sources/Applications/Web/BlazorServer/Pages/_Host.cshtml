@@ -3,7 +3,7 @@
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-     Layout = null;
+     Layout = null;     
 }
 
 <!DOCTYPE html>
@@ -11,10 +11,12 @@
 <head>
      <meta charset="utf-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <title>Blazor</title>
+     <title>TheSharpFactory Sample</title>
      <base href="~/" />
-     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-     <link href="css/site.css" rel="stylesheet" />
+     <link rel="stylesheet"
+           href="_content/TheSharpFactory.Apps.Shared.StaticAssets/libraries/bootstrap/styles/bootstrap.min.css" />
+     <link rel="stylesheet"
+           href="_content/TheSharpFactory.Apps.Shared.StaticAssets/styles/app.css" />
 </head>
 <body>
      <app>
@@ -33,10 +35,5 @@
      </div>
 
      <script src="_framework/blazor.server.js"></script>
-     <script>
-          function isBlazorServer() {
-               return window.wasmBinaryFile === undefined;
-          }
-     </script>
 </body>
 </html>

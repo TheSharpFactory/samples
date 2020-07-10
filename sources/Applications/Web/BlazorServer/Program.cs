@@ -1,7 +1,6 @@
 
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using TheSharpFactory.Apps.Web.SharedUI;
 
 namespace TheSharpFactory.Apps.Web.BlazorServer
 {
@@ -9,27 +8,12 @@ namespace TheSharpFactory.Apps.Web.BlazorServer
     {
         public static void Main(string[] args)
         {
-            SharedUI.StartupBase.AppModel = new BlazorApplicationModel
-            {
-                Flavor = BlazorFlavor.Server,
-                Platform = BlazorPlatform.Web
-            };
+            var builder = Host.CreateDefaultBuilder(args);
 
-            CreateHostBuilder(args).Build().Run();
-
-            //var builder = Host.CreateDefaultBuilder(args);
-
-            //SharedUI
-            //    .Program
-            //    .BuildBlazorHost(builder)
-            //    .Run();
+            SharedUI
+                .Program
+                .BuildBlazorHost<Startup>(builder, false, args)
+                .Run();
         }
-
-        public static IHostBuilder CreateHostBuilder(string[] args)
-            => Host
-                .CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder
-                    => webBuilder.UseStartup<Startup>()
-                );
     }
 }

@@ -2,13 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <LangVersion>8.0</LangVersion>
     <RazorLangVersion>3.0</RazorLangVersion>
     <UserSecretsId>4e234303-6d4a-44b3-a3e9-5058a205e4e1</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..</DockerfileContext>
     <AssemblyName>TheSharpFactory.Apps.Web.BlazorServer</AssemblyName>
-    <RootNamespace>TSF.Apps.Web.BlazorServer</RootNamespace>
+    <RootNamespace>TheSharpFactory.Apps.Web.BlazorServer</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
@@ -27,10 +26,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <AdditionalFiles Include="..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\StaticAssets\Apps.Shared.StaticAssets.csproj" />
     <ProjectReference Include="..\BlazorClient\Apps.Web.BlazorClient.csproj" />
     <ProjectReference Include="..\SharedUI.Blazor\Apps.Web.SharedUI.Blazor.csproj" />
   </ItemGroup>

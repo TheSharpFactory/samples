@@ -1,4 +1,6 @@
-﻿using Microsoft.MobileBlazorBindings;
+﻿using System.Diagnostics.CodeAnalysis;
+
+using Microsoft.MobileBlazorBindings;
 
 using Xamarin.Forms;
 
@@ -6,8 +8,10 @@ using BlazorViews = TheSharpFactory.Apps.Cross.SharedUI.Views.BlazorNative;
 
 namespace TheSharpFactory.Apps.Cross.SharedUI
 {
-    public class BlazorApp : Application
+    public class BlazorApp
+        : Application
     {
+        [SuppressMessage("Redundancy", "RCS1163:Unused parameter.", Justification = "<Pending>")]
         public BlazorApp()
         {
             var host = MobileBlazorBindingsHost

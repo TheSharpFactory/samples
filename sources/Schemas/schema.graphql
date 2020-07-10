@@ -1,0 +1,13 @@
+schema {
+  query: Query
+}
+
+type CustomerDTO {
+  id: String
+  name: String
+  phone: String
+}
+
+type Query {
+  customers: [CustomerDTO!]!
+}
