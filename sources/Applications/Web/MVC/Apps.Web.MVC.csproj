@@ -25,7 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\Extentions.DependencyInjection\Common.Extentions.DependencyInjection.csproj" />
     <ProjectReference Include="..\..\..\Common\SDK.Extensions\SDK.Extensions.csproj" />
-    <ProjectReference Include="..\..\Shared\Apps.Shared.StaticAssets\Apps.Shared.StaticAssets.csproj" />
+    <ProjectReference Include="..\..\Shared\StaticAssets\Apps.Shared.StaticAssets.csproj" />
     <ProjectReference Include="..\..\Shared\ViewModels.Mappers\DTO\Apps.Shared.ViewModels.Mappers.DTO.csproj" />    
     <ProjectReference Include="..\..\Shared\ViewModels\Apps.Shared.ViewModels.csproj" />
     <ProjectReference Include="..\SharedUI\Apps.Web.SharedUI.csproj" />
@@ -36,13 +36,5 @@
     <None Include="..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
     <None Include="..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
   </ItemGroup>
-
-  <ItemGroup>
-    <OpenApiReference Include="OpenAPIs\swagger.json" CodeGenerator="NSwagCSharp" Namespace="TheSharpFactory.SDK">
-      <SourceUri>https://localhost:6050/swagger/v1/swagger.json</SourceUri>
-    </OpenApiReference>
-  </ItemGroup>
-
-  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>

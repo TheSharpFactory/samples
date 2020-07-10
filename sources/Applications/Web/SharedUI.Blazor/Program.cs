@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 #if netcoreapp31
 using ElectronNET.API;
@@ -17,7 +17,7 @@ namespace TheSharpFactory.Apps.Web.SharedUI
 {
     public static class Program
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "RCS1090:Call 'ConfigureAwait(false)'.", Justification = "<Pending>")]
+        [SuppressMessage("Design", "RCS1090:Call 'ConfigureAwait(false)'.", Justification = "<Pending>")]
         public static async Task RunWebAssembly<TApplication, TStartup>(
             WebAssemblyHostBuilder builder,
             string selector,
@@ -39,7 +39,7 @@ namespace TheSharpFactory.Apps.Web.SharedUI
         public static IHost BuildBlazorHost<TStartup>(
             IHostBuilder builder,
             bool isElectron = false,
-            string[] args = null
+            params string[] args
         )
             where TStartup : StartupBase
         => builder

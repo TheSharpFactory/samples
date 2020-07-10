@@ -1,7 +1,5 @@
 <Project>
 
-  <Import Project="Chartist.targets" />
-
   <!-- Also place open-iconic's .(s)css into the wwwroot output -->
   <Target Name="CopyCss" BeforeTargets="CoreBuild">
     <Copy SourceFiles="$(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic.css; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic.min.css; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic.scss; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic-bootstrap.css; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic-bootstrap.min.css; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic-bootstrap.scss; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic-foundation.css; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic-foundation.min.css; $(MSBuildThisFileDirectory)node_modules\open-iconic\font\css\open-iconic-foundation.scss;"

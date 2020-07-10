@@ -28,7 +28,7 @@
     <ProjectReference Include="..\..\Common\SDK.Abstractions\SDK.Abstractions.csproj" />
     <ProjectReference Include="..\..\Domain\Extensions\Domain.Extensions.csproj" />
     <ProjectReference Include="..\Abstractions\Services.Abstractions.csproj" />
-    <ProjectReference Include="..\Services.GraphTypes\Services.GraphTypes.csproj" />
+    <ProjectReference Include="..\GraphTypes\Services.GraphTypes.csproj" />
   </ItemGroup>
   
 </Project>

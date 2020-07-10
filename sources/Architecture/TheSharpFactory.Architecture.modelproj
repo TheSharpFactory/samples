@@ -137,6 +137,10 @@
       <Name>Apps.Shared.Abstractions.ViewModels</Name>
       <Project>{291d61de-55b8-4339-a72f-b4eb5334f5a8}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Applications\Shared\StaticAssets\Apps.Shared.StaticAssets.csproj">
+      <Name>Apps.Shared.StaticAssets</Name>
+      <Project>{a1e24908-364a-4122-bc62-787db3e27d69}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Applications\Shared\Services\Apps.Shared.Services.csproj">
       <Name>Apps.Shared.Services</Name>
       <Project>{7545e23a-6a0f-4ac0-9a18-7feca06cddd6}</Project>
@@ -244,6 +248,10 @@
     <ProjectReference Include="..\Services\Abstractions\Services.Abstractions.csproj">
       <Name>Services.Abstractions</Name>
       <Project>{1b6089dc-182b-4b8b-a249-1637ece80806}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\GraphTypes\Services.GraphTypes.csproj">
+      <Name>Services.GraphTypes</Name>
+      <Project>{2052539a-d4cd-4df6-9d20-9e5b5cd930db}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />

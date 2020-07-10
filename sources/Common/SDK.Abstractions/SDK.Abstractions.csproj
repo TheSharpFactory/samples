@@ -3,28 +3,12 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp3.1</TargetFrameworks>
     <OutputType>Library</OutputType>
-    <IsNetStd20 Condition="'$(TargetFramework)'=='netstandard2.0'">true</IsNetStd20>
-    <IsNetStd21 Condition="'$(TargetFramework)'=='netstandard2.1'">true</IsNetStd21>
-    <IsNetCore31 Condition="'$(TargetFramework)'=='netcoreapp3.1'">true</IsNetCore31>
-    <LangVersion Condition="'$(IsNetStd20)'=='true'">7.3</LangVersion>
-    <LangVersion Condition="'$(IsNetStd21)'=='true' Or '$(IsNetCore31)'=='true'">8.0</LangVersion>
-    <Nullable Condition="'$(IsNetStd21)'=='true' Or '$(IsNetCore31)'=='true'">enable</Nullable>
     <AssemblyName>TheSharpFactory.Common.SDK.Abstractions</AssemblyName>
     <RootNamespace>TheSharpFactory.Common.SDK</RootNamespace>
     <EnableDefaultContentItems>false</EnableDefaultContentItems>
-  </PropertyGroup>
+  </PropertyGroup>  
 
-  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
-    <DefineConstants Condition="'$(IsNetStd20)'=='true'">DEBUG;netstandard20</DefineConstants>
-    <DefineConstants Condition="'$(IsNetStd21)'=='true'">DEBUG;netstandard21</DefineConstants>
-    <DefineConstants Condition="'$(IsNetCore31)'=='true'">DEBUG;netcoreapp31</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)'=='Release'">
-    <DefineConstants Condition="'$(IsNetStd20)'=='true'">TRACE;netstandard20</DefineConstants>
-    <DefineConstants Condition="'$(IsNetStd21)'=='true'">TRACE;netstandard21</DefineConstants>
-    <DefineConstants Condition="'$(IsNetCore31)'=='true'">TRACE;netcoreapp31</DefineConstants>
-  </PropertyGroup>
+  <Import Project="..\..\build\sdk-style-project.props" />
 
   <ItemGroup>
     <Protobuf Include="..\..\Schemas\grpc-sdk.proto" GrpcServices="Client">
@@ -53,15 +37,18 @@
     <PackageReference Include="System.Net.Http.Json" Version="3.2.1" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(IsNetCore31)'=='true'">
-    <PackageReference Include="Grpc.Net.Client.Web" Version="2.29.0" />
+  <ItemGroup Condition="'$(IsNetStd21)'=='true'">
+    <PackageReference Include="Grpc.Net.Client" Version="2.29.0" />
     <PackageReference Include="Grpc.Net.ClientFactory" Version="2.29.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(IsNetCore31)'=='true'">
     <PackageReference Include="Grpc.AspNetCore.Server.ClientFactory" Version="2.29.0" />
     <PackageReference Include="Grpc.AspNetCore.Web" Version="2.29.0" />
+    <PackageReference Include="Grpc.Net.Client.Web" Version="2.29.0" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(IsNetStd21)'=='true' Or '$(IsNetCore31)'=='true'">
-    <PackageReference Include="Grpc.Net.Client" Version="2.29.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="3.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.HttpHandler" Version="3.2.0" />
   </ItemGroup>

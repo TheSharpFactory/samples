@@ -1,7 +1,5 @@
 <Project>
 
-  <Import Project="Chartist.targets" />
-
   <!-- Also place bootstrap's .css into the wwwroot output -->
   <Target Name="CopyCss" BeforeTargets="CoreBuild">
     <Copy SourceFiles="$(MSBuildThisFileDirectory)node_modules\bootstrap\dist\css\bootstrap.css; $(MSBuildThisFileDirectory)node_modules\bootstrap\dist\css\bootstrap.min.css;"

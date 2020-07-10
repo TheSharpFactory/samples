@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-#if netstandard21 || netcoreapp31
-using Grpc.Net.Client;
-#endif
+﻿using System.Diagnostics.CodeAnalysis;
 
 using Microsoft.AspNetCore.Builder;
+
+#if netcoreapp31
+using Grpc.Net.Client;
+#endif
 
 namespace TheSharpFactory.SDK
 {
 #if netcoreapp31
     public static class AppicationBuilderExtensions
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "RCS1001:Add braces (when expression spans over multiple lines).", Justification = "<Pending>")]
+        [SuppressMessage("Style", "RCS1001:Add braces (when expression spans over multiple lines).", Justification = "<Pending>")]
         public static IApplicationBuilder UseSharpFactoryGrpc(
             this IApplicationBuilder app,
             GrpcWebOptions? grpcWebOptions = null

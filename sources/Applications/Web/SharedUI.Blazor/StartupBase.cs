@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using TheSharpFactory.Apps.Shared.Services;
 using TheSharpFactory.Apps.Shared.ViewModels.Conventional;
 
+using System.Diagnostics.CodeAnalysis;
+
 #if netcoreapp31
 using ElectronNET.API;
 using ElectronNET.API.Entities;
@@ -22,18 +24,33 @@ namespace TheSharpFactory.Apps.Web.SharedUI
 {
     public class StartupBase
     {
+        #region .NET Standard 2.0
+#if netstandard20
+        #region Protected Members
+        #region Constructors
+        protected StartupBase(IConfiguration configuration)
+            => Configuration = configuration;
+        #endregion
+        #endregion
+
+        #region Public Members
+        #region Properties
         public IConfiguration Configuration { get; internal set; }
-
         public BlazorApplicationModel AppModel { get; protected set; }
+        #endregion
+        #endregion
+#endif
+        #endregion
 
+        #region .NET Standard 2.1 Or ASP.NET Core 3.1
+#if netstandard21
         protected StartupBase()
         {
         }
-
-        protected StartupBase(IConfiguration configuration)
-            => Configuration = configuration;
-
+#endif
 #if netcoreapp31
+        #region Private members
+        #region Methods
         private void AddServerSideBlazor(IServiceCollection services)
         {
             services.AddRazorPages();
@@ -43,42 +60,7 @@ namespace TheSharpFactory.Apps.Web.SharedUI
                 c.JSInteropDefaultCallTimeout = new System.TimeSpan(10000);
             });
         }
-#endif
 
-        public void ConfigureServices(IServiceCollection services)
-        {
-            using (var sp = services.BuildServiceProvider())
-            {
-                if (Configuration is null)
-                {
-                    try
-                    {
-                        Configuration = sp.GetRequiredService<IConfiguration>();
-                    }
-                    catch { }
-                }
-            }
-
-            var flavor = AppModel.Flavor;
-            var platform = AppModel.Platform;
-            var communicationWay = AppModel.CommunicationWay;
-
-#if netcoreapp31
-            if (flavor == BlazorFlavor.Server || flavor == BlazorFlavor.Hybrid || flavor == (BlazorFlavor.Server | BlazorFlavor.Hybrid))
-            {
-                if (platform == BlazorPlatform.Web || platform == BlazorPlatform.Electron || platform == (BlazorPlatform.Web | BlazorPlatform.Electron))
-                    AddServerSideBlazor(services);
-            }
-#endif
-
-            services.AddSingleton(_ => AppModel);
-            services.AddTransient<IWeatherForecastDTO, WeatherForecastDTO>();
-            services.AddTransient<IWeatherForecastService, WeatherForecastService>();
-            services.AddTransient<IFetchDataViewModel, FetchDataViewModel>();
-            services.AddSingleton<ICounterService, CounterService>();
-        }
-
-#if netcoreapp31
         public void ConfigureBlazorServer(
             IApplicationBuilder app,
             IWebHostEnvironment env,
@@ -134,6 +116,61 @@ namespace TheSharpFactory.Apps.Web.SharedUI
         public void ConfigureWebWindow<TApplication>(DesktopApplicationBuilder app, string selector)
             where TApplication : ComponentBase
             => app.AddComponent<TApplication>(selector);
+        #endregion
+        #endregion
 #endif
+#if netstandard21 || netcoreapp31
+        #region Protected Members
+        #region Constructors
+        protected StartupBase(IConfiguration? configuration = null)
+            => Configuration = configuration!;
+        #endregion
+        #endregion
+
+        #region Public Members
+        #region Properties
+        public IConfiguration? Configuration { get; internal set; }
+        public BlazorApplicationModel? AppModel { get; protected set; }
+        #endregion
+
+        #region Methods
+        [SuppressMessage("Design", "CA1031:Do not catch general exception types", Justification = "<Pending>")]
+        public void ConfigureServices(IServiceCollection services)
+        {
+            using (var sp = services.BuildServiceProvider())
+            {
+                if (Configuration is null)
+                {
+                    try
+                    {
+                        Configuration = sp.GetRequiredService<IConfiguration>();
+                    }
+                    catch { }
+                }
+            }
+
+            var flavor = AppModel!.Flavor;
+            var platform = AppModel!.Platform;
+            var communicationWay = AppModel!.CommunicationWay;
+
+#if netcoreapp31
+            if (flavor == BlazorFlavor.Server || flavor == BlazorFlavor.Hybrid || flavor == (BlazorFlavor.Server | BlazorFlavor.Hybrid))
+            {
+                if (platform == BlazorPlatform.Web || platform == BlazorPlatform.Electron || platform == (BlazorPlatform.Web | BlazorPlatform.Electron))
+                    AddServerSideBlazor(services);
+            }
+#endif
+
+            services.AddSingleton(_ => AppModel!);
+            services.AddTransient<IWeatherForecastDTO, WeatherForecastDTO>();
+            services.AddTransient<IWeatherForecastService, WeatherForecastService>();
+            services.AddTransient<IFetchDataViewModel, FetchDataViewModel>();
+            services.AddSingleton<ICounterService, CounterService>();
+        }
+        #endregion
+
+        #endregion
+#endif
+        #endregion
     }
 }
