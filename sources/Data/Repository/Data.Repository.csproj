@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entity.Utils\Data.Entity.Utils.csproj" />
+    <ProjectReference Include="..\Entity\Data.Entity.csproj" />
+    <ProjectReference Include="..\Query\Data.Query.csproj" />
+    <ProjectReference Include="..\Repository.Interfaces\Data.Repository.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Class1.cs" />
   </ItemGroup>
 
@@ -19,17 +30,6 @@
     <AdditionalFiles Include="..\..\Architecture\AppDirect.layerdiagram" Link="AppDirect.layerdiagram" Visible="False" />
     <None Include="..\..\Architecture\AppDirect.layerdiagram.layout" Link="AppDirect.layerdiagram.layout" Visible="False" />
     <None Include="..\..\Architecture\AppDirect.layerdiagram.suppressions" Link="AppDirect.layerdiagram.suppressions" Visible="False" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Entity.Utils\Data.Entity.Utils.csproj" />
-    <ProjectReference Include="..\Entity\Data.Entity.csproj" />
-    <ProjectReference Include="..\Query\Data.Query.csproj" />
-    <ProjectReference Include="..\Repository.Interfaces\Data.Repository.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
