@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Apps.Shared.StaticAssets\Apps.Shared.StaticAssets.csproj" />
+    <ProjectReference Include="..\..\Shared\StaticAssets\Apps.Shared.StaticAssets.csproj" />
     <ProjectReference Include="..\SharedUI.Blazor\Apps.Web.SharedUI.Blazor.csproj" />
   </ItemGroup>
 

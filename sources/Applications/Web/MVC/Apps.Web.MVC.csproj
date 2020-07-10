@@ -25,7 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\Extentions.DependencyInjection\Common.Extentions.DependencyInjection.csproj" />
     <ProjectReference Include="..\..\..\Common\SDK.Extensions\SDK.Extensions.csproj" />
-    <ProjectReference Include="..\..\Shared\Apps.Shared.StaticAssets\Apps.Shared.StaticAssets.csproj" />
+    <ProjectReference Include="..\..\Shared\StaticAssets\Apps.Shared.StaticAssets.csproj" />
     <ProjectReference Include="..\..\Shared\ViewModels.Mappers\DTO\Apps.Shared.ViewModels.Mappers.DTO.csproj" />    
     <ProjectReference Include="..\..\Shared\ViewModels\Apps.Shared.ViewModels.csproj" />
     <ProjectReference Include="..\SharedUI\Apps.Web.SharedUI.csproj" />
