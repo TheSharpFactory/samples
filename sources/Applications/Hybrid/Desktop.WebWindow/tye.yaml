@@ -9,11 +9,11 @@ services:
   env:
   - name: ASPNETCORE_ENVIRONMENT
     value: Development
-  buildPropertes:
+  buildProperties:
   - name: Configuration
     value: Debug
 - name: blazor-hybrid-webwindow-api-sample
-  project: Apps.Web.Hybrid.Desktop.WebWindow.csproj
+  project: Apps.Hybrid.Desktop.WebWindow.csproj
   bindings:
   - name: https
     protocol: https
@@ -21,6 +21,6 @@ services:
   env:
   - name: IS_WEBWINDOW
     value: True
-  buildPropertes:
+  buildProperties:
   - name: Configuration
     value: Debug

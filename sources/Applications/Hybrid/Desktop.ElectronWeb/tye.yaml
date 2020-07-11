@@ -9,11 +9,12 @@ services:
   env:
   - name: ASPNETCORE_ENVIRONMENT
     value: Development
-  buildPropertes:
+  buildProperties:
   - name: Configuration
     value: Debug
 - name: blazor-hybrid-electron-api-sample
-  project: Apps.Web.Hybrid.Desktop.ElectronWeb.csproj
+  executable: electronize
+  args: start
   bindings:
   - name: https
     protocol: https
@@ -23,6 +24,6 @@ services:
     value: Development
   - name: IS_ELECTRON
     value: True
-  buildPropertes:
+  buildProperties:
   - name: Configuration
     value: Debug

@@ -9,7 +9,7 @@ services:
   env:
   - name: ASPNETCORE_ENVIRONMENT
     value: Development
-  buildPropertes:
+  buildProperties:
   - name: Configuration
     value: Debug
 - name: mvc-api-sample
@@ -23,6 +23,6 @@ services:
     value: Development
   - name: ASPNETCORE_HOSTINGSTARTUPASSEMBLIES
     value: Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
-  buildPropertes:
+  buildProperties:
   - name: Configuration
     value: Debug

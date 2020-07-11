@@ -9,7 +9,7 @@ services:
   env:
   - name: ASPNETCORE_ENVIRONMENT
     value: Development
-  buildPropertes:
+  buildProperties:
   - name: Configuration
     value: Debug
 - name: blazor-wasm-api-sample
@@ -21,6 +21,6 @@ services:
   env:
   - name: ASPNETCORE_ENVIRONMENT
     value: Development
-  buildPropertes:
+  buildProperties:
   - name: Configuration
     value: Debug
