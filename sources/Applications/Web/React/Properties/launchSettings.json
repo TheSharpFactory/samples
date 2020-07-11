@@ -18,10 +18,22 @@
     "React": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "applicationUrl": "https://localhost:6066;",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "Tye": {
+      "commandName": "Executable",
+      "executablePath": "tye",
+      "commandLineArgs": "run",
+      "workingDirectory": "."
+    },
+    "Tye-All": {
+      "commandName": "Executable",
+      "executablePath": "tye",
+      "commandLineArgs": "run",
+      "workingDirectory": "..\\..\\.."
     }
   }
 }

@@ -19,11 +19,11 @@
     "Services-Unified": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "/graph/playground",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:6050;http://localhost:6051"
+      "applicationUrl": "https://localhost:6050;"
     }
   }
 }

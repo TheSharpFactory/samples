@@ -1,10 +1,22 @@
 {
   "profiles": {
-    "Apps.Cross.Desktop.WebWindow": {
+    "Web Window": {
       "commandName": "Project",
       "environmentVariables": {
         "IS_WEBWINDOW": "True"
       }
+    },
+    "Tye": {
+      "commandName": "Executable",
+      "executablePath": "tye",
+      "commandLineArgs": "run",
+      "workingDirectory": "."
+    },
+    "Tye-All": {
+      "commandName": "Executable",
+      "executablePath": "tye",
+      "commandLineArgs": "run",
+      "workingDirectory": "..\\..\\.."
     }
   }
 }
