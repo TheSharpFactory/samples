@@ -1,0 +1,26 @@
+name: apps.web.blazor.client
+services:
+- name: api-sample
+  project: ../../../services/unified/Services.Unified.csproj 
+  bindings:
+  - name: https
+    protocol: https
+    port: 6050
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildProperties:
+  - name: Configuration
+    value: Debug
+- name: blazor-wasm-api-sample
+  project: Apps.Web.BlazorClient.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6064
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildProperties:
+  - name: Configuration
+    value: Debug

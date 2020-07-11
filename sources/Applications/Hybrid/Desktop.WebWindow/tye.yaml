@@ -1,0 +1,26 @@
+name: apps.hybrid.webwindow
+services:
+- name: api-sample
+  project: ../../../services/unified/Services.Unified.csproj 
+  bindings:
+  - name: https
+    protocol: https
+    port: 6050
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildProperties:
+  - name: Configuration
+    value: Debug
+- name: blazor-hybrid-webwindow-api-sample
+  project: Apps.Hybrid.Desktop.WebWindow.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6068
+  env:
+  - name: IS_WEBWINDOW
+    value: True
+  buildProperties:
+  - name: Configuration
+    value: Debug

@@ -4,16 +4,37 @@
     <layer Id="dc9b1a80-6ae2-4466-b34b-f41e923745b9" name="Cross Cutting Layer&#xD;&#xA;">
       <childLayers>
         <layer Id="2e99d0bf-63a2-46d1-8f40-21983cbc175e" name="DTO&#xD;&#xA;">
-          <references>
-            <reference Id="a239f94d-958f-4555-b331-24797eaa371f" name="TheSharpFactory.Common.DTO.dll">
-              <ArtifactNode Label="TheSharpFactory.Common.DTO.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Common.DTO)" />
-              <ExpandedNode Id="(Assembly=TheSharpFactory.Common.DTO)" Label="TheSharpFactory.Common.DTO.dll" Category="CodeSchema_Assembly">
-                <Category Ref="FileSystem.Category.FileOfType.dll" />
-                <LinkCategory Ref="Produces" />
-                <LinkCategory Ref="Represents" />
-              </ExpandedNode>
-            </reference>
-          </references>
+          <childLayers>
+            <layer Id="680a7869-783a-4381-8eaf-b18d93101482" name="Layer of Abstraction">
+              <references>
+                <reference Id="97b6dba0-aa9d-4553-aeb2-559787430cee" name="TheSharpFactory.Common.DTO.Abstractions.dll">
+                  <ArtifactNode Label="TheSharpFactory.Common.DTO.Abstractions.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Common.DTO.Abstractions)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.Common.DTO.Abstractions)" Label="TheSharpFactory.Common.DTO.Abstractions.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="49da9a83-a5b4-4335-bbec-36793cd4e371" name="Objects">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="b608119e-dbba-4f69-9192-3fa6576e2f17" direction="Forward">
+                  <layerMoniker Id="680a7869-783a-4381-8eaf-b18d93101482" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="fd75f0e5-cd02-4732-abeb-0e82e8cfc5ba" name="TheSharpFactory.Common.DTO.dll1">
+                  <ArtifactNode Label="TheSharpFactory.Common.DTO.dll" Category="CodeSchema_Assembly" Id="(Assembly=TheSharpFactory.Common.DTO)" />
+                  <ExpandedNode Id="(Assembly=TheSharpFactory.Common.DTO)" Label="TheSharpFactory.Common.DTO.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
         </layer>
         <layer Id="da587072-a1d3-42ff-9a88-c452c4f0abef" name="Dependency Injection">
           <dependencyToLayers>

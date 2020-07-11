@@ -8,6 +8,8 @@
     <DockerfileContext>..\..\..</DockerfileContext>
     <AssemblyName>TheSharpFactory.Apps.Web.BlazorServer</AssemblyName>
     <RootNamespace>TheSharpFactory.Apps.Web.BlazorServer</RootNamespace>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/core/sdk</ContainerBaseImage>
+    <ContainerBaseTag>3.1-buster-slim</ContainerBaseTag>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">

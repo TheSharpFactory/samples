@@ -2,7 +2,6 @@
 
 namespace TheSharpFactory.Common.DTO
 {
-
     public interface ICustomerDTO
         : IDto
     {

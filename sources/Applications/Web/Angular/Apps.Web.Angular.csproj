@@ -7,11 +7,12 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
-
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
-    <AssemblyName>SharpFactory.Apps.Web.Angular</AssemblyName>
-    <RootNamespace>SF.Apps.Web.Angular</RootNamespace>
+    <AssemblyName>TheSharpFactory.Apps.Web.Angular</AssemblyName>
+    <RootNamespace>TheSharpFactory.Apps.Web.Angular</RootNamespace>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/core/sdk</ContainerBaseImage>
+    <ContainerBaseTag>3.1-buster-slim</ContainerBaseTag>
   </PropertyGroup>
 
   <ItemGroup>

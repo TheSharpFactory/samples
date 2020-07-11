@@ -9,12 +9,6 @@
   <Import Project="..\..\build\sdk-style-project.props" />
 
   <ItemGroup>
-    <AdditionalFiles Include="..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
-    <None Include="..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
-    <None Include="..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.0.0" />
     <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
@@ -24,6 +18,12 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\Models\Domain.Models.csproj" />
     <ProjectReference Include="..\Common.DTO.Abstractions\Common.DTO.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
   </ItemGroup>
 
 </Project>
