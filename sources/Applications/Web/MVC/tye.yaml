@@ -1,0 +1,28 @@
+name: apps.web.mvc
+services:
+- name: api-sample
+  project: ../../../Services/Unified/Services.Unified.csproj 
+  bindings:
+  - name: https
+    protocol: https
+    port: 6050
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildPropertes:
+  - name: Configuration
+    value: Debug
+- name: mvc-api-sample
+  project: Apps.Web.MVC.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6060
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  - name: ASPNETCORE_HOSTINGSTARTUPASSEMBLIES
+    value: Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
+  buildPropertes:
+  - name: Configuration
+    value: Debug

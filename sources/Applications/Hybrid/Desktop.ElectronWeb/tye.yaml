@@ -1,0 +1,28 @@
+name: apps.hybrid.electron
+services:
+- name: api-sample
+  project: ../../../services/unified/Services.Unified.csproj 
+  bindings:
+  - name: https
+    protocol: https
+    port: 6050
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildPropertes:
+  - name: Configuration
+    value: Debug
+- name: blazor-hybrid-electron-api-sample
+  project: Apps.Web.Hybrid.Desktop.ElectronWeb.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6067
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  - name: IS_ELECTRON
+    value: True
+  buildPropertes:
+  - name: Configuration
+    value: Debug

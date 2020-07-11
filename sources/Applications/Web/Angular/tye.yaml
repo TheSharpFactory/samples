@@ -1,0 +1,26 @@
+name: apps.web.angular
+services:
+- name: api-sample
+  project: ../../../services/unified/Services.Unified.csproj 
+  bindings:
+  - name: https
+    protocol: https
+    port: 6050
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildPropertes:
+  - name: Configuration
+    value: Debug
+- name: ng-api-sample
+  project: Apps.Web.Angular.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6065
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildPropertes:
+  - name: Configuration
+    value: Debug
