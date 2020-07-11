@@ -7,7 +7,8 @@
     <OutputType>WinExe</OutputType>
     <AssemblyName>TheSharpFactory.Apps.Hybrid.Desktop.ElectronWeb</AssemblyName>
     <RootNamespace>TheSharpFactory.Apps.Cross.Desktop.ElectronWeb</RootNamespace>
-
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/core/sdk</ContainerBaseImage>
+    <ContainerBaseTag>3.1-buster-slim</ContainerBaseTag>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">

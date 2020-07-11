@@ -6,7 +6,9 @@
     <RazorLangVersion>3.0</RazorLangVersion>
     <OutputType>WinExe</OutputType>
     <RootNamespace>TheSharpFactory.Apps.Hybrid.Desktop.WebWindow</RootNamespace>
-    <AssemblyName>TheSharpFactory.Apps.Hybrid.Desktop.WebWindow</AssemblyName>
+    <AssemblyName>TheSharpFactory.Apps.Hybrid.Desktop.WebWindow</AssemblyName> 
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/core/sdk</ContainerBaseImage>
+    <ContainerBaseTag>3.1-buster-slim</ContainerBaseTag>
   </PropertyGroup>
 
   <ItemGroup>

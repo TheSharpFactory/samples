@@ -7,8 +7,10 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
-    <AssemblyName>SharpFactory.Apps.Web.ReactWithRedux</AssemblyName>
-    <RootNamespace>SF.Apps.Web.React</RootNamespace>
+    <AssemblyName>TheSharpFactory.Apps.Web.ReactWithRedux</AssemblyName>
+    <RootNamespace>TheSharpFactory.Apps.Web.React</RootNamespace>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/core/sdk</ContainerBaseImage>
+    <ContainerBaseTag>3.1-buster-slim</ContainerBaseTag>
   </PropertyGroup>
 
   <ItemGroup>
