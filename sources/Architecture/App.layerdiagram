@@ -121,9 +121,6 @@
         <dependencyFromLayerToLayer Id="c971e0a2-f034-484d-b1b8-64ca3909c7fe" direction="Bidirectional">
           <layerMoniker Id="dc9b1a80-6ae2-4466-b34b-f41e923745b9" />
         </dependencyFromLayerToLayer>
-        <dependencyFromLayerToLayer Id="51b36721-7580-44cc-8fef-05d4056da6c9" direction="Forward">
-          <layerMoniker Id="a1694e12-0839-4d88-a7a4-6b28eb3d31da" />
-        </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <childLayers>
         <layer Id="ccc04ed4-2aba-402f-9a35-106d2beec661" name="Shared">
