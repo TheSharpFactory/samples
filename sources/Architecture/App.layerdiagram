@@ -339,6 +339,11 @@
                   </references>
                 </layer>
                 <layer Id="8b90c7f1-a22d-4eac-9019-b6589f0463d3" name="Entrypoints">
+                  <dependencyToLayers>
+                    <dependencyFromLayerToLayer Id="e0e75d1d-1e1f-4c76-8c4a-380f1f6fdaee" direction="Forward">
+                      <layerMoniker Id="72bf58de-344b-4e0b-90a1-9759345a1bd0" />
+                    </dependencyFromLayerToLayer>
+                  </dependencyToLayers>
                   <references>
                     <reference Id="65df955d-f3df-4170-b0a8-632142d26891" name="ViewController1">
                       <ArtifactNode Label="ViewController" Category="CodeSchema_Class" Id="(Assembly=TheSharpFactory.Apps.Cross.macOS.Blazor Namespace=TheSharpFactory.Apps.Cross.macOS Type=ViewController)" />
