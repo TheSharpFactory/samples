@@ -70,7 +70,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Common.DTO.Abstractions\Common.DTO.Abstractions.csproj" />
+    <ProjectReference Include="..\DTO.Abstractions\Common.DTO.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>
