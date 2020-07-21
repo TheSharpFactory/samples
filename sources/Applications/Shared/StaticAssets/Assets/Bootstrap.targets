@@ -1,0 +1,17 @@
+<Project>
+
+  <!-- Also place bootstrap's .css into the wwwroot output -->
+  <Target Name="CopyCss" BeforeTargets="CoreBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)node_modules\bootstrap\dist\css\bootstrap.css; $(MSBuildThisFileDirectory)node_modules\bootstrap\dist\css\bootstrap.min.css;"
+          DestinationFolder="$(MSBuildThisFileDirectory)..\wwwroot\libraries\bootstrap\styles"
+          SkipUnchangedFiles="true" />
+  </Target>
+
+  <!-- Also place bootstrap's .js into the wwwroot output -->
+  <Target Name="CopyJs" BeforeTargets="CoreBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)node_modules\bootstrap\dist\js\bootstrap.bundle.js; $(MSBuildThisFileDirectory)node_modules\bootstrap\dist\js\bootstrap.bundle.min.js;"
+          DestinationFolder="$(MSBuildThisFileDirectory)..\wwwroot\libraries\bootstrap\scripts"
+          SkipUnchangedFiles="true" />
+  </Target>
+
+</Project>

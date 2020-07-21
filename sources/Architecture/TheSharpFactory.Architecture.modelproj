@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{d958d852-169c-4dc8-b552-81fd82fd4f4b}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>TheSharpfactory.Architecture</Name>
+    <RootNamespace>TheSharpfactory.Architecture</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Validate Include="App.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="App.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>App.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="App.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>App.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="AppDirect.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="AppDirect.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AppDirect.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="AppDirect.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>AppDirect.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Class Diagram - Data Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - Domain Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - Cross Cutting Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - Service Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - Application Layer.dgml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagram - App.dgml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\DTO.Abstractions\Common.DTO.Abstractions.csproj">
+      <Name>Common.DTO.Abstractions</Name>
+      <Project>{cf18325a-53fa-47f2-b454-03c5a5213ed3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\DTO\Common.DTO.csproj">
+      <Name>Common.DTO</Name>
+      <Project>{62285101-0c2b-4620-9d28-3774b15f77c6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Extentions.DependencyInjection\Common.Extentions.DependencyInjection.csproj">
+      <Name>Common.Extentions.DependencyInjection</Name>
+      <Project>{ed722584-627b-416d-9a3d-19a24e9df6b5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\SDK.Abstractions\SDK.Abstractions.csproj">
+      <Name>SDK.Abstractions</Name>
+      <Project>{097be146-421a-4a21-8f25-5d9ae7d6b078}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\SDK.Extensions\SDK.Extensions.csproj">
+      <Name>SDK.Extensions</Name>
+      <Project>{f577149d-2ad6-4f2c-a717-cec65cdb1fcd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\SDK\SDK.csproj">
+      <Name>SDK</Name>
+      <Project>{b4a4b335-08ba-4401-a861-691e4f853abc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Entity.Utils\Data.Entity.Utils.csproj">
+      <Name>Data.Entity.Utils</Name>
+      <Project>{c9c13f26-e5ce-489d-bf41-c2c36f82480c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Entity\Data.Entity.csproj">
+      <Name>Data.Entity</Name>
+      <Project>{86da72b0-0876-4774-ba73-522164c7b33f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Query\Data.Query.csproj">
+      <Name>Data.Query</Name>
+      <Project>{ab244265-ff50-4704-bdfb-4f9733b374ac}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Repository.Interfaces\Data.Repository.Interfaces.csproj">
+      <Name>Data.Repository.Interfaces</Name>
+      <Project>{47faf41a-6d0d-4c4c-b499-5b97f861ed01}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Repository\Data.Repository.csproj">
+      <Name>Data.Repository</Name>
+      <Project>{e6e00a5e-c3d8-4c7d-8b93-816df358e11e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Abstractions\Domain.Abstractions.csproj">
+      <Name>Domain.Abstractions</Name>
+      <Project>{657fb290-edc4-450f-9a80-18e1543703d9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Extensions\Domain.Extensions.csproj">
+      <Name>Domain.Extensions</Name>
+      <Project>{f2ee4778-a0d5-44ba-be20-5913b9962e3d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Models\Domain.Models.csproj">
+      <Name>Domain.Models</Name>
+      <Project>{e9db20ae-ea13-4c57-998c-2c38b0d17395}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Abstractions\Services.Abstractions.csproj">
+      <Name>Services.Abstractions</Name>
+      <Project>{1b6089dc-182b-4b8b-a249-1637ece80806}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\GraphTypes\Services.GraphTypes.csproj">
+      <Name>Services.GraphTypes</Name>
+      <Project>{2052539a-d4cd-4df6-9d20-9e5b5cd930db}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>  
@@ -8,11 +8,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Class1.cs" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Query\Data.Query.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
+
+    <AdditionalFiles Include="..\..\Architecture\AppDirect.layerdiagram" Link="AppDirect.layerdiagram" Visible="False" />
+    <None Include="..\..\Architecture\AppDirect.layerdiagram.layout" Link="AppDirect.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\Architecture\AppDirect.layerdiagram.suppressions" Link="AppDirect.layerdiagram.suppressions" Visible="False" />
   </ItemGroup>
 
 </Project>

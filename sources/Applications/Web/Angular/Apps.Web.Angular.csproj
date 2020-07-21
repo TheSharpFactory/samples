@@ -7,16 +7,17 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
-
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
-    <AssemblyName>SharpFactory.Apps.Web.Angular</AssemblyName>
-    <RootNamespace>SF.Apps.Web.Angular</RootNamespace>
+    <AssemblyName>TheSharpFactory.Apps.Web.Angular</AssemblyName>
+    <RootNamespace>TheSharpFactory.Apps.Web.Angular</RootNamespace>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/core/sdk</ContainerBaseImage>
+    <ContainerBaseTag>3.1-buster-slim</ContainerBaseTag>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.1.4" />
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +25,16 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\StaticAssets\Apps.Shared.StaticAssets.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

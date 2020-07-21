@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+    <AssemblyName>TheSharpFactory.Apps.Shared.ViewModels.Mappers.Domain</AssemblyName>
+    <RootNamespace>TheSharpFactory.Apps.Shared.ViewModels</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\..\..\..\build\sdk-style-project.props" />
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Domain\Models\Domain.Models.csproj" />
+    <ProjectReference Include="..\..\ViewModels\Apps.Shared.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\..\Architecture\AppDirect.layerdiagram" Link="AppDirect.layerdiagram" Visible="False" />
+    <None Include="..\..\..\..\Architecture\AppDirect.layerdiagram.layout" Link="AppDirect.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\..\Architecture\AppDirect.layerdiagram.suppressions" Link="AppDirect.layerdiagram.suppressions" Visible="False" />
+  </ItemGroup>
+
+</Project>

@@ -4,8 +4,6 @@ This interface has been generated dynamically.
 Any changes you make here will be overwritten.
 ************************************************/
 
-using System;
-
 namespace TheSharpFactory.Data.Query
 {
 

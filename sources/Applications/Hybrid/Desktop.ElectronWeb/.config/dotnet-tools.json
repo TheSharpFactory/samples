@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "electronnet.cli": {
+      "version": "9.31.1",
+      "commands": [
+        "electronize"
+      ]
+    },
+    "microsoft.tye": {
+      "version": "0.3.0-alpha.20319.3",
+      "commands": [
+        "tye"
+      ]
+    }
+  }
+}

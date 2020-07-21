@@ -2,34 +2,32 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1;netcoreapp3.1</TargetFrameworks>
-    <LangVersion>8.0</LangVersion>
     <RazorLangVersion>3.0</RazorLangVersion>
     <AssemblyName>TheSharpFactory.Apps.Web.SharedUI.Blazor</AssemblyName>
     <RootNamespace>TheSharpFactory.Apps.Web.SharedUI</RootNamespace>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.1'">
-    <DefineConstants>TRACE;DEBUG;netstandard21;</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
-    <DefineConstants>TRACE;DEBUG;netcoreapp31;</DefineConstants>
-  </PropertyGroup>
+  <Import Project="..\..\..\build\sdk-style-project.props" />
 
   <ItemGroup>
+    <Compile Remove="Data\**" />
     <Compile Remove="Pages\**" />
+    <Content Remove="Data\**" />
     <Content Remove="Pages\**" />
+    <EmbeddedResource Remove="Data\**" />
     <EmbeddedResource Remove="Pages\**" />
+    <None Remove="Data\**" />
     <None Remove="Pages\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="3.2.0" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
-    <PackageReference Include="ElectronNET.API" Version="8.31.2" />
+    <PackageReference Include="ElectronNET.API" Version="9.31.1" />
     <PackageReference Include="WebWindow.Blazor">
       <Version>0.1.0-20200214.10</Version>
     </PackageReference>
@@ -37,11 +35,18 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\Services\Apps.Shared.Services.csproj" />
+    <ProjectReference Include="..\..\Shared\StaticAssets\Apps.Shared.StaticAssets.csproj" />
     <ProjectReference Include="..\..\Shared\ViewModels\Apps.Shared.ViewModels.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
+    <AdditionalFiles Include="..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
+
+    <AdditionalFiles Include="..\..\..\Architecture\AppDirect.layerdiagram" Link="AppDirect.layerdiagram" Visible="False" />
+    <None Include="..\..\..\Architecture\AppDirect.layerdiagram.layout" Link="AppDirect.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\Architecture\AppDirect.layerdiagram.suppressions" Link="AppDirect.layerdiagram.suppressions" Visible="False" />
   </ItemGroup>
 
 </Project>

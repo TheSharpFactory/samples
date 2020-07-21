@@ -1,0 +1,26 @@
+name: apps.web.blazor.server
+services:
+- name: api-sample
+  project: ../../../services/unified/Services.Unified.csproj 
+  bindings:
+  - name: https
+    protocol: https
+    port: 6050
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildProperties:
+  - name: Configuration
+    value: Debug
+- name: blazor-server-api-sample
+  project: Apps.Web.BlazorServer.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6062
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildProperties:
+  - name: Configuration
+    value: Debug

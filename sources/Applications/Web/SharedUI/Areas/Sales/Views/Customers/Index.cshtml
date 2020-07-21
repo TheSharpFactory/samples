@@ -1,0 +1,38 @@
+﻿@model IReadOnlyCollection<ICustomerViewModel>
+@inject MvcApplicationModel appModel
+
+<h1>Customers</h1>
+<h2>Sales Module</h2>
+
+<p>
+     This page demonstrates fetching data from a
+     @{
+          @if (appModel.CommunicationWay == MvcCommunicationWay.Direct)
+          {
+               <strong>business layer</strong>
+          }
+          else {
+               <strong>api call</strong>
+          }
+     }
+</p>
+
+<table class="table">
+     <thead>
+          <tr>
+               <th>Id</th>
+               <th>Name</th>
+               <th>Phone Number</th>
+          </tr>
+     </thead>
+     <tbody>
+          @foreach (var customer in Model)
+          {
+               <tr>
+                    <td>@customer.Id</td>
+                    <td>@customer.Name</td>
+                    <td>@customer.PhoneNumber</td>
+               </tr>
+          }
+     </tbody>
+</table>

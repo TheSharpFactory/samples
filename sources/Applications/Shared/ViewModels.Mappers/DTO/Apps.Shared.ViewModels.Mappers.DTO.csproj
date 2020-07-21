@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+    <AssemblyName>TheSharpFactory.Apps.Shared.ViewModels.Mappers.DTO</AssemblyName>
+    <RootNamespace>TheSharpFactory.Apps.Shared.ViewModels</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\..\..\..\build\sdk-style-project.props" />
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Common\DTO\Common.DTO.csproj" />
+    <ProjectReference Include="..\..\ViewModels\Apps.Shared.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
+  </ItemGroup>
+
+</Project>

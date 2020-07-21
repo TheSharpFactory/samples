@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <ImportGroup Label="libraries">
+    <Import Project="Assets\Bootstrap.targets" />
+    <Import Project="Assets\Chartist.targets" />
+    <Import Project="Assets\OpenIconic.targets" />
+  </ImportGroup>
+
+  <Import Project="Assets\app.css.targets" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RazorLangVersion>3.0</RazorLangVersion>
+    <AssemblyName>TheSharpFactory.Apps.Shared.StaticAssets</AssemblyName>
+    <RootNamespace>TheSharpFactory.Apps.Shared.StaticAssets</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Assets\node_modules\**" />
+    <Content Remove="Assets\node_modules\**" />
+    <EmbeddedResource Remove="Assets\node_modules\**" />
+    <None Remove="Assets\node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\app.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WebpackBuildInputs Remove="Assets\app.css" />
+    <WebpackBuildInputs Remove="Assets\app.css.targets" />
+    <WebpackBuildInputs Remove="Assets\BlazorChartist.ts" />
+    <WebpackBuildInputs Remove="Assets\Bootstrap.targets" />
+    <WebpackBuildInputs Remove="Assets\OpenIconic.targets" />
+    <WebpackBuildInputs Remove="Assets\tsconfig.json" />
+    <WebpackBuildInputs Remove="Assets\webpack.config.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\app.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.5" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
+  </ItemGroup>      
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
+
+    <AdditionalFiles Include="..\..\..\Architecture\AppDirect.layerdiagram" Link="AppDirect.layerdiagram" Visible="False" />
+    <None Include="..\..\..\Architecture\AppDirect.layerdiagram.layout" Link="AppDirect.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\Architecture\AppDirect.layerdiagram.suppressions" Link="AppDirect.layerdiagram.suppressions" Visible="False" />
+  </ItemGroup>  
+
+</Project>

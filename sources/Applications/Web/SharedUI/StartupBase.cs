@@ -1,15 +1,19 @@
 ﻿
-using System;
-
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 using TheSharpFactory.Apps.Shared.Services;
+using TheSharpFactory.Apps.Shared.ViewModels;
 using TheSharpFactory.Apps.Shared.ViewModels.Conventional;
+using TheSharpFactory.Common.DTO;
+using TheSharpFactory.Common.Extensions.DependencyInjection.Mappers;
+using TheSharpFactory.SDK;
+using TheSharpFactory.SDK.Clients;
+using TheSharpFactory.SDK.Graph;
+using TheSharpFactory.SDK.gRPC;
 
 namespace TheSharpFactory.Apps.Web.SharedUI
 {
@@ -17,28 +21,39 @@ namespace TheSharpFactory.Apps.Web.SharedUI
     {
         public IConfiguration Configuration { get; internal set; }
 
-        public static MvcApplicationModel AppModel { get; set; }
+        public MvcApplicationModel AppModel { get; protected set; }
 
         protected StartupBase(IConfiguration configuration)
             => Configuration = configuration;
 
         public virtual void ConfigureServices(IServiceCollection services)
         {
-            if (AppModel.CommunicationWay == MvcCommunicationWay.Direct)
+            if (AppModel.CommunicationWay == MvcCommunicationWay.ViaAPI)
             {
-                //Database.RegisterModelConnectionString(
-                //    RepoLookup.ModelId.WWI,
-                //    Configuration.GetConnectionString("WWIConnectionString")
-                //);
+                services.AddMapper(
+                    false,
+                    false,
+                    typeof(DTOToViewModelMappingProfile).Assembly,
+                    typeof(CustomerMessageToDTOMappingProfile).Assembly
+                );
+                var apiUrl = Configuration
+                                .GetSection("Api")
+                                .Get<ApiConfiguration>()
+                                .Url;
+                services.AddSharpFactoryApiClients(apiUrl);
             }
 
             services.AddSingleton(_ => AppModel);
+            services.AddSingleton<ServiceBase<ICustomerDTO, CustomerDTO, CustomerMessage, GrpcClient<CustomerMessage>, IGetCustomers>, CustomerService>();
             services.AddTransient<IWeatherForecastDTO, WeatherForecastDTO>();
             services.AddTransient<IWeatherForecastService, WeatherForecastService>();
             services.AddTransient<IFetchDataViewModel, FetchDataViewModel>();
+            services.AddTransient<ICustomersViewModel, CustomersViewModel>();
             services.AddSingleton<ICounterService, CounterService>();
 
-            services.AddControllersWithViews(opt => opt.EnableEndpointRouting = false);
+            services.AddControllersWithViews(opt
+                => opt.EnableEndpointRouting = false
+            );
         }
 
         public virtual void Configure(IApplicationBuilder app, IWebHostEnvironment env, MvcApplicationModel appModel)
@@ -76,6 +91,17 @@ namespace TheSharpFactory.Apps.Web.SharedUI
                     "areas",
                     "Landing",
                     "{area:Exists}/{controller=Home}/{action=Index}/{id?}"
+                );
+                endpoints.MapAreaControllerRoute(
+                    "sales",
+                    "Sales",
+                    "{area:Exists}/{controller=Customers}/{action=Index}/{id?}"
+                );
+                endpoints.MapFallbackToAreaController(
+                    "{area:Exists}/{controller=Home}/{action=Index}/{id?}",
+                    "Index",
+                    "Home",
+                    "Landing"
                 );
                 endpoints.MapControllerRoute(
                     name: "default",

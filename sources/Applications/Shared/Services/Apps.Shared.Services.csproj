@@ -1,18 +1,32 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <LangVersion>7.3</LangVersion>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>TheSharpFactory.Apps.Shared.Services</AssemblyName>
     <RootNamespace>TheSharpFactory.Apps.Shared.Services</RootNamespace>
   </PropertyGroup>
 
+  <Import Project="..\..\..\build\sdk-style-project.props" />
+
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.5" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\DTO.Abstractions\Common.DTO.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Common\SDK.Abstractions\SDK.Abstractions.csproj" />
     <ProjectReference Include="..\Abstractions\Services\Apps.Shared.Abstractions.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
+
+    <AdditionalFiles Include="..\..\..\Architecture\AppDirect.layerdiagram" Link="AppDirect.layerdiagram" Visible="False" />
+    <None Include="..\..\..\Architecture\AppDirect.layerdiagram.layout" Link="AppDirect.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\Architecture\AppDirect.layerdiagram.suppressions" Link="AppDirect.layerdiagram.suppressions" Visible="False" />
   </ItemGroup>
 
 </Project>

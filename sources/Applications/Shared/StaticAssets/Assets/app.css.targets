@@ -1,0 +1,10 @@
+<Project>
+
+  <!-- Also place app's .css into the wwwroot output -->
+  <Target Name="CopyCss" BeforeTargets="CoreBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)app.css;"
+          DestinationFolder="$(MSBuildThisFileDirectory)..\wwwroot\styles"
+          SkipUnchangedFiles="true" />
+  </Target>
+
+</Project>

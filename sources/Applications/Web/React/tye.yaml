@@ -1,0 +1,26 @@
+name: apps.web.react
+services:
+- name: api-sample
+  project: ../../../services/unified/Services.Unified.csproj 
+  bindings:
+  - name: https
+    protocol: https
+    port: 6050
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildProperties:
+  - name: Configuration
+    value: Debug
+- name: react-api-sample
+  project: Apps.Web.React.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6066
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildProperties:
+  - name: Configuration
+    value: Debug

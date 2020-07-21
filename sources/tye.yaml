@@ -1,0 +1,105 @@
+# define global settings here
+name: thesharpfactory-sample # application name
+
+# define multiple services here
+services:
+- name: api-sample
+  project: Services/Unified/Services.Unified.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6050
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildPropertes:
+  - name: Configuration
+    value: Debug
+- name: mvc-api-sample
+  project: Applications/Web/MVC/Apps.Web.MVC.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6060
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  - name: ASPNETCORE_HOSTINGSTARTUPASSEMBLIES
+    value: Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
+  buildPropertes:
+  - name: Configuration
+    value: Debug
+- name: blazor-server-api-sample
+  project: Applications/Web/BlazorServer/Apps.Web.BlazorServer.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6062
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildPropertes:
+  - name: Configuration
+    value: Debug
+- name: blazor-wasm-api-sample
+  project: Applications/Web/BlazorClient/Apps.Web.BlazorClient.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6064
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildPropertes:
+  - name: Configuration
+    value: Debug
+- name: angular-api-sample
+  project: Applications/Web/Angular/Apps.Web.Angular.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6065
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildPropertes:
+  - name: Configuration
+    value: Debug
+- name: react-api-sample
+  project: Applications/Web/React/Apps.Web.React.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6066
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  buildPropertes:
+  - name: Configuration
+    value: Debug
+- name: electron-api-sample
+  project: Applications/Hybrid/Desktop.ElectronWeb/Apps.Hybrid.Desktop.ElectronWeb.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6067
+  env:
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  - name: IS_ELECTRON
+    value: True
+  buildPropertes:
+  - name: Configuration
+    value: Debug
+- name: web.window-api-sample
+  project: Applications/Hybrid/Desktop.WebWindow/Apps.Hybrid.Desktp.WebWindow.csproj
+  bindings:
+  - name: https
+    protocol: https
+    port: 6068
+  env:
+  - name: IS_WEBWINDOW
+    value: True
+  buildPropertes:
+  - name: Configuration
+    value: Debug

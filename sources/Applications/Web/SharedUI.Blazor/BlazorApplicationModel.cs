@@ -4,5 +4,6 @@
     {
         public BlazorFlavor Flavor { get; set; }
         public BlazorPlatform Platform { get; set; }
+        public BlazorCommunicationWay CommunicationWay { get; set; }
     }
 }

@@ -8,16 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.5" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Extentions.DependencyInjection\Common.Extentions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\..\Domain\Extensions\Domain.Extensions.csproj" />
+    <ProjectReference Include="..\..\Shared\ViewModels.Mappers\Domain\Apps.Shared.ViewModels.Mappers.Domain.csproj" />
     <ProjectReference Include="..\..\Shared\ViewModels\Apps.Shared.ViewModels.csproj" />
     <ProjectReference Include="..\SharedUI\Apps.Web.SharedUI.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <AdditionalFiles Include="..\..\..\Architecture\AppDirect.layerdiagram" Link="AppDirect.layerdiagram" Visible="False" />
+    <None Include="..\..\..\Architecture\AppDirect.layerdiagram.layout" Link="AppDirect.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\..\Architecture\AppDirect.layerdiagram.suppressions" Link="AppDirect.layerdiagram.suppressions" Visible="False" />    
   </ItemGroup>
 
 </Project>

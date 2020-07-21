@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>TheSharpFactory.Services.GraphTypes</AssemblyName>
+    <RootNamespace>TheSharpFactory.Services.GraphTypes</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />
+    <None Include="..\..\Architecture\App.layerdiagram.layout" Link="App.layerdiagram.layout" Visible="False" />
+    <None Include="..\..\Architecture\App.layerdiagram.suppressions" Link="App.layerdiagram.suppressions" Visible="False" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="HotChocolate.Types" Version="10.4.3" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="10.4.3" />
+    <PackageReference Include="HotChocolate.AspNetCore.Playground" Version="10.4.3" />
+    <PackageReference Include="HotChocolate.AspNetCore.GraphiQl" Version="10.4.3" />
+    <PackageReference Include="HotChocolate.AspNetCore.Voyager" Version="10.4.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\DTO.Abstractions\Common.DTO.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Domain\Abstractions\Domain.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
