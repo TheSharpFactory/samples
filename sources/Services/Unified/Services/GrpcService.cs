@@ -8,7 +8,6 @@ using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 
 using TheSharpFactory.Domain.Models;
-using TheSharpFactory.SDK.gRPC;
 
 namespace TheSharpFactory.Services.Unified.Services
 {

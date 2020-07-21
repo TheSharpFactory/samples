@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 using HotChocolate.Types;
 
 using TheSharpFactory.Common.DTO;
 
 namespace TheSharpFactory.Services.GraphTypes.Sales
 {
-	public class CustomerType
+    public class CustomerType
         : ObjectType<ICustomerDTO>
 	{
         protected override void Configure(IObjectTypeDescriptor<ICustomerDTO> descriptor)

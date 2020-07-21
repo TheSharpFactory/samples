@@ -17,7 +17,6 @@ namespace TheSharpFactory.Data.Query
 
 using System;
 using System.Collections.Generic;
-using TheSharpFactory.Data.Query;
 
 namespace TheSharpFactory.Data.Query
 {

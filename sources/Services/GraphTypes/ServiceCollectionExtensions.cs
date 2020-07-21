@@ -1,6 +1,5 @@
 ﻿using HotChocolate;
 
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using TheSharpFactory.Services.GraphTypes.Sales;

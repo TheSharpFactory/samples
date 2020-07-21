@@ -6,7 +6,6 @@ Any changes you make here will be overwritten.
 
 using System;
 using System.Collections.Generic;
-using TheSharpFactory.Data.Query;
 
 namespace TheSharpFactory.Data.Query
 {
