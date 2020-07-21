@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 using AutoMapper;
 
-using Grpc.Core;
-
 using StrawberryShake;
 
 using TheSharpFactory.Common.DTO;
@@ -24,6 +22,7 @@ namespace TheSharpFactory.Apps.Shared.Services
         where TGrpcClient : GrpcClient<TMessage>
     {
         #region Common
+
         #region Protected Members
         #region Fields
         protected readonly ApiClient<TDtoInterface, TDto, TMessage, TGrpcClient, IGetCustomers> _apiClient;
@@ -41,24 +40,26 @@ namespace TheSharpFactory.Apps.Shared.Services
         }
         #endregion
         #endregion
+
         #endregion
 
         #region .NET Standard 2.0
 #if netstandard20
         #region Public Members
         #region Methods
-        public async Task<IEnumerable<TDtoInterface>> Read(
+        public IAsyncEnumerable<TDtoInterface> Read(
             HttpServiceTypes serviceType = HttpServiceTypes.REST,
             CancellationToken token = default
-        ) => await _apiClient
-                .Read(serviceType, token: token)
-                .ConfigureAwait(false);
+        )
+            => _apiClient
+                .Read(serviceType, token: token);
 
-        public abstract Task<IEnumerable<TDtoInterface>> Read(
+        public abstract IAsyncEnumerable<TDtoInterface> Read(
             IOperation<TOperation> getOperation,
             HttpServiceTypes serviceType = HttpServiceTypes.REST,
             CancellationToken token = default
         );
+
         #endregion
         #endregion
 #endif

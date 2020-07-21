@@ -29,14 +29,13 @@ namespace TheSharpFactory.Apps.Shared.Services
 
         #region Net Standard 2.0
 #if netstandard20
-        public override async Task<IEnumerable<ICustomerDTO>> Read(
+        public override IAsyncEnumerable<ICustomerDTO> Read(
             IOperation<IGetCustomers> getOperation,
             HttpServiceTypes serviceType = HttpServiceTypes.REST,
             CancellationToken token = default
         )
-            => await _apiClient
-                .Read(serviceType, getOperation, token: token)
-                .ConfigureAwait(false);
+            => _apiClient
+                .Read(serviceType, getOperation, token: token);
 #endif
 
         #endregion
