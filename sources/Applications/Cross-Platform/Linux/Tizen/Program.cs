@@ -16,11 +16,11 @@ namespace TheSharpFactory.Apps.Cross.Tizen
 			LoadApplication(new XFApp());
 		}
 
-		private static void Main(string[] args = null)
+        private static void Main(string[] args = null)
 		{
 			var app = new Program();
-			Forms.Init(app);
-			app.Run(args);
+            Forms.Init(app);
+            app.Run(args);
 		}
 	}
 }
