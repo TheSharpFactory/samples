@@ -15,8 +15,6 @@ namespace TheSharpFactory.Data.Repository.WorldWideImporters.Sales
 
 ************************************************/
 
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using TheSharpFactory.Data.Repository.Common;
 using TheSharpFactory.Data.Repository.Interfaces.WorldWideImporters.Sales;

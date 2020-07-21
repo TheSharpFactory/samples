@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
-using System.Threading.Tasks;
 
 using StrawberryShake;
 
@@ -11,20 +10,24 @@ namespace TheSharpFactory.Apps.Shared.ViewModels.Conventional
 {
     public interface ICustomersViewModel
     {
-        IReadOnlyCollection<ICustomerViewModel> AllCustomers { get; }
+#if netstandard20
+        IAsyncEnumerable<ICustomerViewModel> AllCustomers { get; }
+#elif netstandard21
+IAsyncEnumerable<ICustomerViewModel>? AllCustomers { get; }
+#endif
 
-        Task GetCustomers(
+        void GetCustomers(
             HttpServiceTypes apiTypes = HttpServiceTypes.REST,
             CancellationToken token = default
         );
 
-        Task GetCustomers(
+        void GetCustomers(
             IOperation<IGetCustomers> getOperation,
             HttpServiceTypes apiTypes = HttpServiceTypes.REST,
             CancellationToken token = default
         );
 
-        Task GetCustomersStream(
+        void GetCustomersStream(
             HttpServiceTypes apiType = HttpServiceTypes.REST,
             CancellationToken token = default
         );

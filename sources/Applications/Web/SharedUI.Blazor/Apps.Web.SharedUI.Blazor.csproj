@@ -35,6 +35,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\Services\Apps.Shared.Services.csproj" />
+    <ProjectReference Include="..\..\Shared\StaticAssets\Apps.Shared.StaticAssets.csproj" />
     <ProjectReference Include="..\..\Shared\ViewModels\Apps.Shared.ViewModels.csproj" />
   </ItemGroup>
 

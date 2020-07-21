@@ -18,9 +18,15 @@ namespace TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms
         {
             InitializeComponent();
 
-            MasterBehavior = Device.RuntimePlatform == Device.macOS
-                           ? MasterBehavior.Default
-                           : MasterBehavior.Popover;
+            switch (Device.RuntimePlatform)
+            {
+                case Device.Tizen:
+                MasterBehavior = MasterBehavior.Popover;
+                break;
+                default:
+                MasterBehavior = MasterBehavior.Default;
+                break;
+            }
 
             MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
         }
@@ -28,6 +34,7 @@ namespace TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms
         public async Task NavigateFromMenu(int id)
         {
             if (!MenuPages.ContainsKey(id))
+            {
                 switch (id)
                 {
                     case (int)MenuItemType.Browse:
@@ -36,7 +43,10 @@ namespace TheSharpFactory.Apps.Cross.SharedUI.Views.XamarinForms
                     case (int)MenuItemType.About:
                     MenuPages.Add(id, new NavigationPage(new AboutPage()));
                     break;
+                    default:
+                    break;
                 }
+            }
 
             var newPage = MenuPages[id];
 

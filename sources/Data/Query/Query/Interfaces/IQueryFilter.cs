@@ -16,7 +16,6 @@ namespace TheSharpFactory.Data.Query
 ************************************************/
 
 using System;
-using TheSharpFactory.Data.Query;
 
 namespace TheSharpFactory.Data.Query
 {

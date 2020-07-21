@@ -65,7 +65,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.DTO.Abstractions\Common.DTO.Abstractions.csproj">
+    <ProjectReference Include="..\Common\DTO.Abstractions\Common.DTO.Abstractions.csproj">
       <Name>Common.DTO.Abstractions</Name>
       <Project>{cf18325a-53fa-47f2-b454-03c5a5213ed3}</Project>
     </ProjectReference>

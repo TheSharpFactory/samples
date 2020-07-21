@@ -1,13 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Reflection;
-using System.Runtime.ConstrainedExecution;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading;
@@ -29,8 +27,6 @@ namespace TheSharpFactory.SDK.Clients
         #region Fields
         private readonly HttpClient _httpClient;
         private readonly Lazy<JsonSerializerSettings> _settings;
-        private string _module;
-        private string _component;
         #endregion
 
         #region Methods
@@ -107,16 +103,8 @@ namespace TheSharpFactory.SDK.Clients
         #region Public Members
         #region Properties
         public bool ReadResponseAsString { get; set; }
-        public string Module
-        {
-            get => _module;
-            protected set => _module = value;
-        }
-        public string Component
-        {
-            get => _component;
-            protected set => _component = value;
-        }
+        public string Module { get; protected set; }
+        public string Component { get; protected set; }
         #endregion
 
         #region Contructors
@@ -144,14 +132,14 @@ namespace TheSharpFactory.SDK.Clients
                 throw new ArgumentNullException(nameof(module));
             if (string.IsNullOrEmpty(component))
                 throw new ArgumentException(nameof(component));
-            _module = module;
-            _component = component;
+            Module = module;
+            Component = component;
         }
 
         /// <summary>Fatch all the customers</summary>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Task<ICollection<TDto>> GetAsync()
+        public Task<ICollection<TDtoInterface>> GetAsync()
             => GetAsync(CancellationToken.None);
 
 
@@ -159,15 +147,15 @@ namespace TheSharpFactory.SDK.Clients
         /// <summary>Fatch all the customers</summary>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>        
-        public async Task<ICollection<TDto>> GetAsync(
+        public async Task<ICollection<TDtoInterface>> GetAsync(
             CancellationToken cancellationToken
         )
         {
             var urlBuilder_ = new StringBuilder();
             urlBuilder_ = urlBuilder_
-                            .Append(_module)
+                            .Append(Module)
                             .Append('/')
-                            .Append(_component);
+                            .Append(Component);
 
             var client_ = _httpClient;
 
@@ -213,7 +201,10 @@ namespace TheSharpFactory.SDK.Clients
                     {
                         var objectResponse_ = await ReadObjectResponseAsync<ICollection<TDto>>(response_, headers_)
                                                 .ConfigureAwait(false);
-                        return objectResponse_.Object;
+                        return objectResponse_
+                                    .Object
+                                    .Cast<TDtoInterface>()
+                                    .ToList();
                     }
                     else
                     if (status_ != "200" && status_ != "204")

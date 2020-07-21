@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
     <RazorLangVersion>3.0</RazorLangVersion>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
     <RootNamespace>TheSharpFactory.Apps.Cross.SharedUI</RootNamespace>
@@ -20,14 +21,17 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)'=='Release|netstandard2.0'">
     <DefineConstants>TRACE;netstandard20;</DefineConstants>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
-    <PackageReference Include="Microsoft.MobileBlazorBindings" Version="0.3.26-preview" />
     <PackageReference Include="System.Linq" Version="4.3.0" />
     <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+
+    <PackageReference Include="Microsoft.MobileBlazorBindings" Version="0.3.26-preview" />
+
+    <PackageReference Include="Microsoft.MobileBlazorBindings" Version="0.3.26-preview" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1142" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,7 +42,17 @@
     <Compile Update="XFApp.xaml.cs">
       <DependentUpon>XFApp.xaml</DependentUpon>
     </Compile>
-  </ItemGroup>      
+    <Compile Update="Views\XamarinForms\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+
+    <EmbeddedResource Update="XFApp.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\XamarinForms\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 
   <ItemGroup>
     <AdditionalFiles Include="..\..\..\Architecture\App.layerdiagram" Link="App.layerdiagram" Visible="False" />

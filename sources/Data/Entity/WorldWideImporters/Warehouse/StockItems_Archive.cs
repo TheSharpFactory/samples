@@ -16,7 +16,6 @@ namespace TheSharpFactory.Data.Entity.WorldWideImporters.Warehouse
 ************************************************/
 
 using System;
-using System.Collections.Generic;
 
 namespace TheSharpFactory.Data.Entity.WorldWideImporters.Warehouse
 {

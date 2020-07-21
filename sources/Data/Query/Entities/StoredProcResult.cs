@@ -15,7 +15,6 @@ namespace TheSharpFactory.Data.Query
 
 ************************************************/
 
-using System;
 using System.Collections.Generic;
 
 namespace TheSharpFactory.Data.Query

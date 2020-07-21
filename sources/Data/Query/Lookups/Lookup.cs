@@ -17,7 +17,7 @@ namespace TheSharpFactory.Data.Query
 
 using System;
 using System.Collections.Generic;
-using System.Xml.Linq;
+
 using WorldWideImportersE = TheSharpFactory.Data.Entity.WorldWideImporters;
 
 namespace TheSharpFactory.Data.Query

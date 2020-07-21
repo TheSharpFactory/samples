@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\DTO.Abstractions\Common.DTO.Abstractions.csproj" />
     <ProjectReference Include="..\..\..\Common\SDK.Abstractions\SDK.Abstractions.csproj" />
     <ProjectReference Include="..\Abstractions\Services\Apps.Shared.Abstractions.Services.csproj" />
   </ItemGroup>

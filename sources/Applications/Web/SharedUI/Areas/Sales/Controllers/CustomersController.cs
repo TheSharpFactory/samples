@@ -2,8 +2,6 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-using HotChocolate.AspNetCore;
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -31,9 +29,9 @@ namespace TheSharpFactory.Apps.Web.SharedUI.Areas.Landing.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index(CancellationToken token)
+        public IActionResult Index(CancellationToken token)
         {
-            await _customer.GetCustomers(SDK.HttpServiceTypes.REST, token).ConfigureAwait(false);
+            _customer.GetCustomers(SDK.HttpServiceTypes.REST, token);
             _logger.LogInformation(JsonConvert.SerializeObject(_customer.AllCustomers));
             return View(_customer.AllCustomers);
         }

@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\DTO.Abstractions\Common.DTO.Abstractions.csproj" />
     <ProjectReference Include="..\..\..\Common\SDK\SDK.csproj" />
     <ProjectReference Include="..\Abstractions\Services\Apps.Shared.Abstractions.Services.csproj" />
     <ProjectReference Include="..\Abstractions\ViewModels\Apps.Shared.Abstractions.ViewModels.csproj" />

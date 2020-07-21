@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-using Google.Protobuf.WellKnownTypes;
-
 using Grpc.Core;
-using Grpc.Core.Utils;
 
 using TheSharpFactory.SDK.gRPC;
 
@@ -21,16 +19,17 @@ namespace TheSharpFactory.SDK.Clients
         #endregion
         #endregion
 
-        #region Public Members
+        #region Protected Members
         #region Constructors
-        public GrpcClient(ChannelBase channel)
+        protected GrpcClient(ChannelBase channel)
             : base(channel)
         {
 
         }
-
+        #endregion
         #endregion
 
+        #region Public Members
         #region Methods
         public abstract Task<IEnumerable<TMessage>> ReadList(
             CancellationToken token = default
@@ -44,18 +43,10 @@ namespace TheSharpFactory.SDK.Clients
         #region .NET Standard 2.0
 #if netstandard20
         #region Public Members
-        #region Methods
-        public async Task<IEnumerable<CustomerMessage>> ReadStream(
+        public virtual IAsyncEnumerable<TMessage> ReadStream(
             CancellationToken token
         )
-            => await base.GetCustomersStream(
-                new Empty(),
-                cancellationToken: token
-            )
-            .ResponseStream
-            .ToListAsync()
-            .ConfigureAwait(false);
-        #endregion
+            => ReadList(token).GetAwaiter().GetResult().ToAsyncEnumerable();
         #endregion
 #endif
         #endregion
@@ -63,14 +54,11 @@ namespace TheSharpFactory.SDK.Clients
         #region .NET Standard 2.1 Or ASP.NET Core 3.1
 #if netstandard21 || netcoreapp31
         #region Public Members
-        #region Methods
         public abstract IAsyncEnumerable<TMessage> ReadStream(
             CancellationToken token
         );
         #endregion
-        #endregion
 #endif
         #endregion
-
     }
 }

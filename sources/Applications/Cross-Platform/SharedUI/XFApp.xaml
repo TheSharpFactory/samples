@@ -11,7 +11,7 @@
 		<ResourceDictionary>
 			<!--  Global Styles  -->
 			<OnPlatform x:Key="NavigationPrimary" x:TypeArguments="Color">
-				<On Platform="Android, iOS, UWP, WPF">#2196F3</On>
+				<On Platform="Android, iOS, UWP, WPF, Tizen">#2196F3</On>
 				<On Platform="macOS">Blue</On>
 			</OnPlatform>
 			<Style TargetType="NavigationPage">

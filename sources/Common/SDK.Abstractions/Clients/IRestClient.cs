@@ -22,7 +22,7 @@ namespace TheSharpFactory.SDK.Clients
         /// <summary>Fatch all the data</summary>
         /// <returns>Success</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Task<ICollection<TDto>> GetAsync(CancellationToken cancellationToken);
+        Task<ICollection<TDtoInterface>> GetAsync(CancellationToken cancellationToken);
         void SetModule(string module, string component);
         #endregion
 
