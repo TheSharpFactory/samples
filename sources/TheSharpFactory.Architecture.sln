@@ -142,7 +142,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "schemas", "schemas", "{896F
 		Schemas\TheSharpFactory.graphql = Schemas\TheSharpFactory.graphql
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.DTO.Abstractions", "Common\Common.DTO.Abstractions\Common.DTO.Abstractions.csproj", "{CF18325A-53FA-47F2-B454-03C5A5213ED3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.DTO.Abstractions", "Common\DTO.Abstractions\Common.DTO.Abstractions.csproj", "{CF18325A-53FA-47F2-B454-03C5A5213ED3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.GraphTypes", "Services\GraphTypes\Services.GraphTypes.csproj", "{2052539A-D4CD-4DF6-9D20-9E5B5CD930DB}"
 EndProject
@@ -287,6 +287,7 @@ Global
 		{93BAD24F-C421-4316-A158-E12C2DFBDB15}.Release|x86.ActiveCfg = Release|Any CPU
 		{93BAD24F-C421-4316-A158-E12C2DFBDB15}.Release|x86.Build.0 = Release|Any CPU
 		{3599F073-739B-43C5-A044-A460979CCB8C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3599F073-739B-43C5-A044-A460979CCB8C}.Debug|Any CPU.Build.0 = Debug|x86
 		{3599F073-739B-43C5-A044-A460979CCB8C}.Debug|ARM.ActiveCfg = Debug|ARM
 		{3599F073-739B-43C5-A044-A460979CCB8C}.Debug|ARM.Build.0 = Debug|ARM
 		{3599F073-739B-43C5-A044-A460979CCB8C}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -359,6 +360,7 @@ Global
 		{FAFE5226-58FB-4DCE-AC3B-31FDFF352746}.Release|x86.ActiveCfg = Release|Any CPU
 		{FAFE5226-58FB-4DCE-AC3B-31FDFF352746}.Release|x86.Build.0 = Release|Any CPU
 		{C2E0B63B-C99D-4DA4-AB71-6BDEB14C4C7B}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{C2E0B63B-C99D-4DA4-AB71-6BDEB14C4C7B}.Debug|Any CPU.Build.0 = Debug|iPhone
 		{C2E0B63B-C99D-4DA4-AB71-6BDEB14C4C7B}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{C2E0B63B-C99D-4DA4-AB71-6BDEB14C4C7B}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{C2E0B63B-C99D-4DA4-AB71-6BDEB14C4C7B}.Debug|iPhone.Build.0 = Debug|iPhone
@@ -471,6 +473,7 @@ Global
 		{A282ED13-E36A-4D0E-9B63-032C4A311293}.Release|x86.Build.0 = Release|Any CPU
 		{A282ED13-E36A-4D0E-9B63-032C4A311293}.Release|x86.Deploy.0 = Release|Any CPU
 		{44B1F453-0300-49C0-B9E9-2205E9EEAE2C}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{44B1F453-0300-49C0-B9E9-2205E9EEAE2C}.Debug|Any CPU.Build.0 = Debug|iPhone
 		{44B1F453-0300-49C0-B9E9-2205E9EEAE2C}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{44B1F453-0300-49C0-B9E9-2205E9EEAE2C}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{44B1F453-0300-49C0-B9E9-2205E9EEAE2C}.Debug|iPhone.Build.0 = Debug|iPhone
@@ -511,6 +514,7 @@ Global
 		{2407E563-C06F-4D81-B094-311DC85B4B4A}.Release|x86.ActiveCfg = Release|Any CPU
 		{2407E563-C06F-4D81-B094-311DC85B4B4A}.Release|x86.Build.0 = Release|Any CPU
 		{9EE60D61-357B-4454-83F1-063166D6E74A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9EE60D61-357B-4454-83F1-063166D6E74A}.Debug|Any CPU.Build.0 = Debug|x86
 		{9EE60D61-357B-4454-83F1-063166D6E74A}.Debug|ARM.ActiveCfg = Debug|ARM
 		{9EE60D61-357B-4454-83F1-063166D6E74A}.Debug|ARM.Build.0 = Debug|ARM
 		{9EE60D61-357B-4454-83F1-063166D6E74A}.Debug|ARM.Deploy.0 = Debug|ARM
