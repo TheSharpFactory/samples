@@ -35,6 +35,8 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <Debugger>Xamarin</Debugger>
     <BundleAssemblies>true</BundleAssemblies>
+    <MandroidI18n />
+    <AndroidUseAapt2>true</AndroidUseAapt2>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
