@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 
 using AutoMapper;
 
-using Grpc.Core;
-
 using StrawberryShake;
 
 using TheSharpFactory.Common.DTO;
@@ -50,18 +48,14 @@ namespace TheSharpFactory.SDK.Clients
 
         #region Methods
 
-        protected async Task<ICollection<TDto>> ReadRest(
+        protected async Task<ICollection<TDtoInterface>> ReadRest(
             CancellationToken token = default
         )
-            => await _restClient.GetAsync(token)
+            => await _restClient
+                    .GetAsync(token)
                     .ConfigureAwait(false);
         #endregion
 
-        #endregion
-
-        #region Public Members
-        #region Methods
-        #endregion
         #endregion
         #endregion
 
@@ -69,23 +63,37 @@ namespace TheSharpFactory.SDK.Clients
 #if netstandard20
         #region Public Members
         #region Methods
-        public async Task<IEnumerable<TDtoInterface>> Read(
+        public virtual IAsyncEnumerable<TDtoInterface> Read(
             HttpServiceTypes apiType,
             CancellationToken token = default
         )
         {
+            var notImplementedException = new NotImplementedException();
+            ICollection<TDtoInterface> items = new List<TDtoInterface>();
             switch (apiType)
             {
                 case HttpServiceTypes.GraphQL:
-                return await ReadGraph(null, token).ConfigureAwait(false);
+                throw notImplementedException;
                 case HttpServiceTypes.GRPC:
-                return await ReadGrpc(token).ConfigureAwait(false);
+                var enumerable = ReadGrpc(token)
+                                    .ConfigureAwait(false)
+                                    .WithCancellation(token);
+                var enumerator = enumerable.GetAsyncEnumerator();
+                while (enumerator.MoveNextAsync().GetAwaiter().GetResult())
+                    items.Add(enumerator.Current);
+                enumerator.DisposeAsync().GetAwaiter().GetResult();
+                break;
                 default:
-                return await ReadRest(token)
-                            .ConfigureAwait(false);
+                items = ReadRest(token)
+                            .ConfigureAwait(false)
+                            .GetAwaiter()
+                            .GetResult();
+                break;
             }
+
+            return items.ToAsyncEnumerable();
         }
-        public async Task<IEnumerable<TDtoInterface>> Read(
+        public IAsyncEnumerable<TDtoInterface> Read(
             HttpServiceTypes apiType,
             IOperation<TOperation> operation = null,
             CancellationToken token = default
@@ -94,19 +102,28 @@ namespace TheSharpFactory.SDK.Clients
             switch (apiType)
             {
                 case HttpServiceTypes.GraphQL:
-                return await ReadGraph(operation, token).ConfigureAwait(false);
-                case HttpServiceTypes.GRPC:
-                return await ReadGrpc(token).ConfigureAwait(false);
+                ICollection<TDtoInterface> items = new List<TDtoInterface>();
+                var enumerator = ReadGraph(operation, token)
+                                    .WithCancellation(token)
+                                    .ConfigureAwait(false)
+                                    .GetAsyncEnumerator();
+
+                while (enumerator.MoveNextAsync().GetAwaiter().GetResult())
+                {
+                    items.Add(enumerator.Current);
+                }
+                enumerator.DisposeAsync().GetAwaiter().GetResult();
+                return items.ToAsyncEnumerable();
                 default:
-                return await ReadRest(token)
-                            .ConfigureAwait(false);
+                var notImplementedException = new NotImplementedException();
+                throw notImplementedException;
             }
         }
-        public abstract Task<IEnumerable<TDtoInterface>> ReadGraph(
+        public abstract IAsyncEnumerable<TDtoInterface> ReadGraph(
             IOperation<TOperation> operation = null,
             CancellationToken token = default
         );
-        public abstract Task<IEnumerable<TDtoInterface>> ReadGrpc(
+        public abstract IAsyncEnumerable<TDtoInterface> ReadGrpc(
             CancellationToken token = default
         );
         #endregion

@@ -44,41 +44,49 @@ namespace TheSharpFactory.SDK.Clients
         #endregion
         #endregion
 
+        #region Methods
+        #endregion
+
         #endregion
 
         #region .NET Standard 2.0
 #if netstandard20
         #region Public Members
         #region Methods
-        public override async Task<IEnumerable<ICustomerDTO>> ReadGraph(
+        public override IAsyncEnumerable<ICustomerDTO> ReadGraph(
             IOperation<IGetCustomers> operation = null,
             CancellationToken token = default
         )
         {
-            var response = operation is null
-                         ? await _graphClient
-                                .GetCustomersAsync(token)
-                                .ConfigureAwait(false)
-                         : await _graphClient
-                                .GetCustomersAsync(operation, token)
-                                .ConfigureAwait(false);
-            return response.Data.Customers;
+            var task = operation is null
+                     ? _graphClient
+                            .GetCustomersAsync(token)
+                            .ConfigureAwait(false)
+                     : _graphClient
+                            .GetCustomersAsync(operation, token)
+                            .ConfigureAwait(false);
+            return task
+                        .GetAwaiter()
+                        .GetResult()
+                        .Data
+                        .Customers
+                        .ToAsyncEnumerable();
         }
-        public override async Task<IEnumerable<ICustomerDTO>> ReadGrpc(
+        public override IAsyncEnumerable<ICustomerDTO> ReadGrpc(
             CancellationToken token = default
-        )
-        {
-            var result = await _grpcClient
-                            .GetCustomersStream(
-                                new Empty(),
-                                cancellationToken: token
-                            )
-                            .ResponseStream
-                            .ToListAsync();
-            return result
-                    .Select(c => _mapper.Map<CustomerDTO>(c))
-                    .ToList();
-        }
+        ) => _grpcClient
+                .GetCustomersStream(
+                    new Empty(),
+                    cancellationToken: token
+                )
+                .ResponseStream
+                .ToListAsync()
+                .GetAwaiter()
+                .GetResult()
+                .Select(
+                    c => _mapper.Map<CustomerDTO>(c)
+                )
+                .ToAsyncEnumerable();
         #endregion
         #endregion
 #endif
@@ -99,12 +107,11 @@ namespace TheSharpFactory.SDK.Clients
                                 .ConfigureAwait(false)
                          : await _graphClient
                                 .GetCustomersAsync(operation, token)
-                                .ConfigureAwait(false); ;
+                                .ConfigureAwait(false);
 
             foreach (var c in response!.Data!.Customers)
                 yield return c;
         }
-
         public override async IAsyncEnumerable<ICustomerDTO> ReadGrpc(
             [EnumeratorCancellation] CancellationToken token = default
         )
@@ -115,7 +122,8 @@ namespace TheSharpFactory.SDK.Clients
                                 cancellationToken: token
                             )
                             .ResponseStream
-                            .ReadAllAsync();
+                            .ReadAllAsync()
+                            .ConfigureAwait(false);
             await foreach (var c in result)
                 yield return _mapper.Map<CustomerDTO>(c);
 
@@ -124,6 +132,5 @@ namespace TheSharpFactory.SDK.Clients
         #endregion
 #endif
         #endregion
-
     }
 }

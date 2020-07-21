@@ -34,7 +34,12 @@
     <PackageReference Include="RestSharp" Version="106.11.4" />
     <PackageReference Include="StrawberryShake.Abstractions" Version="11.0.0-preview.138" />
     <PackageReference Include="StrawberryShake.Transport.Abstractions" Version="11.0.0-preview.138" />
+    <PackageReference Include="System.Linq.Async" Version="4.1.1" />
     <PackageReference Include="System.Net.Http.Json" Version="3.2.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(IsNetStd20)'=='true'">
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.1" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(IsNetStd21)'=='true'">
