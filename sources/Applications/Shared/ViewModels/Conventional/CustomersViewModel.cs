@@ -28,9 +28,6 @@ namespace TheSharpFactory.Apps.Shared.ViewModels.Conventional
         #endregion
 
         #region Public Members
-        #region Properties
-        public IAsyncEnumerable<ICustomerViewModel> AllCustomers { get; private set; }
-        #endregion
 
         #region Constructors
         public CustomersViewModel(
@@ -69,8 +66,29 @@ namespace TheSharpFactory.Apps.Shared.ViewModels.Conventional
                                 .Read(apiType, token)
                                 .Select(dto => _mapper.Map<CustomerViewModel>(dto));
         #endregion
+
         #endregion
 
+        #endregion
+
+        #region .NET Standard 2.0
+#if netstandard20
+        #region Public Members
+        #region Properties
+        public IAsyncEnumerable<ICustomerViewModel> AllCustomers { get; private set; }
+        #endregion
+        #endregion
+#endif
+        #endregion
+
+        #region .NET Standard 2.1 
+#if netstandard21 
+        #region Public Members
+        #region Properties
+        public IAsyncEnumerable<ICustomerViewModel>? AllCustomers { get; private set; }
+        #endregion
+        #endregion
+#endif
         #endregion
     }
 }
