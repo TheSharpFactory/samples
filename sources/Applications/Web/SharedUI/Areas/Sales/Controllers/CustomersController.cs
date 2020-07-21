@@ -2,8 +2,6 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-using HotChocolate.AspNetCore;
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
