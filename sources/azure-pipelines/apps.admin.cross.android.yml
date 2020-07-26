@@ -3,128 +3,109 @@
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-trigger:
-  branches:
-     include:
-          - master
-          - dev
-          - staging
-          - release
-     exclude:
-          - user_story/*/*
-          - feature/*/*
-          - epic/*/*
-  paths:
-     include:
-          - /**/**/*.csproj
-          - /**/**/*.cs
-     exclude:
-          - *.md
-          - /**/*.md
-
+trigger: none
 pr:
   branches:
-     include:
-          - master
-          - dev
-          - staging
-          - release
-     exclude:
-          - user_story/*/*
-          - feature/*/*
-          - epic/*/*
+    include:
+    - master
+    - dev
+    - staging
+    - release
+    exclude:
+    - user_story/*/*
+    - feature/*/*
+    - epic/*/*
   paths:
-     include:
-          - /**/**/*.*
-     exclude:
-          - *.md
-          - /**/*.md
+    include: sources/*
+    exclude:
+    - \*/*.md'
+    - \*/*.md
 
 variables:
-     platformPath: 'sources/applications/cross-platform/linux/Android'
-     solutionPath: 'sources/MediaStore.Cross.AdminApp.Android.sln'
-     projectName: 'Apps.Cross.Droid.csproj'
-     projectPath: '$(platformPath)/$(projectName)'
-     buildPlatform: 'Any CPU'
-     outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
-     appClass: 'Admin'
-     appTargetPlatform: 'Android'
-     jobName: 'X-Plat apps for $(appClass)s'
-     jobDisplayName: 'Integrate $(appTargetPlatform) $(appClass) App'
+  platformPath: 'sources/applications/cross-platform/linux/Android'
+  solutionPath: 'sources/MediaStore.Cross.AdminApp.Android.sln'
+  projectName: 'Apps.Cross.Droid.csproj'
+  projectPath: '$(platformPath)/$(projectName)'
+  buildPlatform: 'Any CPU'
+  outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+  appClass: 'Admin'
+  appTargetPlatform: 'Android'
+  jobName: 'X-Plat apps for $(appClass)s'
+  jobDisplayName: 'Integrate $(appTargetPlatform) $(appClass) App'
 
 stages:
-  - stage: 'nightly_builds'
-    displayName: 'Dev Environment'
-    condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'dev'))
-    jobs:
-     - job: $(jobName)
-       displayName: $(jobDisplayName)
-       variables:
-       buildConfiguration: 'Debug'
-       pool:
-          vmImage: 'windows-latest'
-        steps:
-          - task: NuGetToolInstaller@0
-            displayName: 'Install NuGet Tools'
-
-          - task: NuGetCommand@2
-            displayName: 'Restore NuGet Packages for Solution'
-            inputs:
-               restoreSolution: $(solutionPath)
-
-          - task: XamarinAndroid@1
-            displayName: 'Build'
-            inputs:
-               projectFile: $(projectPath)
-               outputDirectory: $(outputDirectory)
-               configuration: $(buildConfiguration)
-  - stage: 'staging_builds'
-    displayName: 'Staging Environment'
-    condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'staging'))
-    jobs:
+- stage: 'nightly_builds'
+  displayName: "Dev Environment"
+  condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'dev'))
+  jobs:
     - job: $(jobName)
       displayName: $(jobDisplayName)
       variables:
-          buildConfiguration: 'Debug'
-      pool:
-          vmImage: 'windows-latest'
-      steps:
-        - task: NuGetToolInstaller@0
-          displayName: 'Install NuGet Tools'
-
-        - task: NuGetCommand@2
-          displayName: 'Restore NuGet Packages for Solution'
-          inputs:
-            restoreSolution: $(solutionPath)
-
-        - task: XamarinAndroid@1
-          displayName: 'Build'
-          inputs:
-               projectFile: $(projectPath)
-               outputDirectory: $(outputDirectory)
-               configuration: $(buildConfiguration)
-  - stage: 'prod_builds'
-    displayName: 'Production Environment'
-    condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'release'))
-    jobs:
-    - job: $(jobName)
-      displayName: $(jobDisplayName)
-      variables:
-        buildConfiguration: 'Release'
+      buildConfiguration: 'Debug'
       pool:
         vmImage: 'windows-latest'
       steps:
-        - task: NuGetToolInstaller@0
-          displayName: 'Install NuGet Tools'
+      - task: NuGetToolInstaller@0
+        displayName: 'Install NuGet Tools'
 
-        - task: NuGetCommand@2
-          displayName: 'Restore NuGet Packages for Solution'
-          inputs:
-            restoreSolution: $(solutionPath)
-            
-        - task: XamarinAndroid@1
-          displayName: 'Build'
-          inputs:
+      - task: NuGetCommand@2
+        displayName: 'Restore NuGet Packages for Solution'
+        inputs:
+          restoreSolution: $(solutionPath)
+
+      - task: XamarinAndroid@1
+        displayName: 'Build'
+        inputs:
+          projectFile: $(projectPath)
+          outputDirectory: $(outputDirectory)
+          configuration: $(buildConfiguration)
+- stage: 'staging_builds'
+  displayName: 'Staging Environment'
+  condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'staging'))
+  jobs:
+  - job: $(jobName)
+    displayName: $(jobDisplayName)
+    variables:
+        buildConfiguration: 'Debug'
+    pool:
+        vmImage: 'windows-latest'
+    steps:
+    - task: NuGetToolInstaller@0
+      displayName: 'Install NuGet Tools'
+
+    - task: NuGetCommand@2
+      displayName: 'Restore NuGet Packages for Solution'
+      inputs:
+        restoreSolution: $(solutionPath)
+
+    - task: XamarinAndroid@1
+      displayName: 'Build'
+      inputs:
             projectFile: $(projectPath)
             outputDirectory: $(outputDirectory)
             configuration: $(buildConfiguration)
+- stage: 'prod_builds'
+  displayName: 'Production Environment'
+  condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'release'))
+  jobs:
+  - job: $(jobName)
+    displayName: $(jobDisplayName)
+    variables:
+      buildConfiguration: 'Release'
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+    - task: NuGetToolInstaller@0
+      displayName: 'Install NuGet Tools'
+
+    - task: NuGetCommand@2
+      displayName: 'Restore NuGet Packages for Solution'
+      inputs:
+        restoreSolution: $(solutionPath)
+        
+    - task: XamarinAndroid@1
+      displayName: 'Build'
+      inputs:
+        projectFile: $(projectPath)
+        outputDirectory: $(outputDirectory)
+        configuration: $(buildConfiguration)
