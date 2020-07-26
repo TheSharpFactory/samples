@@ -31,7 +31,7 @@ variables:
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
   appClass: 'Admin'
   appTargetPlatform: 'Android'
-  jobName: "X_Plat apps for $(appClass)"
+  jobName: "XPlat_$(appClass)"
   jobDisplayName: "Integrate $(appTargetPlatform) $(appClass) App"
 
 stages:
