@@ -16,7 +16,8 @@ pr:
     - feature/*/*
     - epic/*/*
   paths:
-    include: sources/*
+    include: 
+    - sources/*
     exclude:
     - \*/*.md'
     - \*/*.md
