@@ -31,7 +31,7 @@ variables:
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
   appClass: 'Admin'
   appTargetPlatform: 'Android'
-  jobName: 'X_Plat apps for $(appClass)s'
+  jobName: 'X-Plat apps for $(appClass)s'
   jobDisplayName: 'Integrate $(appTargetPlatform) $(appClass) App'
 
 stages:
@@ -39,10 +39,10 @@ stages:
   displayName: "Dev Environment"
   condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'dev'))
   jobs:
-    - job: $jobName
-      displayName: $jobDisplayName
+    - job: "$(jobName)"
+      displayName: "$(jobDisplayName)"
       variables:
-        buildConfiguration: 'Debug'
+      buildConfiguration: 'Debug'
       pool:
         vmImage: 'windows-latest'
       steps:
@@ -64,12 +64,12 @@ stages:
   displayName: 'Staging Environment'
   condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'staging'))
   jobs:
-  - job: $jobName
-    displayName: $jobDisplayName
+  - job: "$(jobName)"
+    displayName: "$(jobDisplayName)"
     variables:
-      buildConfiguration: 'Debug'
+        buildConfiguration: 'Debug'
     pool:
-      vmImage: 'windows-latest'
+        vmImage: 'windows-latest'
     steps:
     - task: NuGetToolInstaller@0
       displayName: 'Install NuGet Tools'
@@ -82,15 +82,15 @@ stages:
     - task: XamarinAndroid@1
       displayName: 'Build'
       inputs:
-        projectFile: $(projectPath)
-        outputDirectory: $(outputDirectory)
-        configuration: $(buildConfiguration)
+            projectFile: $(projectPath)
+            outputDirectory: $(outputDirectory)
+            configuration: $(buildConfiguration)
 - stage: 'prod_builds'
   displayName: 'Production Environment'
   condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'release'))
   jobs:
-  - job: $jobName
-    displayName: $jobDisplayName
+  - job: "$(jobName)"
+    displayName: "$(jobDisplayName)"
     variables:
       buildConfiguration: 'Release'
     pool:
