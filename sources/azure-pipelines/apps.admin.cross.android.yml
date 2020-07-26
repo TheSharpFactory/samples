@@ -39,8 +39,8 @@ stages:
   displayName: "Dev Environment"
   condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'dev'))
   jobs:
-    - job: "$(jobName)"
-      displayName: "$(jobDisplayName)"
+    - job: '$(jobName)'
+      displayName: '$(jobDisplayName)'
       variables:
       buildConfiguration: 'Debug'
       pool:
@@ -64,8 +64,8 @@ stages:
   displayName: 'Staging Environment'
   condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'staging'))
   jobs:
-  - job: "$(jobName)"
-    displayName: "$(jobDisplayName)"
+  - job: '$(jobName)'
+    displayName: '$(jobDisplayName)'
     variables:
         buildConfiguration: 'Debug'
     pool:
@@ -89,8 +89,8 @@ stages:
   displayName: 'Production Environment'
   condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'release'))
   jobs:
-  - job: "$(jobName)"
-    displayName: "$(jobDisplayName)"
+  - job: '$(jobName)'
+    displayName: '$(jobDisplayName)'
     variables:
       buildConfiguration: 'Release'
     pool:
