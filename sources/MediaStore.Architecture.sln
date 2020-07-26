@@ -150,6 +150,26 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Unified", "Service
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apps.Shared.StaticAssets", "Applications\Shared\StaticAssets\Apps.Shared.StaticAssets.csproj", "{A1E24908-364A-4122-BC62-787DB3E27D69}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "azure-pipelines", "azure-pipelines", "{9DB28855-40E0-4178-8859-25719C4274FA}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines\apps.admin.cross.android.yml = azure-pipelines\apps.admin.cross.android.yml
+		azure-pipelines\apps.admin.cross.ios.yml = azure-pipelines\apps.admin.cross.ios.yml
+		azure-pipelines\apps.admin.cross.linux.yml = azure-pipelines\apps.admin.cross.linux.yml
+		azure-pipelines\apps.admin.cross.macos.yml = azure-pipelines\apps.admin.cross.macos.yml
+		azure-pipelines\apps.admin.cross.tizen.yml = azure-pipelines\apps.admin.cross.tizen.yml
+		azure-pipelines\apps.admin.hybrid.electron.yml = azure-pipelines\apps.admin.hybrid.electron.yml
+		azure-pipelines\apps.admin.web.blazorserver.yml = azure-pipelines\apps.admin.web.blazorserver.yml
+		azure-pipelines\apps.admin.web.mvc.yml = azure-pipelines\apps.admin.web.mvc.yml
+		azure-pipelines\apps.customer.cross.android.yml = azure-pipelines\apps.customer.cross.android.yml
+		azure-pipelines\apps.customer.cross.ios.yml = azure-pipelines\apps.customer.cross.ios.yml
+		azure-pipelines\apps.customer.cross.macos.yml = azure-pipelines\apps.customer.cross.macos.yml
+		azure-pipelines\apps.customer.cross.tizen.yml = azure-pipelines\apps.customer.cross.tizen.yml
+		azure-pipelines\apps.customer.hybrid.webwindow.yml = azure-pipelines\apps.customer.hybrid.webwindow.yml
+		azure-pipelines\apps.customer.web.BlazorServer.yml = azure-pipelines\apps.customer.web.BlazorServer.yml
+		azure-pipelines\apps.customer.web.BlazorWASM.yml = azure-pipelines\apps.customer.web.BlazorWASM.yml
+		azure-pipelines\apps.customer.web.mvc.yml = azure-pipelines\apps.customer.web.mvc.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

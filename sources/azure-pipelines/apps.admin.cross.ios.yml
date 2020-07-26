@@ -1,0 +1,125 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+  branches:
+    include:
+      - master
+      - dev
+      - staging
+      - release
+    exclude:
+      - user_story/*/*
+      - feature/*/*
+      - epic/*/*
+  paths:
+    exclude:
+      - *.md
+      - /**/*.md
+
+pr:
+  branches:
+    include:
+      - master
+      - dev
+      - staging
+      - release
+    exclude:
+      - user_story/*/*
+      - feature/*/*
+      - epic/*/*
+  paths:
+    exclude:
+      - *.md
+      - /**/*.md
+
+variables:
+  platformPath: 'sources/applications/cross-platform/linux/iOS'
+  solutionPath: 'sources/MediaStore.Cross.AdminApp.iOS.sln'
+  projectName: 'Apps.Cross.iOS.csproj'
+  projectPath: '$(platformPath)/$(projectName)'
+  buildPlatform: 'Any CPU'
+  outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+  appClass: 'Admin'
+  appTargetPlatform: 'iOS'
+  jobName: 'X-Plat apps for $(appClass)s'
+  jobDisplayName: 'Integrate $(appTargetPlatform) $(appClass) App'
+
+stages:
+  - stage: 'nightly_builds'
+    displayName: 'Dev Environment'
+    condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'dev'))
+    jobs:
+    - job: $(jobName)
+      displayName: $(jobDisplayName)
+      variables:
+        buildConfiguration: 'Debug'
+      pool:
+        vmImage: 'windows-latest'
+      steps:
+        - task: NuGetToolInstaller@0
+          displayName: 'Install NuGet Tools'
+
+        - task: NuGetCommand@2
+          displayName: 'Restore NuGet Packages for Solution'
+          inputs:
+            restoreSolution: $(solutionPath)
+        - task: XamarinAndroid@1
+          displayName: 'Build'
+          inputs:
+            projectFile: $(projectPath)
+            outputDirectory: $(outputDirectory)
+            configuration: $(buildConfiguration)
+  - stage: 'staging_builds'
+    displayName: 'Staging Environment'
+    condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'staging'))
+    jobs:
+    - job: $(jobName)
+      displayName: $(jobDisplayName)
+      variables:
+        buildConfiguration: 'Debug'
+      pool:
+        vmImage: 'windows-latest'
+      steps:
+        - task: NuGetToolInstaller@0
+          displayName: 'Install NuGet Tools'
+
+        - task: NuGetCommand@2
+          displayName: 'Restore NuGet Packages for Solution'
+          inputs:
+            restoreSolution: $(solutionPath)
+        - task: XamarinAndroid@1
+          displayName: 'Build'
+          inputs:
+            projectFile: $(projectPath)
+            outputDirectory: $(outputDirectory)
+            configuration: $(buildConfiguration)
+  - stage: 'prod_builds'
+    displayName: 'Production Environment'
+    condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'release'))
+    jobs:
+    - job: $(jobName)
+      displayName: $(jobDisplayName)
+      variables:
+        buildConfiguration: 'AppStore'
+      pool:
+        vmImage: 'macOS-latest'
+      steps:
+        - task: NuGetToolInstaller@0
+          displayName: 'Install NuGet Tools'
+
+        - task: NuGetCommand@2
+          displayName: 'Restore NuGet Packages for Solution'
+          inputs:
+            restoreSolution: $(solutionPath)
+
+        - task: XamariniOS@2
+          displayName: 'Build'
+          inputs:
+            solutionFile: $(projectPath)
+            outputDirectory: $(outputDirectory)
+            packageApp: true
+            configuration: $(buildConfiguration)
+            args: /p:IpaPackageDir="/Users/vsts/agent/2.153.2/work/1/a"

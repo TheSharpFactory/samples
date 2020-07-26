@@ -1,0 +1,118 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+  branches:
+    include:
+      - master
+      - dev
+      - staging
+      - release
+    exclude:
+      - user_story/*/*
+      - feature/*/*
+      - epic/*/*
+  paths:
+    exclude:
+      - *.md
+      - /**/*.md
+
+pr:
+  branches:
+    include:
+      - master
+      - dev
+      - staging
+      - release
+    exclude:
+      - user_story/*/*
+      - feature/*/*
+      - epic/*/*
+  paths:
+    exclude:
+      - *.md
+      - /**/*.md
+
+variables:
+  platformPath: 'sources/applications/web/blazorserver'
+  projectName: 'Apps.Web.BlazorServer.csproj'
+  projectPath: '$(platformPath)/$(projectName)'
+  buildPlatform: 'Any CPU'
+  outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+  appClass: 'Customer'
+  appTargetPlatform: 'ASP.NET Core: BlazorServer'
+  jobName: 'SPA Web apps for $(appClass)s'
+  jobDisplayName: 'Integrate $(appTargetPlatform) $(appClass) App'
+
+stages:
+  - stage: 'nightly_builds'
+    displayName: 'Dev Environment'
+    condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'dev'))
+    jobs:
+    - job: $(jobName)
+      displayName: $(jobDisplayName)
+      variables:
+        buildConfiguration: 'Debug'
+      pool:
+        vmImage: 'windows-latest'
+      steps:
+        - task: UseDotNet@2
+            displayName: 'Use .NET Core SDK'
+            inputs:
+              packageType: sdk
+              version: 3.1.302
+              installationPath: $(Agent.ToolsDirectory)/dotnet
+
+        - task: DotNetCoreCLI@2
+          displayName: 'Build'
+          inputs:
+            command: 'msbuild'
+            arguments: '-property:Configuration=$(buildConfiguration);OutDir=$(outputDirectory) -restore:True $(projectPath)' 
+  - stage: 'staging_builds'
+    displayName: 'Staging Environment'
+    condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'staging'))
+    jobs:
+    - job: $(jobName)
+      displayName: $(jobDisplayName)
+      variables:
+        buildConfiguration: 'Debug'
+      pool:
+        vmImage: 'windows-latest'
+      steps:
+        - task: UseDotNet@2
+            displayName: 'Use .NET Core SDK'
+            inputs:
+              packageType: sdk
+              version: 3.1.302
+              installationPath: $(Agent.ToolsDirectory)/dotnet
+
+        - task: DotNetCoreCLI@2
+          displayName: 'Build'
+          inputs:
+            command: 'msbuild'
+            arguments: '-property:Configuration=$(buildConfiguration);OutDir=$(outputDirectory) -restore:True $(projectPath)' 
+  - stage: 'prod_builds'
+    displayName: 'Production Environment'
+    condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'release'))
+    jobs:
+    - job: $(jobName)
+      displayName: $(jobDisplayName)
+      variables:
+        buildConfiguration: 'Release'
+      pool:
+        vmImage: 'windows-latest'
+      steps:
+        - task: UseDotNet@2
+            displayName: 'Use .NET Core SDK'
+            inputs:
+              packageType: sdk
+              version: 3.1.302
+              installationPath: $(Agent.ToolsDirectory)/dotnet
+
+        - task: DotNetCoreCLI@2
+          displayName: 'Build'
+          inputs:
+            command: 'msbuild'
+            arguments: '-property:Configuration=$(buildConfiguration);OutDir=$(outputDirectory) -restore:True $(projectPath)' 
