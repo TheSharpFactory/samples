@@ -31,8 +31,6 @@ variables:
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
   appClass: 'Admin'
   appTargetPlatform: 'Android'
-  jobName: "XPlat_${{appClass}}"
-  jobDisplayName: "Integrate ${{appTargetPlatform}} ${{appClass}}App"
 
 stages:
 - stage: 'nightly_builds'
@@ -43,6 +41,8 @@ stages:
       displayName: '$(jobDisplayName)'
       variables:
         buildConfiguration: 'Debug'
+        jobName: "XPlat_${{appClass}}"
+        jobDisplayName: "Integrate ${{appTargetPlatform}} ${{appClass}} App"
       pool:
         vmImage: 'windows-latest'
       steps:
@@ -68,6 +68,8 @@ stages:
     displayName: '$(jobDisplayName)'
     variables:
       buildConfiguration: 'Debug'
+      jobName: "XPlat_${{appClass}}"
+      jobDisplayName: "Integrate ${{appTargetPlatform}} ${{appClass}} App"
     pool:
       vmImage: 'windows-latest'
     steps:
@@ -93,6 +95,8 @@ stages:
     displayName: '$(jobDisplayName)'
     variables:
       buildConfiguration: 'Release'
+      jobName: "XPlat_${{appClass}}"
+      jobDisplayName: "Integrate ${{appTargetPlatform}} ${{appClass}} App"
     pool:
       vmImage: 'windows-latest'
     steps:
