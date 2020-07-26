@@ -28,11 +28,11 @@ variables:
   projectName: 'Apps.Cross.Droid.csproj'
   projectPath: '$(platformPath)/$(projectName)'
   buildPlatform: 'Any CPU'
-  outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+  outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)' #Macro syntax variable
   appClass: 'Admin'
   appTargetPlatform: 'Android'
-  jobName: "XPlat_$[variables.appClass]"
-  jobDisplayName: "Integrate $[variables.appTargetPlatform] $[variables.appClass] App"
+  jobName: 'XPlat_($(appClass))' #Macro syntax variable
+  jobDisplayName: "Integrate ($(appTargetPlatform)) ($(appClass)) App" #Macro syntax variable
 
 stages:
 - stage: 'nightly_builds'
