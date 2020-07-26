@@ -19,8 +19,8 @@ pr:
     include: 
     - sources/*
     exclude:
-    - *.md
-    - */*.md
+    - '*.md'
+    - '*/*.md'
 
 variables:
   platformPath: 'sources/applications/cross-platform/linux/Android'
