@@ -42,7 +42,7 @@ stages:
     - job: $(jobName)
       displayName: $(jobDisplayName)
       variables:
-      buildConfiguration: 'Debug'
+        buildConfiguration: 'Debug'
       pool:
         vmImage: 'windows-latest'
       steps:
@@ -67,9 +67,9 @@ stages:
   - job: $(jobName)
     displayName: $(jobDisplayName)
     variables:
-        buildConfiguration: 'Debug'
+      buildConfiguration: 'Debug'
     pool:
-        vmImage: 'windows-latest'
+      vmImage: 'windows-latest'
     steps:
     - task: NuGetToolInstaller@0
       displayName: 'Install NuGet Tools'
@@ -82,9 +82,9 @@ stages:
     - task: XamarinAndroid@1
       displayName: 'Build'
       inputs:
-            projectFile: $(projectPath)
-            outputDirectory: $(outputDirectory)
-            configuration: $(buildConfiguration)
+        projectFile: $(projectPath)
+        outputDirectory: $(outputDirectory)
+        configuration: $(buildConfiguration)
 - stage: 'prod_builds'
   displayName: 'Production Environment'
   condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'release'))
