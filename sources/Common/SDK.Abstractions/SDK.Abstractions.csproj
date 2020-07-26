@@ -43,8 +43,11 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(IsNetStd21)'=='true'">
-    <PackageReference Include="Grpc.Net.Client" Version="2.29.0" />
     <PackageReference Include="Grpc.Net.ClientFactory" Version="2.29.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(IsNetCore31)'=='true'">
+    <PackageReference Include="Grpc.AspNetCore.Server.ClientFactory" Version="2.29.0" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(IsNetCore31)'=='true'">
