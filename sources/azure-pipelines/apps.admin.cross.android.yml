@@ -15,6 +15,9 @@ trigger:
           - feature/*/*
           - epic/*/*
   paths:
+     include:
+          - /**/**/*.csproj
+          - /**/**/*.cs
      exclude:
           - *.md
           - /**/*.md
@@ -31,6 +34,8 @@ pr:
           - feature/*/*
           - epic/*/*
   paths:
+     include:
+          - /**/**/*.*
      exclude:
           - *.md
           - /**/*.md
