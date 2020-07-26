@@ -39,33 +39,33 @@ stages:
   displayName: "Dev Environment"
   condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'dev'))
   jobs:
-    - job: $[variables.jobName] #Runtime Expressions
-      displayName: $[variables.jobDisplayName] #Runtime Expressions
-      variables:
-        buildConfiguration: 'Debug'
-      pool:
-        vmImage: 'windows-latest'
-      steps:
-      - task: NuGetToolInstaller@0
-        displayName: 'Install NuGet Tools'
+  - job: ${{ variables.jobName }} #Template Expressions
+    displayName: ${{ variables.jobDisplayName }} #Template Expressions
+    variables:
+      buildConfiguration: 'Debug'
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+    - task: NuGetToolInstaller@0
+      displayName: 'Install NuGet Tools'
 
-      - task: NuGetCommand@2
-        displayName: 'Restore NuGet Packages for Solution'
-        inputs:
-          restoreSolution: $(solutionPath)
+    - task: NuGetCommand@2
+      displayName: 'Restore NuGet Packages for Solution'
+      inputs:
+        restoreSolution: $(solutionPath)
 
-      - task: XamarinAndroid@1
-        displayName: 'Build'
-        inputs:
-          projectFile: $(projectPath)
-          outputDirectory: $(outputDirectory)
-          configuration: $(buildConfiguration)
+    - task: XamarinAndroid@1
+      displayName: 'Build'
+      inputs:
+        projectFile: $(projectPath)
+        outputDirectory: $(outputDirectory)
+        configuration: $(buildConfiguration)
 - stage: 'staging_builds'
   displayName: 'Staging Environment'
   condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'staging'))
   jobs:
-  - job: $[variables.jobName] #Runtime Expressions
-    displayName: $[variables.jobDisplayName] #Runtime Expressions
+  - job: ${{ variables.jobName }} #Template Expressions
+    displayName: ${{ variables.jobDisplayName }} #Template Expressions
     variables:
       buildConfiguration: 'Debug'
     pool:
@@ -89,8 +89,8 @@ stages:
   displayName: 'Production Environment'
   condition: and(succeeded(), eq(variables['system.pullRequest.targetBranch'], 'release'))
   jobs:
-  - job: $[variables.jobName] #Runtime Expressions
-    displayName: $[variables.jobDisplayName] #Runtime Expressions
+  - job: ${{ variables.jobName }} #Template Expressions
+    displayName: ${{ variables.jobDisplayName }} #Template Expressions
     variables:
       buildConfiguration: 'Release'
     pool:
