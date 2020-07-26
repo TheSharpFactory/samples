@@ -406,3 +406,6 @@ Temporary Items
 
 # Microsoft Tye
 .tye
+
+#Generated JS from TS
+wwwroot
