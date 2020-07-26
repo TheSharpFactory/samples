@@ -31,8 +31,8 @@ variables:
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)' #Macro syntax variable
   appClass: 'Admin'
   appTargetPlatform: 'Android'
-  jobName: 'XPlat_($(appClass))' #Macro syntax variable
-  jobDisplayName: "Integrate ($(appTargetPlatform)) ($(appClass)) App" #Macro syntax variable
+  jobName: 'XPlat_${{ variables.appClass }}' #Template expression
+  jobDisplayName: "Integrate ${{ variables.appTargetPlatform }} ${{ variables.appClass }} App" #template Expression
 
 stages:
 - stage: 'nightly_builds'
